@@ -30,6 +30,7 @@ module Highrise
 
   class Base < ActiveResource::Base
     self.site = 'https://186155d85276a30686adbf4c83475cf0:X@theglamourist.highrisehq.com/'
+    self.logger = Rails.logger
   end
 
   # Abstract super-class, don't instantiate directly. Use Kase, Company, Person instead.
