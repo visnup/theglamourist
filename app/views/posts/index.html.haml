@@ -6,3 +6,4 @@
     .body= post.body_as_html
 
 = will_paginate @posts
+= link_to 'new', new_post_path  if admin?

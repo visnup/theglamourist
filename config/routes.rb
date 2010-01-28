@@ -35,6 +35,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.portfolio "/portfolio", :controller => "index", :action => "portfolio"
   map.about "/about", :controller => "index", :action => "about"
+  map.login "/login", :controller => "index", :action => "login"
+  map.logout "/logout", :controller => "index", :action => "logout"
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => "index"

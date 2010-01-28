@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :check_admin, :only => [ :create, :update, :destroy ]
+
   # GET /posts
   # GET /posts.xml
   def index
@@ -83,4 +85,9 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  private
+    def check_admin
+      raise SecurityError  unless admin?
+    end
 end

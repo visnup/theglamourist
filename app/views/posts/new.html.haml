@@ -1,0 +1,17 @@
+%h1 New post
+
+- form_for(@post) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :body
+    %br
+    = f.text_area :body
+
+  %p
+    = f.submit 'create'
+    = link_to 'cancel', posts_path

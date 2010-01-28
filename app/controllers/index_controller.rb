@@ -12,4 +12,14 @@ class IndexController < ApplicationController
       end
     end
   end
+
+  def login
+    session[:admin] = true  if params[:password] == 'blah'
+    redirect_to root_url
+  end
+
+  def logout
+    reset_session
+    redirect_to root_url
+  end
 end
