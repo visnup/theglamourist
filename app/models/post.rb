@@ -7,6 +7,6 @@ class Post < ActiveRecord::Base
   end
 
   def body_as_html
-    Markdown.new(body, :smartypants => true).to_html
+    Markdown.new(body).to_html
   end
 end
