@@ -77,6 +77,12 @@ ul#nav
       :float left
       :text-shadow #666 0px 1px
       :color = !gray
+      :text-decoration none !important
+      :border-bottom solid 2px transparent
+      &.selected, &:hover
+        :border-bottom-color = !blue
+      &:hover
+        :-webkit-transition border-bottom-color 200ms linear
       &.about
         :background url('/images/about.png') no-repeat
       &.blog
