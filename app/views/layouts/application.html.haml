@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %title= 'pinkyurl'
+    = stylesheet_link_tag 'application', :media => 'all'
+    - if Rails.env.production?
+      = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
+    - else
+      = javascript_include_tag 'jquery-1.4.js'
+  %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]} #{@_first_render.path_without_format_and_extension.gsub('/', '-')}"}
+    #content
+      = yield
+    - if Rails.env.production?
+      %script{ :type => 'text/javascript', :src => 'http://static.getclicky.com/js' }
+      :javascript
+        clicky.init(174984);
+      %noscript
+        %img{ :width => 1, :height => 1, :src => 'http://static.getclicky.com/157700ns.gif' }

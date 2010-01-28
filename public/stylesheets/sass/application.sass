@@ -1,0 +1,35 @@
+!black = #000
+!white = #eee
+
+body
+  :text-align center
+  :background-color = !black
+  :color = !white
+  :font-face 'helvetica neue', helvetica, arial, sans-serif
+  :font-weight lighter
+
+a
+  :text-decoration none
+  &:hover
+    :text-decoration underline
+
+#content
+  :width 800px
+  :margin 0px auto
+  :text-align left
+#nav
+  a
+    :color = !white
+  h1
+    :font-size 24pt
+    :float right
+    :font-weight 100
+    :word-spacing -0.4ex
+    :margin-top 0px
+  li
+    :font-size 18pt
+    :list-style-type none
+    :display inline
+    a
+      :float left
+      :padding 10px
