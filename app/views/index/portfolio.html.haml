@@ -1,3 +1,5 @@
+- content_for :title, 'portfolio'
+
 .pullout
   - @photos.each do |p|
     = link_to image_tag(p[:src]), "http://flickr.com#{p[:href]}", :class => 'thumb', :id => p[:id]

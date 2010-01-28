@@ -1,7 +1,9 @@
 !!! 5
 %html
   %head
-    %title the glamourist - jane kim
+    %title
+      = yield(:title).try :+, ' |'
+      the glamourist - jane kim
     = auto_discovery_link_tag :atom, posts_url(:format => 'atom')
     = stylesheet_link_tag 'application', :media => 'all'
     - if Rails.env.production?
