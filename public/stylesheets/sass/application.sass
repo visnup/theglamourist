@@ -81,8 +81,11 @@ ul#nav
       :border-bottom solid 2px transparent
       &.selected, &:hover
         :border-bottom-color = !blue
+        :color = !white
       &:hover
-        :-webkit-transition border-bottom-color 200ms linear
+        :-webkit-transition
+          :property border-bottom-color, color
+          :duration 200ms
       &.about
         :background url('/images/about.png') no-repeat
       &.blog
