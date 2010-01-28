@@ -1,6 +1,16 @@
-%h1 contact
+#address
+  %h1 contact
+  %p
+    jane kim
+    = mail_to 'jane@theglamourist.com', nil, :encode => 'javascript'
+  %p.phone
+    (714) 932-8289
 
-- form_for :contact do |f|
+%h1 for inquires
+
+- form_for @contact do |f|
+  = f.error_messages
+
   %p
     = f.label :name, 'name'
     %br

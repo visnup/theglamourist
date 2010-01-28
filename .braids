@@ -1,0 +1,7 @@
+--- 
+vendor/plugins/validates_email_format_of: 
+  squashed: true
+  url: http://code.dunae.ca/validates_email_format_of/trunk
+  type: svn
+  revision: 20
+  remote: braid/vendor/plugins/validates-email-format-of
