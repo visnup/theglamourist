@@ -92,6 +92,12 @@ ul#nav
   :background-color rgba(100, 100, 100, 0.2)
   :padding 2em 10px
   :text-shadow #333 0px 1px
+  .pullout
+    :float right
+    :width = !pullout_width - 20px
+
+.clear
+  :clear both
 
 body.index-about
   #page
@@ -102,8 +108,6 @@ body.index-about
 
 body.contacts-new
   #address
-    :float right
-    :width = !pullout_width - 20px
     p
       :font-size = 14pt
     .phone
@@ -115,3 +119,20 @@ body.contacts-new
     :opacity 0.9
   textarea
     :height 12em
+
+body.index-portfolio
+  a.thumb
+    img
+      :width 75px
+      :height 75px
+      :border solid 2px transparent
+    &.selected img
+      :border-color #{!gray}
+      :-webkit-transition border-color 200ms linear
+  #portrait
+    :position relative
+    :margin-right = !pullout_width
+    img
+      :position absolute
+      :border solid 2px #{!black}
+      +shadow
