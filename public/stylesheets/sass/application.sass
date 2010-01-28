@@ -1,35 +1,104 @@
 !black = #000
+!gray = #ccc
 !white = #eee
+!blue = #69c
+!dark_blue = #58b
+
+=rounded(!radius = 2px)
+  :-webkit-border-radius = !radius
+  :-moz-border-radius = !radius
+
+=shadow
+  :-webkit-box-shadow -5px 5px 10px rgba(0, 0, 0, 0.4)
+  :-moz-box-shadow -5px 5px 10px rgba(0, 0, 0, 0.4)
 
 body
   :text-align center
   :background-color = !black
   :color = !white
-  :font-face 'helvetica neue', helvetica, arial, sans-serif
+
+body, input, textarea
+  :font-family 'helvetica neue', helvetica, arial, sans-serif
   :font-weight lighter
+  :font-size 12pt
 
 a
   :text-decoration none
   &:hover
     :text-decoration underline
 
+h1, h2, h3
+  :font-weight 100
+
+p
+  :line-height 160%
+
+label
+  :cursor pointer
+
+input[type=text], textarea
+  :padding 6px
+
+input[type=submit]
+  +rounded
+  :border solid 1px #{!dark_blue}
+  :background-color = !blue
+  :color = !white
+  :text-shadow #666 0px 1px
+
 #content
-  :width 800px
+  :width 900px
   :margin 0px auto
   :text-align left
-#nav
+ul#nav
+  :list-style-type none
+  :padding 0px
+  :margin 0px
   a
     :color = !white
+    :padding 60px 10px 10px
+  h1, li
+    :line-height 32pt
   h1
-    :font-size 24pt
     :float right
-    :font-weight 100
     :word-spacing -0.4ex
-    :margin-top 0px
+    :margin 0px
+    a
+      :display inline-block
   li
     :font-size 18pt
-    :list-style-type none
     :display inline
     a
+      +shadow
       :float left
-      :padding 10px
+      :text-shadow #666 0px 1px
+      :color = !gray
+      &.about
+        :background url('/images/about.png') no-repeat
+      &.blog
+        :background url('/images/blog.png') no-repeat
+      &.contact
+        :background url('/images/contact.png') no-repeat
+      &.home
+        :background url('/images/home.png') no-repeat
+      &.portfolio
+        :background url('/images/portfolio.png') no-repeat
+#page
+  :clear both
+  :background-color rgba(100, 100, 100, 0.2)
+  :padding 2em 10px
+
+body.index-about
+  #page
+    :padding 2em 100px
+  p
+    :margin-top 0px
+
+body.index-contact
+  input, textarea
+    :font-size 14pt
+  input[type=text], textarea
+    :width 600px
+    :opacity 0.9
+  textarea
+    :height 12em

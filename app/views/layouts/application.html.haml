@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title= 'pinkyurl'
+    %title the glamourist - jane kim
     = stylesheet_link_tag 'application', :media => 'all'
     - if Rails.env.production?
       = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
@@ -9,7 +9,30 @@
       = javascript_include_tag 'jquery-1.4.js'
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]} #{@_first_render.path_without_format_and_extension.gsub('/', '-')}"}
     #content
-      = yield
+      %ul#nav
+        %h1
+          - link_to blog_path do
+            the
+            %strong glamourist
+        %li= link_to 'home', root_path, :class => 'home'
+        %li= link_to 'portfolio', portfolio_path, :class => 'portfolio'
+        %li= link_to 'about', about_path, :class => 'about'
+        %li= link_to 'contact', contact_path, :class => 'contact'
+        %li= link_to 'blog', blog_path, :class => 'blog'
+      :javascript
+        $(document).ready(function() {
+          $('#nav li a').hover(
+            function() {
+              if (!$(this).data('originalWidth'))
+                $(this).data('originalWidth', $(this).width());
+              $(this).animate({ width: $(this).width() + 50 });
+            },
+            function() {
+              $(this).animate({ width: $(this).data('originalWidth') });
+            });
+        });
+      #page
+        = yield
     - if Rails.env.production?
       %script{ :type => 'text/javascript', :src => 'http://static.getclicky.com/js' }
       :javascript
