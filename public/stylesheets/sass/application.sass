@@ -149,3 +149,11 @@ body.index-portfolio
 body.posts-index
   .body
     :margin-bottom 2em
+
+body.posts-new, body.posts-edit
+  #page
+    :margin-right = !pullout_width
+  input[type=text], textarea
+    :width 100%
+  input[type=text]
+    :font-size 14pt
