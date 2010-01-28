@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :contacts
+  map.resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -34,7 +35,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.portfolio "/portfolio", :controller => "index", :action => "portfolio"
   map.about "/about", :controller => "index", :action => "about"
-  map.blog "/blog", :controller => "index", :action => "blog"
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map.root :controller => "index"
