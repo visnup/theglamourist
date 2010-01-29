@@ -1,8 +1,7 @@
 !black = #000
 !gray = #ccc
 !white = #eee
-!blue = #69c
-!dark_blue = #58b
+!link = #69c
 
 !pullout_width = 240px
 
@@ -25,7 +24,7 @@ body, input, textarea
   :font-size 12pt
 
 a
-  :color = !blue
+  :color = !link
   :text-decoration none
   &:hover
     :text-decoration underline
@@ -41,13 +40,20 @@ label
 
 input[type=text], textarea
   :padding 6px
+  :font-size 14pt
 
 input[type=submit]
   +rounded
-  :border solid 1px #{!dark_blue}
-  :background-color = !blue
+  :border solid 1px #{!link - #333}
+  :border-top-color #{!link + #111}
+  :border-left-color #{!link + #111}
+  :background-color = !link
+  :background -webkit-gradient(linear, left top, left bottom, from(#{!link+#222}), to(#{!link - #222}))
   :color = !white
   :text-shadow #666 0px 1px
+  :font-size 18pt
+  &:active
+    :background -webkit-gradient(linear, left bottom, left top, from(#{!link+#222}), to(#{!link - #222}))
 
 #content
   :width 900px
@@ -80,7 +86,7 @@ ul#nav
       :text-decoration none !important
       :border-bottom solid 2px transparent
       &.selected, &:hover
-        :border-bottom-color = !blue
+        :border-bottom-color = !link
         :color = !white
       &:hover
         :-webkit-transition
@@ -99,6 +105,7 @@ ul#nav
 #page
   :clear both
   :background-color rgba(100, 100, 100, 0.2)
+  :background rgba(100, 100, 100, 0.2)
   :padding 2em 10px
   :text-shadow #333 0px 1px
   .pullout
@@ -121,8 +128,6 @@ body.contacts-new
       :font-size = 14pt
     .phone
       :font-size = 16pt
-  input, textarea
-    :font-size 14pt
   input[type=text], textarea
     :width 500px
     :opacity 0.9
@@ -155,5 +160,3 @@ body.posts-new, body.posts-edit
     :margin-right = !pullout_width
   input[type=text], textarea
     :width 100%
-  input[type=text]
-    :font-size 14pt
