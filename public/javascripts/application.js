@@ -9,7 +9,7 @@ $(document).ready(function() {
     function() {
       if (!$(this).data('originalWidth'))
         $(this).data('originalWidth', $(this).width());
-      $(this).animate({ width: $(this).width() + 50 });
+      $(this).animate({ width: $(this).width() + 50 }, 'fast');
     },
     function() {
       $(this).animate({ width: $(this).data('originalWidth') }, 'fast');

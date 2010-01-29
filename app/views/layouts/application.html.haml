@@ -23,6 +23,7 @@
         %li= link_to 'about', about_path, :class => 'about'
         %li= link_to 'contact', new_contact_path, :class => 'contact'
         %li= link_to 'blog', posts_path, :class => 'blog'
+        .clear
       #page
         = yield
     - if Rails.env.production?
