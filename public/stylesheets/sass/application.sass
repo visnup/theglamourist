@@ -1,7 +1,7 @@
 !black = #000
 !gray = #ccc
-!white = #eee
-!link = #69c
+!white = #FFFFF1
+!link = #8FB87F
 
 !pullout_width = 240px
 
@@ -141,14 +141,14 @@ body.index-portfolio
       :height 75px
       :border solid 2px transparent
     &.selected img
-      :border-color #{!gray}
+      :border-color = !link
       :-webkit-transition border-color 200ms linear
   #portrait
     :position relative
     :margin-right = !pullout_width
     img
       :position absolute
-      :border solid 2px #{!black}
+      :border solid 5px #{!white}
       +shadow
 
 body.posts-index
