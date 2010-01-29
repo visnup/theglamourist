@@ -51,9 +51,5 @@
 
     $('a.thumb')
       .attr('href', function() { return '#x' + $(this).attr('id'); })
-      .click(function(e) {
-        loadPortrait(this);
-
-        e.stopPropagation();
-      });
+      .click(function(e) { loadPortrait(this); });
   });

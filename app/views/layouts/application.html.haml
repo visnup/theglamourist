@@ -23,21 +23,6 @@
         %li= link_to 'about', about_path, :class => 'about'
         %li= link_to 'contact', new_contact_path, :class => 'contact'
         %li= link_to 'blog', posts_path, :class => 'blog'
-      :javascript
-        $(document).ready(function() {
-          $('#nav li a[href=' + window.location.pathname + ']')
-            .addClass('selected')
-            .css('width', function() { return $(this).width() + 50; });
-          $('#nav li a:not(.selected)').hover(
-            function() {
-              if (!$(this).data('originalWidth'))
-                $(this).data('originalWidth', $(this).width());
-              $(this).animate({ width: $(this).width() + 50 });
-            },
-            function() {
-              $(this).animate({ width: $(this).data('originalWidth') }, 'fast');
-            });
-        });
       #page
         = yield
     - if Rails.env.production?
