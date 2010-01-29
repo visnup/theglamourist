@@ -37,7 +37,7 @@ class Sass::Script::Color
   end
 
   def self.from_hsl hsl
-    Sass::Script::Functions::EvaluationContext.new(nil).hsl *hsl.map {|x| Sass::Script::Number.new(x) }
+    Sass::Script::Functions::EvaluationContext.new(nil).hsl *hsl.map {|x| Sass::Script::Number.new(x < 0 ? 0 : x) }
   end
 
   private
