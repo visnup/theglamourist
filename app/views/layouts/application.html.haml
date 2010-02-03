@@ -11,6 +11,10 @@
     - else
       = javascript_include_tag 'jquery-1.4.js'
     = javascript_include_tag 'application'
+    = javascript_include_tag 'http://use.typekit.com/tvu7fwn.js'
+    :javascript
+      if (navigator.userAgent.indexOf('Windows') != -1)
+        try{Typekit.load();}catch(e){}
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]} #{@_first_render.path_without_format_and_extension.gsub('/', '-')}"}
     #content
       %ul#nav
