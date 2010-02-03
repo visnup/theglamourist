@@ -31,6 +31,7 @@ a
 
 h1, h2, h3, h4, h5, h6
   :font-weight 100
+  :margin-top 0px
 
 p
   :line-height 160%
@@ -94,8 +95,6 @@ ul#nav
         :-webkit-transition
           :property border-bottom-color, color
           :duration 200ms
-      &.about
-        :background url('/images/about.png') no-repeat
       &.blog
         :background url('/images/blog.png') no-repeat
       &.contact
@@ -120,9 +119,13 @@ ul#nav
 body.index-index
   img
     :float left
-    :margin-right 20px
     :border solid 5px #{!white}
     +shadow
+  h1, p
+    :margin-left 330px
+  p
+    :text-align justify
+    :margin-right 35px
 
 body.index-portfolio
   a.thumb
@@ -140,13 +143,6 @@ body.index-portfolio
       :position absolute
       :border solid 5px #{!white}
       +shadow
-
-body.index-about
-  #page
-    :padding 2em 100px
-  p
-    :text-align justify
-    :margin-top 0px
 
 body.contacts-new
   #address

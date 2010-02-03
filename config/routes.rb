@@ -34,7 +34,6 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   map.portfolio "/portfolio", :controller => "index", :action => "portfolio"
-  map.about "/about", :controller => "index", :action => "about"
   map.login "/login", :controller => "index", :action => "login"
   map.logout "/logout", :controller => "index", :action => "logout"
 
