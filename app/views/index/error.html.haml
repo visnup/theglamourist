@@ -1,0 +1,12 @@
+- content_for :title, "error (#{params[:code]})"
+%h1 ?
+- case params[:code]
+- when '404'
+  %h2 The page you were looking for doesn't exist.
+  %p You may have mistyped the address or the page may have moved.
+- when '422'
+  %h2 The change you wanted was rejected.
+  %p Maybe you tried to change something you didn't have access to.
+- else
+  %h2 We're sorry, but something went wrong.
+  %p We've been notified about this issue and we'll take a look at it shortly.
