@@ -103,12 +103,14 @@ ul#nav
         :background url('/images/home.png') no-repeat
       &.portfolio
         :background url('/images/portfolio.png') no-repeat
+      &.services
+        :background url('/images/services.png') no-repeat
 #page
   :clear both
   :background-color rgba(100, 100, 100, 0.2)
   :background rgba(100, 100, 100, 0.2)
   :padding 2em 10px
-  :text-shadow #333 0px 1px
+  :text-shadow #000 0px 1px
   .pullout
     :float right
     :width = !pullout_width - 20px
@@ -165,3 +167,9 @@ body.posts-new, body.posts-edit
     :margin-right = !pullout_width
   input[type=text], textarea
     :width 100%
+
+body.index-error
+  #page
+    :text-align center
+    h1
+      :font-size 48pt
