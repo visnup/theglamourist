@@ -95,6 +95,8 @@ ul#nav
         :-webkit-transition
           :property border-bottom-color, color
           :duration 200ms
+      &.about
+        :background url('/images/about.png') no-repeat
       &.blog
         :background url('/images/blog.png') no-repeat
       &.contact
@@ -118,33 +120,31 @@ ul#nav
 .clear
   :clear both
 
-body.index-index
+a.thumb
   img
-    :float left
+    :width 75px
+    :height 75px
+    :border solid 2px transparent
+  &.selected img
+    :border-color = !link
+    :-webkit-transition border-color 200ms linear
+#portrait
+  :position relative
+  img
+    :position absolute
     :border solid 5px #{!white}
     +shadow
-  h1, p
-    :margin-left 330px
-  p
-    :text-align justify
-    :margin-right 35px
+
+body.index-index
+  a.thumb img
+    :vertical-align -30%
+  #portrait
+    :float right
+    :width = !pullout_width * 2
 
 body.index-portfolio
-  a.thumb
-    img
-      :width 75px
-      :height 75px
-      :border solid 2px transparent
-    &.selected img
-      :border-color = !link
-      :-webkit-transition border-color 200ms linear
   #portrait
-    :position relative
     :margin-right = !pullout_width
-    img
-      :position absolute
-      :border solid 5px #{!white}
-      +shadow
 
 body.contacts-new
   #address
@@ -157,6 +157,17 @@ body.contacts-new
     :opacity 0.9
   textarea
     :height 12em
+
+body.index-about
+  img
+    :float left
+    :border solid 5px #{!white}
+    +shadow
+  h1, p
+    :margin-left 330px
+  p
+    :text-align justify
+    :margin-right 35px
 
 body.posts-index
   .body

@@ -1,24 +1,28 @@
-= image_tag 'jane.png'
+#portrait
+
+%h1 latest from our portfolio
+
+%p
+  - @photos.each do |p|
+    = link_to image_tag(p[:src]), "http://flickr.com#{p[:href]}", :class => 'thumb', :id => p[:id]
+  = link_to 'see more &raquo;', portfolio_path
 
 :markdown
-  welcome to the glamourist
-  =========================
+  popular services
+  ================
 
-  Hello, my name is Jane Kim. I'm a native of Los Angeles and more recently
-  became a transplant to beautiful San Francisco. Though Los Angeles will
-  always hold a place in my heart, I am in love with San Francisco and
-  everything this city has to offer. I currently live with my boyfriend Visnu
-  and our lazy dog, Choco, and whiny cat, Unagi. I've been a freelance make
-  up artist for the past 9 years working with lines such as Chanel and Calvin
-  Klein Color. My recent work has been primarily in the bridal industry
-  helping brides enhance their beauty for their most memorable day... their
-  wedding day.
+    - bridal makeup, hairstyling
+    - engagement, photo shoots
+    - photo shoots
+    - editorials, print
+    - commercials
+    - eye brow grooming
+    - image consulting
+    - makeup lessons (group or individual)
 
-  This site ([www.theglamourist.com](http://www.theglamourist.com)) has been
-  designed to keep you informed of my latest work, experiences, stories and as
-  an avenue to view my portfolio.  So for the latest news on what’s happening
-  in the life of theglamourist, please check back regularly!
+  see more in our [full services list](#{services_path})
 
-  --Jane
+%h1 contact us
 
-.clear
+fill out #{link_to 'our contact form', new_contact_path} or send us an email at
+#{mail_to 'jane@theglamourist', nil, :encode => 'javascript'}.

@@ -33,6 +33,7 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
+  map.about "/about", :controller => "index", :action => "about"
   map.portfolio "/portfolio", :controller => "index", :action => "portfolio"
   map.services "/services", :controller => "index", :action => "services"
   map.login "/login", :controller => "index", :action => "login"
