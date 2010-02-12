@@ -5,6 +5,16 @@
 
 !pullout_width = 240px
 
+// http://style.cleverchimp.com/font_size_intervals/altintervals.html
+// using 16 ppem
+!xx_small = 10px
+!x_small = 12px
+!small = 14px
+!medium = 16px
+!large = 19px
+!x_large = 24px
+!xx_large = 32px
+
 =rounded(!radius = 2px)
   :-webkit-border-radius = !radius
   :-moz-border-radius = !radius
@@ -21,7 +31,7 @@ body
 body, input, textarea
   :font-family 'helvetica neue', museo-sans-1, tahoma, helvetica, arial, sans-serif
   :font-weight 100
-  :font-size 12pt
+  :font-size = !medium
 
 a
   :color = !link
@@ -41,7 +51,7 @@ label
 
 input[type=text], textarea
   :padding 6px
-  :font-size 14pt
+  :font-size = !large
 
 input[type=submit]
   +rounded
@@ -52,7 +62,7 @@ input[type=submit]
   :background -webkit-gradient(linear, left top, left bottom, from(#{!link+#999}), to(#{!link+#666}))
   :color = !white
   :text-shadow #666 0px 1px
-  :font-size 18pt
+  :font-size = !large
   &:active
     :background -webkit-gradient(linear, left bottom, left top, from(#{!link+#999}), to(#{!link+#666}))
 
@@ -69,7 +79,7 @@ ul#nav
     :color = !white
     :padding 60px 20px 10px 10px
   h1, li
-    :line-height 32pt
+    :line-height = !xx_large
   h1
     :position absolute
     :right 0px
@@ -79,7 +89,7 @@ ul#nav
     a
       :display inline-block
   li
-    :font-size 18pt
+    :font-size = !x_large
     :display inline
     a
       +shadow
@@ -116,6 +126,10 @@ ul#nav
   .pullout
     :float right
     :width = !pullout_width - 20px
+#footer
+  :font-size = !x_small
+  :padding 1em 10px
+  :text-align center
 
 .clear
   :clear both
@@ -141,6 +155,8 @@ body.index-index
   #portrait
     :float right
     :width = !pullout_width * 2
+  #footer
+    :text-align left
 
 body.index-portfolio
   #portrait
@@ -149,9 +165,9 @@ body.index-portfolio
 body.contacts-new
   #address
     p
-      :font-size = 14pt
+      :font-size = !large
     .phone
-      :font-size = 16pt
+      :font-size = !x_large
   input[type=text], textarea
     :width 500px
     :opacity 0.9
@@ -183,4 +199,4 @@ body.index-error
   #page
     :text-align center
     h1
-      :font-size 48pt
+      :font-size = !xx_large
