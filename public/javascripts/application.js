@@ -6,9 +6,10 @@ $(document).ready(function() {
       .animate({ width: $(this).data('selectedWidth') }, 'fast')
       .parent().siblings().find('a')
         .each(function() {
-          $(this)
-            .clearQueue()
-            .animate({ width: $(this).data('startWidth') }, 'fast');
+          if ($(this).data('startWidth'))
+            $(this)
+              .clearQueue()
+              .animate({ width: $(this).data('startWidth') }, 'fast');
         });
   };
 
