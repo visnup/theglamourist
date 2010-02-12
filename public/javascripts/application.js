@@ -53,6 +53,7 @@ $(document).ready(function() {
         $(this)
           .hide()
           .appendTo(portrait)
+          .wrap('<a href="' + $(link).data('flickr') + '">')
           .css({
             position: 'absolute',
             top: top + Math.random() * 50,
@@ -71,6 +72,7 @@ $(document).ready(function() {
     loadPortrait('a.thumb:first');
 
   $('a.thumb')
+    .each(function() { $(this).data('flickr', $(this).attr('href')); })
     .attr('href', function() { return '#x' + $(this).attr('id'); })
     .click(function(e) { loadPortrait(this); });
 });
