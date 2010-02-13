@@ -2,10 +2,10 @@
 
 - @posts.each do |post|
   .post
-    %h2.title
-      = link_to post.title, post
-    .time= post.updated_at.strftime '%b %e, %Y %l:%m %p'
-    .body= post.body_as_html
+    %h2.title= link_to raw(post.title), post
+    %time{ :datetime => post.updated_at.xmlschema }
+      = post.updated_at.strftime '%b %e, %Y %l:%m %p'
+    .body!= post.body_as_html
 
 = will_paginate @posts
 = link_to 'new', new_post_path  if admin?

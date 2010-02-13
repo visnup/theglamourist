@@ -1,3 +1,5 @@
+require 'sass'
+
 #
 # fix sass color math
 #

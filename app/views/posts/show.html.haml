@@ -1,6 +1,7 @@
-%h1.title= @post.title
-.time= @post.updated_at.strftime '%b %e, %Y %l:%m %p'
-.body= @post.body_as_html
+%h1.title!= @post.title
+%time{ :datetime => @post.updated_at.xmlschema }
+  = @post.updated_at.strftime '%b %e, %Y %l:%m %p'
+.body!= @post.body_as_html
 
 - if admin?
   = link_to 'edit', edit_post_path(@post)
