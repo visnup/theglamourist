@@ -1,33 +1,21 @@
 class ContactsController < ApplicationController
+  respond_to :html, :xml, :json
+
   # GET /contacts/1
   def show
     @contact = Contact.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-    end
+    respond_with @contact
   end
 
   # GET /contacts/new
   def new
     @contact = Contact.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-    end
+    respond_with @contact
   end
 
   # POST /contacts
   def create
-    @contact = Contact.new(params[:contact])
-
-    respond_to do |format|
-      if @contact.save
-        flash[:notice] = 'Contact was successfully created.'
-        format.html { redirect_to(@contact) }
-      else
-        format.html { render :action => "new" }
-      end
-    end
+    @contact = Contact.create(params[:contact])
+    respond_with @contact
   end
 end
