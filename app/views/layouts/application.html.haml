@@ -2,8 +2,7 @@
 %html
   %head
     %title
-      - unless (title = yield(:title)).blank?
-        = title + ' |'
+      = yield(:title) + ' |'  if content_for?(:title)
       the glamourist - jane kim
     = auto_discovery_link_tag :atom, posts_url(:format => 'atom')
     = stylesheet_link_tag 'application', :media => 'all'
