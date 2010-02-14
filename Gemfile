@@ -20,6 +20,7 @@ gem "rdiscount"
 gem "will_paginate", "3.0.pre"
 
 group :development do
+  gem "ruby-debug"
   gem "thin"
 end
 
