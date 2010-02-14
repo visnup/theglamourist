@@ -16,3 +16,12 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 end
+
+namespace :bundle do
+  desc "Check gem dependencies"
+  task :check do
+    run "cd #{release_path} && bundle check"
+  end
+end
+
+after "deploy:update_code", "bundle:check"
