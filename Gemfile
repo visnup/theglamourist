@@ -17,8 +17,11 @@ gem "mysql"
 gem "haml"
 gem "nokogiri"
 gem "rdiscount"
-gem "thin"
 gem "will_paginate", "3.0.pre"
+
+group :development do
+  gem "thin"
+end
 
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
