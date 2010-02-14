@@ -1,20 +1,12 @@
 class ContactObserver < ActiveRecord::Observer
   def after_create contact
-    person = Highrise::Person.find :first, :from => :search,
-      :params => { :criteria => { :email => contact.email } }
-    unless person
-      person = Highrise::Person.create :name => contact.name,
-        :contact_data => {
-          :email_addresses => [
-            { :address => contact.email,
-              :location => 'Work' }
-          ]
-        }
+    m = Mail.new do
+      to 'jane@theglamourist.com'
+      cc 'task+today@05316348.theglamourist.highrisehq.com'
+      subject 'website lead'
     end
-
-    email = Highrise::Email.new :body => contact.message,
-      :title => 'website lead'
-    email.prefix_options = { :person_id => person.id }
-    email.save
+    m.from = contact.email
+    m.body = contact.message
+    m.deliver!
   end
 end
