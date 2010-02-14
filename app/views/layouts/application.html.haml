@@ -4,13 +4,14 @@
     %title
       = yield(:title) + ' |'  if content_for?(:title)
       the glamourist - jane kim
+    = csrf_meta_tag
     = auto_discovery_link_tag :atom, posts_url(:format => 'atom')
     = stylesheet_link_tag 'application', :media => 'all'
     - if Rails.env.production?
       = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
     - else
       = javascript_include_tag 'jquery-1.4.js'
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'application', 'rails', :cache => true
     = javascript_include_tag 'http://use.typekit.com/tvu7fwn.js'
     :javascript
       if (navigator.userAgent.indexOf('Windows') != -1)

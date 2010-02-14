@@ -33,6 +33,7 @@ $(document).ready(function() {
   $('#page form :text:first').focus();
 
   var loadPortrait = function(link) {
+    if ($(link).length == 0) return;
     var src = $(link)
       .siblings()
         .removeClass('selected')
