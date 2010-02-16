@@ -2,6 +2,7 @@ require 'open-uri'
 
 class IndexController < ApplicationController
   before_filter :photos_from_flickr, :only => [:index, :portfolio]
+  caches_page :index, :portfolio
 
   def index
     @photos = @photos[0, 3]
@@ -15,6 +16,12 @@ class IndexController < ApplicationController
   def logout
     reset_session
     redirect_to root_url
+  end
+
+  def expire
+    expire_page "/"
+    expire_page "/portfolio"
+    render :text => "ok"
   end
 
   private
