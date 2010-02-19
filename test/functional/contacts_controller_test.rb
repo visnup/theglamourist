@@ -13,11 +13,19 @@ class ContactsControllerTest < ActionController::TestCase
   end
 
   test "should create contact" do
+    ActiveResource::HttpMock.respond_to do |mock|
+      mock.get '/people/search.xml?criteria[email]=jane%40foo.com', {"Authorization"=>"Basic MTg2MTU1ZDg1Mjc2YTMwNjg2YWRiZjRjODM0NzVjZjA6WA==", "Accept"=>"application/xml"}, '<people type="array"><person><id>2</id></person></people>'
+      mock.post '/emails.xml?person_id=2', {"Authorization"=>"Basic MTg2MTU1ZDg1Mjc2YTMwNjg2YWRiZjRjODM0NzVjZjA6WA==", "Content-Type"=>"application/xml"}, ''
+    end
+
     assert_difference('Contact.count') do
       post :create, :contact => { :name => 'jane', :email => 'jane@foo.com', :message => 'hi' }
     end
 
     assert_redirected_to contact_path(assigns(:contact))
+    assert m = Contact::Notifier.deliveries.first
+    assert_equal ['jane@theglamourist.com'], m.to
+    assert_equal 'hi', m.body.raw_source
   end
 
   test "should show contact" do

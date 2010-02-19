@@ -4,13 +4,7 @@ class Contact < ActiveRecord::Base
   after_create :send_notifications
 
   def send_notifications
-    m = Mail.new do
-      to 'jane@theglamourist.com'
-      subject 'website lead'
-    end
-    m.from = email
-    m.body = message
-    m.deliver!
+    Notifier.contact(self).deliver
 
     person = Highrise::Person.find :first, :from => :search,
       :params => { :criteria => { :email => email } }
@@ -28,5 +22,15 @@ class Contact < ActiveRecord::Base
       :title => 'website lead'
     email.prefix_options = { :person_id => person.id }
     email.save
+  end
+
+  class Notifier < ActionMailer::Base
+    default :to => 'jane@theglamourist.com', :subject => 'website lead'
+
+    def contact(contact)
+      mail :from => "#{contact.name} <#{contact.email}>" do |format|
+        format.text { render :text => contact.message }
+      end
+    end
   end
 end
