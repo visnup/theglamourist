@@ -19,9 +19,9 @@ end
 
 namespace :bundle do
   desc "Check gem dependencies"
-  task :check do
-    run "cd #{release_path} && bundle check"
+  task :install do
+    run "cd #{release_path} && bundle install"
   end
 end
 
-after "deploy:update_code", "bundle:check"
+after "deploy:update_code", "bundle:install"
