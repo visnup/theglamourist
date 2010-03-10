@@ -8,6 +8,9 @@ class IndexController < ApplicationController
     @photos = @photos[0, 3]
   end
 
+  def portfolio
+  end
+
   def login
     session[:admin] = true  if params[:password] == 'blah'
     redirect_to root_url
