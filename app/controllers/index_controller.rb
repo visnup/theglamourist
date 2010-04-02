@@ -1,5 +1,3 @@
-require 'open-uri'
-
 class IndexController < ApplicationController
   before_filter :photos_from_flickr, :only => [:index, :portfolio]
   caches_page :index, :portfolio
