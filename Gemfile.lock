@@ -7,7 +7,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 3.0.0.beta2
+    version: = 3.0.0.beta3
   mysql: 
     group: 
     - :default
@@ -40,25 +40,25 @@ specs:
 - builder: 
     version: 2.1.2
 - i18n: 
-    version: 0.3.6
+    version: 0.3.7
 - memcache-client: 
-    version: 1.8.1
+    version: 1.8.3
 - tzinfo: 
-    version: 0.3.18
+    version: 0.3.20
 - activesupport: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - activemodel: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - erubis: 
     version: 2.6.5
 - rack: 
     version: 1.1.0
 - rack-mount: 
-    version: 0.6.1
+    version: 0.6.3
 - rack-test: 
     version: 0.5.3
 - actionpack: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -66,21 +66,21 @@ specs:
 - treetop: 
     version: 1.4.5
 - mail: 
-    version: 2.1.5.3
+    version: 2.2.1
 - text-hyphen: 
     version: 1.0.0
 - text-format: 
     version: 1.0.0
 - actionmailer: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - arel: 
     version: 0.3.3
 - activerecord: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - activeresource: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - bundler: 
-    version: 0.9.14
+    version: 0.9.25
 - columnize: 
     version: 0.3.1
 - daemons: 
@@ -88,21 +88,21 @@ specs:
 - eventmachine: 
     version: 0.12.10
 - haml: 
-    version: 2.2.22
+    version: 3.0.6
 - linecache: 
     version: "0.43"
 - mysql: 
     version: 2.8.1
 - nokogiri: 
-    version: 1.4.1
+    version: 1.4.2
 - thor: 
-    version: 0.13.4
+    version: 0.13.6
 - railties: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - rails: 
-    version: 3.0.0.beta2
+    version: 3.0.0.beta3
 - rdiscount: 
-    version: 1.6.3
+    version: 1.6.3.2
 - ruby-debug-base: 
     version: 0.10.3
 - ruby-debug: 
@@ -111,7 +111,7 @@ specs:
     version: 1.2.7
 - will_paginate: 
     version: 3.0.pre
-hash: be7921f1136d9de9a1490a7854c40b4a4538cf17
+hash: ae488b3b2ca112becf36d00d3f3aadfe7f48a3b4
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
