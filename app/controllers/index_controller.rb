@@ -1,6 +1,6 @@
 class IndexController < ApplicationController
   before_filter :photos_from_flickr, :only => [:index, :portfolio]
-  caches_page :index, :portfolio
+  caches_page :index, :portfolio  unless Rails.env.development?
 
   def index
     @photos = @photos[0, 3]
