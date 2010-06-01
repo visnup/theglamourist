@@ -1,5 +1,5 @@
 !black = #000
-!gray = #ccc
+!gray = #eee
 !white = #FFFFF1
 !link = #8FB87F
 
@@ -22,6 +22,9 @@
 =shadow
   :-webkit-box-shadow -5px 5px 10px rgba(0, 0, 0, 0.4)
   :-moz-box-shadow -5px 5px 10px rgba(0, 0, 0, 0.4)
+
+=background(!image)
+  :background-image -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), color-stop(70%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #{!image}
 
 body
   :text-align center
@@ -77,17 +80,22 @@ ul#nav
   :position relative
   a
     :color = !white
-    :padding 60px 20px 10px 10px
+    :padding 80px 20px 0px 10px
   h1, li
     :line-height = !xx_large
   h1
     :position absolute
     :right 0px
+    :bottom 6px
     :width = !pullout_width
     :word-spacing -0.4ex
     :margin 0px
+    :white-space nowrap
+    :font-size 2.2em
     a
       :display inline-block
+    strong
+      :font-weight 400
   li
     :font-size = !x_large
     :display inline
@@ -97,7 +105,8 @@ ul#nav
       :text-shadow #000 0px 1px
       :color = !gray
       :text-decoration none !important
-      :border-bottom solid 2px transparent
+      :border-bottom solid 2px rgba(0, 0, 0, 0.4)
+      :background-repeat no-repeat
       &.selected, &:hover
         :border-bottom-color = !link
         :color = !white
@@ -106,17 +115,17 @@ ul#nav
           :property border-bottom-color, color
           :duration 200ms
       &.about
-        :background url('/images/about.png') no-repeat
+        +background(url('/images/about.png'))
       &.blog
-        :background url('/images/blog.png') no-repeat
+        +background(url('/images/blog.png'))
       &.contact
-        :background url('/images/contact.png') no-repeat
+        +background(url('/images/contact.png'))
       &.home
-        :background url('/images/home.png') no-repeat
+        +background(url('/images/home.png'))
       &.portfolio
-        :background url('/images/portfolio.png') no-repeat
+        +background(url('/images/portfolio.png'))
       &.services
-        :background url('/images/services.png') no-repeat
+        +background(url('/images/services.png'))
 #page
   :clear both
   :background-color rgba(100, 100, 100, 0.2)
