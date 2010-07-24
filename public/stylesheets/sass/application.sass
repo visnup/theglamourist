@@ -63,11 +63,13 @@ input[type=submit]
   :border-left-color hsla(0, 0%, 0%, 0.2)
   :background-color $link
   :background-image -webkit-gradient(linear, left top, left bottom, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.2)))
+  :background-image -moz-linear-gradient(hsla(0, 100%, 100%, 0.6), hsla(0, 100%, 100%, 0.2))
   :color $white
   :text-shadow #666 0px 1px
   :font-size $large
   &:active
     :background-image -webkit-gradient(linear, left bottom, left top, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.2)))
+    :background-image -moz-linear-gradient(90deg, hsla(0, 100%, 100%, 0.6), hsla(0, 100%, 100%, 0.2))
 
 #content
   :width 900px
