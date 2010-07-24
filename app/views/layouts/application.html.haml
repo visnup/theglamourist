@@ -11,11 +11,7 @@
       = javascript_include_tag 'http://code.jquery.com/jquery.min.js'
     - else
       = javascript_include_tag 'jquery-1.4.js'
-    = javascript_include_tag 'application', 'rails', :cache => true
-    = javascript_include_tag 'http://use.typekit.com/tvu7fwn.js'
-    :javascript
-      if (navigator.userAgent.indexOf('Windows') != -1)
-        try{Typekit.load();}catch(e){}
+    = javascript_include_tag 'rails', 'application', :cache => true
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
     #content
       %ul#nav
