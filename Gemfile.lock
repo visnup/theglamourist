@@ -7,7 +7,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 3.0.0.beta3
+    version: = 3.0.0.beta4
   mysql: 
     group: 
     - :default
@@ -23,7 +23,7 @@ dependencies:
   will_paginate: 
     group: 
     - :default
-    version: = 3.0.pre
+    version: ">= 0"
   rdiscount: 
     group: 
     - :default
@@ -37,58 +37,52 @@ specs:
     version: 0.8.7
 - abstract: 
     version: 1.0.0
+- activesupport: 
+    version: 3.0.0.beta4
 - builder: 
     version: 2.1.2
 - i18n: 
-    version: 0.3.7
-- memcache-client: 
-    version: 1.8.3
-- tzinfo: 
-    version: 0.3.20
-- activesupport: 
-    version: 3.0.0.beta3
+    version: 0.4.1
 - activemodel: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - erubis: 
-    version: 2.6.5
+    version: 2.6.6
 - rack: 
     version: 1.1.0
 - rack-mount: 
-    version: 0.6.3
+    version: 0.6.9
 - rack-test: 
-    version: 0.5.3
+    version: 0.5.4
+- tzinfo: 
+    version: 0.3.22
 - actionpack: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - mime-types: 
     version: "1.16"
 - polyglot: 
     version: 0.3.1
 - treetop: 
-    version: 1.4.5
+    version: 1.4.8
 - mail: 
-    version: 2.2.1
-- text-hyphen: 
-    version: 1.0.0
-- text-format: 
-    version: 1.0.0
+    version: 2.2.5
 - actionmailer: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - arel: 
-    version: 0.3.3
+    version: 0.4.0
 - activerecord: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - activeresource: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - bundler: 
-    version: 0.9.25
+    version: 0.9.26
 - columnize: 
     version: 0.3.1
 - daemons: 
-    version: 1.0.10
+    version: 1.1.0
 - eventmachine: 
     version: 0.12.10
 - haml: 
-    version: 3.0.6
+    version: 3.0.13
 - linecache: 
     version: "0.43"
 - mysql: 
@@ -96,13 +90,13 @@ specs:
 - nokogiri: 
     version: 1.4.2
 - thor: 
-    version: 0.13.6
+    version: 0.13.8
 - railties: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - rails: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
 - rdiscount: 
-    version: 1.6.3.2
+    version: 1.6.5
 - ruby-debug-base: 
     version: 0.10.3
 - ruby-debug: 
@@ -111,7 +105,13 @@ specs:
     version: 1.2.7
 - will_paginate: 
     version: 3.0.pre
-hash: ae488b3b2ca112becf36d00d3f3aadfe7f48a3b4
+    source: 0
+hash: 914c1ed7fa08553c251530d7c8e9dd5ffea52a80
 sources: 
+- Git: 
+    uri: http://github.com/mislav/will_paginate.git
+    branch: rails3
+    git: http://github.com/mislav/will_paginate.git
+    ref: 60aa1c7b2ef03ee7c7a5ed657efb479a69f7d128
 - Rubygems: 
     uri: http://gemcutter.org
