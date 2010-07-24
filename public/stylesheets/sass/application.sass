@@ -24,6 +24,7 @@ $xx_large: 32px
   :-moz-box-shadow -5px 5px 10px rgba(0, 0, 0, 0.4)
 
 @mixin background($image)
+  :background-image $image
   :background-image -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), color-stop(70%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), $image
   :background-image -moz-linear-gradient(transparent, transparent 70%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.2)), $image
 

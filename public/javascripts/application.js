@@ -60,6 +60,7 @@ $(document).ready(function() {
             position: 'absolute',
             top: top + Math.random() * 50,
             left: (portrait.width() - $(this).width())/2,
+            //filter: 'progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)',
             '-webkit-transform': rotation,
             '-moz-transform': rotation
           })
