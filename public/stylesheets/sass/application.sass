@@ -1,43 +1,43 @@
-!black = #000
-!gray = #eee
-!white = #FFFFF1
-!link = #8FB87F
+$black: #000
+$gray: #eee
+$white: #FFFFF1
+$link: #8FB87F
 
-!pullout_width = 240px
+$pullout_width: 240px
 
 // http://style.cleverchimp.com/font_size_intervals/altintervals.html
 // using 16 ppem
-!xx_small = 10px
-!x_small = 12px
-!small = 14px
-!medium = 16px
-!large = 19px
-!x_large = 24px
-!xx_large = 32px
+$xx_small: 10px
+$x_small: 12px
+$small: 14px
+$medium: 16px
+$large: 19px
+$x_large: 24px
+$xx_large: 32px
 
-=rounded(!radius = 2px)
-  :-webkit-border-radius = !radius
-  :-moz-border-radius = !radius
+@mixin rounded($radius: 2px)
+  :-webkit-border-radius $radius
+  :-moz-border-radius $radius
 
-=shadow
+@mixin shadow
   :-webkit-box-shadow -5px 5px 10px rgba(0, 0, 0, 0.4)
   :-moz-box-shadow -5px 5px 10px rgba(0, 0, 0, 0.4)
 
-=background(!image)
-  :background-image -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), color-stop(70%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #{!image}
+@mixin background($image)
+  :background-image -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), color-stop(70%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), $image
 
 body
   :text-align center
-  :background-color = !black
-  :color = !white
+  :background-color $black
+  :color $white
 
 body, input, textarea
   :font-family 'helvetica neue', museo-sans-1, tahoma, helvetica, arial, sans-serif
   :font-weight 200
-  :font-size = !medium
+  :font-size $medium
 
 a
-  :color = !link
+  :color $link
   :text-decoration none
   &:hover
     :text-decoration underline
@@ -54,20 +54,20 @@ label
 
 input[type=text], textarea
   :padding 6px
-  :font-size = !large
+  :font-size $large
 
 input[type=submit]
   +rounded
-  :border solid 1px #{!link + #333}
-  :border-top-color #{!link + #ccc}
-  :border-left-color #{!link + #ccc}
-  :background-color = !link
-  :background -webkit-gradient(linear, left top, left bottom, from(#{!link+#999}), to(#{!link+#666}))
-  :color = !white
+  :border solid 1px hsla(0, 0%, 0%, 0.5)
+  :border-top-color hsla(0, 0%, 0%, 0.2)
+  :border-left-color hsla(0, 0%, 0%, 0.2)
+  :background-color $link
+  :background-image -webkit-gradient(linear, left top, left bottom, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.2)))
+  :color $white
   :text-shadow #666 0px 1px
-  :font-size = !large
+  :font-size $large
   &:active
-    :background -webkit-gradient(linear, left bottom, left top, from(#{!link+#999}), to(#{!link+#666}))
+    :background-image -webkit-gradient(linear, left bottom, left top, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.2)))
 
 #content
   :width 900px
@@ -82,7 +82,7 @@ ul#nav
     :color = !white
     :padding 80px 20px 0px 10px
   h1, li
-    :line-height = !xx_large
+    :line-height $xx_large
   h1
     :position absolute
     :right 0px
@@ -97,19 +97,19 @@ ul#nav
     strong
       :font-weight 400
   li
-    :font-size = !x_large
+    :font-size $x_large
     :display inline
     a
       +shadow
       :float left
       :text-shadow #000 0px 1px
-      :color = !gray
+      :color $gray
       :text-decoration none !important
       :border-bottom solid 2px rgba(0, 0, 0, 0.4)
       :background-repeat no-repeat
       &.selected, &:hover
-        :border-bottom-color = !link
-        :color = !white
+        :border-bottom-color $link
+        :color $white
       &:hover
         :-webkit-transition
           :property border-bottom-color, color
@@ -134,9 +134,9 @@ ul#nav
   :text-shadow #000 0px 1px
   .pullout
     :float right
-    :width = !pullout_width - 20px
+    :width $pullout_width - 20px
 #footer
-  :font-size = !x_small
+  :font-size $x_small
   :padding 1em 10px
   :text-align center
 
@@ -149,13 +149,13 @@ a.thumb
     :height 75px
     :border solid 2px transparent
   &.selected img
-    :border-color = !link
+    :border-color $link
     :-webkit-transition border-color 200ms linear
 #portrait
   :position relative
   img
     :position absolute
-    :border solid 5px #{!white}
+    :border solid 5px $white
     +shadow
 
 body.index-index
@@ -163,22 +163,22 @@ body.index-index
     :vertical-align -30%
   #portrait
     :float right
-    :width = !pullout_width * 2
+    :width $pullout_width * 2
   #about
-    :margin-right = !pullout_width * 2 + 20px
+    :margin-right $pullout_width * 2 + 20px
   #footer
     :text-align left
 
 body.index-portfolio
   #portrait
-    :margin-right = !pullout_width
+    :margin-right $pullout_width
 
 body.contacts-new, body.contacts-create
   #address
     p
-      :font-size = !large
+      :font-size $large
     .phone
-      :font-size = !x_large
+      :font-size $x_large
   input[type=text], textarea
     :width 500px
     :opacity 0.9
@@ -188,7 +188,7 @@ body.contacts-new, body.contacts-create
 body.index-about
   img
     :float left
-    :border solid 5px #{!white}
+    :border solid 5px $white
     +shadow
   h1, p
     :margin-left 330px
@@ -202,7 +202,7 @@ body.posts-index
 
 body.posts-new, body.posts-edit, body.posts-create, body.posts-update
   #page
-    :margin-right = !pullout_width
+    :margin-right $pullout_width
   input[type=text], textarea
     :width 100%
 
@@ -210,4 +210,4 @@ body.index-error
   #page
     :text-align center
     h1
-      :font-size = !xx_large
+      :font-size $xx_large
