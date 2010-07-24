@@ -1,28 +1,20 @@
 #portrait
 
-%h1 latest from our portfolio
+#about
+  %h2 services
+  %p
+    professional makeup and hair services for the bay area, los angeles, and
+    beyond.
+  %p
+    see more in our #{raw link_to('full services list', services_path)}.
 
-%p
-  - @photos.each do |p|
-    = link_to image_tag(p[:src]), "http://flickr.com#{p[:href]}", :class => 'thumb', :id => p[:id]
-  = link_to raw('see more &raquo;'), portfolio_path
+  %h2 contact us
+  %p
+    fill out #{link_to 'our contact form', new_contact_path} or send us an email
+    at #{raw mail_to('jane@theglamourist.com', nil, :encode => 'javascript')}.
 
-:markdown
-  popular services
-  ================
-
-    - bridal makeup, hairstyling
-    - engagement, photo shoots
-    - photo shoots
-    - editorials, print
-    - commercials
-    - eye brow grooming
-    - image consulting
-    - makeup lessons (group or individual)
-
-  see more in our [full services list](#{services_path})
-
-%h1 contact us
-
-fill out #{link_to 'our contact form', new_contact_path} or send us an email at
-#{raw mail_to('jane@theglamourist', nil, :encode => 'javascript')}.
+  %h2 latest from our portfolio
+  %p
+    - @photos.each do |p|
+      = link_to image_tag(p[:src]), "http://flickr.com#{p[:href]}", :class => 'thumb', :id => p[:id]
+    = link_to raw('see more &raquo;'), portfolio_path
