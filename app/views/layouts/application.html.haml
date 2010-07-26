@@ -7,6 +7,9 @@
     = csrf_meta_tag
     = auto_discovery_link_tag :atom, posts_url(:format => 'atom')
     = stylesheet_link_tag 'application', :media => 'all'
+    <!--[if IE]>
+    = stylesheet_link_tag 'ie', :media => 'all'
+    <![endif]-->
     - if Rails.env.production?
       = javascript_include_tag 'http://code.jquery.com/jquery.min.js'
     - else

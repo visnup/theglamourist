@@ -19,6 +19,7 @@ $(document).ready(function() {
       var w = $(this).width();
       $(this).data({ 'startWidth': w, 'selectedWidth': w + 50 });
     })
+    .wrapInner('<span>')
     .mouseenter(expand)
     .click(function() {
       $('#nav li a.selected').removeClass('selected');
