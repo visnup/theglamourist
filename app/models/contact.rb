@@ -5,23 +5,6 @@ class Contact < ActiveRecord::Base
 
   def send_notifications
     Notifier.contact(self).deliver
-
-    person = Highrise::Person.find :first, :from => :search,
-      :params => { :criteria => { :email => email } }
-    unless person
-      person = Highrise::Person.create :name => name,
-        :contact_data => {
-          :email_addresses => [
-            { :address => email,
-              :location => 'Work' }
-          ]
-        }
-    end
-
-    email = Highrise::Email.new :body => message,
-      :title => 'website lead'
-    email.prefix_options = { :person_id => person.id }
-    email.save
   end
 
   class Notifier < ActionMailer::Base
