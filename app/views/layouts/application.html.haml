@@ -38,6 +38,6 @@
     - if Rails.env.production?
       %script{ :type => 'text/javascript', :src => 'http://static.getclicky.com/js' }
       :javascript
-        clicky.init(174984);
+        try{clicky.init(236629);}catch(e){}
       %noscript
-        = image_tag 'http://static.getclicky.com/174984ns.gif', :size => '1x1'
+        = image_tag 'http://in.getclicky.com/236629ns.gif', :size => '1x1'
