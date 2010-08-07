@@ -39,10 +39,8 @@ GEM
       activesupport (>= 3.0.0.beta)
     builder (2.1.2)
     columnize (0.3.1)
-    daemons (1.1.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    eventmachine (0.12.10)
     haml (3.0.14)
     i18n (0.4.1)
     linecache (0.43)
@@ -79,10 +77,6 @@ GEM
       ruby-debug-base (~> 0.10.3.0)
     ruby-debug-base (0.10.3)
       linecache (>= 0.3)
-    thin (1.2.7)
-      daemons (>= 1.0.9)
-      eventmachine (>= 0.12.6)
-      rack (>= 1.0.0)
     thor (0.14.0)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
@@ -98,5 +92,4 @@ DEPENDENCIES
   rails (= 3.0.0.rc)
   rdiscount
   ruby-debug
-  thin
   will_paginate!

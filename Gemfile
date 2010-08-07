@@ -15,5 +15,4 @@ gem "will_paginate", :git => "http://github.com/mislav/will_paginate.git",
 
 group :development do
   gem "ruby-debug"
-  gem "thin"
 end
