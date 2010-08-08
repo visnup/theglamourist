@@ -24,7 +24,7 @@ class IndexController < ApplicationController
 
   private
     def photos_from_flickr
-      api_key = 'c91b7029d91f12409f7c9a3591f4e829'
+      api_key = '18635c5ffedaf5681361e557ad8ed565'
       url = "http://api.flickr.com/services/rest/?method=flickr.collections.getTree&api_key=#{api_key}&collection_id=20446502-72157624005829771&user_id=20451842%40N05&format=json&nojsoncallback=1"
 
       @sets =

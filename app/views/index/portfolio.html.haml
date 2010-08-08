@@ -2,15 +2,21 @@
 
 .pullout
   %ul.sets
+    %h3
+      %a.back{ :href => '#' } &laquo; Back
+      %span.title Choose a set below
     - @sets.each do |s|
-      %li
-        %ul.set.closed
-          - s['photos'].reverse.each do |p|
-            %li
-              %a.thumb{ :href => p['href'], :id => p['id'] }
-                = image_tag p['src']
+      %li.set.closed
         %h4
           %a{ :href => "##{s['id']}" }= s['title']
+        %ul
+          - s['photos'].each_with_index do |p, i|
+            %li{ :style => "z-index: -#{i};" }
+              %a.thumb{ :href => p['href'], :id => p['id'] }
+                = image_tag p['src']
+          - if s['photos'].size.odd?
+            %li.spacer
+  .clear
 
 #portrait
 

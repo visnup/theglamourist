@@ -33,18 +33,21 @@ $(document).ready(function() {
   // focus first form elements
   $('#page form :text:first').focus();
 
+  // setup hrefs from ids
+  $('a.thumb')
+    .each(function() { $(this).data('flickr', $(this).attr('href')); })
+    .attr('href', function() { return '#x' + $(this).attr('id'); });
+
   var loadPortrait = function(link) {
     if ($(link).length == 0) return;
+    $('a.thumb.selected').removeClass('selected');
     var src = $(link)
-      .siblings()
-        .removeClass('selected')
-        .end()
       .addClass('selected')
       .find('img').attr('src').replace(/_s.jpg$/, '.jpg');
     var img = $('<img>')
       .load(function() {
         var portrait = $('#portrait'),
-            rotation = 'rotate(' + ((Math.random() * 20)-10) + 'deg)';
+            rotation = 'rotate(' + ((Math.random() * 10)-5) + 'deg)';
         var top = $(window).scrollTop() + 50 - portrait.offset().top;
         if (top < 0) top = 0;
 
@@ -70,25 +73,53 @@ $(document).ready(function() {
       .attr('src', src);
   };
 
+  var openSet = function(set) {
+    $(set)
+      .toggleClass('open closed')
+      .find('img').slice(1, 4)
+        .css({
+          '-webkit-transform': 'none',
+          '-moz-transform': 'none'
+        });
+
+    $('ul.sets')
+      .find('a.back').show().end()
+      .find('.title')
+        .text($('h4', set).text());
+
+    $('.set.closed').hide();
+  };
+
+  var closeSet = function(set) {
+    $('ul.sets')
+      .find('a.back').hide().end()
+      .find('.title')
+        .text('Choose a set below');
+
+    $(set).toggleClass('open closed')
+
+    $('.set.closed')
+      .each(function() {
+        $('img', this).slice(1, 4).each(function() {
+          var rotation = 'rotate(' + 10*((Math.random() * 2)-1) + 'deg)';
+          $(this).css({
+            '-webkit-transform': rotation,
+            '-moz-transform': rotation
+          });
+        });
+      })
+      .show();
+  };
+
   if (window.location.hash)
     loadPortrait('a.thumb#' + window.location.hash.substring(2));
   else
     loadPortrait('a.thumb:first');
 
-  $('a.thumb')
-    .each(function() { $(this).data('flickr', $(this).attr('href')); })
-    .attr('href', function() { return '#x' + $(this).attr('id'); })
-    .click(function(e) { loadPortrait(this); })
-    .find('img')
-      .load(function() { $(this).animate({opacity: 1}, 'fast'); });
+  $('ul.sets')
+    .delegate('a.back', 'click', function(e) { closeSet($('.set.open')); })
+    .delegate('.set.closed', 'click', function(e) { openSet(this); })
+    .delegate('a.thumb', 'click', function(e) { loadPortrait(this); });
 
-  $('ul.set.closed').each(function() {
-    $('img', this).slice(1, 4).each(function() {
-      var rotation = 'rotate(' + 10*((Math.random() * 2)-1) + 'deg)';
-      $(this).css({
-        '-webkit-transform': rotation,
-        '-moz-transform': rotation
-      });
-    });
-  });
+  closeSet();
 });

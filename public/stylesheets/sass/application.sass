@@ -166,7 +166,6 @@ a.thumb
     :width 75px
     :height 75px
     :border solid 2px $white
-    +opacity(0)
   &.selected img
     :border-color $link
     :-webkit-transition border-color 200ms linear
@@ -189,6 +188,7 @@ body.index-index
     :text-align left
 
 body.index-portfolio
+  :overflow-y scroll
   #portrait
     :margin-right $pullout_width
   .pullout
@@ -197,26 +197,34 @@ body.index-portfolio
     :list-style-type none
     :margin 0px
     :padding 0px
-  ul.sets
+  .sets
     :margin 0px auto
-    > li
-      :display inline-block
-      :margin 0px 5px 40px
-      :height 79px
-      h4
-        :width 79px
-  ul.set.closed
+    h3
+      :font-size $large
+    a.back
+      :display none
+      :position absolute
+      :font-size $small
+      :margin-top $large - $small - 1
+  .set.closed, li.spacer
     :position relative
     :display inline-block
     :width 79px
     :height 79px
+    :margin 0px 5px 40px
     li
       :position absolute
       :top 0px
       :left 0px
+    h4
+      :margin-top 85px
   .set.open
     li
+      :position static
       :display inline-block
+      :margin 5px
+    h4
+      :display none
 
 body.contacts-new, body.contacts-create
   #address
