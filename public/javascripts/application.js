@@ -35,6 +35,7 @@ $(function() {
   $('a.thumb')
     .each(function() { $(this).data('flickr', $(this).attr('href')); })
     .attr('href', function() { return '#t' + $(this).attr('id'); });
+  $('body.index-index a.thumb').data('flickr', '/portfolio');
 
   var loadPortrait = function(link) {
     if ($(link).length == 0) return;
@@ -49,7 +50,7 @@ $(function() {
         var top = $(window).scrollTop() + 50 - portrait.offset().top;
         if (top < 0) top = 0;
 
-        portrait.find('img').fadeOut(10000, function() {
+        portrait.find('img').fadeOut(5000, function() {
           $(this).parent().remove();
         });
 
