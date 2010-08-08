@@ -15,7 +15,7 @@
               %a.thumb{ :href => p['href'], :id => p['id'] }
                 = image_tag p['src']
           - if s['photos'].size.odd?
-            %li.spacer
+            %li.spacer{ :style => "z-index: -#{s['photos'].size};" }
   .clear
 
 #portrait

@@ -13,8 +13,8 @@
     - if Rails.env.production?
       = javascript_include_tag 'http://code.jquery.com/jquery.min.js'
     - else
-      = javascript_include_tag 'jquery-1.4.js'
-    = javascript_include_tag 'rails', 'application', :cache => true
+      = javascript_include_tag 'jquery'
+    = javascript_include_tag 'jquery.ba-hashchange.min', 'rails', 'application', :cache => true
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
     #content
       %ul#nav

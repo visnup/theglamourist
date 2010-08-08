@@ -1,6 +1,5 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-$(document).ready(function() {
+$(function() {
+  // setup the top nav
   var expand = function() {
     $(this)
       .animate({ width: $(this).data('selectedWidth') }, 'fast')
@@ -13,7 +12,6 @@ $(document).ready(function() {
         });
   };
 
-  // setup the top nav
   $('#nav li a')
     .each(function() {
       var w = $(this).width();
@@ -36,7 +34,7 @@ $(document).ready(function() {
   // setup hrefs from ids
   $('a.thumb')
     .each(function() { $(this).data('flickr', $(this).attr('href')); })
-    .attr('href', function() { return '#x' + $(this).attr('id'); });
+    .attr('href', function() { return '#t' + $(this).attr('id'); });
 
   var loadPortrait = function(link) {
     if ($(link).length == 0) return;
@@ -51,9 +49,8 @@ $(document).ready(function() {
         var top = $(window).scrollTop() + 50 - portrait.offset().top;
         if (top < 0) top = 0;
 
-        var left = portrait.find('img');
-        left.filter(':lt(' + (left.length-3) + ')').fadeOut(function() {
-          $(this).remove();
+        portrait.find('img').fadeOut(10000, function() {
+          $(this).parent().remove();
         });
 
         $(this)
@@ -74,7 +71,11 @@ $(document).ready(function() {
   };
 
   var openSet = function(set) {
-    $(set)
+    var $set = $(set);
+
+    if ($set.is('.open')) return;
+
+    $set
       .toggleClass('open closed')
       .find('img').slice(1, 4)
         .css({
@@ -111,15 +112,16 @@ $(document).ready(function() {
       .show();
   };
 
-  if (window.location.hash)
-    loadPortrait('a.thumb#' + window.location.hash.substring(2));
-  else
-    loadPortrait('a.thumb:first');
-
-  $('ul.sets')
-    .delegate('a.back', 'click', function(e) { closeSet($('.set.open')); })
-    .delegate('.set.closed', 'click', function(e) { openSet(this); })
-    .delegate('a.thumb', 'click', function(e) { loadPortrait(this); });
-
-  closeSet();
+  $(window)
+    .hashchange(function() {
+      if (location.hash.length > 2) {
+        var thumb = $('a.thumb#' + window.location.hash.substring(2));
+        openSet(thumb.closest('.set'));
+        loadPortrait(thumb);
+      } else {
+        closeSet($('.set.open'));
+        loadPortrait('a.thumb:first');
+      }
+    })
+    .hashchange();
 });
