@@ -3,10 +3,7 @@ class IndexController < ApplicationController
   caches_page :index, :portfolio
 
   def index
-    @photos = @photos[0, 3]
-  end
-
-  def portfolio
+    @photos = @sets.first['photos'][0, 3]
   end
 
   def login
@@ -27,14 +24,24 @@ class IndexController < ApplicationController
 
   private
     def photos_from_flickr
-      url = 'http://www.flickr.com/photos/20451842@N05/sets/72157617757170924/'
-      @photos = open url do |f|
-        n = Nokogiri::HTML f
-        n.search('#setThumbs span.photo_container').map do |s|
-          { :id => s['id'],
-            :href => s.at('a.image_link')['href'],
-            :src => s.at('img')['src'] }
+      api_key = 'c91b7029d91f12409f7c9a3591f4e829'
+      url = "http://api.flickr.com/services/rest/?method=flickr.collections.getTree&api_key=#{api_key}&collection_id=20446502-72157624005829771&user_id=20451842%40N05&format=json&nojsoncallback=1"
+
+      @sets =
+        open url do |f|
+          collection = JSON.parse(f.read)['collections']['collection'].first
+          collection['set'].map do |set|
+            url = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=#{api_key}&photoset_id=#{set['id']}&format=json&nojsoncallback=1"
+            photos = open(url) { |f| JSON.parse(f.read)['photoset']['photo'] }
+            photos.reverse!.each do |p|
+              p['href'] = "http://www.flickr.com/photos/20451842%40N05/#{p['id']}"
+              p['src'] = "http://farm#{p['farm']}.static.flickr.com/#{p['server']}/#{p['id']}_#{p['secret']}_s.jpg"
+            end
+
+            { 'id' => set['id'],
+              'title' => set['title'],
+              'photos' => photos }
+          end
         end
-      end.reverse
     end
 end

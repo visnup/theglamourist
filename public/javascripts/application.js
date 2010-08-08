@@ -78,5 +78,17 @@ $(document).ready(function() {
   $('a.thumb')
     .each(function() { $(this).data('flickr', $(this).attr('href')); })
     .attr('href', function() { return '#x' + $(this).attr('id'); })
-    .click(function(e) { loadPortrait(this); });
+    .click(function(e) { loadPortrait(this); })
+    .find('img')
+      .load(function() { $(this).animate({opacity: 1}, 'fast'); });
+
+  $('ul.set.closed').each(function() {
+    $('img', this).slice(1, 4).each(function() {
+      var rotation = 'rotate(' + 10*((Math.random() * 2)-1) + 'deg)';
+      $(this).css({
+        '-webkit-transform': rotation,
+        '-moz-transform': rotation
+      });
+    });
+  });
 });

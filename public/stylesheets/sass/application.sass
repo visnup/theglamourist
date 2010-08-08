@@ -165,7 +165,8 @@ a.thumb
   img
     :width 75px
     :height 75px
-    :border solid 2px transparent
+    :border solid 2px $white
+    +opacity(0)
   &.selected img
     :border-color $link
     :-webkit-transition border-color 200ms linear
@@ -190,6 +191,32 @@ body.index-index
 body.index-portfolio
   #portrait
     :margin-right $pullout_width
+  .pullout
+    :text-align center
+  ul
+    :list-style-type none
+    :margin 0px
+    :padding 0px
+  ul.sets
+    :margin 0px auto
+    > li
+      :display inline-block
+      :margin 0px 5px 40px
+      :height 79px
+      h4
+        :width 79px
+  ul.set.closed
+    :position relative
+    :display inline-block
+    :width 79px
+    :height 79px
+    li
+      :position absolute
+      :top 0px
+      :left 0px
+  .set.open
+    li
+      :display inline-block
 
 body.contacts-new, body.contacts-create
   #address
