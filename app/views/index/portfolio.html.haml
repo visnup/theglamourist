@@ -8,11 +8,11 @@
     - @sets.each do |s|
       %li.set.closed
         %h4
-          %a{ :href => "##{s['id']}" }= s['title']
+          %a{ :href => "#p#{s['id']}-#{s['photos'].first['id']}" }= s['title']
         %ul
           - s['photos'].each_with_index do |p, i|
             %li{ :style => "z-index: -#{i};" }
-              %a.thumb{ :href => p['href'], :id => p['id'] }
+              %a.thumb{ :href => p['href'], :id => "#{s['id']}-#{p['id']}" }
                 = image_tag p['src']
           - if s['photos'].size.odd?
             %li.spacer{ :style => "z-index: -#{s['photos'].size};" }
