@@ -51,7 +51,7 @@ $(function() {
         if (top < 0) top = 0;
 
         portrait.find('img').fadeOut(5000, function() {
-          $(this).parent().remove();
+          $(this).parent('a').remove();
         });
 
         $(this)

@@ -203,17 +203,21 @@ body.index-portfolio
     :margin 0px auto
     h3
       :font-size $large
+      :position relative
     a.back
       :display none
       :position absolute
+      :left 0px
       :font-size $small
       :margin-top $large - $small - 1
   .set.closed, li.spacer
     :position relative
     :display inline-block
     :width 79px
-    :height 79px
-    :margin 0px 5px 40px
+    :height 130px
+    :margin 0px 5px
+    :overflow show
+    :vertical-align top
     li
       :position absolute
       :top 0px
