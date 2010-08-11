@@ -27,6 +27,7 @@ $(function() {
       .addClass('selected')
       .css('width', function() { return $(this).data('selectedWidth'); });
   $('#nav').mouseleave(function() { expand.apply($('#nav li a.selected')); });
+  expand.apply($('#nav li a.selected'));
 
   // focus first form elements
   $('#page form :text:first').focus();
