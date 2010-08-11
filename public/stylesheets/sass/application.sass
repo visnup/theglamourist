@@ -39,7 +39,7 @@ body
   :color $black
 
 body, input, textarea
-  :font-family 'helvetica neue', tahoma, helvetica, arial, sans-serif
+  :font-family 'gill sans', 'helvetica neue', 'book antiqua', helvetica, arial, sans-serif
   :font-weight 200
   :font-size $medium
 
@@ -241,8 +241,9 @@ body.contacts-new, body.contacts-create
   #address
     p
       :font-size $large
-    .phone
-      :font-size $x_large
+      :line-height 125%
+      &.address
+        :font-size $medium
   input[type=text], textarea
     :width 500px
     +opacity(0.9)
