@@ -1,7 +1,7 @@
 $black: #000
 $gray: #eee
 $white: #FFFFF1
-$link: #8FB87F
+$link: #79a269
 $red: red
 
 $pullout_width: 240px
@@ -21,8 +21,8 @@ $xx_large: 32px
   :-moz-border-radius $radius
 
 @mixin shadow($color: hsla(0, 0%, 0%, 0.4))
-  :-webkit-box-shadow -5px 5px 10px $color
-  :-moz-box-shadow -5px 5px 10px $color
+  :-webkit-box-shadow 0px 0px 5px $color
+  :-moz-box-shadow 0px 0px 5px $color
 
 @mixin opacity($value)
   :opacity $value
@@ -35,8 +35,8 @@ $xx_large: 32px
 
 body
   :text-align center
-  :background-color $black
-  :color $white
+  :background-color $white
+  :color $black
 
 body, input, textarea
   :font-family 'helvetica neue', tahoma, helvetica, arial, sans-serif
@@ -113,6 +113,7 @@ ul#nav
     :font-size 2.2em
     a
       :display inline-block
+      :color $black
     strong
       :font-weight 400
   li
@@ -150,7 +151,7 @@ ul#nav
   :background-color rgba(100, 100, 100, 0.2)
   :background rgba(100, 100, 100, 0.2)
   :padding 2em 10px
-  :text-shadow 0px 1px 0px hsla(0, 0%, 0%, 1)
+  :text-shadow 0px 1px 0px hsla(0, 100%, 100%, 0.5)
   .pullout
     :float right
     :width $pullout_width - 20px
