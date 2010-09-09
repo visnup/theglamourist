@@ -30,8 +30,7 @@ $xx_large: 32px
 
 @mixin background($image)
   :background-image $image
-  :background-image -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), color-stop(70%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), $image
-  :background-image -moz-linear-gradient(transparent, transparent 70%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.2)), $image
+  :background url('/images/shading.png') repeat-x, $image no-repeat
 
 body
   :text-align center
@@ -114,7 +113,7 @@ ul#nav
     a
       :display inline-block
       :color $black
-    strong
+    b
       :font-weight 400
   li
     :font-size $x_large

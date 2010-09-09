@@ -16,10 +16,7 @@
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
     #content
       %ul#nav
-        %h1
-          = link_to root_path do
-            the
-            %strong glamourist
+        %h1= link_to 'the <b>glamourist</b>'.html_safe, root_path
         %li= link_to 'home', root_path, :class => 'home'
         %li= link_to 'portfolio', portfolio_path, :class => 'portfolio'
         %li= link_to 'services', services_path, :class => 'services'
