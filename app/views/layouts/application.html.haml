@@ -13,11 +13,6 @@
     <!--[if IE 7]>
     = stylesheet_link_tag 'ie7'
     <![endif]-->
-    - if Rails.env.production?
-      = javascript_include_tag 'http://code.jquery.com/jquery.min.js'
-    - else
-      = javascript_include_tag 'jquery'
-    = javascript_include_tag 'jquery.ba-hashchange.min', 'rails', 'application', :cache => true
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
     #content
       %ul#nav
@@ -38,6 +33,11 @@
         &copy; #{Time.now.year} the glamourist
         &mdash; designed by #{link_to 'fortnight labs', 'http://fortnightlabs.com'}
         &mdash; code on #{link_to 'github', 'http://github.com/visnup/theglamourist'}
+    - if Rails.env.production?
+      = javascript_include_tag 'http://code.jquery.com/jquery.min.js'
+    - else
+      = javascript_include_tag 'jquery'
+    = javascript_include_tag 'jquery.ba-hashchange.min', 'rails', 'application', :cache => true
     - if Rails.env.production?
       %script{ :type => 'text/javascript', :src => 'http://static.getclicky.com/js' }
       :javascript
