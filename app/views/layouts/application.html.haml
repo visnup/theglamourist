@@ -16,7 +16,12 @@
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
     #content
       %ul#nav
-        %h1= link_to 'the <b>glamourist</b>'.html_safe, root_path
+        %h1
+          = link_to 'the <b>glamourist</b>'.html_safe, root_path
+        .social
+          = '<a href="http://www.facebook.com/theglamourist"><img src="/images/facebook.png" class="facebook" alt="Like theglamourist on Facebook"/></a>'.html_safe
+          = '<a href="http://www.twitter.com/theglamourist"><img src="http://twitter-badges.s3.amazonaws.com/t_logo-b.png" alt="Follow theglamourist on Twitter" class="twitter"/></a>'.html_safe
+          = '<a href="http://www.yelp.com/biz/the-glamourist-san-francisco"><img src="/images/yelp.png" class="yelp" alt="Rate theglamourist on Yelp"/></a>'.html_safe
         %li= link_to 'home', root_path, :class => 'home'
         %li= link_to 'portfolio', portfolio_path, :class => 'portfolio'
         %li= link_to 'services', services_path, :class => 'services'

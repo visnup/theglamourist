@@ -101,9 +101,12 @@ ul#nav
     :padding 80px 20px 0px 10px
   h1, li
     :line-height $xx_large
-  h1
+  h1, .social
     :position absolute
     :right 0px
+    :padding-right 10px
+  h1
+    :text-align right
     :bottom 6px
     :width $pullout_width
     :word-spacing -0.4ex
@@ -113,8 +116,20 @@ ul#nav
     a
       :display inline-block
       :color $black
+      :padding-right 0px
     b
       :font-weight 400
+  .social
+    :-webkit-box-reflect below -5px -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(0.6, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)))
+    a
+      :padding 0px
+    img
+      :width 36px
+      :height 36px
+      &.facebook
+        +rounded(5px)
+      &.yelp
+        :width 26px
   li
     :font-size $x_large
     :display inline
