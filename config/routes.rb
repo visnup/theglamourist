@@ -9,7 +9,7 @@ TheGlamourist::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-  %w/ about portfolio services login logout expire /.each do |r|
+  %w/ about portfolio services login logout expire error /.each do |r|
     match r => "index##{r}", :as => r
   end
 
