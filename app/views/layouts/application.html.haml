@@ -5,7 +5,7 @@
       = yield(:title) + ' |'  if content_for?(:title)
       the glamourist - jane kim
     = csrf_meta_tag
-    = auto_discovery_link_tag :atom, posts_url(:format => 'atom')
+    = auto_discovery_link_tag :atom, posts_url('atom')
     = stylesheet_link_tag 'application'
     <!--[if IE]>
     = stylesheet_link_tag 'ie'

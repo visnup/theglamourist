@@ -15,7 +15,12 @@ TheGlamourist::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :contacts, :posts
+  resources :contacts
+
+  match '/posts.:format' => redirect('/blog.%{format}')
+  match '/posts' => redirect('/blog')
+  match '/posts/:id' => redirect('/blog/%{id}')
+  resources :posts, :path => 'blog'
 
   # Sample resource route with options:
   #   resources :products do
