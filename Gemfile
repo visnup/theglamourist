@@ -2,7 +2,7 @@
 source :rubygems
 
 gem "rails", "3.0.1"
-gem "mysql"
+gem "sqlite3-ruby"
 
 gem "haml"
 gem "json"
@@ -11,6 +11,7 @@ gem "will_paginate", "3.0.pre2"
 
 group :development do
   gem "ruby-debug"
+  gem "yaml_db"
 end
 
 group :test do
