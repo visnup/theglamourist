@@ -8,7 +8,7 @@ class Contact < ActiveRecord::Base
   end
 
   class Notifier < ActionMailer::Base
-    default :to => 'jane@theglamourist.com', :subject => 'website lead'
+    default :to => 'jane@theglamourist.com', :subject => '[theglamourist] New Inquiry'
 
     def contact(contact)
       mail :from => "#{contact.name} <#{contact.email}>" do |format|
