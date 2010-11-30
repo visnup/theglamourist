@@ -2,7 +2,7 @@ $black: #000
 $gray: #eee
 $white: #FFF
 $link: #a93583
-$red: red
+$red: $link
 
 $pullout_width: 240px
 
@@ -47,12 +47,15 @@ header, footer, nav
 body
   :text-align center
   :background-color $white
+  :background $white url('/images/bg.jpg')
   :color $black
 
-body, input, textarea
+body, input, textarea, select, option
   :font-family 'raleway', 'helvetica neue', 'book antiqua', helvetica, arial, sans-serif
-  :font-weight 200
   :font-size $medium
+
+input:focus, textarea:focus, select:focus, a:focus, a:active
+  :outline-color $link
 
 a
   :color $link
@@ -64,18 +67,59 @@ a
     :border none
 
 h1, h2, h3, h4, h5, h6
-  :font-weight 200
   :text-transform uppercase
+  :font-weight 300
 
 p
   :line-height 160%
 
-label
+label[for]
   :cursor pointer
 
-input[type=text], textarea
+form.formtastic
+  ol
+    :list-style-type none
+    :padding 0px
+    :margin 0px
+    li
+      :margin 0.5em 0px
+  fieldset
+    :border none
+    :margin 0px
+    :padding 0px
+  label
+    :display inline-block
+    :width 25ex
+    :padding-right 1ex
+  abbr[title=required]
+    :font-size $x_small
+    :color $red
+    :margin-left 0.5ex
+  li.text
+    label
+      :margin-top 7px
+    textarea
+      :vertical-align top
+  li.date, li.time
+    legend
+      :display none
+    ol li
+      :display inline
+      & + li label
+        :display none
+  li.error
+    label
+      :color $link
+    input, textarea
+      +inset_shadow($red)
+    p.inline-errors
+      :color $link
+      :margin 0px 0px 0px 25ex
+
+input[type=text], input[type=email], input[type=tel], textarea, select
   :padding 6px
-  :font-size $large
+  :margin 0px
+  :font-size $medium
   :border solid 1px hsla(0, 0%, 0%, 0.3)
   +inset_shadow
   +rounded
@@ -97,14 +141,6 @@ input[type=submit]
     :background-image -webkit-gradient(linear, left bottom, left top, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.2)))
     :background-image -moz-linear-gradient(90deg, hsla(0, 100%, 100%, 0.6), hsla(0, 100%, 100%, 0.2))
 
-.fieldWithErrors
-  label
-    :text-shadow 0px 1px 2px $red
-    :color hsla(0, 100%, 100%, 0.85)
-  input, textarea
-    :-webkit-box-shadow 0px 0px 5px $red
-    :-moz-box-shadow 0px 0px 5px $red
-
 body
   :background-color #f6f6f9
 
@@ -117,8 +153,8 @@ body
   :padding 20px
   :border solid 1px #ccc
   :background-color #e6e6e6
-  :background-color hsla(0, 0%, 0%, 0.05)
-  +inset_shadow(hsla(0, 0%, 0%, 0.1), 300px)
+  :background-color hsla(0, 0%, 90%, 0.6)
+  +inset_shadow(hsla(0, 0%, 0%, 0.2), 300px)
   +rounded
 
 header, nav
@@ -130,7 +166,7 @@ header
   h1
     :word-spacing -0.5ex
     :font-size $xx_large
-    :text-shadow 0px 0px 2px hsla(0, 0%, 0%, 0.5)
+    :text-shadow 0px 0px 2px hsla(0, 0%, 0%, 0.3)
     :color #666
     .tagline
       :word-spacing 0px
@@ -257,11 +293,15 @@ body.contacts-new, body.contacts-create
     :text-transform uppercase
     p
       :line-height 125%
-  input[type=text], textarea
-    :width 500px
-    +opacity(0.9)
+  input[type=text], input[type=email], input[type=tel], textarea, p.demand
+    :width 50ex
   textarea
     :height 12em
+  p.demand
+    :margin-left 26ex
+
+body.contacts-show #page
+  :text-align center
 
 body.index-about
   #page img

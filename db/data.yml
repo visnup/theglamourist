@@ -1,0 +1,1522 @@
+
+--- 
+contacts: 
+  columns: 
+  - id
+  - name
+  - email
+  - message
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - David Nghiem
+    - defmacro@destructuring.org
+    - |-
+      Jane,
+      
+      Hi, my name is David Nghiem, Visnu's friend, even though we don't hang out much.
+      
+      I'm seriously wondering how much for a makeup session to glamour me up girl style, geisha like.  It's a personal fantasy of mine, which I can't indulge, but thought this would be a good one-time thing.  It will make a nice Facebook profile picture, I hope.
+      
+      So let me know how much this would cost?  I would need to wash it off immediately after the photo.
+      
+      Strictest confidence,
+      David N.
+    - 2010-01-28 20:24:18
+    - 2010-01-28 20:24:18
+  - - "2"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - hi gf. I <3 you.
+    - 2010-02-05 05:46:43
+    - 2010-02-05 05:46:43
+  - - "3"
+    - Elisa Lee
+    - elisaslee@gmail.com
+    - |-
+      Hi Jane,
+      
+      Do you still work in the Los Angeles area?  If so, can you please provide me pricing for:
+      
+      1 Bride
+      2 Bridesmaids
+      2 Mothers
+      
+      Thanks!
+    - 2010-02-09 22:48:59
+    - 2010-02-09 22:48:59
+  - - "4"
+    - Alicia Huffman
+    - ahuffman_design@yahoo.com
+    - |-
+      Hi Jane, 
+      
+      Thanks for sending me the site and here's my email :)
+      
+      Alicia
+    - 2010-02-12 15:45:48
+    - 2010-02-12 15:45:48
+  - - "5"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - testing
+    - 2010-02-13 01:06:14
+    - 2010-02-13 01:06:14
+  - - "6"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - testing email
+    - 2010-02-14 09:39:58
+    - 2010-02-14 09:39:58
+  - - "7"
+    - Visnu Pitiyanuvath
+    - visnup@gmail.com
+    - another email test.
+    - 2010-02-14 09:40:41
+    - 2010-02-14 09:40:41
+  - - "8"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - c'mon work work work
+    - 2010-02-14 09:46:39
+    - 2010-02-14 09:46:39
+  - - "9"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - test again
+    - 2010-02-14 09:55:12
+    - 2010-02-14 09:55:12
+  - - "10"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - another email test.
+    - 2010-02-14 10:07:16
+    - 2010-02-14 10:07:16
+  - - "11"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - hi gf. whatcha doin'?
+    - 2010-02-16 01:47:14
+    - 2010-02-16 01:47:14
+  - - "12"
+    - Irene
+    - ireneschun@gmail.com
+    - |-
+      Hi Jane,
+      
+      I'm getting married at ruby hill golf course in pleasanton ca on sat 8/21/2010. I was wondering what your pricing is for 1 bride, 7 bridesmaids, and 2 moms. Since its potentially 10 people, would you be doing everyone's hair and make up or working with an assistant? will there be a travel fee? How much to secure a date?
+      
+      Thanks,
+      Irene
+    - 2010-02-16 08:13:57
+    - 2010-02-16 08:13:57
+  - - "13"
+    - liece laurens
+    - liecelaurens@yahoo.com
+    - |-
+      I wonder what is your bridal pricing? makeup & hairstyling. will it be airbrushed? n how much for bridesmaid makeup & hair? n is there any travel fee
+      
+      Thanks
+    - 2010-02-17 01:36:19
+    - 2010-02-17 01:36:19
+  - - "14"
+    - liece laurens
+    - liecelaurens@yahoo.com
+    - |-
+      I wonder what is your bridal pricing? makeup & hairstyling. will it be airbrushed? n how much for bridesmaid makeup & hair? n is there any travel fee
+      
+      Thanks
+    - 2010-02-17 01:36:21
+    - 2010-02-17 01:36:21
+  - - "15"
+    - Rachel Acosta
+    - chellychel2000@yahoo.com
+    - |-
+      I am getting married in October.  I was looking for makeup and hair from someone who specializes in Asian hair and faces.  Can you send me a price list for your services, please?  Thank you.
+      Rachel
+    - 2010-02-18 23:03:31
+    - 2010-02-18 23:03:31
+  - - "16"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - testing again. ignore me gf!
+    - 2010-02-19 02:44:46
+    - 2010-02-19 02:44:46
+  - - "17"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - "more\xC2\xA0testing\xC2\xA0after\xC2\xA0an\xC2\xA0update."
+    - 2010-02-28 02:02:34
+    - 2010-02-28 02:02:34
+  - - "18"
+    - Shuyin
+    - shuyinlau@yahoo.com
+    - |-
+      Hi Jane,
+      
+      I am getting married November 13 in Cupertino, CA and am interested in knowing your rates for the trial makeup and hair session as well as the actual wedding day makeup and hair services. 
+      
+      Thank you!
+    - 2010-03-08 03:07:03
+    - 2010-03-08 03:07:03
+  - - "19"
+    - Janet
+    - janchu@gmail.com
+    - |-
+      Hi Rona,
+      
+      I found your info on Project Wedding!  Your work is beautiful!  I was wondering if you were available for my wedding on Saturday, July 17, 2010.  I will need hair and make-up for myself, make-up for 5 of my bridesmaids, and make-up for my mother and mother-in-law.  Do you offer a group discount?  If you can send me a price quote of your services, I'd appreciate it!
+      
+      Looking forward to hearing from you.
+      
+      Thanks,
+      Janet
+    - 2010-03-11 07:32:29
+    - 2010-03-11 07:32:29
+  - - "20"
+    - Allyssa Vergara
+    - Allyssa_vergara@yahoo.com
+    - |
+      Hi,
+      
+      Are you available for my date? Can you send me details about what you offer and pricing?
+      
+      Wedding Date: November 18, 2010
+      Wedding Location: Pleasanton, CA
+      
+      Thanks,
+      Allyssa Vergara
+
+    - 2010-03-20 17:53:39
+    - 2010-03-20 17:53:39
+  - - "21"
+    - Jeannie Lam
+    - jnnelam@yahoo.com
+    - |-
+      Hi Jane,
+      
+      I was wondering if you could send me a full price list of your services. I'm getting married in Burlingame on July 31st. 
+      
+      Thanks, Jeannie
+    - 2010-04-08 23:51:53
+    - 2010-04-08 23:51:53
+  - - "22"
+    - Annie Chen
+    - jerannielee@gmail.com
+    - I found you on chopstickbride.com and would like to inquire about your pricing for my upcoming wedding on 10/2/2010. I will need make up and hair done for myself and 4 bridesmaids. The wedding will be in San Francisco. I look forward hearing from you.
+    - 2010-04-23 04:11:37
+    - 2010-04-23 04:11:37
+  - - "23"
+    - "Minh "
+    - minhdang22@yahoo.com
+    - What are your rates and availability for 10/24/10 (Berkeley)?
+    - 2010-04-24 06:24:07
+    - 2010-04-24 06:24:07
+  - - "24"
+    - Megan Brown
+    - missmeganbrown@gmail.com
+    - |-
+      Hi Jane,
+      
+      Can you tell me what your bridal hair/makeup rates are?  My fiancee and I are heading to SF to elope in early September, so it would just be for me (no bridesmaids or anything).  Let me know if you need any other info from me.
+      
+      Thanks!!
+      
+      Megan
+    - 2010-04-26 16:21:33
+    - 2010-04-26 16:21:33
+  - - "25"
+    - Nanette Shreve
+    - nanette_shreve@yahoo.com
+    - |-
+      Hello. I am interested in your rates for the bridal hair and make up. I may be interested for the Maid of Honor and Junior Bridesmaid (my 10 year old daughter, for hair only). 
+      
+      The wedding is on Friday, May 21, 2010, at 4:30pm. I would probably want to arrive at the ceremony location in Burlingame around 3pm.
+      
+      I would get ready at my house is in Daly City.
+      
+      Do you do airbrush make up?
+      
+      Thank you,
+      Nanette
+    - 2010-04-27 02:50:13
+    - 2010-04-27 02:50:13
+  - - "26"
+    - sarah
+    - famsaetern@sbcglobal.net
+    - Hi, I would like to know your prices for bridal hair and make-up as well as for the bridal party.
+    - 2010-05-04 04:18:39
+    - 2010-05-04 04:18:39
+  - - "27"
+    - Tania
+    - qtee_fong@yahoo.com
+    - |-
+      Hi Jane.
+      
+      I am looking for a make-up artist to do my make-up and hair for my wedding on October 23rd in Palm Springs area. Can you please check to see if you are available for that date and let me know if you are willing to travel to Palm Springs. Thank you.
+      
+      Tania
+    - 2010-05-11 05:02:40
+    - 2010-05-11 05:02:40
+  - - "28"
+    - "Marie "
+    - marie_hsu@yahoo.com
+    - |-
+      Hi Jane, 
+      
+      I'm looking for a make up artist for my wedding on July 10th in Oakland in the mid morning.  Are you available?  If so, what are your prices?  And do you do hair as well?  THanks! 
+      
+      Marie
+    - 2010-05-14 17:49:02
+    - 2010-05-14 17:49:02
+  - - "29"
+    - Jess
+    - jessdang@gmail.com
+    - |-
+      Hi, I'm looking for someone to do my hair / make-up for my Sonoma valley wedding on Sunday, 9/5.  It'd also be for make-up for 4 bridesmaids and hair for 1 bridesmaid.  
+      
+      i've had my make-up done a few times, and i must admit it's all been a bit scarring.  i wear a little make-up everyday - neutral eye shadow, liner and a cheek tint - but i never wear foundation or powder.  i'm definitely a bit nervous about having make-up caked onto my face on the day of my wedding.  even though i know it's necessary for the photos, i'd really just like to look like a more polished version of myself the day of my wedding.  i had one trial done over the weekend and while it definitely looked good in the photos, the make-up was very cakey and my fiance admitted that i looked a bit scary in person, and i don't want that the day of my wedding.  if you can help, please contact me!
+    - 2010-05-17 19:28:47
+    - 2010-05-17 19:28:47
+  - - "30"
+    - Marife Enriquez
+    - gregorymarife@gmail.com
+    - |-
+      Hello,
+      My name is Marife Enriquez and I am getting married in Napa Valley on September 25, 2010.  I was wondering if you can travel to Napa and if so, what your fees for hair and makeup are.  Hair and makeup services would be for myself and six bridesmaids.  I would like to have an updo and my bridesmaids to have half up half down hairstyles.  Looking forward to hearing from you.
+      Marife
+      551-404-6644
+    - 2010-05-18 22:31:13
+    - 2010-05-18 22:31:13
+  - - "31"
+    - joan
+    - joan_doan@yahoo.com
+    - |
+      Hi Jane,
+      I am getting married on September 4, 2010 in Saratoga. Are you available on that date? If yes, could you please send me your price list and more pictures of your work? I am interested in getting hair and makeup done fore myself, 2 bridesmaids, and my mom (just makeup for her). Also, do you use airbrush makeup?
+      
+      thanks,
+      Joan
+      
+
+    - 2010-05-22 12:43:12
+    - 2010-05-22 12:43:12
+  - - "32"
+    - joan
+    - joan_doan@yahoo.com
+    - |
+      Hi Jane,
+      I am getting married on September 4, 2010 in Saratoga. Are you available on that date? If yes, could you please send me your price list and more pictures of your work? I am interested in getting hair and makeup done fore myself, 2 bridesmaids, and my mom (just makeup for her). Also, do you use airbrush makeup?
+      
+      thanks,
+      Joan
+      
+
+    - 2010-05-22 12:43:17
+    - 2010-05-22 12:43:17
+  - - "33"
+    - Ei Ei Htwe
+    - dr.eieihtwe@gmail.com
+    - |-
+      interested in bridal makeup & hairstyling
+      
+      are you available on June 20, 2010?
+      
+      is there a trial?
+      
+      What are your prices?
+    - 2010-05-23 23:28:07
+    - 2010-05-23 23:28:07
+  - - "34"
+    - Sara Toruno
+    - saratoruno@hotmail.com
+    - |-
+      I'm looking into pricing information for hair and makeup for myself (the bride) and my bridal party (3 people).  The wedding date is August 13th of this year.  Ceremony starts at 6pm. 
+      
+      Please respond with more info.
+      
+      Thank you,
+      
+      Sara Toruno
+    - 2010-05-23 23:29:27
+    - 2010-05-23 23:29:27
+  - - "35"
+    - George
+    - georgevanheel@gmail.com
+    - Please join me inside the FASHION WORLD by strict invite only. See you there.
+    - 2010-05-24 05:51:57
+    - 2010-05-24 05:51:57
+  - - "36"
+    - Lynn Yamamoto
+    - lynn_yamamoto@hotmail.com
+    - |-
+      Hi,
+      
+      I was wondering if you are available for hair and make-up for my wedding (+ 4 bridesmaids) on 9/5/10. If you are, could you please also send information on pricing?
+      
+      Thank you,
+      Lynn
+    - 2010-05-27 04:06:43
+    - 2010-05-27 04:06:43
+  - - "37"
+    - Thuy Tran
+    - thuyt123@gmail.com
+    - |-
+      Hi Jane,
+      
+      Can you send a price list for your services, particularly bridal make-up and styling for bride and bridal party?  Thanks.
+      
+      Thuy
+    - 2010-06-07 21:37:22
+    - 2010-06-07 21:37:22
+  - - "38"
+    - Sooyoun Kim
+    - sooyoun@gmail.com
+    - |-
+      Hi Jane,
+      
+      I am inquiring to see if you are still available for my wedding on Saturday, 10/16/10? The wedding will be in palo alto,ca and we are starting pictures around 1pm? Could you send me additional information on your wedding packages? I also have very sensitive skin and tend to break out very easily when I use new products, so I'm wondering what you use for bridal makeup? Do you use air brushing as well? 
+      Thank you!
+      Sooyoun
+    - 2010-06-14 17:25:48
+    - 2010-06-14 17:25:48
+  - - "39"
+    - Cheryl Panlilio
+    - distantfocusfilms@hotmail.com
+    - |
+      Hello,
+      
+      I'm currently looking for a make-up and hairstylist for my wedding in San Francisco on Saturday, October 16th, 2010.
+      
+      I think your work is wonderful.  Can you tell me what your rates are?
+      
+      Thanks!
+      Cheryl
+
+    - 2010-06-15 17:52:31
+    - 2010-06-15 17:52:31
+  - - "40"
+    - Kelly Comstock
+    - kellycomstock@yahoo.com
+    - |
+      Hi Jane,
+       
+      I came across your website on the knot and I really enjoyed your photos & reviews. I would love to meet and do a trial if you are available. Here is some info:
+       
+      Wedding Date:             September 18th, 2010
+      Ceremony start time:    5:00 pm
+      Wedding Location:        Willow Heights Mansion, Morgan Hill CA
+       
+      I look forward to hearing from you...
+       
+      Best
+       
+      Kelly
+
+    - 2010-06-17 22:17:36
+    - 2010-06-17 22:17:36
+  - - "41"
+    - linda
+    - lindachau84@gmail.com
+    - |-
+      hi, how much are your services for bridal makeup and trial?
+      
+      thanks!
+    - 2010-07-02 18:07:46
+    - 2010-07-02 18:07:46
+  - - "42"
+    - Sabrina Hom
+    - opheliax80@yahoo.com
+    - Hi, I was wondering how much you charge for wedding-day hair and makeup.  Also, how much do you charge for "special event" (banquet) hair and makeup?  Thank you!
+    - 2010-07-07 01:14:44
+    - 2010-07-07 01:14:44
+  - - "43"
+    - Ihn Young Song
+    - dave.iy.0905@gmail.com
+    - |-
+      Dear Jane,
+      
+      I am interested in your bridal makeup/hair services for our wedding at Auberge du Soleil on September 5 2010 (morning ceremony at 11:00AM with luncheon reception). Can you please let me know your availability and pricing? Thanks so much.
+      
+      Sincerely,
+      Ann Song
+    - 2010-07-09 05:28:45
+    - 2010-07-09 05:28:45
+  - - "44"
+    - Sarah Griffith
+    - sarah.e.griff@gmail.com
+    - |-
+      Hi Jane, I'm getting married in Rutherford next Spring- Could you please send me your rates for bridal hair/makeup, trial sessions, and bridal party rates?  Would you have a transportation fee for this location?
+      Thanks, Sarah
+    - 2010-07-11 14:50:07
+    - 2010-07-11 14:50:07
+  - - "45"
+    - Alima Ravenscroft
+    - alimarave@msn.com
+    - I live in Denver, CO but am getting married at San Francisco City Hall on Monday, October 18th.  I was interested in your prices for wedding makeup and hair!  Thank you!
+    - 2010-07-17 16:28:44
+    - 2010-07-17 16:28:44
+  - - "46"
+    - andrea
+    - anurse4u@hotmail.com
+    - i was wondering if you offer airbrush makeup applications? If so what is the cost for a bride? Thank you.
+    - 2010-07-19 00:29:55
+    - 2010-07-19 00:29:55
+  - - "47"
+    - gxskbzhpea
+    - yhgvpq@kftdic.com
+    - IW1Tnf  <a href="http://isfscagsxbir.com/">isfscagsxbir</a>, [url=http://uvluhuosepxg.com/]uvluhuosepxg[/url], [link=http://xtpzjpaznyvl.com/]xtpzjpaznyvl[/link], http://vyeeepipwkhz.com/
+    - 2010-07-21 23:38:33
+    - 2010-07-21 23:38:33
+  - - "48"
+    - Angela Kuo
+    - briangelachan@gmail.com
+    - |-
+      Hi, Jane.
+      
+      I found your contact information from a blog.  I'm interested in just hiring someone to work on hair for my wedding day. How much do you charge to do wedding hair for 9 people (the bride, the bridal party, and the mothers)? Also, how much do you charge for the trial for bridal hair, and lastly, are you available on November 13, 2010?
+      
+      Please advise.
+      
+      Thank you,
+      Angela
+    - 2010-07-22 06:27:43
+    - 2010-07-22 06:27:43
+  - - "49"
+    - Alice Huang
+    - hansandalice@aol.com
+    - |-
+      Hi!  I'm getting married at the Bently Reserve on 5/1/2010.  I was wondering what your rates are for bridal makeup and hair.  Do you do eyelash extentions and hair extentions?  Also, do you charge for travel fee?  How much is your wedding trial fee?
+      
+      Thanks!
+      
+      Alice
+    - 2010-07-22 17:01:20
+    - 2010-07-22 17:01:20
+  - - "50"
+    - Edna Flores
+    - ednaflores@hotmail.com
+    - |-
+      Hi Jane,
+      
+      I got your name from TheKnot.com. I'm having my wedding in San Francisco on Sat April 30,2011. I was wondering if you are available on that date and your pricing for your services.
+      
+      Thank you.
+      
+      Edna A. Flores
+    - 2010-07-23 00:08:36
+    - 2010-07-23 00:08:36
+  - - "51"
+    - kim
+    - kimnguy3n@yahoo.com
+    - Hi what are your rates for bridal hair & makeup & Trial?  And do you do airbrush?  Thanks.
+    - 2010-07-23 03:11:59
+    - 2010-07-23 03:11:59
+  - - "52"
+    - kazuko yamamoto
+    - itsme_kazu@yahoo.com
+    - |-
+      I saw your ad thru knot.com.  I am getting married on Sunday, October 10, 2010.
+      
+      I have a person who does hair, however, since our wedding ceremony starts 11am and if she has to do all hair and make up, we will have to get start at 3am..that's too extreme, 
+      
+      So, I am looking for a person who does make up for all my 3 bridemaids.
+      
+      Please let me know your price and your availabilities. 
+      Thank you. Kazu
+    - 2010-07-23 05:23:29
+    - 2010-07-23 05:23:29
+  - - "53"
+    - ji kim
+    - kim.jihye@gmail.com
+    - |-
+      hi jane - it's super late notice, but i was looking for someone who'd be willing to travel up to napa valley on sunday, august 8th, to do hair for myself, 3 bridesmaids and my mom and mother-in-law (6 people total) - how much would you charge? 
+      thanks!
+    - 2010-07-23 16:53:59
+    - 2010-07-23 16:53:59
+  - - "54"
+    - Nicole Rigby
+    - Nicole.Rigby@univarusa.com
+    - |-
+      Good Morning Jane,
+      
+      I am searching for bridal hair & make up services for my wedding on 9/18/10 in Livermore, CA.  I would be interested to know if you might be available and what your rates might be?
+      
+      Sincerely,
+      Nicole Rigby
+      916-871-4273
+    - 2010-07-23 18:16:22
+    - 2010-07-23 18:16:22
+  - - "55"
+    - Ashley Schweickart
+    - AMSchweickart@gmail.com
+    - |-
+      Dear Jane,
+      
+      I would like to learn more about your pricing and packages for wedding hair and makeup. I am the bride, getting married April 23, 2011 in Fremont, CA. I'd like to keep my budget for hair and makeup under $200, so please let me know if you offer options in that price range.
+      
+      Thanks for your help!
+      
+      Ashley Schweickart
+    - 2010-07-23 19:34:33
+    - 2010-07-23 19:34:33
+  - - "56"
+    - Diana
+    - dianamel76@hotmail.com
+    - I'm interested in your services. My wedding is on Nov. 27, 2010. I like in Ukiah, and if it's possible I would want to get an estimate on hair and make-up.  Thank you.
+    - 2010-07-23 21:01:18
+    - 2010-07-23 21:01:18
+  - - "61"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - |
+      testing
+
+    - 2010-07-28 04:35:38
+    - 2010-07-28 04:35:38
+  - - "62"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - I hope you get this...
+    - 2010-07-28 04:36:02
+    - 2010-07-28 04:36:02
+  - - "63"
+    - Amie Wong
+    - amiemwong@yahoo.com
+    - |-
+      Hi Jane,
+      
+      I was wondering what your availability might be for my upcoming wedding.
+      
+      Here are the details for my event:
+      
+      * Date: Saturday, September 25, 2010
+      * Time: Ceremony starts at 5:00pm; I should be ready to go for photos, etc. by 2:00pm
+      * Location: San Francisco 
+      * I'm interested in a trial and day-of hair and makeup services
+      * I may have 1-3 other ladies interested in hair and/or makeup as well (not confirmed)
+      
+      Let me know if you need any other info! If you're available, I would love to hear more about pricing and any other details.
+      
+      Thanks so much,
+      Amie Wong
+      amiemwong@yahoo.com
+    - 2010-07-30 19:09:57
+    - 2010-07-30 19:09:57
+  - - "64"
+    - Maggie Salas
+    - markconwaybd@gmail.com
+    - |
+      What am I doing wrong on my site? When will my site get more links? Why are other sites ranking higher than mine? How do I target the right keywords? If so, we have a Huge Deal on Internet Marketing/SEO/SEM services for you! Please reply to this email to know more.
+
+    - 2010-08-02 05:27:12
+    - 2010-08-02 05:27:12
+  - - "65"
+    - Franz Erian
+    - tompopoact1@pacbell.net
+    - "Hello,\r\n\
+      \r\n\
+      I am looking for a make up artist/ hair stylist for a feature film I am will be shooting. The budget allows for $400 for the artist for the entirety of the two week production (food, credit and a copy of the finished film will also be provided). This project is part student film and part indie film (most of the crew is either recently graduated from San Francisco State or will be graduating this semester). If you, or anyone you know would be interested please contact me,\r\n\
+      \r\n\
+      Franz Erian - Director \r\n\
+      \r\n\
+      Shooting schedule and general location:\r\n\
+      Monday Wednessday and Friday - 3:30pm - 10:30pm  - Warehouse - hayward\r\n\
+      Tuesdays - apartment  SF  1:00pm-9:30pm\r\n\
+      Thursday aug 12 unscheduled (most likely 2:00pm - 10:30 pm) san jose\r\n\
+      Thursday Aug 19th 8:00am - 12:00pm liquor store - hayward AND  2pm-6pm theater - san mateo\r\n\
+      Saturdays and Sundays 9:00am - 10:00pm hospital - most likely san leandro (but maybe Napa)   "
+    - 2010-08-02 21:26:24
+    - 2010-08-02 21:26:24
+  - - "66"
+    - stephanie
+    - mr_and_mrs_maldonado@yahoo.com
+    - |-
+      hi jane,
+        we worked on a wedding together a few weeks back at winnie and will's wedding in sj/silver creek (i was the second photographer).  i loved your work and how on top of things you were throughout all the photos it was very impressive.  i am getting married myself next year, still working on the date, but i was wondering what your prices are!  both for makeup and hair and staying throughout the pics.  thank you very much for all of your help the other weekend too btw!  have a great day and i look forward to speaking with you soon.
+      cheers,
+        stephanie
+    - 2010-08-03 00:04:37
+    - 2010-08-03 00:04:37
+  - - "67"
+    - Alisa Grover
+    - Alisa_grover@yahoo.com
+    - |-
+      Hello,
+      
+      I'm getting married Nov 20th, 2010. Are you available that day? If so I would like to find out about your prices. The wedding will be here in the Bay Area.
+      
+      Hope to talk to you soon.
+      
+      Alisa :)
+    - 2010-08-06 05:42:27
+    - 2010-08-06 05:42:27
+  - - "68"
+    - Marnie Tracey
+    - puggirl@hotmail.com
+    - |
+      Wondering about availability for hair and makeup this Friday 8/13/2010.  Wedding 2pm at Old St. Hilary's in Tiburon.  One bridesmaid, two flowergirls.  Trial on Thursday would be a nice option also.  Living in S Cal and get to the bay area on Wednesday afternoon around 330p
+      
+
+    - 2010-08-07 22:10:09
+    - 2010-08-07 22:10:09
+  - - "69"
+    - Judy Fong
+    - judyfong88@hotmail.com
+    - |-
+      Hi Jane,
+      
+      I'm inquiring about your prices for hair and makeup for a wedding. My wedding is on 2-26-2011.
+      
+      Thanks,
+      Judy Fong
+    - 2010-08-10 03:24:28
+    - 2010-08-10 03:24:28
+  - - "70"
+    - Laurie Miller
+    - lauriemiller725@gmail.com
+    - |-
+      Hi,
+      I will be getting married on May 29, and I am interested in your hair and makeup services for myself and 5 bridesmaids. We will all be having our hair done, and some will be getting makeup. Can you please let me know about prices. We will be in Napa at the Silverado Resort. Do you have other people working for you?
+      Thanks
+      Laurie
+    - 2010-08-11 14:10:41
+    - 2010-08-11 14:10:41
+  - - "71"
+    - Amaranta Colindres
+    - amaranta.colindres.p569@statefarm.com
+    - |-
+      Hi Jane,
+      
+      I'm getting married in april and am looking for a make up artist.  I do my own make up well, but i beleive you do airbrush, which is beyond my skills.  I have dark spots, which I conceal a lot, and am a mixture of hispanic and black, so have a skin tone that is challenging to match with some make up brands.  I have been using mac and make up forever.   I have dry skin and eczema, to make things more interesting!  ;)  I had planned on doing my own make up to spend less, but maybe you are more affordable than I think.  Doesnt hurt to ask.
+      Thanks Jane,
+      
+      Amaranta Colindres
+      707-853-3395
+      amaranta.colindres.p569@statefarm.com
+    - 2010-08-11 20:10:19
+    - 2010-08-11 20:10:19
+  - - "72"
+    - Rowena Marzran
+    - rowmarzan@yahoo.com
+    - |-
+      Are you available on october 23, 2010?
+      I'm interested in makeup and hair service.
+      The wedding will be located in Tiburon.
+      Can you please tell me your rate?
+    - 2010-08-12 04:52:41
+    - 2010-08-12 04:52:41
+  - - "73"
+    - Eunice Cho
+    - eunicecho123@gmail.com
+    - |-
+      Hi Jane,
+      I'm wondering if you have availability for a wedding in Oakland, CA on October 9, 2010 (4:30 pm start time) to do hair/makeup for a bride? Also, if you are available, what are your rates?
+      Thanks!
+      eunice
+    - 2010-08-19 21:50:37
+    - 2010-08-19 21:50:37
+  - - "74"
+    - Katie Oertli
+    - katie.oertli@capitalone.com
+    - |
+      Hi Jane, 
+      Hope you are well. 
+      Are you available for a hair/makeup for myself and the bridal party (it is a small group) on Sunday October 10th in Tiburon in the morning?
+      
+      Currently live out of state and am looking via theknot website. 
+      
+      Looking for hair and make up for 3 at the least.
+      
+
+    - 2010-08-19 21:56:57
+    - 2010-08-19 21:56:57
+  - - "75"
+    - Barbara
+    - barbaralouie@gmail.com
+    - |-
+      Hi there!
+      
+      I'm looking for a hair/makeup artist for my upcoming April wedding in Emeryville.  
+      
+      Can you please give me some more information about your services and a price list?  I would need hair/makeup for myself and 5 bridesmaids and possibly my mom.
+      
+      Thank you in advance,
+      Barbara
+    - 2010-08-21 09:17:50
+    - 2010-08-21 09:17:50
+  - - "76"
+    - Raymond Chao
+    - rchao_7@hotmail.com
+    - |-
+      Hi Jane,
+      
+      I'd like information on your availability.  I'm looking at preparing my fiance for her wedding in Nov. 6th.  She's arriving from China, Oct. 1st.  I would like to be able to meet up with you and go through a trial run.
+      
+      Thanks,
+      Raymond Chao
+    - 2010-08-24 22:12:58
+    - 2010-08-24 22:12:58
+  - - "77"
+    - aly
+    - alysonphung@gmail.com
+    - "Hi Jane, \r\n\
+      \r\n\
+      I wanted to know how much do you charge for hair and makeup? I have 5 bridesmaid and currently live in Concord.  \r\n\
+      \r\n\
+      Thanks, Aly "
+    - 2010-08-27 02:11:56
+    - 2010-08-27 02:11:56
+  - - "78"
+    - Julie Ho
+    - jho118@gmail.com
+    - |-
+      Hello Jane,
+      
+      You were recommended on The Knot website and I checked out the review on Yelp. Based on the Yelp review- as I am similar to the reviewer in terms of make up use and preference- and your portfolio on your website, I am interested in having a trial session with you. What is your cost for such a session? How long would the session be?
+      
+      If your cost is within my range, I would like to have a session with you this Sunday, Aug 29th in the morning if possible as I have an engagement photo shoot in the afternoon (around 1 pm).
+      
+      I look forward to hearing from you. My cell number is: 415-828-7837.
+      
+      Julie
+    - 2010-08-27 11:30:23
+    - 2010-08-27 11:30:23
+  - - "79"
+    - Missie
+    - m.houangvilay@gmail.com
+    - Hi, found your ad on the weddingbee, I was wondering if I could please get a price list. My wedding is in Oakland at the Metropolitan Golf Links on July 1, 2011 (a Friday). I also have 5 bridesmaids (one of them is a junior bridesmaid at the age of 9) and my Mom and Mother in Law. Thank you.
+    - 2010-08-30 10:20:08
+    - 2010-08-30 10:20:08
+  - - "80"
+    - "Rachel "
+    - rachelczy@yahoo.com
+    - |-
+      Hi Jane,
+      
+      Could you please give me your pricing details for bridal makeup + hair (including trial session). My wedding will be on November 13, 2010 in the Bay Area.
+      
+      Thanks,
+      
+      Rachel
+    - 2010-08-31 19:22:34
+    - 2010-08-31 19:22:34
+  - - "81"
+    - Tina Lau
+    - tinajlau@yahoo.com
+    - |-
+      Hi Jane-
+      
+      I'm searching for an artist for myself and 3 bridesmaid for my wedding on 5/28/11.  Would you please send me your pricing info?
+      
+      Thanks,
+      Tina
+    - 2010-09-03 20:50:57
+    - 2010-09-03 20:50:57
+  - - "82"
+    - joann pusong
+    - deep_imprints@yahoo.com
+    - |-
+      hi, jane! im currently searching for an artist to do my hair and make-up for my upcoming wedding this october 9 when i found you on www.projectwedding.com. i wanted to know if you're still open on the said date and your rates. 
+      
+      hope to hear from you soon. thank you.
+      
+      ~ joann pusong
+    - 2010-09-08 01:31:35
+    - 2010-09-08 01:31:35
+  - - "83"
+    - Kimberly
+    - bumblebride@gmail.com
+    - |
+      Hi Jane!
+      Are you available to do make up and hair for atleast 4 people on Saturday May 21, 2010?
+      
+      Would you also be able to send over your rates/packages?
+      
+      Thanks so much!
+      Kimberly
+      
+
+    - 2010-09-08 17:24:35
+    - 2010-09-08 17:24:35
+  - - "84"
+    - kylie Hospenthal
+    - cougarkylz@gmail.com
+    - |
+      Hi
+      
+      I am getting married on the 25th September and would like a price on hair and make up for me the bride.
+      I am not sure what sort of information you need from me?
+      I will be in lafayette and would like you to come to me.  I get married at 11am.
+      
+      I have blond, medium length to long hair (bra strap) and want slight curls natural look maybe half up?
+      
+      I want a nice natural make up look, maybe slightly smoky eyes and nude lips.
+      
+      209 480 6197
+      
+      If you could get back to me prices and/or availability that would be awesome thanks
+      
+      Kind regards 
+      
+      Kylie
+      
+
+    - 2010-09-10 03:49:16
+    - 2010-09-10 03:49:16
+  - - "85"
+    - Jaime Jack
+    - jackwalkerdo@gmail.com
+    - |
+      We noticed that you are not at the top of the search engines for a number of your key terms. We have helped companies similar to yours to achieve top organic rankings. Please reply to this message and we will prepare a special proposal for you, to show you how we can achieve similar results for you.
+
+    - 2010-09-11 11:48:07
+    - 2010-09-11 11:48:07
+  - - "86"
+    - patty Kim
+    - p_h_kim@yahoo.com
+    - I am looking for a make up artist for my wedding and was wondering if I could book a trial session with you. Please let me know when you are available and if you travel. The wedding will be in San Ramon. Thank you.
+    - 2010-09-11 22:44:04
+    - 2010-09-11 22:44:04
+  - - "87"
+    - Jill Gleason
+    - gleasonjill@hotmail.com
+    - |-
+      Hi, I'm getting married on Nov. 6 in Tiburon and I'm a little slow at getting my hair and makeup scheduled.  I wanted to see if you were available and what your costs are? Thanks
+      Jill
+    - 2010-09-12 04:07:36
+    - 2010-09-12 04:07:36
+  - - "88"
+    - "Shana "
+    - shanajmac@gmail.com
+    - "Hi Jane, I am getting married on Jan. 1, 2011 in Berkeley, Ca and am looking for a hair and makeup artist. Are you available on this day and if so, can you please send me your rates? I also saw on Yelp that you are offering a 'free makeup consultation' -- what does this entail? I look forward to hearing from you. Thanks. "
+    - 2010-09-18 01:38:27
+    - 2010-09-18 01:38:27
+  - - "89"
+    - Jessica Gallagher
+    - jessicangallagher@gmail.com
+    - |-
+      Hello,
+      
+      I am currently looking for a makeup and hair stylist for my 8.6.2011 wedding in Palo Alto, CA. Could you please send me your pricing information?
+      
+      Thanks,
+      Jessica
+    - 2010-09-19 05:30:39
+    - 2010-09-19 05:30:39
+  - - "90"
+    - Liz
+    - lizpaul29@gmail.com
+    - Hi, I just found your website on yelp and I was inquiring into your services for hair and makeup for my wedding on February 20, 2011.  The look I am going for is old school hollywood glamour, with a touch of 1930's flapper.  I currently have short hair and am hoping it grows long enough for pin curls, but I also am open to suggestions.  I think I would want fake eyelashes as well.  Anyhow, please let me know your availability, and I wanted to hopefully set up a consultation with you, taking advantage of your free offer.  Thank you so much!  I can email pictures of ideas I have as well.  Thanks again, Liz
+    - 2010-09-20 22:02:05
+    - 2010-09-20 22:02:05
+  - - "91"
+    - Rita Posadas
+    - rsposadas@yahoo.com
+    - |-
+      Dear Jane,
+      
+      Hi! I was wondering if you are available for hairstyling for myself (the bride) and 6 members of my bridal party. My wedding is on October 2 at 2pm in Vallejo, CA. I realize it is super late, but I thought I'd take a chance. Thank you for your time and consideration. Take care!
+      
+      Sincerely,
+      Rita
+      (510) 685-5144
+    - 2010-09-21 06:07:47
+    - 2010-09-21 06:07:47
+  - - "92"
+    - "Pearl "
+    - perleeshellz@gmail.com
+    - |-
+      Hi Jane.
+      I found your website on the Knot.com can you please send me your pricing to my email.  thank you.
+    - 2010-09-22 05:36:04
+    - 2010-09-22 05:36:04
+  - - "93"
+    - karame adesko
+    - karameadesko@aol.com
+    - "Hi,\r\n\
+      \r\n Wanted to know if you have Oct. 9th 2010 open for a wedding party of 6. It's at Nestldown in Los Gatos. I know it's late notice I was planning on bringing my hairdresser from orange county, but she is currently in the hospital on bed rest for the rest of her pregnancy. Hope to hear from you! "
+    - 2010-09-22 18:15:56
+    - 2010-09-22 18:15:56
+  - - "94"
+    - "Kristi "
+    - kristiandjay@gmail.com
+    - |-
+      Hi Jane,
+      
+      I love your work! I'm looking to have a wedding on Feb 26th, 2011 in the East Bay, and was wondering if you could forward over some pricing and availability information. 
+      
+      Thanks!
+      Kristi
+    - 2010-09-23 23:41:43
+    - 2010-09-23 23:41:43
+  - - "95"
+    - Katie
+    - kwackowski@gmail.com
+    - |-
+      Hi Jane,
+      
+      Just curious about your charges for a wedding group of about 11 (bride, 6 bridesmaids, 2 Jr. bridesmaids, 2 flower girls -gotta love little cousins who would die if they weren't in your wedding).  I am not sure if the mother's want to be included.  
+      
+      The wedding is in Moraga, Ca, at Saint Mary's College on July 9, 2011 at 5:15pm.
+      
+      Thank you!
+      Katie
+    - 2010-09-25 17:01:05
+    - 2010-09-25 17:01:05
+  - - "96"
+    - Herry Smith
+    - herryseomarketing@gmail.com
+    - We strongly believe that we have an excellent opportunity to increase the number of visitors to your website through our white-hat SEO services. Please simply reply to this message and we will be delighted to send you further information.
+    - 2010-09-27 12:06:40
+    - 2010-09-27 12:06:40
+  - - "97"
+    - Jamie Woo
+    - jamie.woo@gmail.com
+    - I'm interested in finding out the pricing for your wedding packages. Thanks!
+    - 2010-09-28 23:10:19
+    - 2010-09-28 23:10:19
+  - - "98"
+    - Monica Salazar
+    - johnson.melodie01@gmail.com
+    - We noticed that you are not at the top of the search engines for a number of your key terms. We have helped companies similar to yours to achieve top organic rankings. Please reply to this message and we will prepare a special proposal for you, to show you how we can achieve similar results for you.
+    - 2010-09-29 11:45:43
+    - 2010-09-29 11:45:43
+  - - "99"
+    - zlrmdb@yodraq.com
+    - zlrmdb@yodraq.com
+    - 3Y3Ek7  <a href="http://cqwwprhvpvcl.com/">cqwwprhvpvcl</a>, [url=http://jlndkylwtcnr.com/]jlndkylwtcnr[/url], [link=http://vlwclqkptljt.com/]vlwclqkptljt[/link], http://ukdtztsihdwz.com/
+    - 2010-10-04 20:43:00
+    - 2010-10-04 20:43:00
+  - - "100"
+    - Julie Tsang
+    - julieptsang@gmail.com
+    - |-
+      Hi Jane,
+      
+      Nice portfolio! I love the looks you've created - soft, elegant, and sophisticated. Very impressed with the before and after photos!
+      
+      Before I continue any further - are you available on May 21st, 2011 for on location make-up? 
+      
+      If you're available, I will provide you with more details and go from there.
+      
+      Thanks!
+      Julie
+      510-9319358
+      P.S. I found you on Wedding Wire.
+    - 2010-10-05 03:44:35
+    - 2010-10-05 03:44:35
+  - - "101"
+    - Kellen Williams
+    - wkellen@hotmail.com
+    - |-
+      I am getting married on April 16th, 2011. I am looking for someone who can do my hair and make-up, as well as the hair and possibly make-up for 8 other people.
+      
+      Is this a possible? Do you charge flat rates? Can you do trial or consultations?
+      
+      Thank you!
+      
+      Kellen
+    - 2010-10-08 02:02:22
+    - 2010-10-08 02:02:22
+  - - "102"
+    - Lhia Krista Dolores
+    - alexlhia@yahoo.com
+    - |-
+      Hi Jane,
+      
+      I would like to ask for the prices for bridal services (hair and makeup).
+      When would be the earliest available date for a trial?
+      Also, our wedding will be in November 13, 2010, is this date still available?
+      Thank you so much and we are looking forward to hear from you.
+      
+      Best regards,
+      Lhia
+    - 2010-10-09 16:59:12
+    - 2010-10-09 16:59:12
+  - - "103"
+    - Allison Riechert
+    - ariechert@gmail.com
+    - |-
+      Hi!
+      
+        I am getting married in Napa on May 7, 2011.  I am interested in my hair and makeup as well as hair and make up for my 6 bridesmaids and maybe the mother of the brides.  Do you travel to Napa and do you have a rate sheet?  Thank you!
+      
+           Allison
+    - 2010-10-10 04:26:26
+    - 2010-10-10 04:26:26
+  - - "104"
+    - Mandi Matsumoto
+    - mandimatsumoto@gmail.com
+    - |-
+      Hello,
+      
+      I am planning to get married July 2, 2011 and am wondering if you would be available? I also plan on having a large bridal party (9). I am not sure as of now if all will need hair and/or makeup. 
+      
+      I loved looking at your portfolio and would like to know more about your rates and services.
+      
+      Thank you for your time.
+      
+      - Mandi
+    - 2010-10-10 19:47:46
+    - 2010-10-10 19:47:46
+  - - "105"
+    - Catherine
+    - catherine@csimplicitydesign.com
+    - |
+      Please send rate details
+      Wedding Date: 2/26/11
+      Time: 5:00 - 11:00 PM
+      Location: Auberge du Soleil, CA
+      
+      Bridal + one bridesmaid hair and makeup on location
+      
+      Trial date: 11/13/10 morning
+
+    - 2010-10-11 16:41:16
+    - 2010-10-11 16:41:16
+  - - "106"
+    - Ann Nguyen
+    - a2nguyen@yahoo.com
+    - |-
+      Hi Jane-
+      
+      I'm getting married February 5th, 2011 and wanted to inquire about your hair and makeup services for your brides. I looked through your portfolio and loved the work that you did for your brides. I am getting married in San Jose and wanted to know if you would be able to provide services in that area. If so, I would love to book a trial with you. I can be reached at 408.505.1288 or via email. Thanks for your time and I look forward to hearing from you soon.
+      
+      Ann
+    - 2010-10-12 01:50:35
+    - 2010-10-12 01:50:35
+  - - "107"
+    - Judy Mui
+    - mui.soares@gmail.com
+    - |-
+      I would like to know if you would be available for myu 11.06.10 wedding for make up and hair for 5 girls, inlcuding the bride and 4 hair and make up.
+      
+      If you don't mind, sending along a price package if you have the availability, I would love to work with you.
+    - 2010-10-12 22:01:02
+    - 2010-10-12 22:01:02
+  - - "108"
+    - Kimiko Yamaguchi
+    - kimikoyamaguchi@hotmail.com
+    - |-
+      I was looking through "The Knot"  and yelp and saw you had some great reviews. I am currently looking for someone to do my wedding make up and hair . Please let me know first if you still have May 1, 2011 available, if so please give me a call or email me at your earliest convenience.
+      
+      Thank You
+      Kimiko 510-589-8124
+    - 2010-10-13 22:26:39
+    - 2010-10-13 22:26:39
+  - - "109"
+    - nellie tom
+    - nellietom@gmail.com
+    - Hi there, I am interested in your bridal service. I will be getting married on March 19, 2011. Are you available that day? If so, can you provide me some information such as your pricing packages for bride and bridesmaid as well as an engagement session. I am interested in hair and make-up for the wedding and engagement. Thanks. I look forward in hearing from you soon.
+    - 2010-10-16 01:56:33
+    - 2010-10-16 01:56:33
+  - - "110"
+    - pjcyet@fgdtxk.com
+    - pjcyet@fgdtxk.com
+    - 4O9tfP  <a href="http://jguipbnpwlyf.com/">jguipbnpwlyf</a>, [url=http://afibdkmimakt.com/]afibdkmimakt[/url], [link=http://aedqdlchmdmg.com/]aedqdlchmdmg[/link], http://xfdurukgoqxe.com/
+    - 2010-10-18 14:50:48
+    - 2010-10-18 14:50:48
+  - - "111"
+    - auurrv@cmvxtm.com
+    - auurrv@cmvxtm.com
+    - st3Pl3  <a href="http://iwdrinihpdeb.com/">iwdrinihpdeb</a>, [url=http://hymfhokkumwn.com/]hymfhokkumwn[/url], [link=http://ixdbiwmewuvz.com/]ixdbiwmewuvz[/link], http://riknwccduiet.com/
+    - 2010-10-18 14:51:06
+    - 2010-10-18 14:51:06
+  - - "112"
+    - yjnnbk@rjspis.com
+    - yjnnbk@rjspis.com
+    - T20vqc  <a href="http://trmyjajtffxu.com/">trmyjajtffxu</a>, [url=http://rhlezihdqjio.com/]rhlezihdqjio[/url], [link=http://zpaxhsnnrlqm.com/]zpaxhsnnrlqm[/link], http://piylwgiiretd.com/
+    - 2010-10-18 14:51:19
+    - 2010-10-18 14:51:19
+  - - "113"
+    - vzndfg@kxjfol.com
+    - vzndfg@kxjfol.com
+    - DcUvar  <a href="http://dbdkfxhoqzmc.com/">dbdkfxhoqzmc</a>, [url=http://xfifykjngzaq.com/]xfifykjngzaq[/url], [link=http://vbxscnmxheuh.com/]vbxscnmxheuh[/link], http://qkptntibyxrq.com/
+    - 2010-10-18 14:51:44
+    - 2010-10-18 14:51:44
+  - - "114"
+    - Kiani Lee
+    - jklee76@gmail.com
+    - |-
+      Hey there!
+      
+      I'm planning to take engagement photos mid Nov.  How would I go about scheduling a consultation? 
+      
+      I would also like pricing information as well.
+      
+      Look forward to hearing fr you.
+    - 2010-10-18 16:05:35
+    - 2010-10-18 16:05:35
+  - - "115"
+    - zpdirn@qhskkk.com
+    - zpdirn@qhskkk.com
+    - Iq3Mbe  <a href="http://ujqexkguqngn.com/">ujqexkguqngn</a>, [url=http://axxqcmyjtggt.com/]axxqcmyjtggt[/url], [link=http://yjhwzcenfuum.com/]yjhwzcenfuum[/link], http://izqwaepjzgyb.com/
+    - 2010-10-19 03:09:28
+    - 2010-10-19 03:09:28
+  - - "116"
+    - Joy Suzuki
+    - emailjys@yahoo.co.jp
+    - "Dear Jane Kim,\r\n\
+      \r\n\
+      I saw your site and would like to inquire about your wedding services.  We are having a small intimate luncheon on 12/31.  So I would like someone to do my hair and make up that morning downtown at the hotel.  \r\n\
+      \r\n\
+      Could you please let me know what your rates would be?\r\n\
+      \r\n\
+      Thank you,\r\n\
+      \r\n\
+      Joy "
+    - 2010-10-20 23:39:18
+    - 2010-10-20 23:39:18
+  - - "117"
+    - Jennifer Choi
+    - jennifer.l.choi@gmail.com
+    - |-
+      Hello!
+      My fiance and I will be getting married on April 30th, 2011 in Manhattan Beach at American Martyrs Catholic Church.  The reception will be held at the Ritz Carlton Marina del Rey.  My bridesmaids (5 total) and I will be getting ready in one of the suites at the Ritz Carlton.  Do you still travel to LA?  Are you available for that day?  Do you have a pricing menu you are able to share?
+      
+      Looking forward to hearing from you,
+      
+      Jennifer
+    - 2010-10-22 05:12:06
+    - 2010-10-22 05:12:06
+  - - "118"
+    - chun hui chen
+    - chunhui808@gmail.com
+    - |-
+      Hi,
+      
+      What are you rates for day of services? I'm getting married on a thursday in May (5.5.2011) at Viansa winery in Sonoma.
+      
+      Thank you
+      Chun
+    - 2010-10-22 18:56:33
+    - 2010-10-22 18:56:33
+  - - "119"
+    - Visnu Pitiyanuvath
+    - visnupx@gmail.com
+    - test
+    - 2010-10-24 00:35:16
+    - 2010-10-24 00:35:16
+
+--- 
+posts: 
+  columns: 
+  - id
+  - title
+  - body
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - new blog!
+    - for a new website.
+    - 2010-01-29 07:30:15
+    - 2010-01-29 07:30:15
+  - - "2"
+    - finding the right...
+    - |
+      Your hair and makeup is  just as important as finding the perfect wedding dress.   Makeup and hair can set the tone for the entire day because it has the power to make a bride feel confident and beautiful.   Just like how a great photographer or a videographer  is able to capture each memory,  the right makeup artist ensures you look beautiful and flawless in each memory/image that is  captured.  Not just for today. Not just for tomorrow but as long as those memories  last.  
+
+    - 2010-02-16 07:08:35
+    - 2010-02-16 07:08:35
+  - - "3"
+    - what's happening?
+    - |
+      These past few weeks have been quite busy! I had a few weddings, booked 3 more clients for this season, booked 2 photo shoots and planning a my boyfriend's birthday party. Whew!  
+      
+      I wanted to share with you a little tidbit from the wedding I did this weekend.  Pictured below is the mother of the groom's before and after.  Normally she doesn't wear makeup, maybe a tad bit of concealer but pretty much nothing.  I glammed her up with some color and smoothed out her hair with an flatiron.   Look how amazing she looks, with just a little bit of makeup.
+      
+      Here are the unedited before and after pics...
+      
+      ![ba](http://farm5.static.flickr.com/4085/4843659901_ba56ef1bb1_b.jpg)
+      
+      
+
+    - 2010-05-24 20:21:00
+    - 2010-07-30 19:52:53
+  - - "4"
+    - Jess Dang
+    - |
+      I just finalized a booking last night and I am so excited!  Jess Dang, who is getting married in beautiful Sonoma this coming September, was a contestant on the Food Network's show The Next Food Network Star.  She was one of the contestants in the season that Guy Fieri won.  Those who know me and kind of sort of know me, know that I LOVE food.  So meeting someone who has met all the greats on one of my favorite networks is a real treat.    
+      
+      Just like me, Jess has a food blog called thepetitepig.com where she shares wonderful and yet easy recipes.    It's amazing because she's a complete foodie but soooo tiny... where does all the food go?
+      
+      After going off in a tangent,  I wanted share with you some looks that we tested.   She wanted to be a polished version of her natural self but with definition in the eyes and a beautiful glow.  So we kept the makeup very simple but softened up  black eye shadow on her lids.  As for the hair, she wants to wear two styles one for the reception and another for the ceremony.  
+      
+      Check out her pics...
+      
+      ![before](http://farm5.static.flickr.com/4017/4633038781_d5d065b18b_o.jpg)
+      ![before](http://farm5.static.flickr.com/4031/4633635392_6f2c215981.jpg)
+      ![before](http://farm5.static.flickr.com/4039/4633039409_77c45fe02a_o.jpg)
+
+    - 2010-05-25 19:13:39
+    - 2010-07-30 19:54:05
+  - - "5"
+    - a wedding in healdsburg...
+    - |-
+      Vendor Credits
+      
+        * Photography: [JP Langland]
+        * Event Coordinator: [Lily Spruce]
+        * Venue: [Russian River Rose Company]
+        * Food: [DL Catering]
+      
+      A few weeks ago, I did makeup and hair a beautiful couple Alex and Alica.  Well, mainly  Alicia but she is one half of the beautiful couple.   This was probably one of the beautiful and scenic weddings I have had the pleasure of being a part of.  The photographer [JP Langland] did the most of amazing job in capturing the scenery and the beautiful, and yet silly, essence of the bride and groom. Of course, hats off to [Lily Spruce] for making this a seamless event.
+      
+      The venue was held  at the [Russian River Rose Company], which is the home of the groom's parents.    It was  a casual affair with bbq, lemonade, a jukebox and popcorn machine.  Being that it was casual affair, the bride wanted to look natural but with a bit of color.  She did not want to wear foundation because she wanted her freckles to shine through. For the makeup,  I primed her skin with [MAC's] strobe cream and dusted mineral powder for coverage.  Applied a bit of lip tint and a cheek tint to give her the rosy color.  For the eyes, I applied just a thin layer of liquid liner and a double coating of mascara.  For the hair, she wanted  a retro look, so we did a pin curled the bangs and in the back looped a ponytail through and pinned it up.
+      
+      Below are some pictures of the wedding, thanks again to [JP Langland] for sharing these wonderful pictures.  Be sure to check out his website for your event!
+      
+      [JP Langland]:http://jplphotography.com
+      [Lily Spruce]:http://www.lilyspruce.com
+      [Russian River Rose Company]:http://www.russian-river-rose.com
+      [MAC's]:http://www.maccosmetics.com
+      [DL Catering]:http://www.facebook.com/dlcatering
+      
+      ![1](http://farm5.static.flickr.com/4013/4657214422_05dd3719de.jpg)
+      ![2](http://farm5.static.flickr.com/4001/4657213468_442f3c547b.jpg)
+      ![3](http://farm5.static.flickr.com/4033/4657213076_f0b4f7926d.jpg)
+      ![4](http://farm5.static.flickr.com/4001/4656590569_9a1d195a6a_b.jpg)
+      ![5](http://farm5.static.flickr.com/4061/4656590107_da577c8d4a.jpg)
+      ![6](http://farm5.static.flickr.com/4072/4657210784_2778544286.jpg)
+      ![7](http://farm5.static.flickr.com/4045/4656592433_9f399ea995.jpg)
+    - 2010-05-31 19:16:35
+    - 2010-06-08 22:09:20
+  - - "6"
+    - Christine of Ford Models
+    - |-
+      Christine is a newly signed Ford Model.  At the tender age of 14, she already has the natural instincts of a supermodel.  She is such a beautiful person and the sweetest thing ever.  She was so excited to have her hair and makeup done and be photographed.
+      
+      Photography by Olga Vinokurova
+      
+      ![1](http://farm5.static.flickr.com/4134/4788528118_a1d5e2b8d2_b.jpg)
+      ![2](http://farm5.static.flickr.com/4096/4787898119_27400a1f33_b.jpg)
+      ![3](http://farm5.static.flickr.com/4142/4788530170_bac3c63981_b.jpg)
+      ![4](http://farm5.static.flickr.com/4114/4788529252_036c120c77_b.jpg)
+      ![5](http://farm5.static.flickr.com/4076/4788528378_345e53ab8e_b.jpg)
+      ![6](http://farm5.static.flickr.com/4100/4787897799_6e325b767d_b.jpg)
+    - 2010-07-19 16:44:53
+    - 2010-07-19 16:45:28
+  - - "7"
+    - Allie of Look Models
+    - |
+      When I first met Allie, i thought she was jaw-droppingly gorgeous, so it was no surprise that she needed minimal makeup.  We kept the mood very natural and changed to cat-eyes and red lips for a later look.
+      
+      Photography by Olga Vinokurova
+      
+      These images were actually shot a couple months ago out in Dublin...
+      ![1](http://farm5.static.flickr.com/4101/4781487478_32a599bda7_b.jpg)
+      ![2](http://farm5.static.flickr.com/4141/4780851543_02f57c6c42_b.jpg)
+      ![3](http://farm5.static.flickr.com/4136/4780851333_7b14e7f895_b.jpg)
+      
+
+    - 2010-07-19 17:03:28
+    - 2010-07-19 17:09:58
+  - - "8"
+    - Patty & Eugene, Carmel Wedding
+    - |
+      Vendor Credits:
+      
+        Photography: [Jennifer Skog]
+        Event Coordinator: [8events]
+        Bride's Hair/Makeup: [Maria Chang of PMA]
+        Bridal Party Makeup: [the glamourist]
+        Videography: [Stillmotion]
+      
+      I was honored when Patty, the mastermind behind [8events], asked me to be the makeup artist for her bridal party for her wedding day.  She enlisted the who's who of wedding vendors for her big day, [Jennifer Skog], [Maria Chang of PMA], [8events] and [Stillmotion], to name a few.  It was such an honor to be apart of such an elite team of wedding professionals.
+      
+      She shared with me clip of her video (below) and I was floored by [Stillmotion]'s work.  I was in tears!  They did a wonderful job in capturing the vintage essence that Patty had envisioned.
+      
+      May Patty and Eugene live happily ever after.
+      
+      <object width="400" height="225"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=13579895&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=13579895&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="225"></embed></object><p><a href="http://vimeo.com/13579895">p + e // 06.26.10 . a vintage toned same day edit</a> from <a href="http://vimeo.com/user403001">stillmotion</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+      
+      [Jennifer Skog]:http://jenniferskog.com
+      [8events]:http://8events.com
+      [Maria Chang of PMA]:http://pmastyle.com
+      [the glamourist]:http://theglamourist.com
+      [Stillmotion]:http://stillmotion.ca
+
+    - 2010-07-30 20:34:46
+    - 2010-07-30 20:44:59
+  - - "9"
+    - JULIE & MARCUS | BOLINAS WEDDING
+    - |-
+      Julie emailed me last thursday, we set up a preview session for  friday and then the wedding was to be held the following saturday! 
+      
+      Julie is probably the coolest and most casual bride I have ever met.  When most brides are stressing over seating charts, registries and timelines, Julie evited her 25 closest family and friends, rented a beach house, enlisted a food truck, Roli Roti, to cater the dinner and did I mention the reception involved surfing lessons?  There was no centerpieces, no seating charts nor a bridal party.  Her Carolyn Bisset-esque dress was made by her dear friend and the whole event was to be documented by her mother, a photographer.  I along with the 2 food trucks, were the only vendors the bride and groom hired for for this wedding.
+      
+      Bolinas is a sleepy little beach town just north of San Francisco and very reminiscent of Oahu's North Shore.   To match the beachy setting and casualness of the event,  she wanted a natural sunkissed look but accentuating her eyes. I kept the palette very bronze and peachy and heightened her eyes with liquid liner.
+      
+      Here is her before and after shots and pictures of the church. 
+      
+      (she put on the veil so quickly,  i didn't have a chance to capture her look without the veil)
+      ![a](http://farm5.static.flickr.com/4147/4847228594_a61a4aa73f_b.jpg)
+      ![b](http://farm5.static.flickr.com/4113/4846598071_44dabd3c5e.jpg)
+      ![c](http://farm5.static.flickr.com/4147/4846597343_816fb643b5.jpg)
+      ![d](http://farm5.static.flickr.com/4103/4846597549_4dbc32e44b.jpg)
+      ![e](http://farm5.static.flickr.com/4112/4846597789_f3d1b38294.jpg)
+      ![f](http://farm5.static.flickr.com/4144/4846597051_043d2f49c0.jpg)
+    - 2010-07-31 19:15:11
+    - 2010-08-11 19:55:07
+  - - "10"
+    - MAID OF HONOR DUTIES
+    - |-
+      So this coming October, I will be a Maid of Honor in my best friend's wedding.  As the appointed MOH, it is within my role to coordinate the bridal shower and the bachelorette party.  I wanted to do this bride proud and take my role seriously.  I wanted play my role in a traditional way but still keep it modern.  
+      
+      First stop... bridal shower invitations.  I got all the supplies from Flax.  I designed and printed the invite and my boyfriend was responsible for the beautfiul map.  Here are some  pictures I wanted to share...
+      ![2](http://farm5.static.flickr.com/4122/4880509728_2d72967b54.jpg) 
+      ![3](http://farm5.static.flickr.com/4142/4879899949_291b617796.jpg)
+    - 2010-08-10 21:33:48
+    - 2010-08-11 19:54:30
+  - - "11"
+    - Kind Words
+    - "I opened my inbox this morning to find a little message from this past weekend's bride...\r\n\
+      \r\n\
+      Dear Jane,\r\n\
+      \r\n\
+      I don't know how to say it well but here it goes: THANK YOU SO MUCH FOR THE AMAZING WORK YOU DID ON SATURDAY!  I am just now starting to recover from how much fun the wedding was.  I'm so lucky to have found you at the last second, that was the best desperate phone call I ever made!  You were amazing...\r\n\
+      \r\n\
+      Thank you so much Erika! You were a delight to work with and tons of fun.\r\n\
+      \r\n\
+      I'm excited to see the images from the talented Alison Yin.  "
+    - 2010-08-27 19:03:57
+    - 2010-08-27 19:04:28
+  - - "12"
+    - MEGAN & STAN | SAN FRANCISCO ELOPEMENT
+    - |
+      Megan & Stan were a  delight and an easy going couple to work with.  Not to mention, they were complete champs in roughing, the rare, SF heat wave.  Previously, Megan had sent me some makeup looks that she had liked and when I arrived at the hotel room she said they would also be doing casual shots later on.  With that information, I went to town.   For the hair, I wanted to do a simple, slightly messy, less than perfect updo so that it would be easy to take down later... too much hair spray was not an option.  For the makeup, based on the images, she wanted slightly smokey, defined eyes but soft since it was daylight and a very casual affair. 
+      
+      The talented [Augie Chang] was commissioned to capture their tender moments.  He was also kind enough to send the teasers, THE SAME DAY!
+      
+      Venue: San Francisco City Hall
+      
+      Photographer:  [Augie Chang]
+      
+      Hair & Makeup: The Glamourist by Jane KIm
+      
+      Without further adieu....
+      
+      ![img](http://farm5.static.flickr.com/4087/4950056963_51bac399f0.jpg)
+      ![img](http://farm5.static.flickr.com/4088/4950649512_9216a7d691.jpg)
+      ![img](http://farm5.static.flickr.com/4148/4950648324_2c775393ef.jpg)
+      ![img](http://farm5.static.flickr.com/4111/4950056299_5486c0b698.jpg)
+      ![img](http://farm5.static.flickr.com/4093/4950055799_4e509f5228.jpg)
+      ![img](http://farm5.static.flickr.com/4137/4950646832_c74dc30258.jpg)
+      
+      [Augie Chang]:http://www.augiechang.com
+
+    - 2010-09-02 19:49:43
+    - 2010-09-02 19:59:22
+  - - "13"
+    - Facebook Fan Page
+    - |
+      So, I started a facebook fan page... please like or add it to your page.
+      
+      [www.facebook.com/theglamourist](http://www.facebook.com/theglamourist)
+      
+      Like and twitter button will follow shortly!
+      
+
+    - 2010-09-04 01:24:12
+    - 2010-09-09 22:52:11
+  - - "14"
+    - Featured Publishing | Jess & Tim's Wedding
+    - "I have been holding off on blogging about one of my favorite brides and her wildly creative and fun wedding.   [Junebug Weddings], a very popular wedding blog, selected this wedding to be featured on their blog!  This artfully crafted and masterfully executed wedding was the sole doing of the bride and groom. \r\n\
+      \r\n\
+      As beautiful as they are,  this wedding couldn't have been possible without the magnificent imagery of [Noah Hawthorne] & [10thlettermedia].\r\n\
+      ![img](http://farm5.static.flickr.com/4112/5034936993_bf5a9826f1.jpg)\r\n\
+      \r\n\
+      [Check out the full feature here]<br/>\r\n\
+      [Check out the slideshow here]\r\n\
+      \r\n\
+      Watch the video below \r\n\
+      \r\n\
+      <object width=\"400\" height=\"225\"><param name=\"allowfullscreen\" value=\"true\" /><param name=\"allowscriptaccess\" value=\"always\" /><param name=\"movie\" value=\"http://vimeo.com/moogaloop.swf?clip_id=14766990&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=&amp;fullscreen=1&amp;autoplay=0&amp;loop=0\" /><embed src=\"http://vimeo.com/moogaloop.swf?clip_id=14766990&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=1&amp;color=&amp;fullscreen=1&amp;autoplay=0&amp;loop=0\" type=\"application/x-shockwave-flash\" allowfullscreen=\"true\" allowscriptaccess=\"always\" width=\"400\" height=\"225\"></embed></object><p><a href=\"http://vimeo.com/14766990\">Jess and Tim | Relais Du Soleil | 09.05.10</a> from <a href=\"http://vimeo.com/tenthlm\">10th Letter Media, LLC</a> on <a href=\"http://vimeo.com\">Vimeo</a>.</p>\r\n\
+      The Wedding Team:\r\n\
+      \r\n * Photographer: [Noah Hawthorne] Photography       \r\n * Videographer: Julian Gilliam of [10thLetterMedia]   \r\n * Ceremony and Reception Venue: Relais du Soleil\r\n * Catering: Grapevine Catering\r\n * Florist: Oak Hill Farm\r\n * Desserts: A sundae bar from Ben & Jerry\xE2\x80\x99s of Sonoma\r\n * Wedding dress: Amy Kuschel\xE2\x80\x99s Turner dress, Reception dress BCBG . \r\n * Hair and make-up: Jane Kim [The Glamourist]\r\n * DJ: Phil Trau of Pure Energy Productions \r\n * Transportation: Pure Luxury Transporation \r\n * Dance instruction: Val Cunningham \r\n\
+      \r\n\
+      Thank you Jess & Tim for allowing me to be apart of your special day.\r\n\
+      \r\n\
+      [Junebug Weddings]:http://www.junebugweddings.com\r\n\
+      [Noah Hawthorne]:http://hawthornephotography.com\r\n\
+      [10thLetterMedia]:http://www.10thlettermedia.com/\r\n\
+      [The Glamourist]:http://www.theglamourist.com\r\n\
+      [Check out the full feature here]:http://junebugweddings.com/blogs/what_junebug_loves/archive/2010/09/27/wedding-style-jess-and-tim.aspx\r\n\
+      [Check out the slideshow here]:http://www.hawthornephotography.com/Slideshows/Tim_Jess/index.html\r\n"
+    - 2010-09-29 06:29:28
+    - 2010-09-29 06:43:22
+  - - "15"
+    - Featured Publishing | Kristine & Todd's Wedding
+    - |-
+      When [Gladys Jem] sent me an email to hold off on blogging about Kristine & Todd's wedding, I happily obliged because it was getting featured!  Lovely wedding blog [Elizabeth Anne Designs] shared the whimsical ceremony and rustic details of this wonderful couple & dear friend's matrimonial journey.
+      
+      Of course, these details and imagery would not be possible without the talented [Gladys Jem].  She captured every moment with her keen photojournalistic instinct and beautiful style.
+      ![img](http://farm5.static.flickr.com/4058/5078304937_17b822fee5_b.jpg)
+      
+      [Click here to see the full article on Elizabeth Anne Designs]
+      
+      [Click here to see the more images on Gladys Jem's Blog]
+      
+      Wedding Team:
+      
+      *Ceremony Venue: Shakespeare Garden, Golden Gate Park
+      * Reception Venue: [Terra Gallery]
+      *Coordinator: Julene Veach from [Terra Gallery]
+      *DJ: Allen Valenzuela
+      *Catering: [Devoted Catering] by Aimee Alan
+      *Flowers: [Studio Choo]
+      *Photography: [Gladys Jem]
+      *Hair & Makeup: Jane Kim of [The Glamourist]
+      
+      [The Glamourist]:http:t//heglamourist.com
+      [Gladys Jem]:http://www.gladysjem.com
+      [Elizabeth Anne Designs]:http://elizabethannedesigns.com
+      [Terra Gallery]:http.//terrasf.com
+      [Studio Choo]:http://smallstump.com/aboutchoo.html
+      [Devoted Catering]:http://devotedcatering.com/
+      [Click here to see the full article on Elizabeth Anne Designs]:http://www.elizabethannedesigns.com/blog/2010/10/13/san-francisco-art-gallery-wedding/
+      
+      [Click here to see the more images on Gladys Jem's Blog]:http://gladysjemblog.com/kristine-todd-shakespeare-garden-terra-gallery-sf-wedding/
+    - 2010-10-15 07:15:27
+    - 2010-10-15 23:39:02
+  - - "16"
+    - ERIKA & COLIN | A BEREKLEY AFFAIR
+    - |-
+      One of the questions that I get asked the most is "do you ever deal with any bridezillas"?   I have been fortunate enough to say that I have not.    This wedding was no different, Erika was probably one of my most favorite brides.  I know I say this about most of my brides but Erika truly has an infectious bubbly personality that makes you feel like old time friends.  You can't help but fall in love with her.  I can totally understand why Colin chose her to spend his happily ever after with.
+      
+      I must add, the old cliche is indeed true... "you are the company you keep".  Her bridesmaids were all a riot.  Each and everyone of them were so sweet, so genuine and truly beautiful girls!  One of them called me a "life-changer"... all for applying falsies on her.
+      
+      For her makeup she wanted to keep a very natural feel with some definition in the eyes.  I kept the makeup on neutral palette with browns, peaches and corals. Picking a makeup artist is like picking a dress.  When you know, you know.   Erika had gone through trial sessions with several other artists until she found [The Glamourist].  That's when she knew... :D
+      
+      This wedding could not be complete without the beautiful imagery of [Alison Yin].
+       
+      [Click here for Alison's blog post.]
+      
+      ![img](http://farm5.static.flickr.com/4090/5106000214_fea03bc9ca.jpg)
+      
+      ![img](http://farm5.static.flickr.com/4124/5105999984_0712c86b69.jpg)
+      ![img](http://farm2.static.flickr.com/1157/5105999188_d98b1567db.jpg)
+      ![img](http://farm2.static.flickr.com/1357/5105997870_9aafb9911b.jpg)
+      ![img](http://farm2.static.flickr.com/1085/5105403883_da4b374174.jpg)
+      ![img](http://farm2.static.flickr.com/1077/5105404375_b4e5924d42.jpg)
+      ![img](http://farm5.static.flickr.com/4088/5105404621_fc5de49e70.jpg)
+      ![img](http://farm2.static.flickr.com/1157/5105999188_d98b1567db.jpg)
+      ![img](http://farm2.static.flickr.com/1132/5105999390_c4928e629e.jpg)
+      
+      Vendor Credits:
+       *Venue: U.C. Berekely Faculty Club
+       *Photography: [Alison Yin]
+       *Coordinator:  [The Wedding Coach]
+       *Makeup & Hair: [The Glamourist by Jane Kim]
+       *Makeup & Hair Assistant: [Jihyun Kim]
+      
+      [Alison Yin]:http://www.alisonyinweddings.com/
+      [Click here for Alison's blog post.]:http://www.alisonyinblog.com/?p=1975
+      [The Wedding Coach]:http://weddingcoach.bz/
+      [Jihyun Kim]:http://www.onegerl.com
+      [The Glamourist by Jane Kim]:http://theglamourist.com
+    - 2010-10-22 23:23:54
+    - 2010-10-22 23:27:15

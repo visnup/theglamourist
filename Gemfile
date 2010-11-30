@@ -4,6 +4,7 @@ source :rubygems
 gem "rails"
 gem "sqlite3-ruby"
 
+gem "formtastic"
 gem "haml"
 gem "json"
 gem "rdiscount"

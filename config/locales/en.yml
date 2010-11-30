@@ -2,4 +2,11 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      contact:
+        event_at: Event date
+        event_venue: Event location
+        party_size: Size of bridal party
+        ready_time: What time will you need to be ready by?
+        message: Please describe what you’re looking for

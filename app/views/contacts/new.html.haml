@@ -16,20 +16,17 @@
 
 %h2 for inquiries
 
-= form_for @contact do |f|
-  = f.error_messages
-
-  %p
-    = f.label :name, 'name'
-    %br
-    = f.text_field :name
-  %p
-    = f.label :email, 'email'
-    %br
-    = f.text_field :email
-  %p
-    = f.label :message, 'message'
-    %br
-    = f.text_area :message, :placeholder => 'please describe what you&rsquo;re looking for'.html_safe
-  %p
-    = f.submit 'send'
+= semantic_form_for @contact do |f|
+  = f.inputs :name, :email, :phone_number
+  = f.inputs do
+    = f.input :service_type, :as => :select, :collection => %w/ Wedding Commercial Fashion Lessons Boudoir Other /
+    = f.input :event_at, :labels => { :year => I18n.t('activerecord.attributes.contact.event_at') }, :start_year => Date.today.year, :include_blank => false, :required => true
+    = f.input :event_venue
+    = f.input :ready_time, :labels => { :hour => I18n.t('activerecord.attributes.contact.ready_time') }, :meridian => true, :minute_step => 15
+    = f.input :party_size
+  = f.inputs :message
+  %p.demand
+    We try to respond promptly, but due to the high volume of inquiries, please
+    allow up to 72 hours for a reply.
+  = f.buttons do
+    = f.commit_button 'Send'

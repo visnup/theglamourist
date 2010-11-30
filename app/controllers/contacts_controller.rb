@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/new
   def new
-    @contact = Contact.new
+    @contact = Contact.new :event_at => Date.today
     respond_with @contact
   end
 
