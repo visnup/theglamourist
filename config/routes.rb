@@ -17,10 +17,12 @@ TheGlamourist::Application.routes.draw do
   #   resources :products
   resources :contacts
 
-  match '/posts.:format' => redirect('/blog.%{format}')
-  match '/posts' => redirect('/blog')
-  match '/posts/:id' => redirect('/blog/%{id}')
-  resources :posts, :path => 'blog'
+  %w/ posts blog /.each do |path|
+    match "/#{path}.:format" => redirect('http://blog.theglamourist.com/rss.xml')
+    match "/#{path}" => redirect('http://blog.theglamourist.com')
+    match "/#{path}/:id" => redirect('http://blog.theglamourist.com')
+  end
+  #resources :posts, :path => 'blog'
 
   # Sample resource route with options:
   #   resources :products do

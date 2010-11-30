@@ -5,7 +5,7 @@
       = yield(:title) + ' |'  if content_for?(:title)
       the glamourist - jane kim
     = csrf_meta_tag
-    = auto_discovery_link_tag :atom, posts_url('atom')
+    = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
     = stylesheet_link_tag 'application'
     <!--[if IE]>
     = stylesheet_link_tag 'ie'
@@ -27,7 +27,7 @@
         %li= link_to 'services', services_path, :class => 'services'
         %li= link_to 'contact', new_contact_path, :class => 'contact'
         %li= link_to 'about', about_path, :class => 'about'
-        %li= link_to 'blog', posts_path, :class => 'blog'
+        %li= link_to 'blog', 'http://blog.theglamourist.com', :class => 'blog'
         .clear
       #page
         = yield
