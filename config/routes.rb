@@ -22,7 +22,7 @@ TheGlamourist::Application.routes.draw do
     match "/#{path}" => redirect('http://blog.theglamourist.com')
     match "/#{path}/:id" => redirect('http://blog.theglamourist.com')
   end
-  resources :posts, :path => 'export'
+  #resources :posts, :path => 'blog'
 
   # Sample resource route with options:
   #   resources :products do
