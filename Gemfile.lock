@@ -46,6 +46,7 @@ GEM
     mime-types (1.16)
     mocha (0.9.10)
       rake
+    nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -87,6 +88,7 @@ DEPENDENCIES
   haml
   json
   mocha
+  nokogiri
   rails (= 3.0.1)
   rdiscount
   ruby-debug

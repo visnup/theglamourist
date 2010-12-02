@@ -10,6 +10,7 @@ gem "rdiscount"
 gem "will_paginate", "3.0.pre2"
 
 group :development do
+  gem "nokogiri"
   gem "ruby-debug"
   gem "yaml_db"
 end
