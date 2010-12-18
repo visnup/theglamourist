@@ -3,7 +3,7 @@ class IndexController < ApplicationController
   caches_page :index, :portfolio
 
   def index
-    @photos = @sets.first['photos'][0, 3]
+    @photo = @sets.first['photos'][0]
   end
 
   def login

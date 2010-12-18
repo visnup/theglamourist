@@ -148,7 +148,7 @@ ul#nav
 #page
   :clear both
   :background-color #e6e6e6
-  :background-color hsla(0, 0%, 0%, 0.1)
+  :background-color hsla(0, 0%, 0%, 0.05)
   :padding 2em 10px
   :text-shadow 0px 1px 0px hsla(0, 100%, 100%, 0.5)
   .pullout
@@ -180,13 +180,11 @@ a.thumb
     +shadow
 
 body.index-index
-  a.thumb img
-    :vertical-align -30%
   #portrait
-    :float right
-    :width $pullout_width * 2
-  #about
-    :margin-right $pullout_width * 2 + 20px
+    :text-align center
+    img
+      :margin 0px auto
+      :position static
   #footer
     :text-align left
 
