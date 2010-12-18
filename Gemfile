@@ -1,7 +1,7 @@
 # Edit this Gemfile to bundle your application's dependencies.
 source :rubygems
 
-gem "rails", "3.0.1"
+gem "rails"
 gem "sqlite3-ruby"
 
 gem "haml"
