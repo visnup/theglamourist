@@ -6,6 +6,7 @@
       the glamourist - jane kim
     = csrf_meta_tag
     = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:100'
     = stylesheet_link_tag 'application'
     <!--[if IE]>
     = stylesheet_link_tag 'ie'
@@ -35,7 +36,6 @@
         .where SF Bay Area Makeup Artist, SF, Napa, San Jose, Northern CA, Southen CA, Boudoir, Commerical, Fashion
         &copy; #{Time.now.year} the glamourist
         &mdash; designed by #{link_to 'fortnight labs', 'http://fortnightlabs.com'}
-        &mdash; code on #{link_to 'github', 'http://github.com/visnup/theglamourist'}
     - if Rails.env.production?
       = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js'
     - else
