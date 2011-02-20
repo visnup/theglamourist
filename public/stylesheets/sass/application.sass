@@ -107,6 +107,8 @@ form.formtastic
       :display inline
       & + li label
         :display none
+  fieldset.buttons ol
+    :margin-left 26ex
   li.error
     label
       :color $link
@@ -114,7 +116,7 @@ form.formtastic
       +inset_shadow($red)
     p.inline-errors
       :color $link
-      :margin 0px 0px 0px 25ex
+      :margin 0px 0px 0px 26ex
 
 input[type=text], input[type=email], input[type=tel], textarea, select
   :padding 6px
@@ -132,14 +134,19 @@ input[type=submit]
   :border-left-color hsla(0, 0%, 0%, 0.2)
   :padding 0.25em 0.5em 0.1em
   :background-color $link
-  :background-image -webkit-gradient(linear, left top, left bottom, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.2)))
-  :background-image -moz-linear-gradient(hsla(0, 100%, 100%, 0.6), hsla(0, 100%, 100%, 0.2))
+  :background-image -webkit-gradient(linear, left top, left bottom, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.3)))
+  :background-image -moz-linear-gradient(hsla(0, 100%, 100%, 0.6), hsla(0, 100%, 100%, 0.3))
   :color $white
   :text-shadow 0px 1px 0px hsla(0, 0%, 0%, 0.5)
   :font-size $large
+  :cursor pointer
+  :-webkit-transition -webkit-box-shadow 100ms ease-in
+  :-moz-transition -moz-box-shadow 100ms ease-in
+  &:hover
+    +shadow($link)
   &:active
-    :background-image -webkit-gradient(linear, left bottom, left top, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.2)))
-    :background-image -moz-linear-gradient(90deg, hsla(0, 100%, 100%, 0.6), hsla(0, 100%, 100%, 0.2))
+    :background-image -webkit-gradient(linear, left bottom, left top, from(hsla(0, 100%, 100%, 0.6)), to(hsla(0, 100%, 100%, 0.3)))
+    :background-image -moz-linear-gradient(90deg, hsla(0, 100%, 100%, 0.6), hsla(0, 100%, 100%, 0.3))
 
 body
   :background-color #f6f6f9
