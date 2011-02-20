@@ -4,6 +4,7 @@
     %title
       = yield(:title) + ' |'  if content_for?(:title)
       the glamourist - jane kim
+    %meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
     = csrf_meta_tag
     = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:100'
