@@ -6,8 +6,8 @@ gem "sqlite3-ruby"
 
 gem "haml"
 gem "json"
-gem "jquery-rails"
 gem "rdiscount"
+gem "will_paginate", "3.0.pre2"
 
 group :development do
   gem "nokogiri"
