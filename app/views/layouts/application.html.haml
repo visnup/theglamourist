@@ -16,26 +16,30 @@
     <![endif]-->
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
     #content
-      %ul#nav
+      %header
         %h1
-          = link_to 'the <b>glamourist</b>'.html_safe, root_path
-        .social
-          = '<a href="http://www.facebook.com/theglamourist"><img src="/images/facebook.png" class="facebook" alt="Like theglamourist on Facebook"/></a>'.html_safe
-          = '<a href="http://www.twitter.com/theglamourist"><img src="http://twitter-badges.s3.amazonaws.com/t_logo-b.png" alt="Follow theglamourist on Twitter" class="twitter"/></a>'.html_safe
-          = '<a href="http://www.yelp.com/biz/the-glamourist-san-francisco"><img src="/images/yelp.png" class="yelp" alt="Rate theglamourist on Yelp"/></a>'.html_safe
-        %li= link_to 'home', root_path, :class => 'home'
-        %li= link_to 'portfolio', portfolio_path, :class => 'portfolio'
-        %li= link_to 'services', services_path, :class => 'services'
-        %li= link_to 'contact', new_contact_path, :class => 'contact'
-        %li= link_to 'about', about_path, :class => 'about'
-        %li= link_to 'blog', 'http://blog.theglamourist.com', :class => 'blog'
-        .clear
-      #page
-        = yield
-      #footer
-        .where SF Bay Area Makeup Artist, SF, Napa, San Jose, Northern CA, Southen CA, Boudoir, Commerical, Fashion
-        &copy; #{Time.now.year} the glamourist
-        &mdash; designed by #{link_to 'fortnight labs', 'http://fortnightlabs.com'}
+          .tagline! Hair <b>|</b> Makeup Design
+          = link_to 'THE <b>GLAMOURIST</b>'.html_safe, root_path
+        %nav
+          %ul
+            %li= link_to_unless_current 'home', root_path, :class => 'home'
+            %li= link_to_unless_current 'about', about_path, :class => 'about'
+            %li= link_to_unless_current 'gallery', portfolio_path, :class => 'portfolio'
+            %li= link_to_unless_current 'services', services_path, :class => 'services'
+            %li= link_to_unless_current 'blog', 'http://blog.theglamourist.com', :class => 'blog'
+            %li= link_to_unless_current 'contact', new_contact_path, :class => 'contact'
+            %li.social
+              %a{ :href => "http://www.facebook.com/theglamourist" }
+                %img.facebook{ :src => "/images/facebook.png" }
+              %a{ :href => "http://www.twitter.com/theglamourist" }
+                %img.twitter{ :src => "/images/twitter.png" }
+              %a{ :href => "http://www.yelp.com/biz/the-glamourist-san-francisco" }
+                %img.yelp{ :src => "/images/yelp.png" }
+      #page= yield
+    %footer
+      .where SF Bay Area Makeup Artist, SF, Napa, San Jose, Northern CA, Southen CA, Boudoir, Commerical, Fashion
+      &copy; #{Time.now.year} the glamourist
+      &mdash; designed by #{link_to 'fortnight labs', 'http://fortnightlabs.com'}
     - if Rails.env.production?
       = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'
     - else

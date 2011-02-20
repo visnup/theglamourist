@@ -1,34 +1,4 @@
 $(function() {
-  // setup the top nav
-  var expand = function() {
-    $(this)
-      .animate({ width: $(this).data('selectedWidth') }, 'fast')
-      .parent().siblings().find('a')
-        .each(function() {
-          if ($(this).data('startWidth'))
-            $(this)
-              .clearQueue()
-              .animate({ width: $(this).data('startWidth') }, 'fast');
-        });
-  };
-
-  $('#nav li a')
-    .each(function() {
-      var w = $(this).width();
-      $(this).data({ 'startWidth': w, 'selectedWidth': w + 50 });
-    })
-    .wrapInner('<span>')
-    .mouseenter(expand)
-    .click(function() {
-      $('#nav li a.selected').removeClass('selected');
-      $(this).addClass('selected');
-    })
-    .filter('a[href=' + window.location.pathname + ']')
-      .addClass('selected')
-      .css('width', function() { return $(this).data('selectedWidth'); });
-  $('#nav').mouseleave(function() { expand.apply($('#nav li a.selected')); });
-  expand.apply($('#nav li a.selected'));
-
   // focus first form elements
   $('#page form :text:first').focus();
 
@@ -38,7 +8,7 @@ $(function() {
     .attr('href', function() { return '#t' + $(this).attr('id'); });
   $('body.index-index a.thumb').data('flickr', '/portfolio');
 
-  var loadPortrait = function(link) {
+  function loadPortrait(link) {
     if ($(link).length == 0) return;
     $('a.thumb.selected').removeClass('selected');
     var src = $(link)
@@ -63,16 +33,16 @@ $(function() {
             position: 'absolute',
             top: top + Math.random() * 50,
             left: (portrait.width() - $(this).width())/2,
-            //filter: 'progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)',
             '-webkit-transform': rotation,
-            '-moz-transform': rotation
+            '-moz-transform': rotation,
+            '-ms-transform': rotation
           })
           .fadeIn('fast');
       })
       .attr('src', src);
   };
 
-  var openSet = function(set) {
+  function openSet(set) {
     var $set = $(set);
 
     if ($set.is('.open')) return;
@@ -82,7 +52,8 @@ $(function() {
       .find('img').slice(1, 4)
         .css({
           '-webkit-transform': 'none',
-          '-moz-transform': 'none'
+          '-moz-transform': 'none',
+          '-ms-transform': 'none'
         });
 
     $('ul.sets')
@@ -93,7 +64,7 @@ $(function() {
     $('.set.closed').hide();
   };
 
-  var closeSet = function(set) {
+  function closeSet(set) {
     $('ul.sets')
       .find('a.back').hide().end()
       .find('.title')
@@ -107,7 +78,8 @@ $(function() {
           var rotation = 'rotate(' + 10*((Math.random() * 2)-1) + 'deg)';
           $(this).css({
             '-webkit-transform': rotation,
-            '-moz-transform': rotation
+            '-moz-transform': rotation,
+            '-ms-transform': rotation
           });
         });
       })
