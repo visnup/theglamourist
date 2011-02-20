@@ -16,6 +16,11 @@ $large: 19px
 $x_large: 24px
 $xx_large: 32px
 
+=rotate($length)
+  :-webkit-transform rotate($length)
+  :-moz-transform rotate($length)
+  :-ms-transform rotate($length)
+
 =rounded($radius: 2px)
   :-webkit-border-radius $radius
   :-moz-border-radius $radius
@@ -259,9 +264,7 @@ body.index-about
   #page img
     :float left
     :border solid 5px $white
-    :-webkit-transform rotate(1deg)
-    :-moz-transform rotate(1deg)
-    :-ms-transform rotate(1deg)
+    +rotate(-2deg)
     +shadow
   p
     :margin-left 330px
