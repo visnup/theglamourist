@@ -40,10 +40,6 @@ $xx_large: 32px
   :opacity $value
   :filter alpha(opacity = $value*100)
 
-// some things need some definition
-header, footer, nav
-  :display block
-
 body
   :text-align center
   :background-color $white
@@ -151,7 +147,7 @@ input[type=submit]
 body
   :background-color #f6f6f9
 
-#content, footer
+#content, #footer
   :width 900px
   :margin 0px auto
   :text-align left
@@ -165,10 +161,10 @@ body
   :background hsla(0, 0%, 100%, 0.5) -moz-radial-gradient(50% 30px, hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 30%, 0.15))
   +rounded
 
-header, nav
+#header, #nav
   :text-align center
 
-header
+#header
   a:hover
     :text-decoration none
   h1
@@ -186,7 +182,7 @@ header
     b
       :color $link
 
-nav ul
+#nav ul
   :list-style-type none
   :padding 0px
   :text-transform uppercase
@@ -215,7 +211,7 @@ nav ul
   .pullout
     :float right
     :width $pullout_width - 20px
-footer
+#footer
   :font-size $small
   :padding 1em 10px
   .where
@@ -245,7 +241,7 @@ body.index-index
     img
       :margin 0px auto
       :position static
-  footer
+  #footer
     :text-align left
 
 body.index-portfolio

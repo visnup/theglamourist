@@ -17,11 +17,11 @@
     <![endif]-->
   %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
     #content
-      %header
+      #header
         %h1
           .tagline! Hair <b>|</b> Makeup Design
           = link_to 'THE <b>GLAMOURIST</b>'.html_safe, root_path
-        %nav
+        #nav
           %ul
             %li= link_to_unless_current 'home', root_path, :class => 'home'
             %li= link_to_unless_current 'about', about_path, :class => 'about'
@@ -37,7 +37,7 @@
               %a{ :href => "http://www.yelp.com/biz/the-glamourist-san-francisco" }
                 %img.yelp{ :src => "/images/yelp.png" }
       #page= yield
-    %footer
+    #footer
       .where SF Bay Area Makeup Artist, SF, Napa, San Jose, Northern CA, Southen CA, Boudoir, Commerical, Fashion
       &copy; #{Time.now.year} the glamourist
       &mdash; designed by #{link_to 'fortnight labs', 'http://fortnightlabs.com'}
