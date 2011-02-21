@@ -2,10 +2,6 @@ class IndexController < ApplicationController
   before_filter :photos_from_flickr, :only => [:index, :portfolio]
   caches_page :index, :portfolio
 
-  def index
-    @photo = @sets.first['photos'][0]
-  end
-
   def login
     session[:admin] = true  if params[:password] == 'blah'
     redirect_to root_url
