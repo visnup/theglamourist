@@ -15,7 +15,7 @@ class IndexControllerTest < ActionController::TestCase
     flickr_setup
     get :index
     assert_response :ok
-    assert_equal 3, assigns(:photos).size
+    assert_equal 4, assigns(:sets).size
   end
 
   test "should get portfolio" do
