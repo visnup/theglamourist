@@ -19,13 +19,13 @@ class ContactsControllerTest < ActionController::TestCase
     end
 
     assert_difference('Contact.count') do
-      post :create, :contact => { :name => 'jane', :email => 'jane@foo.com', :message => 'hi' }
+      post :create, :contact => { :name => 'jane', :email => 'jane@foo.com', :phone_number => 'hi', :event_at => 1.day.from_now }
     end
 
     assert_redirected_to contact_path(assigns(:contact))
     assert m = Contact::Notifier.deliveries.first
     assert_equal ['jane@theglamourist.com'], m.to
-    assert_equal 'hi', m.body.raw_source
+    assert_equal assigns(:contact).attributes.to_yaml, m.body.raw_source
   end
 
   test "should show contact" do
