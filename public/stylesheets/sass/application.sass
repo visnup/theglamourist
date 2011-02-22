@@ -161,6 +161,10 @@ body
   :background hsla(0, 0%, 100%, 0.5) -moz-radial-gradient(50% 30px, hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 60%, 0.2))
   +rounded
 
+html.ie8, html.ie7, html.ie6
+  #content
+    :background-image url('/images/bg_light.jpg')
+
 #header, #nav
   :text-align center
 
@@ -298,6 +302,10 @@ body.index-portfolio
       :margin 5px
     h4
       :display none
+
+html.ie7, html.ie6
+  body.index-portfolio
+    :overflow-y auto
 
 body.contacts-new, body.contacts-create
   #address
