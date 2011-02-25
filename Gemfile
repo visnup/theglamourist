@@ -7,6 +7,7 @@ gem "sqlite3-ruby"
 gem "formtastic"
 gem "haml"
 gem "json"
+gem "jquery-rails"
 gem "rdiscount"
 gem "will_paginate", "3.0.pre2"
 
