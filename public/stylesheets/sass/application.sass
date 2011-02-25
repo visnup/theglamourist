@@ -193,6 +193,8 @@ html.ie8, html.ie7, html.ie6
   :color $link
   a
     :color $black
+    :-webkit-transition color 200ms ease-out
+    :-moz-transition color 200ms ease-out
     &:hover
       :color $link
   li
@@ -232,6 +234,7 @@ a.thumb
   &.selected img
     :border-color $link
     :-webkit-transition border-color 200ms linear
+    :-moz-transition border-color 200ms linear
 #portrait
   :position relative
   img
@@ -245,12 +248,25 @@ body.index-index
       :font-size 72px
     #nav
       :font-size 18px
-  #portrait
+  .portfolio
     :text-align center
-    img
+    a
+      :display inline-block
+      :background-color $white
+      :padding 5px
       :margin 0px auto
-      :vertical-align middle
-      :position static
+      +shadow
+      +rotate(1deg)
+      &:first-child
+        +rotate(-1deg)
+      &:hover
+        :text-decoration none
+    h3
+      :font-family 'Rock Salt'
+      :margin 0px
+    img
+      :border solid 1px hsla(0, 0%, 0%, 0.2)
+      +rounded(2px)
   #footer
     :text-align left
 
@@ -354,6 +370,7 @@ body.index-services
     h1, h2, h3, li
       :border-bottom dotted 1px transparent
       :-webkit-transition border-bottom 100ms linear
+      :-moz-transition border-bottom 100ms linear
       &:hover
         :border-bottom-color hsla(0, 0%, 0%, 0.2)
 
