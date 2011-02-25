@@ -30,6 +30,8 @@ $xx_large: 32px
   :-webkit-box-shadow 0px 0px 5px $color
   :-moz-box-shadow 0px 0px 5px $color
   :box-shadow 0px 0px 5px $color
+  html.ie8 &, html.ie7 &, html.ie6 &
+    :border solid 1px #ccc
 
 =inset_shadow($color: hsla(0, 0%, 0%, 0.3), $width: 3px)
   :-webkit-box-shadow 0px 0px $width $color inset
