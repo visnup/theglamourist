@@ -19,13 +19,14 @@ class ContactsControllerTest < ActionController::TestCase
     end
 
     assert_difference('Contact.count') do
-      post :create, :contact => { :name => 'jane', :email => 'jane@foo.com', :phone_number => 'hi', :event_at => 1.day.from_now }
+      post :create, :contact => { :name => 'jane', :email => 'jane@foo.com', :phone_number => '415-305-7168', :event_at => 1.day.from_now, :message => "hi,\n\n<3 you gf!\n" }
     end
 
     assert_redirected_to contact_path(assigns(:contact))
-    assert m = Contact::Notifier.deliveries.first
+    assert m = Notifier.deliveries.first
     assert_equal ['jane@theglamourist.com'], m.to
-    assert_equal assigns(:contact).attributes.to_yaml, m.body.raw_source
+    File.open(Rails.root + 'tmp/new_contact.html', 'w') { |f| f.write m.body.raw_source }
+    assert_equal File.read(fixture_path + 'new_contact.html'), m.body.raw_source
   end
 
   test "should show contact" do

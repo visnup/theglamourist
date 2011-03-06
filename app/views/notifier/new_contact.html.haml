@@ -1,0 +1,49 @@
+!!! 5
+%html
+  %head
+    %title
+      = yield(:title) + ' |'  if content_for?(:title)
+      the glamourist - jane kim
+    %style{ :type => 'text/css' }
+      :sass
+        =rounded($radius: 2px)
+          :-webkit-border-radius $radius
+          :-moz-border-radius $radius
+          :border-radius $radius
+
+        body
+          :background url('http://theglamourist.com/images/bg.jpg') repeat
+          :text-align center
+          :font-family Raleway
+        #content
+          :width 600px
+          :margin 0px auto
+          :text-align left
+          :padding 20px
+          :border solid 1px #ccc
+          :background hsla(0, 0%, 100%, 0.5) -webkit-gradient(radial, 50% 30, 100, 50% 50, 500, from(hsla(0, 0%, 100%, 0.3)), to(hsla(0, 0%, 60%, 0.2)))
+          +rounded
+        th, td
+          :width 25%
+        th
+          :padding-right 1em
+  %body
+    #content
+      %table
+        %tr
+          %th= label :contact, :phone_number
+          %td= @contact.phone_number
+          %th= label :contact, :service_type
+          %td= @contact.service_type
+        %tr
+          %th= label :contact, :event_venue
+          %td= @contact.event_venue
+          %th= label :contact, :event_at
+          %td= @contact.event_at.to_date.to_s :long
+        %tr
+          %th= label :contact, :party_size, 'Party size'
+          %td= @contact.party_size
+          %th= label :contact, :ready_time, 'Ready time'
+          %td= @contact.ready_time.try :strftime, '%l:%M %p'
+      -# HACK change this back to simple_format once https://rails.lighthouseapp.com/projects/8994/tickets/6513 is fixed
+      = complex_format @contact.message
