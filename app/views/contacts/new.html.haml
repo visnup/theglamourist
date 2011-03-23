@@ -1,7 +1,7 @@
 - content_for :title, 'contact'
 
 #address.pullout
-  %h2 contact
+  %h3 contact
   %p
     Jane Kim
     %br
@@ -14,7 +14,7 @@
     San Francisco, CA  94107
   Available for travel worldwide.
 
-%h2 for inquiries
+%h3 for inquiries
 
 = semantic_form_for @contact do |f|
   = f.inputs :name, :email, :phone_number
