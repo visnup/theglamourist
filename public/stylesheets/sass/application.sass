@@ -49,8 +49,9 @@ body
   :color $black
 
 body, input, textarea, select, option
-  :font-family 'raleway', 'helvetica neue', 'book antiqua', helvetica, arial, sans-serif
+  :font-family 'helvetica neue', 'book antiqua', helvetica, arial, sans-serif
   :font-size $medium
+  :font-weight 300
 
 input:focus, textarea:focus, select:focus, a:focus, a:active
   :outline-color $link
@@ -168,6 +169,7 @@ html.ie8, html.ie7, html.ie6
     :background-image url('/images/bg_light.jpg')
 
 #header, #nav
+  :font-family 'raleway', 'helvetica neue', helvetica, arial, sans-serif
   :text-align center
 
 #header
@@ -329,7 +331,6 @@ html.ie7, html.ie6
 
 body.contacts-new, body.contacts-create
   #address
-    :text-transform uppercase
     p
       :line-height 125%
   input[type=text], input[type=email], input[type=tel], textarea, p.demand
