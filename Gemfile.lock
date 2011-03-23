@@ -53,7 +53,7 @@ GEM
     mocha (0.9.12)
     nokogiri (1.4.4)
     polyglot (0.3.1)
-    rack (1.2.1)
+    rack (1.2.2)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -84,7 +84,7 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.24)
+    tzinfo (0.3.25)
     will_paginate (3.0.pre2)
     yaml_db (0.2.0)
 
