@@ -246,6 +246,9 @@ a.thumb
     :border solid 5px $white
     +shadow
 
+body
+  :overflow-y scroll
+
 body.index-index
   #header
     h1
@@ -277,7 +280,6 @@ body.index-index
     :text-align left
 
 body.index-portfolio
-  :overflow-y scroll
   #page
     :min-height 420px
   #portrait
@@ -334,7 +336,7 @@ body.index-portfolio
       :display none
 
 html.ie7, html.ie6
-  body.index-portfolio
+  body
     :overflow-y auto
 
 body.contacts-new, body.contacts-create
