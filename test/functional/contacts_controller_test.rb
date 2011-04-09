@@ -19,7 +19,7 @@ class ContactsControllerTest < ActionController::TestCase
     end
 
     assert_difference('Contact.count') do
-      post :create, :contact => { :name => 'jane', :email => 'jane@foo.com', :phone_number => '415-305-7168', :event_at => 1.day.from_now, :message => "hi,\n\n<3 you gf!\n" }
+      post :create, :contact => { :name => 'jane', :email => 'jane@foo.com', :phone_number => '415-305-7168', :event_at => Time.parse('2011-03-06'), :message => "hi,\n\n<3 you gf!\n" }
     end
 
     assert_redirected_to contact_path(assigns(:contact))
