@@ -299,6 +299,14 @@ body.index-portfolio
       :left 0px
       :font-size $small
       :margin-top $large - $small - 1
+    ul
+      :overflow auto
+    ::-webkit-scrollbar
+      :width 8px
+      :height 8px
+    ::-webkit-scrollbar-thumb:vertical
+      :background-color hsla(0, 0%, 0%, 0.2)
+      :-webkit-border-radius 8px
   .set.closed, li.spacer
     :position relative
     :display inline-block

@@ -8,6 +8,14 @@ $(function() {
     .attr('href', function() { return '#t' + $(this).attr('id'); });
   $('body.index-index a.thumb').data('flickr', '/portfolio');
 
+  $('body.index-portfolio').each(function() {
+    var $window = $(window);
+
+    $window.resize(function() {
+      $('ul.sets ul').css('height', $window.height() - 400);
+    }).resize();
+  });
+
   function loadPortrait(link) {
     if ($(link).length == 0) return;
     $('a.thumb.selected').removeClass('selected');
@@ -33,7 +41,7 @@ $(function() {
             .wrap('<a href="' + $(link).data('flickr') + '">')
             .css({
               position: 'absolute',
-              top: top + Math.random() * 50,
+              top: top + Math.random() * ($(window).height()-400)/5,
               left: (portrait.width() - $this.width())/2,
               '-webkit-transform': rotation,
               '-moz-transform': rotation,
