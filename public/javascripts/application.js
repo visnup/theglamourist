@@ -16,6 +16,19 @@ $(function() {
     }).resize();
   });
 
+  $(window)
+    .hashchange(function() {
+      if (location.hash.length > 2) {
+        var thumb = $('a.thumb#' + window.location.hash.substring(2));
+        openSet(thumb.closest('.set'));
+        loadPortrait(thumb);
+      } else {
+        closeSet($('.set.open'));
+        loadPortrait('a.thumb:first');
+      }
+    })
+    .hashchange();
+
   function loadPortrait(link) {
     if ($(link).length == 0) return;
     $('a.thumb.selected').removeClass('selected');
@@ -51,7 +64,7 @@ $(function() {
         }, 0);
       })
       .attr('src', src);
-  };
+  }
 
   function openSet(set) {
     var $set = $(set);
@@ -73,7 +86,7 @@ $(function() {
         .text($('h4', set).text());
 
     $('.set.closed').hide();
-  };
+  }
 
   function closeSet(set) {
     $('ul.sets')
@@ -95,18 +108,5 @@ $(function() {
         });
       })
       .show();
-  };
-
-  $(window)
-    .hashchange(function() {
-      if (location.hash.length > 2) {
-        var thumb = $('a.thumb#' + window.location.hash.substring(2));
-        openSet(thumb.closest('.set'));
-        loadPortrait(thumb);
-      } else {
-        closeSet($('.set.open'));
-        loadPortrait('a.thumb:first');
-      }
-    })
-    .hashchange();
+  }
 });
