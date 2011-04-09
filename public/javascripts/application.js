@@ -9,11 +9,25 @@ $(function() {
   $('body.index-index a.thumb').data('flickr', '/portfolio');
 
   $('body.index-portfolio').each(function() {
-    var $window = $(window);
+    var $window = $(window),
+        $ul = $('ul.sets ul');
 
-    $window.resize(function() {
-      $('ul.sets ul').css('height', $window.height() - 400);
-    }).resize();
+    $window
+      .resize(function() { $ul.css('height', $window.height() - 400); })
+      .resize();
+
+    // https://github.com/Modernizr/Modernizr/blob/master/modernizr.js#L347
+    if ('ontouchstart' in window) {
+      var scrollStart = 0;
+      $ul
+        .bind('touchstart', function(e) {
+          scrollStart = $ul.scrollTop() + e.originalEvent.touches[0].pageY;
+        })
+        .bind('touchmove', function(e) {
+          e.preventDefault();
+          $ul.scrollTop(scrollStart - e.originalEvent.touches[0].pageY);
+        });
+    }
   });
 
   $(window)
