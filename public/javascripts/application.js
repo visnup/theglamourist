@@ -14,30 +14,33 @@ $(function() {
     var src = $(link)
       .addClass('selected')
       .find('img').attr('src').replace(/_s.jpg$/, '.jpg');
-    var img = $('<img>')
+    var img = $('<img class="portrait">')
       .load(function() {
         var portrait = $('#portrait'),
+            $this = $(this),
             rotation = 'rotate(' + ((Math.random() * 10)-5) + 'deg)';
         var top = $(window).scrollTop() + 50 - portrait.offset().top;
         if (top < 0) top = 0;
 
-        portrait.find('img').fadeOut(5000, function() {
+        portrait.find('img').fadeOut(3000, function() {
           $(this).parent('a').remove();
         });
 
-        $(this)
-          .hide()
-          .appendTo(portrait)
-          .wrap('<a href="' + $(link).data('flickr') + '">')
-          .css({
-            position: 'absolute',
-            top: top + Math.random() * 50,
-            left: (portrait.width() - $(this).width())/2,
-            '-webkit-transform': rotation,
-            '-moz-transform': rotation,
-            '-ms-transform': rotation
-          })
-          .fadeIn('fast');
+        setTimeout(function() {
+          $this
+            .hide()
+            .appendTo(portrait)
+            .wrap('<a href="' + $(link).data('flickr') + '">')
+            .css({
+              position: 'absolute',
+              top: top + Math.random() * 50,
+              left: (portrait.width() - $this.width())/2,
+              '-webkit-transform': rotation,
+              '-moz-transform': rotation,
+              '-ms-transform': rotation
+            })
+            .fadeIn(100);
+        }, 0);
       })
       .attr('src', src);
   };
