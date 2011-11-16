@@ -1,17 +1,16 @@
-# Edit this Gemfile to bundle your application's dependencies.
 source :rubygems
-
-gem "rails"
-gem "sqlite3-ruby"
 
 gem "formtastic"
 gem "haml"
-gem "json"
 gem "jquery-rails"
+gem "json"
+gem "rails"
 gem "rdiscount"
-gem "will_paginate", "3.0.pre2"
+gem "sass"
+gem "sqlite3-ruby"
 
 group :development do
+  gem "capistrano"
   gem "nokogiri"
   gem "ruby-debug"
   gem "yaml_db"
