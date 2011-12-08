@@ -25,6 +25,7 @@ class ContactsControllerTest < ActionController::TestCase
     assert_redirected_to contact_path(assigns(:contact))
     assert m = Notifier.deliveries.first
     assert_equal ['jane@theglamourist.com'], m.to
+    assert_equal '[theglamourist] March  6, 2011', m.subject
     File.open(Rails.root + 'tmp/new_contact.html', 'w') { |f| f.write m.body.raw_source }
     assert_equal File.read(fixture_path + 'new_contact.html'), m.body.raw_source
   end

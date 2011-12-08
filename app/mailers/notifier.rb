@@ -5,6 +5,6 @@ class Notifier < ActionMailer::Base
   def new_contact(contact)
     @contact = contact
     mail :from => "#{@contact.name} <#{@contact.email}>",
-         :subject => "[theglamourist] #{@contact.event_at.strftime(:long)}"
+         :subject => "[theglamourist] #{@contact.event_at.to_date.to_s(:long)}"
   end
 end
