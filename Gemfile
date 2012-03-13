@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'active-model-email-validator'
 gem 'formtastic'
-gem 'haml'
+gem 'slim'
 gem 'rails'
 gem 'rdiscount'
 gem 'sqlite3'

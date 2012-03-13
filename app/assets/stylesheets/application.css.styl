@@ -1,3 +1,7 @@
+//= require normalize
+//= require_self
+//= require_tree .
+
 @import "nib"
 
 black = #000
@@ -128,10 +132,12 @@ body
 
 #content
   padding 20px
+  margin-top 10px
   border solid 1px #ccc
   background-color #fcfcfc
   background-color hsla(0, 0%, 98%, 0.7)
-  background hsla(0, 0%, 100%, 0.5) radial-gradient(50% 30, 100, 50% 50, 500, hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 60%, 0.2))
+  background hsla(0, 0%, 100%, 0.5) -webkit-gradient(radial, 50% 30, 100, 50% 50, 500, from(hsla(0, 0%, 100%, 0.3)), to(hsla(0, 0%, 60%, 0.2)))
+  background hsla(0, 0%, 100%, 0.5) -moz-radial-gradient(50% 30px, hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 60%, 0.2))
   border-radius 2px
 
 html.ie8, html.ie7, html.ie6
@@ -365,9 +371,6 @@ body.index-services
     h1, h2, h3, li
       border-bottom dotted 1px transparent
       transition border-bottom 100ms linear
-    /*
-      &:hover
-        border-bottom-color hsla(0, 0%, 0%, 0.2)
 
 body.index-error
   #page

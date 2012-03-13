@@ -1,5 +1,0 @@
-.portfolio
-  - @sets.values_at(0, 2).each do |s|
-    = link_to portfolio_path(:anchor => "p#{s['id']}-#{s['photos'].first['id']}") do
-      = image_tag(s['photos'][0]['src'].sub('_s', '_m'))
-      %h3= s['title']

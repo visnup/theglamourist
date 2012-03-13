@@ -1,0 +1,32 @@
+- content_for :title, 'contact'
+
+address.pullout
+  h3 contact
+  p
+    | Jane Kim
+    br
+    == mail_to 'jane@theglamourist.com', nil, encode: 'javascript'
+  p.phone (415) 860-5872
+  p.address
+    a( href='http://maps.google.com/maps?q=1325+Indiana+St+Ste+301,+San+Francisco,+CA+94107+(The+Glamourist)&hl=en&sll=37.75358,-122.390639&sspn=0.011757,0.01929&vpsrc=0&gl=us&hnear=1325+Indiana+St+%23301,+San+Francisco,+California+94107&t=m&z=16&iwloc=A' )
+      | 1325 Indiana St.  Ste. 301
+      br
+      | San Francisco, CA  94107
+  | Available for travel worldwide.
+
+h3 for inquiries
+
+= semantic_form_for @contact do |f|
+  = f.inputs :name, :email, :phone_number
+  = f.inputs do
+    = f.input :service_type, as: :select, collection: %w/ Wedding Commercial Fashion Lessons Boudoir Other /
+    = f.input :event_at, labels: { year: I18n.t('activerecord.attributes.contact.event_at') }, start_year: Date.today.year, include_blank: false, required: true
+    = f.input :event_venue
+    = f.input :ready_time, labels: { hour: I18n.t('activerecord.attributes.contact.ready_time') }, meridian: true, minute_step: 15
+    = f.input :party_size
+  = f.inputs :message
+  p.demand
+    | We try to respond promptly, but due to the high volume of inquiries,
+    | please allow up to 72 hours for a reply.
+  = f.buttons do
+    = f.commit_button 'Send'
