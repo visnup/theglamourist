@@ -11,13 +11,12 @@
     %title
       = yield(:title) + ' |'  if content_for?(:title)
       the glamourist - jane kim - makeup artist (san francisco)
-    %meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ 'http-equiv' => "X-UA-Compatible", content: "IE=edge,chrome=1" }
     = csrf_meta_tag
     = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
-    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Raleway:100'
-    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Rock+Salt'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Rock+Salt|Raleway:100'
     = stylesheet_link_tag 'application'
-  %body{:class => "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
+  %body{class: "#{params[:controller]} #{params[:controller]}-#{params[:action]}"}
     #content
       #header
         %h1
@@ -25,31 +24,27 @@
           = link_to 'THE <b>GLAMOURIST</b>'.html_safe, root_path
         #nav
           %ul
-            %li= link_to_unless_current 'home', root_path, :class => 'home'
-            %li= link_to_unless_current 'about', about_path, :class => 'about'
-            %li= link_to_unless_current 'gallery', portfolio_path, :class => 'portfolio'
-            %li= link_to_unless_current 'services', services_path, :class => 'services'
-            %li= link_to_unless_current 'blog', 'http://blog.theglamourist.com', :class => 'blog'
-            %li= link_to_unless_current 'contact', new_contact_path, :class => 'contact'
+            %li= link_to_unless_current 'home', root_path, class: 'home'
+            %li= link_to_unless_current 'about', about_path, class: 'about'
+            %li= link_to_unless_current 'gallery', portfolio_path, class: 'portfolio'
+            %li= link_to_unless_current 'services', services_path, class: 'services'
+            %li= link_to_unless_current 'blog', 'http://blog.theglamourist.com', class: 'blog'
+            %li= link_to_unless_current 'contact', new_contact_path, class: 'contact'
             %li.social
-              %a{ :href => "http://www.facebook.com/theglamourist" }
-                %img.facebook{ :src => "/images/facebook.png" }
-              %a{ :href => "http://www.twitter.com/theglamourist" }
-                %img.twitter{ :src => "/images/twitter.png" }
-              %a{ :href => "http://www.yelp.com/biz/the-glamourist-san-francisco" }
-                %img.yelp{ :src => "/images/yelp.png" }
+              %a{ href: "http://www.facebook.com/theglamourist" }
+                %img.facebook{ src: "/assets/facebook.png" }
+              %a{ href: "http://www.twitter.com/theglamourist" }
+                %img.twitter{ src: "/assets/twitter.png" }
+              %a{ href: "http://www.yelp.com/biz/the-glamourist-san-francisco" }
+                %img.yelp{ src: "/assets/yelp.png" }
       #page= yield
     #footer
       .where San Francisco Makeup Artist, SF Bay Area Makeup Artist, Los Angeles, Boudoir, Commerical, Fashion
       &copy; #{Time.now.year} the glamourist
     - if Rails.env.production?
-      = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'
-    - else
-      = javascript_include_tag 'jquery'
-    = javascript_include_tag 'jquery.ba-hashchange.min', 'rails', 'application', :cache => true
-    - if Rails.env.production?
-      %script{ :type => 'text/javascript', :src => 'http://static.getclicky.com/js' }
+      %script{ type: 'text/javascript', src: 'http://static.getclicky.com/js' }
       :javascript
         try{clicky.init(236629);}catch(e){}
       %noscript
-        = image_tag 'http://in.getclicky.com/236629ns.gif', :size => '1x1'
+        = image_tag 'http://in.getclicky.com/236629ns.gif', size: '1x1'
+    = javascript_include_tag 'application'

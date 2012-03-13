@@ -1,0 +1,12 @@
+{
+  "name": "theglamourist",
+  "version": "0.0.1",
+  "dependencies": {
+    "canvas": {
+      "version": "0.10.3"
+    },
+    "nib": {
+      "version": "0.3.2"
+    }
+  }
+}

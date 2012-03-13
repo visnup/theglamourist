@@ -6,8 +6,8 @@ module ActionView
           if @options[:use_hidden] || @options[:discard_hour]
             build_hidden(:hour, hour)
           else
-            html = build_options_and_select(:hour, hour, :end => 23)
-            html.gsub(/>(\d+)</) do |match|
+            html = build_options_and_select(:hour, hour, end: 23)
+            html.to_param.gsub />(\d+)</ do |match|
               h = $1.to_i
               case h
               when 0
@@ -21,7 +21,7 @@ module ActionView
               else
                 '>??<'
               end
-            end
+            end.html_safe
           end
         else
           select_hour_without_meridian

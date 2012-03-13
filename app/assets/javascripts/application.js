@@ -1,3 +1,9 @@
+//= require jquery
+//= require jquery_ujs
+//= require jquery.ba-hashchange
+//= require_self
+//= require_tree .
+
 $(function() {
   // focus first form elements
   $('#page form :text:first').focus();

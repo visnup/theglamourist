@@ -1,22 +1,27 @@
 source :rubygems
 
-gem "formtastic"
-gem "haml"
-gem "jquery-rails"
-gem "json"
-gem "rails"
-gem "rdiscount"
-gem "sass"
-gem "sqlite3-ruby"
+gem 'active-model-email-validator'
+gem 'formtastic'
+gem 'haml'
+gem 'rails'
+gem 'rdiscount'
+gem 'sqlite3'
+
+group :assets do
+  gem 'coffee-rails'
+  gem 'jquery-rails'
+  gem 'stylus'
+  gem 'uglifier'
+end
+
+group :development, :test do
+  gem 'ruby-debug19'
+end
 
 group :development do
-  gem "capistrano"
-  gem "nokogiri"
-  gem "ruby-debug"
-  gem "yaml_db"
+  gem 'capistrano'
 end
 
 group :test do
-  gem "mocha"
-  gem "ruby-debug"
+  gem 'mocha'
 end
