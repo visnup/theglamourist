@@ -8,6 +8,7 @@ gem 'rdiscount'
 gem 'sqlite3'
 
 group :assets do
+  gem 'backbone-rails'
   gem 'coffee-rails'
   gem 'jquery-rails'
   gem 'stylus'

@@ -1,0 +1,160 @@
+@import "_common"
+
+body.index-index
+  #header
+    h1
+      font-size 72px
+      .tagline
+        margin-left 455px
+    #nav
+      font-size 18px
+  .portfolio
+    text-align center
+    a
+      display inline-block
+      background-color white
+      padding 5px
+      margin 0px auto
+      box-shadow 0 0 5px hsla(0, 0%, 0%, 0.4)
+      border-radius 2px
+      transform rotate(1deg)
+      &:first-child
+        transform rotate(-1deg)
+      &:hover
+        text-decoration none
+    h3
+      font-family 'Rock Salt'
+      margin 0px
+    img
+      border solid 1px hsla(0, 0%, 0%, 0.2)
+      border-radius 2px
+  #footer
+    text-align left
+
+body.index-portfolio
+  #page
+    min-height 420px
+  #portrait
+    position relative
+    margin-right pullout-width
+    img
+      position absolute
+      border solid 5px white
+      border-radius 2px
+      box-shadow 0 0 5px hsla(0, 0%, 0%, 0.4)
+      opacity 0
+      transition opacity ease-out 5s
+      &.fade-in
+        opacity 1
+        transition opacity ease-in 100ms
+  .pullout
+    text-align center
+  ul
+    list-style-type none
+    margin 0px
+    padding 0px
+  .sets
+    margin 0px auto
+    h3
+      position relative
+    a.back
+      display none
+      position absolute
+      left 0px
+      font-size small
+      margin-top large - small - 1
+    .title
+      display inline-block
+      width 6em
+    ul
+      overflow auto
+      transition height 200ms
+    :-webkit-scrollbar
+      width 8px
+      height 8px
+    :-webkit-scrollbar-thumb:vertical
+      background-color hsla(0, 0%, 0%, 0.2)
+      border-radius 8px
+  a.thumb
+    img
+      width 75px
+      height 75px
+      border solid 2px white
+      border-radius 2px
+    &.selected img
+      border-color link
+      transition border-color 200ms linear
+  .set.closed, li.spacer
+    position relative
+    display inline-block
+    width 79px
+    height 130px
+    margin 5px
+    overflow show
+    vertical-align top
+    li
+      position absolute
+      top 0px
+      left 0px
+    h4
+      text-transform none
+      margin-top 85px
+      width 79px
+      overflow hidden
+      text-overflow ellipsis
+  .set.open
+    li
+      position static
+      display inline-block
+      margin 5px
+    h4
+      display none
+
+body.index-about
+  #page img
+    float left
+    border solid 5px white
+    transform rotate(-2deg)
+    box-shadow 0 0 5px hsla(0, 0%, 0%, 0.4)
+  p
+    margin-left 330px
+    text-align justify
+    margin-right 35px
+
+body.index-services
+  #page
+    position relative
+    width 60%
+    margin 0px auto
+  h2
+    color link
+    font-size 1.25em
+    .location
+      text-transform none
+    .price
+      color black
+  ul
+    list-style-type none
+    padding-left 20px
+  li
+    margin 0.25em 0px
+    line-height 125%
+  .price
+    position absolute
+    right 0px
+    text-transform none
+    display none
+  .details ul
+    font-size small
+    padding-left 0px
+    margin-left 0px
+  #page
+    h1, h2, h3, li
+      border-bottom dotted 1px transparent
+      transition border-bottom 100ms linear
+
+body.index-error
+  #page
+    text-align center
+    h1
+      font-size xx-large
