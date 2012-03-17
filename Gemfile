@@ -15,13 +15,19 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'ruby-debug19'
+  gem 'rspec-rails'
 end
 
 group :development do
   gem 'capistrano'
+  #gem 'ruby-debug19'
 end
 
 group :test do
-  gem 'mocha'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'fakeweb'
+  gem 'ffaker'
+  gem 'shoulda-matchers'
+  gem 'vcr'
 end

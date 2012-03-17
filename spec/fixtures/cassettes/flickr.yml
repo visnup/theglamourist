@@ -1,0 +1,793 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.flickr.com/services/rest/?method=flickr.collections.getTree&api_key=18635c5ffedaf5681361e557ad8ed565&collection_id=20446502-72157624005829771&user_id=20451842%40N05&format=json&nojsoncallback=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 17 Mar 2012 03:29:24 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private
+      x-served-by:
+      - www124.flickr.mud.yahoo.com
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '800'
+      connection:
+      - close
+      content-type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"collections":{"collection":[{"id":"20446502-72157624005829771",
+        "title":"Portfolio", "description":"compilation of my makeup and hair work.
+        enjoy!", "iconlarge":"http:\/\/farm4.staticflickr.com\/3372\/cols\/72157624005829771_43ee72fea0_l.jpg",
+        "iconsmall":"http:\/\/farm4.staticflickr.com\/3372\/cols\/72157624005829771_43ee72fea0_s.jpg",
+        "set":[{"id":"72157624129720866", "title":"Weddings", "description":"Real
+        weddings - Real Photographers"}, {"id":"72157624005396809", "title":"Before
+        & After(s)", "description":""}, {"id":"72157624130178490", "title":"Fashion",
+        "description":""}, {"id":"72157625061763872", "title":"Press", "description":""},
+        {"id":"72157626848930587", "title":"Engagement", "description":""}, {"id":"72157626973424464",
+        "title":"Boudoir", "description":""}]}]}, "stat":"ok"}'
+    http_version: '1.1'
+  recorded_at: Sat, 17 Mar 2012 03:29:24 GMT
+- request:
+    method: get
+    uri: http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=18635c5ffedaf5681361e557ad8ed565&photoset_id=72157624129720866&format=json&nojsoncallback=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 17 Mar 2012 03:29:24 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private
+      x-served-by:
+      - www22.flickr.mud.yahoo.com
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"photoset":{"id":"72157624129720866", "primary":"4294320609", "owner":"20451842@N05",
+        "ownername":"janekimmer", "photo":[{"id":"3506297440", "secret":"1f37c5fa46",
+        "server":"3595", "farm":4, "title":"Stella & David", "isprimary":"0"}, {"id":"3506297648",
+        "secret":"4747f83c0d", "server":"3547", "farm":4, "title":"Stella & David",
+        "isprimary":"0"}, {"id":"3506297842", "secret":"eece830d75", "server":"3656",
+        "farm":4, "title":"Stella & David", "isprimary":"0"}, {"id":"4295061266",
+        "secret":"fa517a886c", "server":"2725", "farm":3, "title":"Marria & Tim",
+        "isprimary":"0"}, {"id":"4294320609", "secret":"d4c65d8aa1", "server":"4067",
+        "farm":5, "title":"Marria & Tim", "isprimary":"1"}, {"id":"4294320765", "secret":"47f124b235",
+        "server":"2743", "farm":3, "title":"hawaii wedding", "isprimary":"0"}, {"id":"4295066834",
+        "secret":"2cbdc272e0", "server":"2694", "farm":3, "title":"Marria & Tim",
+        "isprimary":"0"}, {"id":"4295063682", "secret":"62c9f50c19", "server":"2746",
+        "farm":3, "title":"Marria & Tim", "isprimary":"0"}, {"id":"4657210784", "secret":"2778544286",
+        "server":"4072", "farm":5, "title":"Alicia & Alex", "isprimary":"0"}, {"id":"4656590107",
+        "secret":"da577c8d4a", "server":"4061", "farm":5, "title":"Alicia & Alex",
+        "isprimary":"0"}, {"id":"4656590569", "secret":"9a1d195a6a", "server":"4001",
+        "farm":5, "title":"Alicia & Alex", "isprimary":"0"}, {"id":"4657213076", "secret":"f0b4f7926d",
+        "server":"4033", "farm":5, "title":"Alicia & Alex", "isprimary":"0"}, {"id":"4657213468",
+        "secret":"442f3c547b", "server":"4001", "farm":5, "title":"Alicia & Alex",
+        "isprimary":"0"}, {"id":"4657214422", "secret":"05dd3719de", "server":"4013",
+        "farm":5, "title":"Alicia & Alex", "isprimary":"0"}, {"id":"5105405269", "secret":"a74b795a9b",
+        "server":"1359", "farm":2, "title":"Erika + Colin Wedding", "isprimary":"0"},
+        {"id":"5105997154", "secret":"1c91357cec", "server":"1062", "farm":2, "title":"Erika
+        + Colin Wedding", "isprimary":"0"}, {"id":"5105998386", "secret":"c1ec8ce748",
+        "server":"1371", "farm":2, "title":"Erika + Colin Wedding", "isprimary":"0"},
+        {"id":"5105404621", "secret":"fc5de49e70", "server":"4088", "farm":5, "title":"Erika
+        + Colin Wedding", "isprimary":"0"}, {"id":"5106266020", "secret":"dec0ef861f",
+        "server":"1323", "farm":2, "title":"Erika + Colin Wedding copy", "isprimary":"0"},
+        {"id":"5105999188", "secret":"d98b1567db", "server":"1157", "farm":2, "title":"Erika
+        + Colin Wedding", "isprimary":"0"}, {"id":"5106000214", "secret":"fea03bc9ca",
+        "server":"4090", "farm":5, "title":"Erika + Colin Wedding", "isprimary":"0"},
+        {"id":"5105403883", "secret":"da4b374174", "server":"1085", "farm":2, "title":"Erika
+        + Colin Wedding", "isprimary":"0"}, {"id":"5105403307", "secret":"dc46550b2b",
+        "server":"4131", "farm":5, "title":"Erika + Colin Wedding", "isprimary":"0"},
+        {"id":"5105999788", "secret":"d853d2b77e", "server":"1379", "farm":2, "title":"Erika
+        + Colin Wedding", "isprimary":"0"}, {"id":"5105404375", "secret":"b4e5924d42",
+        "server":"1077", "farm":2, "title":"Erika + Colin Wedding", "isprimary":"0"},
+        {"id":"5105403073", "secret":"1dc5fd4c2d", "server":"4104", "farm":5, "title":"Erika
+        + Colin Wedding", "isprimary":"0"}, {"id":"5105999984", "secret":"0712c86b69",
+        "server":"4124", "farm":5, "title":"Erika + Colin Wedding", "isprimary":"0"},
+        {"id":"5105999390", "secret":"c4928e629e", "server":"1132", "farm":2, "title":"Erika
+        + Colin Wedding", "isprimary":"0"}, {"id":"4950646548", "secret":"d2cba59695",
+        "server":"4104", "farm":5, "title":"megan & stan", "isprimary":"0"}, {"id":"4950646832",
+        "secret":"c74dc30258", "server":"4137", "farm":5, "title":"megan & stan",
+        "isprimary":"0"}, {"id":"4950055799", "secret":"4e509f5228", "server":"4093",
+        "farm":5, "title":"megan & stan", "isprimary":"0"}, {"id":"4950056299", "secret":"5486c0b698",
+        "server":"4111", "farm":5, "title":"megan & stan", "isprimary":"0"}, {"id":"4950648324",
+        "secret":"2c775393ef", "server":"4148", "farm":5, "title":"megan & stan",
+        "isprimary":"0"}, {"id":"4950056963", "secret":"51bac399f0", "server":"4087",
+        "farm":5, "title":"megan & stan", "isprimary":"0"}, {"id":"4950649512", "secret":"9216a7d691",
+        "server":"4088", "farm":5, "title":"megan & stan", "isprimary":"0"}, {"id":"4994839539",
+        "secret":"95bffd588b", "server":"4145", "farm":5, "title":"julie & marcus",
+        "isprimary":"0"}, {"id":"5150131558", "secret":"45448b9b46", "server":"1413",
+        "farm":2, "title":"I_1259", "isprimary":"0"}, {"id":"5149522383", "secret":"fcf74f1f24",
+        "server":"1387", "farm":2, "title":"I_1289", "isprimary":"0"}, {"id":"5149523409",
+        "secret":"e853829c20", "server":"4083", "farm":5, "title":"I_1292", "isprimary":"0"},
+        {"id":"5150130332", "secret":"8d294d38ed", "server":"1419", "farm":2, "title":"I_1299",
+        "isprimary":"0"}, {"id":"5149523617", "secret":"cc8fa4e5ce", "server":"4085",
+        "farm":5, "title":"I_1317", "isprimary":"0"}, {"id":"5149521777", "secret":"511ba6f40d",
+        "server":"4002", "farm":5, "title":"I_1356", "isprimary":"0"}, {"id":"5149521309",
+        "secret":"1e2dbd4e53", "server":"1061", "farm":2, "title":"I_1393", "isprimary":"0"},
+        {"id":"5150132512", "secret":"4c13145da0", "server":"4089", "farm":5, "title":"I_1425",
+        "isprimary":"0"}, {"id":"5149522599", "secret":"65acf621ee", "server":"1330",
+        "farm":2, "title":"I_1427", "isprimary":"0"}, {"id":"5150130772", "secret":"671186117a",
+        "server":"4066", "farm":5, "title":"I_1438", "isprimary":"0"}, {"id":"5150131966",
+        "secret":"ba445c76c9", "server":"1264", "farm":2, "title":"I_1471", "isprimary":"0"},
+        {"id":"5150130924", "secret":"d402c35241", "server":"1216", "farm":2, "title":"I_1499",
+        "isprimary":"0"}, {"id":"5149523047", "secret":"8d2c26ac63", "server":"1157",
+        "farm":2, "title":"sherry", "isprimary":"0"}, {"id":"5270178373", "secret":"86bc19eeb7",
+        "server":"5282", "farm":6, "title":"", "isprimary":"0"}, {"id":"5073074957",
+        "secret":"8cffea2864", "server":"4088", "farm":5, "title":"IMG_0091", "isprimary":"0"},
+        {"id":"5270787832", "secret":"92a0d01954", "server":"5008", "farm":6, "title":"",
+        "isprimary":"0"}, {"id":"5270177927", "secret":"941364a824", "server":"5285",
+        "farm":6, "title":"", "isprimary":"0"}, {"id":"5270786898", "secret":"5262fec17d",
+        "server":"5044", "farm":6, "title":"", "isprimary":"0"}, {"id":"5073670422",
+        "secret":"bd51070855", "server":"4125", "farm":5, "title":"IMG_0097", "isprimary":"0"},
+        {"id":"5073076393", "secret":"cd06a54fd9", "server":"4111", "farm":5, "title":"IMG_0105",
+        "isprimary":"0"}, {"id":"5073670728", "secret":"f9ce40f3c5", "server":"4087",
+        "farm":5, "title":"IMG_0106", "isprimary":"0"}, {"id":"5073672432", "secret":"fecd23f31c",
+        "server":"4127", "farm":5, "title":"IMG_0111", "isprimary":"0"}, {"id":"5073076133",
+        "secret":"9e71cd4ec6", "server":"4149", "farm":5, "title":"IMG_0114", "isprimary":"0"},
+        {"id":"5073673822", "secret":"64d92392e1", "server":"4088", "farm":5, "title":"IMG_0146",
+        "isprimary":"0"}, {"id":"5270786306", "secret":"0fe4c02445", "server":"5207",
+        "farm":6, "title":"", "isprimary":"0"}, {"id":"5073073911", "secret":"e5976e7ce7",
+        "server":"4130", "farm":5, "title":"IMG_0147", "isprimary":"0"}, {"id":"5270179497",
+        "secret":"bde461fbc7", "server":"5007", "farm":6, "title":"", "isprimary":"0"},
+        {"id":"5073075781", "secret":"8170fa4123", "server":"4146", "farm":5, "title":"IMG_0160",
+        "isprimary":"0"}, {"id":"5270178801", "secret":"2e5de89e00", "server":"5245",
+        "farm":6, "title":"", "isprimary":"0"}, {"id":"5073074401", "secret":"ff76fd5704",
+        "server":"4126", "farm":5, "title":"IMG_0177", "isprimary":"0"}, {"id":"5270785838",
+        "secret":"f79e4e78a1", "server":"5163", "farm":6, "title":"", "isprimary":"0"},
+        {"id":"5073074677", "secret":"b11e29a69d", "server":"4146", "farm":5, "title":"IMG_0184",
+        "isprimary":"0"}, {"id":"5270178689", "secret":"ee25370773", "server":"5246",
+        "farm":6, "title":"", "isprimary":"0"}, {"id":"5270788046", "secret":"689c85b696",
+        "server":"5003", "farm":6, "title":"", "isprimary":"0"}, {"id":"5270178931",
+        "secret":"2b821c86e2", "server":"5126", "farm":6, "title":"", "isprimary":"0"},
+        {"id":"5073672688", "secret":"04005a1b6a", "server":"4127", "farm":5, "title":"IMG_0187",
+        "isprimary":"0"}, {"id":"5270787404", "secret":"896ddf5d03", "server":"5290",
+        "farm":6, "title":"", "isprimary":"0"}, {"id":"5270786780", "secret":"e467db8592",
+        "server":"5210", "farm":6, "title":"", "isprimary":"0"}, {"id":"5270178177",
+        "secret":"a9bc3321b3", "server":"5201", "farm":6, "title":"", "isprimary":"0"},
+        {"id":"5149432349", "secret":"0356643994", "server":"4031", "farm":5, "title":"K&T2",
+        "isprimary":"0"}, {"id":"5150042060", "secret":"845bf156c3", "server":"1378",
+        "farm":2, "title":"K&T7", "isprimary":"0"}, {"id":"5150043708", "secret":"175b4ba2d8",
+        "server":"1323", "farm":2, "title":"K&T10", "isprimary":"0"}, {"id":"5150041350",
+        "secret":"f1002e5cdc", "server":"1077", "farm":2, "title":"K&T12", "isprimary":"0"},
+        {"id":"5149432151", "secret":"671343d8b7", "server":"1153", "farm":2, "title":"K&T13",
+        "isprimary":"0"}, {"id":"5149432817", "secret":"650881ae17", "server":"1331",
+        "farm":2, "title":"K&T16", "isprimary":"0"}, {"id":"5150043496", "secret":"32a3a07991",
+        "server":"1227", "farm":2, "title":"K&T17", "isprimary":"0"}, {"id":"5150041108",
+        "secret":"63f19416c4", "server":"1072", "farm":2, "title":"K&T18", "isprimary":"0"},
+        {"id":"5149436081", "secret":"4e3469ab24", "server":"4131", "farm":5, "title":"K&T28",
+        "isprimary":"0"}, {"id":"5150042554", "secret":"86b5050d16", "server":"1180",
+        "farm":2, "title":"K&T32", "isprimary":"0"}, {"id":"5150042770", "secret":"ba26d350f7",
+        "server":"1312", "farm":2, "title":"K&T15", "isprimary":"0"}, {"id":"5149434431",
+        "secret":"ef10a9f831", "server":"4029", "farm":5, "title":"K&T26", "isprimary":"0"},
+        {"id":"5150041590", "secret":"464297ea8b", "server":"4034", "farm":5, "title":"K&T29",
+        "isprimary":"0"}, {"id":"5149432591", "secret":"08a36b49d9", "server":"1237",
+        "farm":2, "title":"K&T58", "isprimary":"0"}, {"id":"5149433019", "secret":"0b126b1b0b",
+        "server":"4012", "farm":5, "title":"K&T59", "isprimary":"0"}, {"id":"5831203970",
+        "secret":"3bfe91b040", "server":"3078", "farm":4, "title":"W0009", "isprimary":"0"},
+        {"id":"5830654359", "secret":"e96e76657f", "server":"5154", "farm":6, "title":"W0025",
+        "isprimary":"0"}, {"id":"5830651329", "secret":"b214006afe", "server":"3615",
+        "farm":4, "title":"W0036", "isprimary":"0"}, {"id":"5830650715", "secret":"1dfd009c3c",
+        "server":"5160", "farm":6, "title":"W0426", "isprimary":"0"}, {"id":"5830652679",
+        "secret":"be47a7ff63", "server":"5117", "farm":6, "title":"W0429", "isprimary":"0"},
+        {"id":"5831203304", "secret":"761fd525b9", "server":"3116", "farm":4, "title":"W0428",
+        "isprimary":"0"}, {"id":"5831202882", "secret":"0c8c17b8bf", "server":"3379",
+        "farm":4, "title":"W0374", "isprimary":"0"}, {"id":"5831203710", "secret":"829aef5b00",
+        "server":"3141", "farm":4, "title":"W0386", "isprimary":"0"}, {"id":"5830650979",
+        "secret":"fd77690f00", "server":"3256", "farm":4, "title":"W0072", "isprimary":"0"},
+        {"id":"5831204604", "secret":"896c180741", "server":"2796", "farm":3, "title":"W0073",
+        "isprimary":"0"}, {"id":"5831199132", "secret":"b6bee8c7ca", "server":"2634",
+        "farm":3, "title":"W0049", "isprimary":"0"}, {"id":"5830649753", "secret":"67fbf56f4d",
+        "server":"2764", "farm":3, "title":"W0134", "isprimary":"0"}, {"id":"5830652023",
+        "secret":"f1aeb9c5b6", "server":"3224", "farm":4, "title":"W0155", "isprimary":"0"},
+        {"id":"5830651687", "secret":"b9343d6cd1", "server":"5193", "farm":6, "title":"W0160",
+        "isprimary":"0"}, {"id":"5149433919", "secret":"5e9e919e51", "server":"4056",
+        "farm":5, "title":"K&T14", "isprimary":"0"}, {"id":"5808862796", "secret":"bca3b07804",
+        "server":"3365", "farm":4, "title":"01_preparation (17)", "isprimary":"0"},
+        {"id":"5808296137", "secret":"c87232d448", "server":"5232", "farm":6, "title":"01_preparation
+        (21)", "isprimary":"0"}, {"id":"5808860350", "secret":"42e7ba492c", "server":"5110",
+        "farm":6, "title":"02_michelle_david (1)", "isprimary":"0"}, {"id":"5808861702",
+        "secret":"9a505ee6b0", "server":"2680", "farm":3, "title":"02_michelle_david
+        (44)", "isprimary":"0"}, {"id":"5831058494", "secret":"8f64da6728", "server":"3242",
+        "farm":4, "title":"02_michelle_david (54)", "isprimary":"0"}, {"id":"5830549869",
+        "secret":"be8bacee5d", "server":"2493", "farm":3, "title":"02_michelle_david
+        (92)", "isprimary":"0"}, {"id":"5831057880", "secret":"0372f7c278", "server":"3318",
+        "farm":4, "title":"02_michelle_david (95)", "isprimary":"0"}, {"id":"5831104490",
+        "secret":"048d5ebd95", "server":"2443", "farm":3, "title":"02_michelle_david
+        (146)", "isprimary":"0"}, {"id":"5831199430", "secret":"931c0e164e", "server":"5037",
+        "farm":6, "title":"02_michelle_david (330)", "isprimary":"0"}, {"id":"5831200166",
+        "secret":"bc639c1a4b", "server":"3111", "farm":4, "title":"02_michelle_david
+        (335)", "isprimary":"0"}, {"id":"5831100938", "secret":"2dea9d62f5", "server":"3357",
+        "farm":4, "title":"02_michelle_david (357)", "isprimary":"0"}, {"id":"5830549419",
+        "secret":"1bc8cf6563", "server":"5196", "farm":6, "title":"01_preparation
+        (47)", "isprimary":"0"}, {"id":"5830553059", "secret":"f980b137c0", "server":"5185",
+        "farm":6, "title":"01_preparation (48)", "isprimary":"0"}, {"id":"5808860926",
+        "secret":"fef98356e4", "server":"3489", "farm":4, "title":"01_preparation
+        (64)", "isprimary":"0"}, {"id":"5808863104", "secret":"c061c2641e", "server":"2207",
+        "farm":3, "title":"02_michelle_david (390)", "isprimary":"0"}, {"id":"6479810961",
+        "secret":"035e60698c", "server":"7012", "farm":8, "title":"0016", "isprimary":"0"},
+        {"id":"6479790895", "secret":"3187456e10", "server":"7021", "farm":8, "title":"0027",
+        "isprimary":"0"}, {"id":"6479790371", "secret":"4fcb2b9c9c", "server":"7164",
+        "farm":8, "title":"0036", "isprimary":"0"}, {"id":"6479792687", "secret":"9fffe31a98",
+        "server":"7025", "farm":8, "title":"0064", "isprimary":"0"}, {"id":"6479808723",
+        "secret":"da4d2888d2", "server":"7171", "farm":8, "title":"0121", "isprimary":"0"},
+        {"id":"6479795523", "secret":"2068144a76", "server":"7009", "farm":8, "title":"0165
+        bride and mom", "isprimary":"0"}, {"id":"6479792037", "secret":"9bc85c933f",
+        "server":"7159", "farm":8, "title":"0172 bride veil", "isprimary":"0"}, {"id":"6479807043",
+        "secret":"80fa894c75", "server":"7018", "farm":8, "title":"0243", "isprimary":"0"},
+        {"id":"6479810239", "secret":"aa98e1a6c8", "server":"7026", "farm":8, "title":"0240
+        bride groom", "isprimary":"0"}, {"id":"6479805721", "secret":"796fa2b8c2",
+        "server":"7161", "farm":8, "title":"0315 bride groom bouquet", "isprimary":"0"},
+        {"id":"6479791527", "secret":"11fcff0560", "server":"7146", "farm":8, "title":"0331
+        groom", "isprimary":"0"}, {"id":"6479793313", "secret":"153f4473b5", "server":"7163",
+        "farm":8, "title":"0382 bride with dad", "isprimary":"0"}, {"id":"6479811653",
+        "secret":"28aaa2121d", "server":"7174", "farm":8, "title":"0410 bridesmaids",
+        "isprimary":"0"}, {"id":"6479807887", "secret":"fbfde702eb", "server":"7142",
+        "farm":8, "title":"0518 ceremony", "isprimary":"0"}, {"id":"6479794649", "secret":"777740731f",
+        "server":"7168", "farm":8, "title":"0544 ceremony", "isprimary":"0"}, {"id":"5830552029",
+        "secret":"ec1322841f", "server":"5306", "farm":6, "title":"17", "isprimary":"0"},
+        {"id":"5830552483", "secret":"b1430711ee", "server":"3641", "farm":4, "title":"8",
+        "isprimary":"0"}, {"id":"6028462038", "secret":"0088b18be6", "server":"6137",
+        "farm":7, "title":"YolandaGary_0071", "isprimary":"0"}, {"id":"6028464842",
+        "secret":"e3e2465a69", "server":"6149", "farm":7, "title":"YolandaGary_0080",
+        "isprimary":"0"}, {"id":"6028464624", "secret":"1003b9c26d", "server":"6138",
+        "farm":7, "title":"YolandaGary_0118", "isprimary":"0"}, {"id":"6300497879",
+        "secret":"17e6263077", "server":"6105", "farm":7, "title":"YolandaGary_0123",
+        "isprimary":"0"}, {"id":"6028465332", "secret":"a46d7017d1", "server":"6193",
+        "farm":7, "title":"YolandaGary_0408", "isprimary":"0"}, {"id":"6027912071",
+        "secret":"0fc3925979", "server":"6205", "farm":7, "title":"YolandaGary_0412",
+        "isprimary":"0"}, {"id":"6028463234", "secret":"f54b842f38", "server":"6182",
+        "farm":7, "title":"YolandaGary_0653-2", "isprimary":"0"}, {"id":"6027909213",
+        "secret":"27a3f5cfe9", "server":"6146", "farm":7, "title":"YolandaGary_0657",
+        "isprimary":"0"}, {"id":"6027911685", "secret":"1324b43092", "server":"6129",
+        "farm":7, "title":"YolandaGary_0658", "isprimary":"0"}, {"id":"6028463410",
+        "secret":"d035a43dd3", "server":"6185", "farm":7, "title":"YolandaGary_0682",
+        "isprimary":"0"}, {"id":"6028465710", "secret":"afa2d2ce2b", "server":"6076",
+        "farm":7, "title":"YolandaGary_0692", "isprimary":"0"}, {"id":"6028462632",
+        "secret":"ae4225fc95", "server":"6072", "farm":7, "title":"YolandaGary_0699",
+        "isprimary":"0"}, {"id":"6028465162", "secret":"37a513425a", "server":"6199",
+        "farm":7, "title":"YolandaGary_0719", "isprimary":"0"}, {"id":"6028463590",
+        "secret":"fec7314418", "server":"6085", "farm":7, "title":"YolandaGary_0728",
+        "isprimary":"0"}, {"id":"6300500735", "secret":"53187097d5", "server":"6045",
+        "farm":7, "title":"YolandaGary_0818", "isprimary":"0"}, {"id":"6300498125",
+        "secret":"a84ddb1c95", "server":"6038", "farm":7, "title":"YolandaGary_0913",
+        "isprimary":"0"}, {"id":"6301031332", "secret":"ebd19f2833", "server":"6053",
+        "farm":7, "title":"YolandaGary_0987", "isprimary":"0"}, {"id":"6301028240",
+        "secret":"ab79b21317", "server":"6094", "farm":7, "title":"katetim_forjane4",
+        "isprimary":"0"}, {"id":"6301028976", "secret":"ab04e43f8c", "server":"6229",
+        "farm":7, "title":"katetim_forjane5", "isprimary":"0"}, {"id":"6301031642",
+        "secret":"1d4be80364", "server":"6118", "farm":7, "title":"katetim_forjane7",
+        "isprimary":"0"}, {"id":"6301032812", "secret":"8258962ac5", "server":"6096",
+        "farm":7, "title":"katetim_forjane8", "isprimary":"0"}, {"id":"6300496219",
+        "secret":"93c7bd5f3a", "server":"6042", "farm":7, "title":"katetim_forjane9",
+        "isprimary":"0"}, {"id":"6300501061", "secret":"05b02a9135", "server":"6052",
+        "farm":7, "title":"katetim_forjane10", "isprimary":"0"}, {"id":"6301032496",
+        "secret":"bd8ae6cea0", "server":"6231", "farm":7, "title":"katetim_forjane11",
+        "isprimary":"0"}, {"id":"6301033854", "secret":"ff4a36fa17", "server":"6107",
+        "farm":7, "title":"katetim_forjane12", "isprimary":"0"}, {"id":"6301032082",
+        "secret":"380b749987", "server":"6225", "farm":7, "title":"katetim_forjane13",
+        "isprimary":"0"}, {"id":"6300497593", "secret":"cc4d9ba2b8", "server":"6102",
+        "farm":7, "title":"Screen Shot 2011-08-08 at 4.46.35 PM", "isprimary":"0"},
+        {"id":"6300497337", "secret":"d834f174a3", "server":"6223", "farm":7, "title":"Screen
+        Shot 2011-08-08 at 4.46.57 PM", "isprimary":"0"}, {"id":"6301029350", "secret":"eb0080e90f",
+        "server":"6220", "farm":7, "title":"Screen Shot 2011-08-08 at 4.47.24 PM",
+        "isprimary":"0"}, {"id":"6478093089", "secret":"fc86ca72b2", "server":"7153",
+        "farm":8, "title":"Armaita-and-Clifton-Wedding-Blog-0013", "isprimary":"0"},
+        {"id":"6478092309", "secret":"3cb1472820", "server":"7022", "farm":8, "title":"Armaita-and-Clifton-Wedding-Blog-0018",
+        "isprimary":"0"}, {"id":"6478093499", "secret":"032a6c6fe7", "server":"7010",
+        "farm":8, "title":"Armaita-and-Clifton-Wedding-Blog-0027", "isprimary":"0"},
+        {"id":"6478093951", "secret":"5967f7be33", "server":"7175", "farm":8, "title":"Armaita-and-Clifton-Wedding-Blog-0069",
+        "isprimary":"0"}, {"id":"6478092745", "secret":"a6344f8f41", "server":"7003",
+        "farm":8, "title":"Armaita-and-Clifton-Wedding-Blog-0059", "isprimary":"0"},
+        {"id":"6478094377", "secret":"6cb4fd95de", "server":"7005", "farm":8, "title":"Armaita-and-Clifton-Wedding-Blog-0048",
+        "isprimary":"0"}, {"id":"6479912561", "secret":"fd354a5df7", "server":"7151",
+        "farm":8, "title":"0678693-R1-E010", "isprimary":"0"}, {"id":"6479911833",
+        "secret":"30e80fa67d", "server":"7016", "farm":8, "title":"0678693-R1-E031",
+        "isprimary":"0"}, {"id":"6479912207", "secret":"270829c7c0", "server":"7021",
+        "farm":8, "title":"7001623-R2-E021", "isprimary":"0"}, {"id":"6479911423",
+        "secret":"6ddd6e1ee8", "server":"7164", "farm":8, "title":"7001623-R2-E026",
+        "isprimary":"0"}, {"id":"6479909775", "secret":"b9ea4ce759", "server":"7165",
+        "farm":8, "title":"7001623-R2-E034", "isprimary":"0"}, {"id":"6479910633",
+        "secret":"d25dbea46d", "server":"7024", "farm":8, "title":"0489496-R1-007-2",
+        "isprimary":"0"}, {"id":"6479911047", "secret":"05346206f1", "server":"7025",
+        "farm":8, "title":"0678683-R1-E020", "isprimary":"0"}, {"id":"6479910145",
+        "secret":"f4a625dd1c", "server":"7004", "farm":8, "title":"7001623-R2-E011",
+        "isprimary":"0"}], "page":1, "per_page":500, "perpage":500, "pages":1, "total":"180"},
+        "stat":"ok"}'
+    http_version: '1.1'
+  recorded_at: Sat, 17 Mar 2012 03:29:25 GMT
+- request:
+    method: get
+    uri: http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=18635c5ffedaf5681361e557ad8ed565&photoset_id=72157624005396809&format=json&nojsoncallback=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 17 Mar 2012 03:29:25 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private
+      x-served-by:
+      - www53.flickr.mud.yahoo.com
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '7161'
+      connection:
+      - close
+      content-type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"photoset":{"id":"72157624005396809", "primary":"4844316220", "owner":"20451842@N05",
+        "ownername":"janekimmer", "photo":[{"id":"5238225253", "secret":"db97f35423",
+        "server":"5047", "farm":6, "title":"", "isprimary":"0"}, {"id":"4843659609",
+        "secret":"8ea936cbdf", "server":"4103", "farm":5, "title":"", "isprimary":"0"},
+        {"id":"4843659901", "secret":"ba56ef1bb1", "server":"4085", "farm":5, "title":"",
+        "isprimary":"0"}, {"id":"4843677367", "secret":"5031c4fa63", "server":"4090",
+        "farm":5, "title":"", "isprimary":"0"}, {"id":"4844316220", "secret":"b024ea5001",
+        "server":"4127", "farm":5, "title":"", "isprimary":"1"}, {"id":"4844379398",
+        "secret":"b90f7bd3b4", "server":"4149", "farm":5, "title":"", "isprimary":"0"},
+        {"id":"4919391196", "secret":"d050dcbc4b", "server":"4073", "farm":5, "title":"rebecca",
+        "isprimary":"0"}, {"id":"4919391382", "secret":"45a4c89319", "server":"4115",
+        "farm":5, "title":"taryn", "isprimary":"0"}, {"id":"5238826538", "secret":"de6bc71af6",
+        "server":"5128", "farm":6, "title":"angela", "isprimary":"0"}, {"id":"4969412502",
+        "secret":"35e99c1f53", "server":"4104", "farm":5, "title":"jess", "isprimary":"0"},
+        {"id":"5238225511", "secret":"83178d08e5", "server":"5010", "farm":6, "title":"ellen",
+        "isprimary":"0"}, {"id":"5002428445", "secret":"f2b42cea2e", "server":"4113",
+        "farm":5, "title":"rowena", "isprimary":"0"}, {"id":"5003043594", "secret":"0a794c892f",
+        "server":"4108", "farm":5, "title":"kristine", "isprimary":"0"}, {"id":"5015086861",
+        "secret":"4d3cc0edb8", "server":"4130", "farm":5, "title":"suzanne", "isprimary":"0"},
+        {"id":"5023904940", "secret":"bcefaf5889", "server":"4126", "farm":5, "title":"Kylie",
+        "isprimary":"0"}, {"id":"5037198428", "secret":"d3e9771b89", "server":"4104",
+        "farm":5, "title":"Mary", "isprimary":"0"}, {"id":"5060057895", "secret":"45f24dd17a",
+        "server":"4086", "farm":5, "title":"cathy", "isprimary":"0"}, {"id":"5094657592",
+        "secret":"2998c2915e", "server":"4128", "farm":5, "title":"Screen shot 2010-10-18
+        at 12.55.01 PM", "isprimary":"0"}, {"id":"5106254628", "secret":"c88aab2b25",
+        "server":"4091", "farm":5, "title":"Screen shot 2010-10-22 at 4.36.03 PM",
+        "isprimary":"0"}, {"id":"5108642969", "secret":"cf0e8103f2", "server":"1249",
+        "farm":2, "title":"rowena", "isprimary":"0"}, {"id":"5238227453", "secret":"9fc3665773",
+        "server":"5046", "farm":6, "title":"Screen shot 2010-12-01 at 8.50.35 AM",
+        "isprimary":"0"}, {"id":"5238826074", "secret":"359b89612d", "server":"5085",
+        "farm":6, "title":"kiana", "isprimary":"0"}, {"id":"5364362502", "secret":"b118ba4285",
+        "server":"5043", "farm":6, "title":"liz", "isprimary":"0"}, {"id":"5363850409",
+        "secret":"f26d26c1b0", "server":"5161", "farm":6, "title":"linda", "isprimary":"0"},
+        {"id":"5364482086", "secret":"c5bb3ec84d", "server":"5048", "farm":6, "title":"Screen
+        shot 2011-01-17 at 10.03.27 AM", "isprimary":"0"}, {"id":"5405689264", "secret":"7252fa2eac",
+        "server":"5098", "farm":6, "title":"Screen shot 2011-01-31 at 10.03.54 AM",
+        "isprimary":"0"}, {"id":"5480608066", "secret":"2c87bf4e52", "server":"5094",
+        "farm":6, "title":"Screen shot 2011-02-26 at 5.00.24 PM", "isprimary":"0"},
+        {"id":"5914359839", "secret":"5e954aaba8", "server":"6099", "farm":7, "title":"Screen
+        shot 2011-03-26 at 2.43.34 PM", "isprimary":"0"}, {"id":"5914359547", "secret":"499d01b7aa",
+        "server":"5311", "farm":6, "title":"Screen shot 2011-03-26 at 3.29.13 PM",
+        "isprimary":"0"}, {"id":"6287327354", "secret":"a86a2cbc79", "server":"6031",
+        "farm":7, "title":"Screen shot 2011-04-01 at 8.45.27 PM", "isprimary":"0"},
+        {"id":"5714488466", "secret":"01ede66232", "server":"3620", "farm":4, "title":"Screen
+        shot 2011-05-08 at 8.48.26 PM", "isprimary":"0"}, {"id":"5714488086", "secret":"d84f58ee4b",
+        "server":"2617", "farm":3, "title":"Screen shot 2011-05-08 at 8.49.53 PM",
+        "isprimary":"0"}, {"id":"5914919384", "secret":"56aaf67ed9", "server":"5315",
+        "farm":6, "title":"Screen shot 2011-05-12 at 3.32.30 PM", "isprimary":"0"},
+        {"id":"5714558034", "secret":"a7ea011601", "server":"3349", "farm":4, "title":"Screen
+        shot 2011-05-12 at 3.53.21 PM", "isprimary":"0"}, {"id":"5914359141", "secret":"dbd9df6e16",
+        "server":"5271", "farm":6, "title":"Screen shot 2011-05-12 at 3.59.52 PM",
+        "isprimary":"0"}, {"id":"5914892276", "secret":"9bcae66c02", "server":"5077",
+        "farm":6, "title":"Screen shot 2011-06-14 at 8.31.55 AM", "isprimary":"0"},
+        {"id":"5838045217", "secret":"54e28a9233", "server":"2623", "farm":3, "title":"Screen
+        shot 2011-06-14 at 8.32.45 AM", "isprimary":"0"}, {"id":"5838596350", "secret":"be9b3b78c7",
+        "server":"2519", "farm":3, "title":"Screen shot 2011-06-15 at 10.02.09 PM",
+        "isprimary":"0"}, {"id":"5838044831", "secret":"ac39a8708b", "server":"5223",
+        "farm":6, "title":"Screen shot 2011-06-15 at 10.06.40 PM", "isprimary":"0"},
+        {"id":"5838595984", "secret":"2db979c50c", "server":"5226", "farm":6, "title":"Screen
+        shot 2011-06-15 at 10.19.33 PM", "isprimary":"0"}, {"id":"5914332921", "secret":"0fa5d062b5",
+        "server":"5038", "farm":6, "title":"Screen shot 2011-06-15 at 11.36.40 PM",
+        "isprimary":"0"}, {"id":"5914905100", "secret":"aa91bae5f7", "server":"6014",
+        "farm":7, "title":"Screen shot 2011-07-07 at 11.53.48 PM", "isprimary":"0"},
+        {"id":"5927546822", "secret":"c72fc082ee", "server":"6127", "farm":7, "title":"Screen
+        Shot 2011-07-11 at 12.20.20 PM", "isprimary":"0"}, {"id":"5927547182", "secret":"692b402827",
+        "server":"6003", "farm":7, "title":"Screen Shot 2011-07-11 at 12.26.26 PM",
+        "isprimary":"0"}, {"id":"6001255222", "secret":"e6d09a30c1", "server":"6148",
+        "farm":7, "title":"Screen Shot 2011-07-14 at 2.12.34 PM", "isprimary":"0"},
+        {"id":"6001255632", "secret":"b4009326fd", "server":"6133", "farm":7, "title":"Screen
+        Shot 2011-07-29 at 8.58.19 PM", "isprimary":"0"}, {"id":"6000707299", "secret":"1e14363d7c",
+        "server":"6002", "farm":7, "title":"Screen Shot 2011-08-01 at 11.26.42 PM",
+        "isprimary":"0"}, {"id":"6236559695", "secret":"8c45f3fc6f", "server":"6155",
+        "farm":7, "title":"Screen Shot 2011-10-11 at 11.02.45 PM", "isprimary":"0"},
+        {"id":"6237084344", "secret":"e9b41b0a5d", "server":"6180", "farm":7, "title":"Screen
+        Shot 2011-10-11 at 11.03.32 PM", "isprimary":"0"}, {"id":"6236559871", "secret":"764b9a2355",
+        "server":"6215", "farm":7, "title":"Screen Shot 2011-10-12 at 12.02.56 AM",
+        "isprimary":"0"}, {"id":"6306237183", "secret":"263dbdbaa6", "server":"6229",
+        "farm":7, "title":"Screen Shot 2011-10-31 at 1.53.25 PM", "isprimary":"0"},
+        {"id":"6304408611", "secret":"47d0c616c4", "server":"6113", "farm":7, "title":"Screen
+        Shot 2011-11-01 at 8.07.23 PM", "isprimary":"0"}, {"id":"6479050487", "secret":"f17b5dc5ba",
+        "server":"7004", "farm":8, "title":"Screen Shot 2011-12-08 at 10.36.57 AM",
+        "isprimary":"0"}, {"id":"6479051175", "secret":"61f51064d8", "server":"7150",
+        "farm":8, "title":"Screen Shot 2011-12-08 at 10.43.39 AM", "isprimary":"0"},
+        {"id":"6479050831", "secret":"6f4d4b5665", "server":"7014", "farm":8, "title":"Screen
+        Shot 2011-12-08 at 10.51.44 AM", "isprimary":"0"}, {"id":"6485465277", "secret":"8a58fc50fb",
+        "server":"7166", "farm":8, "title":"Screen Shot 2011-12-09 at 10.54.29 PM",
+        "isprimary":"0"}], "page":1, "per_page":500, "perpage":500, "pages":1, "total":"56"},
+        "stat":"ok"}'
+    http_version: '1.1'
+  recorded_at: Sat, 17 Mar 2012 03:29:26 GMT
+- request:
+    method: get
+    uri: http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=18635c5ffedaf5681361e557ad8ed565&photoset_id=72157624130178490&format=json&nojsoncallback=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 17 Mar 2012 03:29:26 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private
+      x-served-by:
+      - www202.flickr.mud.yahoo.com
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '7107'
+      connection:
+      - close
+      content-type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"photoset":{"id":"72157624130178490", "primary":"3506295106", "owner":"20451842@N05",
+        "ownername":"janekimmer", "photo":[{"id":"3505483983", "secret":"d0c6f99d4c",
+        "server":"3336", "farm":4, "title":"", "isprimary":"0"}, {"id":"3505484723",
+        "secret":"b6732faca0", "server":"3636", "farm":4, "title":"Head Shots", "isprimary":"0"},
+        {"id":"3505484943", "secret":"e24eef1c0f", "server":"3395", "farm":4, "title":"Headshots",
+        "isprimary":"0"}, {"id":"3505486703", "secret":"a2d9d159a6", "server":"3617",
+        "farm":4, "title":"Headshots", "isprimary":"0"}, {"id":"3506295106", "secret":"2e69a434e4",
+        "server":"3590", "farm":4, "title":"Headshots", "isprimary":"1"}, {"id":"4780851333",
+        "secret":"7b14e7f895", "server":"4136", "farm":5, "title":"", "isprimary":"0"},
+        {"id":"4781487478", "secret":"32a599bda7", "server":"4101", "farm":5, "title":"",
+        "isprimary":"0"}, {"id":"4781494916", "secret":"8b9dc3c8aa", "server":"4115",
+        "farm":5, "title":"IMG_3779", "isprimary":"0"}, {"id":"4780851543", "secret":"02f57c6c42",
+        "server":"4141", "farm":5, "title":"", "isprimary":"0"}, {"id":"4788527390",
+        "secret":"b1ed225d6f", "server":"4102", "farm":5, "title":"", "isprimary":"0"},
+        {"id":"4788528118", "secret":"a1d5e2b8d2", "server":"4134", "farm":5, "title":"",
+        "isprimary":"0"}, {"id":"4788528378", "secret":"345e53ab8e", "server":"4076",
+        "farm":5, "title":"", "isprimary":"0"}, {"id":"4787897799", "secret":"6e325b767d",
+        "server":"4100", "farm":5, "title":"", "isprimary":"0"}, {"id":"4787898119",
+        "secret":"27400a1f33", "server":"4096", "farm":5, "title":"", "isprimary":"0"},
+        {"id":"4788529252", "secret":"036c120c77", "server":"4114", "farm":5, "title":"",
+        "isprimary":"0"}, {"id":"4787898655", "secret":"7b18811c0e", "server":"4115",
+        "farm":5, "title":"", "isprimary":"0"}, {"id":"4788529782", "secret":"613106efd4",
+        "server":"4136", "farm":5, "title":"", "isprimary":"0"}, {"id":"4788530170",
+        "secret":"bac3c63981", "server":"4142", "farm":5, "title":"", "isprimary":"0"},
+        {"id":"4787899531", "secret":"541c95eb2a", "server":"4119", "farm":5, "title":"",
+        "isprimary":"0"}, {"id":"4815441873", "secret":"f5dd12fd8c", "server":"4096",
+        "farm":5, "title":"", "isprimary":"0"}, {"id":"4816064646", "secret":"d941d54c96",
+        "server":"4076", "farm":5, "title":"", "isprimary":"0"}, {"id":"6027866429",
+        "secret":"a50886cede", "server":"6205", "farm":7, "title":"1_s", "isprimary":"0"},
+        {"id":"4946028036", "secret":"858061d7f3", "server":"4115", "farm":5, "title":"14_s",
+        "isprimary":"0"}, {"id":"4946028310", "secret":"f7129405ee", "server":"4150",
+        "farm":5, "title":"16_s", "isprimary":"0"}, {"id":"4946028620", "secret":"c332cd6543",
+        "server":"4083", "farm":5, "title":"8_s", "isprimary":"0"}, {"id":"4946028920",
+        "secret":"cac2542294", "server":"4085", "farm":5, "title":"3_s", "isprimary":"0"},
+        {"id":"4945444657", "secret":"43be64e3d2", "server":"4088", "farm":5, "title":"4_s",
+        "isprimary":"0"}, {"id":"4946029742", "secret":"322d3d76e9", "server":"4093",
+        "farm":5, "title":"17_s", "isprimary":"0"}, {"id":"4946030038", "secret":"967f803b87",
+        "server":"4091", "farm":5, "title":"12_s", "isprimary":"0"}, {"id":"4945446087",
+        "secret":"4074088583", "server":"4150", "farm":5, "title":"1_s", "isprimary":"0"},
+        {"id":"4945446395", "secret":"941d35fd83", "server":"4094", "farm":5, "title":"2_s",
+        "isprimary":"0"}, {"id":"4945446653", "secret":"dd76bb48da", "server":"4132",
+        "farm":5, "title":"5_s", "isprimary":"0"}, {"id":"4946031642", "secret":"4701a914f4",
+        "server":"4150", "farm":5, "title":"17_s", "isprimary":"0"}, {"id":"5405546253",
+        "secret":"ca21346751", "server":"5135", "farm":6, "title":"9", "isprimary":"0"},
+        {"id":"5405546019", "secret":"0bebe2a9f7", "server":"5137", "farm":6, "title":"8",
+        "isprimary":"0"}, {"id":"5405547131", "secret":"6db3bc8657", "server":"5134",
+        "farm":6, "title":"7", "isprimary":"0"}, {"id":"5406151712", "secret":"3b61529258",
+        "server":"5293", "farm":6, "title":"6", "isprimary":"0"}, {"id":"5405546531",
+        "secret":"3abd1742b8", "server":"5212", "farm":6, "title":"5", "isprimary":"0"},
+        {"id":"5406157102", "secret":"0d42e05807", "server":"5134", "farm":6, "title":"4",
+        "isprimary":"0"}, {"id":"5405547689", "secret":"e2f935d746", "server":"5131",
+        "farm":6, "title":"1", "isprimary":"0"}, {"id":"5437294664", "secret":"a089f43155",
+        "server":"4097", "farm":5, "title":"13255_dsc_6100", "isprimary":"0"}, {"id":"5437295310",
+        "secret":"4213eed25c", "server":"4073", "farm":5, "title":"13259_dsc_6157",
+        "isprimary":"0"}, {"id":"5436684495", "secret":"c507d974ba", "server":"4137",
+        "farm":5, "title":"13236_dsc_6195", "isprimary":"0"}, {"id":"5436683891",
+        "secret":"fd401db048", "server":"5219", "farm":6, "title":"13297_dsc_6262",
+        "isprimary":"0"}, {"id":"5436682867", "secret":"91d3fda787", "server":"5174",
+        "farm":6, "title":"13327_dsc_6473", "isprimary":"0"}, {"id":"5436683035",
+        "secret":"62ffc23f91", "server":"4122", "farm":5, "title":"13342_dsc_6542",
+        "isprimary":"0"}, {"id":"5437294874", "secret":"4f4ae3dc0b", "server":"5134",
+        "farm":6, "title":"13237_dsc_6545", "isprimary":"0"}, {"id":"5436683255",
+        "secret":"93800f1a30", "server":"5174", "farm":6, "title":"13238_dsc_6553",
+        "isprimary":"0"}, {"id":"5437293252", "secret":"e9ed411bf1", "server":"5020",
+        "farm":6, "title":"13368_dsc_6634", "isprimary":"0"}, {"id":"5437293018",
+        "secret":"80b1ce05c8", "server":"4150", "farm":5, "title":"13369_dsc_6655",
+        "isprimary":"0"}, {"id":"5436683443", "secret":"4d1d051c40", "server":"4075",
+        "farm":5, "title":"13372_dsc_6734", "isprimary":"0"}, {"id":"5437294250",
+        "secret":"d3b27cd7f0", "server":"5054", "farm":6, "title":"13374_dsc_6764",
+        "isprimary":"0"}, {"id":"6027924969", "secret":"33bfe06e9f", "server":"6191",
+        "farm":7, "title":"lovelifestudios-025", "isprimary":"0"}, {"id":"6028476408",
+        "secret":"d2cb9895c4", "server":"6193", "farm":7, "title":"lovelifestudios-026",
+        "isprimary":"0"}, {"id":"6028476766", "secret":"c361cf81e6", "server":"6185",
+        "farm":7, "title":"lovelifestudios-029", "isprimary":"0"}, {"id":"6027923463",
+        "secret":"cfbabba299", "server":"6184", "farm":7, "title":"lovelifestudios-014",
+        "isprimary":"0"}, {"id":"6027924087", "secret":"b35422b231", "server":"6194",
+        "farm":7, "title":"lovelifestudios-005", "isprimary":"0"}, {"id":"6027923653",
+        "secret":"1c0f9b2cc1", "server":"6201", "farm":7, "title":"lovelifestudios-006",
+        "isprimary":"0"}, {"id":"6028475880", "secret":"32dca8a8db", "server":"6184",
+        "farm":7, "title":"lovelifestudios-001", "isprimary":"0"}, {"id":"6028476242",
+        "secret":"b017ca4943", "server":"6195", "farm":7, "title":"lovelifestudios-015",
+        "isprimary":"0"}, {"id":"6028476618", "secret":"49515b2044", "server":"6131",
+        "farm":7, "title":"lovelifestudios-004", "isprimary":"0"}, {"id":"5927026741",
+        "secret":"25bc9272ef", "server":"6021", "farm":7, "title":"lovelifestudios-017",
+        "isprimary":"0"}, {"id":"6028475332", "secret":"d3ea608ac7", "server":"6133",
+        "farm":7, "title":"4thofJulyEngagementParty016", "isprimary":"0"}, {"id":"6028477108",
+        "secret":"88d303b229", "server":"6186", "farm":7, "title":"4thofJulyEngagementParty019",
+        "isprimary":"0"}], "page":1, "per_page":500, "perpage":500, "pages":1, "total":"64"},
+        "stat":"ok"}'
+    http_version: '1.1'
+  recorded_at: Sat, 17 Mar 2012 03:29:26 GMT
+- request:
+    method: get
+    uri: http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=18635c5ffedaf5681361e557ad8ed565&photoset_id=72157625061763872&format=json&nojsoncallback=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 17 Mar 2012 03:29:26 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private
+      x-served-by:
+      - www223.flickr.mud.yahoo.com
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '1537'
+      connection:
+      - close
+      content-type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"photoset":{"id":"72157625061763872", "primary":"5034936993", "owner":"20451842@N05",
+        "ownername":"janekimmer", "photo":[{"id":"5034936993", "secret":"bf5a9826f1",
+        "server":"4112", "farm":5, "title":"Featured Publishing: Jess & Tim", "isprimary":"1"},
+        {"id":"5078304937", "secret":"17b822fee5", "server":"4058", "farm":5, "title":"kristine
+        & todd", "isprimary":"0"}, {"id":"5103817838", "secret":"bd10d87cfa", "server":"4153",
+        "farm":5, "title":"Screen shot 2010-10-21 at 6.03.40 PM", "isprimary":"0"},
+        {"id":"5406101344", "secret":"c2d42cdcba", "server":"5017", "farm":6, "title":"Screen
+        shot 2011-01-31 at 2.40.25 PM", "isprimary":"0"}, {"id":"5406102222", "secret":"b0f49a3735",
+        "server":"5139", "farm":6, "title":"Screen shot 2011-01-31 at 2.40.54 PM",
+        "isprimary":"0"}, {"id":"5405496183", "secret":"2cd1ca934c", "server":"5296",
+        "farm":6, "title":"Screen shot 2011-01-31 at 2.42.05 PM", "isprimary":"0"},
+        {"id":"5405495859", "secret":"44baa7624b", "server":"5136", "farm":6, "title":"Screen
+        shot 2011-01-31 at 2.42.18 PM", "isprimary":"0"}, {"id":"5406101588", "secret":"839dae6812",
+        "server":"5016", "farm":6, "title":"Screen shot 2011-01-31 at 2.42.30 PM",
+        "isprimary":"0"}, {"id":"5406102656", "secret":"136abd5559", "server":"5255",
+        "farm":6, "title":"Screen shot 2011-01-31 at 2.42.46 PM", "isprimary":"0"},
+        {"id":"5548481119", "secret":"f973917735", "server":"5103", "farm":6, "title":"Screen
+        shot 2011-03-21 at 11.10.32 AM", "isprimary":"0"}], "page":1, "per_page":500,
+        "perpage":500, "pages":1, "total":"10"}, "stat":"ok"}'
+    http_version: '1.1'
+  recorded_at: Sat, 17 Mar 2012 03:29:26 GMT
+- request:
+    method: get
+    uri: http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=18635c5ffedaf5681361e557ad8ed565&photoset_id=72157626848930587&format=json&nojsoncallback=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 17 Mar 2012 03:29:26 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private
+      x-served-by:
+      - www22.flickr.mud.yahoo.com
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '1974'
+      connection:
+      - close
+      content-type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"photoset":{"id":"72157626848930587", "primary":"5837987875", "owner":"20451842@N05",
+        "ownername":"janekimmer", "photo":[{"id":"5837987875", "secret":"cf13c911ea",
+        "server":"2550", "farm":3, "title":"0328", "isprimary":"1"}, {"id":"5838539416",
+        "secret":"e5452c3870", "server":"5077", "farm":6, "title":"0323", "isprimary":"0"},
+        {"id":"5838539768", "secret":"336fbc5052", "server":"5034", "farm":6, "title":"0391",
+        "isprimary":"0"}, {"id":"6479795831", "secret":"a6bdb4fcd5", "server":"7025",
+        "farm":8, "title":"11-san-francisco-rustic-engagement-session", "isprimary":"0"},
+        {"id":"6479796385", "secret":"45aefc901c", "server":"7163", "farm":8, "title":"03-san-francisco-rustic-engagement-session",
+        "isprimary":"0"}, {"id":"6479796985", "secret":"5ddd1d524d", "server":"7021",
+        "farm":8, "title":"05-san-francisco-rustic-engagement-session", "isprimary":"0"},
+        {"id":"6479797365", "secret":"1c43d44c81", "server":"7034", "farm":8, "title":"23-san-francisco-embarcadero-engagement-session",
+        "isprimary":"0"}, {"id":"6479797917", "secret":"ef7958a34a", "server":"7034",
+        "farm":8, "title":"17-san-francisco-mission-valencia-engagement-session",
+        "isprimary":"0"}, {"id":"6479798341", "secret":"c048a88894", "server":"7025",
+        "farm":8, "title":"21-san-francisco-embarcadero-engagement-session", "isprimary":"0"},
+        {"id":"6479798953", "secret":"b66c573b54", "server":"7161", "farm":8, "title":"16-san-francisco-mission-valencia-engagement-session",
+        "isprimary":"0"}, {"id":"6479799339", "secret":"19e1b64de1", "server":"7159",
+        "farm":8, "title":"02-san-francisco-rustic-engagement-session", "isprimary":"0"},
+        {"id":"6479799889", "secret":"3d5dea661c", "server":"7175", "farm":8, "title":"13-san-francisco-mission-valencia-engagement-session",
+        "isprimary":"0"}, {"id":"6479800543", "secret":"00a7f36fb9", "server":"7025",
+        "farm":8, "title":"04-san-francisco-rustic-engagement-session", "isprimary":"0"}],
+        "page":1, "per_page":500, "perpage":500, "pages":1, "total":"13"}, "stat":"ok"}'
+    http_version: '1.1'
+  recorded_at: Sat, 17 Mar 2012 03:29:26 GMT
+- request:
+    method: get
+    uri: http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=18635c5ffedaf5681361e557ad8ed565&photoset_id=72157626973424464&format=json&nojsoncallback=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 17 Mar 2012 03:29:26 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private
+      x-served-by:
+      - www211.flickr.mud.yahoo.com
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '2548'
+      connection:
+      - close
+      content-type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"photoset":{"id":"72157626973424464", "primary":"5765132921", "owner":"20451842@N05",
+        "ownername":"janekimmer", "photo":[{"id":"5838808198", "secret":"48566d8cc3",
+        "server":"3222", "farm":4, "title":"suzanne_boudoir_11", "isprimary":"0"},
+        {"id":"5838256307", "secret":"207c8f43f4", "server":"5301", "farm":6, "title":"suzanne_boudoir_31",
+        "isprimary":"0"}, {"id":"5838807844", "secret":"bd3d8e1ef9", "server":"3316",
+        "farm":4, "title":"suzanne_boudoir_32", "isprimary":"0"}, {"id":"5838807504",
+        "secret":"be3ee74214", "server":"5309", "farm":6, "title":"suzanne_boudoir_33",
+        "isprimary":"0"}, {"id":"5838807980", "secret":"6838baf661", "server":"2642",
+        "farm":3, "title":"suzanne_boudoir_34", "isprimary":"0"}, {"id":"5838255689",
+        "secret":"c3d6e41e6e", "server":"5064", "farm":6, "title":"suzanne_boudoir_35",
+        "isprimary":"0"}, {"id":"5838808470", "secret":"b4f2495fcb", "server":"2464",
+        "farm":3, "title":"suzanne_boudoir_36", "isprimary":"0"}, {"id":"5812472424",
+        "secret":"c48667b131", "server":"3333", "farm":4, "title":"Boudoir session
+        | Angeline", "isprimary":"0"}, {"id":"5812471884", "secret":"124244d613",
+        "server":"3367", "farm":4, "title":"Boudoir session | Angeline", "isprimary":"0"},
+        {"id":"5811906499", "secret":"20085a25a4", "server":"3523", "farm":4, "title":"Boudoir
+        session | Angeline", "isprimary":"0"}, {"id":"5838179353", "secret":"36ea6cce95",
+        "server":"2789", "farm":3, "title":"IMG_3819-copy", "isprimary":"0"}, {"id":"5838179001",
+        "secret":"f5f85d07b1", "server":"5303", "farm":6, "title":"IMG_3848-copy-2",
+        "isprimary":"0"}, {"id":"5838179509", "secret":"4704604520", "server":"2520",
+        "farm":3, "title":"IMG_3853-copy-2", "isprimary":"0"}, {"id":"5838732470",
+        "secret":"763e0c524e", "server":"3644", "farm":4, "title":"IMG_3890-copy",
+        "isprimary":"0"}, {"id":"5838179675", "secret":"cdb8a50bfa", "server":"2556",
+        "farm":3, "title":"IMG_3901-copy", "isprimary":"0"}, {"id":"5838179169", "secret":"31bc2a9255",
+        "server":"2436", "farm":3, "title":"IMG_3925-copy-2", "isprimary":"0"}, {"id":"5838180185",
+        "secret":"8f00d402ed", "server":"5108", "farm":6, "title":"IMG_3437-copy",
+        "isprimary":"0"}, {"id":"5838179985", "secret":"08937dffaa", "server":"5155",
+        "farm":6, "title":"IMG_3438-copy", "isprimary":"0"}, {"id":"5838179815", "secret":"95f429e26f",
+        "server":"2688", "farm":3, "title":"IMG_3591-copy", "isprimary":"0"}, {"id":"5765132921",
+        "secret":"1a9ec5576a", "server":"5261", "farm":6, "title":"Lash Lab photoshoot",
+        "isprimary":"1"}], "page":1, "per_page":500, "perpage":500, "pages":1, "total":"20"},
+        "stat":"ok"}'
+    http_version: '1.1'
+  recorded_at: Sat, 17 Mar 2012 03:29:27 GMT
+recorded_with: VCR 2.0.0

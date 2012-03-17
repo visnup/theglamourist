@@ -1,6 +1,9 @@
 - content_for :title, "error (#{params[:code]})"
 h1 ?
 - case params[:code]
+- when '401'
+  h2 You are not allowed to do that.
+  p Maybe you tried to request something you didn't have access to.
 - when '404'
   h2 The page you were looking for doesn't exist.
   p You may have mistyped the address or the page may have moved.

@@ -1,9 +1,11 @@
+require 'open-uri'
+
 class IndexController < ApplicationController
   before_filter :photos_from_flickr, :only => [:index, :portfolio]
   caches_page :index, :portfolio
 
   def login
-    session[:admin] = true  if params[:password] == 'blah'
+    session[:admin] = true  if params[:password] == '<3ugf'
     redirect_to root_url
   end
 
@@ -13,14 +15,15 @@ class IndexController < ApplicationController
   end
 
   def expire
-    expire_page "/"
-    expire_page "/portfolio"
-    render :text => "ok"
+    expire_page '/'
+    expire_page '/portfolio'
+    render :text => 'ok'
   end
 
   private
+    def api_key; '18635c5ffedaf5681361e557ad8ed565' end
+
     def photos_from_flickr
-      api_key = '18635c5ffedaf5681361e557ad8ed565'
       url = "http://api.flickr.com/services/rest/?method=flickr.collections.getTree&api_key=#{api_key}&collection_id=20446502-72157624005829771&user_id=20451842%40N05&format=json&nojsoncallback=1"
 
       @sets =

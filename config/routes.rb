@@ -3,7 +3,7 @@ TheGlamourist::Application.routes.draw do
     match r => "index##{r}", :as => r
   end
 
-  resources :contacts
+  resources :contacts, only: [ :new, :create, :show ]
 
   %w/ posts blog /.each do |path|
     match "/#{path}.:format" => redirect('http://blog.theglamourist.com/rss.xml')
