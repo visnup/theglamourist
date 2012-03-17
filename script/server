@@ -1,0 +1,3 @@
+#!/bin/sh
+
+script/rails s -p 3004
