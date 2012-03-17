@@ -1,14 +1,15 @@
 doctype html
-html
+html( lang="en" )
   head
+    meta( charset="utf-8" )
+    meta( http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" )
+    = csrf_meta_tag
     title
       = yield(:title) + ' |'  if content_for?(:title)
       | the glamourist - jane kim - makeup artist (san francisco)
-    meta( http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" )
-    = csrf_meta_tag
-    = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Rock+Salt|Raleway:100'
     = stylesheet_link_tag 'application'
+    = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
     = javascript_include_tag 'modernizr.min.js'
   body( class="#{params[:controller]} #{params[:controller]}-#{params[:action]}" )
     #content
@@ -37,10 +38,9 @@ html
     #footer
       .where San Francisco Makeup Artist, SF Bay Area Makeup Artist, Los Angeles, Boudoir, Commerical, Fashion
       | &copy; #{Time.now.year} the glamourist
+    = javascript_include_tag 'application'
     - if Rails.env.production?
-      script( type='text/javascript' src='http://static.getclicky.com/js' )
+      script( type='text/javascript' src='//static.getclicky.com/js' )
       javascript:
         try{clicky.init(236629);}catch(e){}
-      noscript
-        = image_tag 'http://in.getclicky.com/236629ns.gif', size: '1x1'
-    = javascript_include_tag 'application'
+      noscript= image_tag 'http://in.getclicky.com/236629ns.gif', size: '1x1'
