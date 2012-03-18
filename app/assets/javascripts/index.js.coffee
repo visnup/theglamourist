@@ -21,13 +21,20 @@ $('body.index-portfolio').each ->
   $ -> $(window).resize().hashchange()
 
   if Modernizr.touch
-    scrollStart = 0
+    y0 = y1 = start = 0
     $(document)
       .on 'touchstart', 'ul.sets ul', (e) ->
-        scrollStart = this.scrollTop() + e.originalEvent.touches[0].pageY
+        y0 = y1 = e.originalEvent.touches[0].pageY
+        start = $(this).scrollTop() + y0
       .on 'touchmove', 'ul.sets ul', (e) ->
-        e.preventDefault()
-        this.scrollTop scrollStart - e.originalEvent.touches[0].pageY
+        y1 = e.originalEvent.touches[0].pageY
+        $(this).scrollTop start - y1
+      .on 'click', 'ul.sets ul a.thumb', (e) ->
+        if Math.abs(y1 - y0) > 10
+          e.preventDefault()
+          e.stopImmediatePropagation()
+        else
+          true
 
   $(document).on 'click', 'a.thumb', (e) ->
     e.preventDefault()
