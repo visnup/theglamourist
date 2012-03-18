@@ -1,17 +1,39 @@
-- content_for :title, 'contact'
+= content_for :title, 'contact'
 
-address.pullout
+= content_for :head do
+  link( rel="profile" href="http://microformats.org/profile/hcard" )
+
+.pullout.vcard
   h3 contact
   p
-    | Jane Kim
+    span.fn Jane Kim
     br
-    == mail_to 'jane@theglamourist.com', nil, encode: 'javascript'
-  p.phone (415) 860-5872
-  p.address
-    a( href='http://maps.google.com/maps?q=1325+Indiana+St+Ste+301,+San+Francisco,+CA+94107+(The+Glamourist)&hl=en&sll=37.75358,-122.390639&sspn=0.011757,0.01929&vpsrc=0&gl=us&hnear=1325+Indiana+St+%23301,+San+Francisco,+California+94107&t=m&z=16&iwloc=A' )
-      | 1325 Indiana St.  Ste. 301
+    = mail_to 'jane@theglamourist.com', nil, class: 'email'
+  p.tel (415) 860-5872
+  p.adr.address.studio
+    label.type Studio & Appointments
+    br
+    a( href='http://maps.google.com/maps?q=Blu+Bungalow&hl=en&ll=37.801307,-122.43546&spn=0.020481,0.033259&view=map&cid=15634673860134688280&t=m&z=15&iwloc=A' )
+      span.name Blu Bungalow
       br
-      | San Francisco, CA  94107
+      span.street-address 2068 Union St.
+      br
+      span.locality San Francisco
+      ' ,
+      span.region( title="California" ) CA
+      '
+      span.postal-code 94043
+  p.adr.address.mail
+    label.type Mail & Correspondence
+    br
+    a( href='http://maps.google.com/maps?q=The+Glamourist&hl=en&ll=37.756839,-122.391987&spn=0.020493,0.033259&view=map&cid=14521749320186323615&t=m&z=15&iwloc=A' )
+      span.street-address 1325 Indiana St. Ste. 301
+      br
+      span.locality San Francisco
+      ' ,
+      span.region( title="California" ) CA
+      '
+      span.postal-code 94107
   | Available for travel worldwide.
 
 h3 for inquiries

@@ -11,6 +11,7 @@ html( lang="en" )
     = stylesheet_link_tag 'application'
     = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
     = javascript_include_tag 'modernizr.min.js'
+    = yield(:head)
   body( class="#{params[:controller]} #{params[:controller]}-#{params[:action]}" )
     #content
       #header
