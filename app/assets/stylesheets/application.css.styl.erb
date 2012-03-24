@@ -32,6 +32,7 @@ label[for]
 
 input[type=text], input[type=email], input[type=tel], textarea, select
   margin 0
+  padding 2px
   border none
   border-bottom solid 1px hsla(0, 0%, 0%, 0.3)
   &:focus
@@ -40,7 +41,7 @@ input[type=text], input[type=email], input[type=tel], textarea, select
 select
   appearance none
   border-radius 0
-  padding 0 20px 0 1ex
+  padding-right 12px
   background url('<%= asset_data_uri 'down-arrow.png' %>') no-repeat 100% 0
   &:focus
     background-position 100% -18px
