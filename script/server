@@ -1,3 +1,2 @@
 #!/bin/sh
-
-script/rails s -p 3004
+passenger start -p 3004
