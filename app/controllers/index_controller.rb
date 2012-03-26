@@ -27,20 +27,23 @@ class IndexController < ApplicationController
       url = "http://api.flickr.com/services/rest/?method=flickr.collections.getTree&api_key=#{api_key}&collection_id=20446502-72157624005829771&user_id=20451842%40N05&format=json&nojsoncallback=1"
 
       @sets =
+        Rails.cache.fetch 'flickr' do
         open url do |f|
           collection = JSON.parse(f.read)['collections']['collection'].first
           collection['set'].map do |set|
-            url = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=#{api_key}&photoset_id=#{set['id']}&format=json&nojsoncallback=1"
+            url = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=#{api_key}&photoset_id=#{set['id']}&format=json&nojsoncallback=1&extras=original_format"
             photos = open(url) { |f| JSON.parse(f.read)['photoset']['photo'] }
             photos.reverse!.each do |p|
               p['href'] = "http://www.flickr.com/photos/20451842%40N05/#{p['id']}"
-              p['src'] = "http://farm#{p['farm']}.static.flickr.com/#{p['server']}/#{p['id']}_#{p['secret']}_s.jpg"
+              p['src'] = "http://farm#{p['farm']}.staticflickr.com/#{p['server']}/#{p['id']}_#{p['secret']}_s.jpg"
+              p['original'] = "http://farm#{p['farm']}.staticflickr.com/#{p['server']}/#{p['id']}_#{p['originalsecret']}_o.jpg"
             end
 
             { 'id' => set['id'],
               'title' => set['title'],
               'photos' => photos }
           end
+        end
         end
     end
 end

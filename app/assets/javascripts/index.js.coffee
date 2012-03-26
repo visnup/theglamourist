@@ -14,10 +14,6 @@ $('body.index-portfolio').each ->
       else
         closeSet $('.set.open')
         loadPortrait 'a.thumb:first'
-    .on 'resize scroll', _.debounce ->
-      height = $(window).height() + $(window).scrollTop() - 345
-      $('ul.sets ul').css 'height', height
-    , 200
   $ -> $(window).resize().hashchange()
 
   if Modernizr.touch
@@ -45,32 +41,43 @@ loadPortrait = (link) ->
 
   $('a.thumb.selected').removeClass 'selected'
 
+  portrait = $('#portrait')
   src = $(link)
     .addClass('selected')
-    .find('img').attr('src').replace(/_s.jpg$/, '_z.jpg')
+    .find('img').attr('src').replace(/_s.jpg$/, '_b.jpg')
+    #.data('original')
 
   img = $('<img class="portrait">')
     .load ->
-      portrait = $('#portrait')
       $this = $(this)
-      rotation = "rotate(#{(Math.random() * 10)-5}deg)"
 
-      old = $('img', portrait).removeClass('fade-in')
-      _.delay (-> old.parent('a').remove()), 6000
+      ww = $(window).width() + 2
+      wh = $(window).height() + 2
 
-      _.defer ->
-        $this
-          .appendTo(portrait)
-          .wrap($('<a>', href: $(link).attr 'href'))
-          .css
-            position: 'absolute'
-            top: Math.floor(Math.random() * 20)
-            left: (portrait.width() - $this.width())/2
-            transform: rotation
-          .addClass('fade-in')
-        $('#page').css 'minHeight', (i, min) ->
-          Math.max $this.height()-10, parseInt(min)
-    .attr 'src', src
+      $this
+        .appendTo(portrait)
+        .wrap($('<a>', href: $(link).attr('href')))
+        .css(height: wh)
+        .addClass('fade-in')
+
+      iw = $this.width()
+      ih = $this.height()
+      ir = iw / ih
+
+      if 0.7 < ir < 1
+        if iw < ww/2
+          $this.css
+            height: 'auto'
+            width: ww/2
+      else if 1 <= ir < 1.6
+        if iw < ww
+          $this.css
+            height: 'auto'
+            width: ww
+
+      pw = _.reduce $('img', portrait), ((s, img) -> s + $(img).width()), 0
+      portrait.css 'left', ww - pw
+    .attr('src', src)
 
 openSet = (set) ->
   $set = $(set)

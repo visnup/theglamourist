@@ -1,0 +1,28 @@
+analytics
+  window sizes
+
+gallery
+  handle multiple sizes
+    crop top and bottom (not just top)
+    resize handling
+    portrait mode (ipad)
+  autohide picker
+    move title to left
+  back button
+  scroll left
+    update hash tag
+  initial view
+    fill up the page
+
+index
+  table of contents
+  integrate with tumblr
+    migrate posterous
+  pinterest "ads"
+
+contact form
+  textarea
+  select down arrow
+    2x image resolution?
+
+ie

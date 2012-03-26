@@ -32,40 +32,73 @@ body.index-index
     text-align left
 
 body.index-portfolio
-  #page
-    min-height 420px
-  #portrait
+  background url('/assets/bg.jpg')
+  header
     position relative
-    margin-right pullout-width
+    background-color hsla(0, 0%, 100%, 0.9)
+    padding 1ex 1em
+    display -webkit-box
+    display -moz-box
+    display -ms-box
+    display box
+    box-align baseline
+    h1, nav
+      margin 0
+      box-flex 1
+    h1
+      font-size medium
+      text-align left
+      .the
+        position static
+        font-size small
+      .tagline
+        display none
+    nav
+      font-size small
+      text-align right
+      li
+        padding 0 0 0 2em
+      .social
+        position absolute
+        right -80px
+  footer
+    display none
+  #portrait
+    position fixed
+    bottom -4px
+    right 0
+    z-index -1
+    white-space nowrap
+    transition left ease 500ms
+    &.removing
+      transition none
     img
-      position absolute
-      border solid 5px white
-      border-radius 2px
-      box-shadow 0 0 5px hsla(0, 0%, 0%, 0.4)
       opacity 0
-      transition opacity ease-out 5s
       &.fade-in
         opacity 1
-        transition opacity ease-in 100ms
-  .pullout
-    text-align center
+        transition opacity ease 100ms
   ul
     list-style-type none
     margin 0px
     padding 0px
   .sets
-    margin 0px auto
+    position fixed
+    bottom 0
     h3
       position relative
+      &, a
+        color white
+        text-shadow 0 0 2px hsla(0, 0%, 0%, 0.8)
     a.back
       display none
       position absolute
       left 0px
       font-size small
-      margin-top large - small - 1
+      margin-top large - small - 3
     .title
       display inline-block
       width 6em
+      margin-left 80px
     ul
       overflow auto
       transition height 200ms
@@ -79,8 +112,8 @@ body.index-portfolio
     img
       width 75px
       height 75px
-      border solid 2px white
-      border-radius 2px
+      border solid 1px white
+      border-radius 1px
     &.selected img
       border-color link
       transition border-color 200ms linear
@@ -103,6 +136,9 @@ body.index-portfolio
       overflow hidden
       text-overflow ellipsis
   .set.open
+    height 100px
+    width 900px
+    white-space nowrap
     li
       position static
       display inline-block
