@@ -1,20 +1,19 @@
 #= require 'underscore'
 
 # google analytics
-_gaq = window._gaq ||= []
+_gaq = (window._gaq ||= [])
 
 # window sizes
-trackWindowDimensions = (action) ->
+trackViewport = _.debounce (action) ->
   w = $(window).width()
   h = $(window).height()
-  event = [ '_trackEvent', 'Window Dimensions', action, "#{w}x#{h}", w/h, true ]
-  console.log event
-  _gaq.push event
-
+  aspect = Math.floor w / h * 100
+  _gaq.push [ '_trackEvent', 'Viewport', action, "#{w}x#{h}", aspect, true ]
   true
+, 500
 
-$(document).ready -> trackWindowDimensions 'Load'
-$(window).resize _.debounce((-> trackWindowDimensions 'Resize'), 500)
+trackViewport 'Load'
+$(window).resize -> trackViewport 'Resize'
 
 # gallery clicks
 $(document).on 'click', 'a.thumb', ->
