@@ -7,8 +7,11 @@ _gaq = window._gaq ||= []
 trackWindowDimensions = (action) ->
   w = $(window).width()
   h = $(window).height()
-  _gaq.push [ '_trackEvent', 'Window Dimensions', action,
-              "#{w}x#{h}", w/h, true ]
+  event = [ '_trackEvent', 'Window Dimensions', action, "#{w}x#{h}", w/h, true ]
+  console.log event
+  _gaq.push event
+
+  true
 
 $(document).ready -> trackWindowDimensions 'Load'
 $(window).resize _.debounce((-> trackWindowDimensions 'Resize'), 500)
