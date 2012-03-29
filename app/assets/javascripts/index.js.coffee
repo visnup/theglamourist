@@ -7,8 +7,8 @@ return if $('body.index').length is 0
 $('body.index-portfolio').each ->
   $(window)
     .on 'hashchange', ->
-      if location.hash.length > 2
-        thumb = $("a.thumb##{window.location.hash.substring(2)}")
+      if location.hash.length > 1
+        thumb = $("a.thumb##{window.location.hash.substring(1)}")
         openSet thumb.closest('.set')
         loadPortrait thumb
       else
@@ -34,7 +34,7 @@ $('body.index-portfolio').each ->
 
   $(document).on 'click', 'a.thumb', (e) ->
     e.preventDefault()
-    location.hash = "t#{$(this).attr('id')}"
+    location.hash = $(this).attr('id')
 
 loadPortrait = (link) ->
   return if $(link).length is 0
@@ -42,9 +42,10 @@ loadPortrait = (link) ->
   $('a.thumb.selected').removeClass 'selected'
 
   portrait = $('#portrait')
-  src = $(link)
+  thumb = $(link)
     .addClass('selected')
-    .find('img').attr('src').replace(/_s.jpg$/, '_b.jpg')
+    .find('img')
+  src = thumb.attr('src').replace(/_s.jpg$/, '_n.jpg')
     #.data('original')
 
   img = $('<img class="portrait">')
@@ -57,6 +58,7 @@ loadPortrait = (link) ->
       $this
         .appendTo(portrait)
         .wrap($('<a>', href: $(link).attr('href')))
+        .after($('<div class="caption">').text(thumb.attr('title')))
         .css(height: wh)
         .addClass('fade-in')
 
@@ -104,9 +106,15 @@ closeSet = (set) ->
 
   $(set).toggleClass 'open closed'
 
-  $('.set.closed')
-    .each ->
-      $('img', this).slice(1, 4).each ->
-        rotation = "rotate(#{10*((Math.random() * 2)-1)}deg)"
-        $(this).css transform: rotation
-    .show()
+  $('.set.closed').show()
+
+getColor = (img) ->
+  canvas = $('#color-test')
+  if canvas.length is 0
+    canvas = $('<canvas width=10 height=10 id="color-test">')
+      .css(position: 'absolute', left: 10, top: 10)
+      .appendTo(document.body)
+
+  ctx = canvas[0].getContext('2d')
+  ctx.drawImage img, 0, 0, 10, 10
+  ctx.getImageData 10, 10, 1, 1

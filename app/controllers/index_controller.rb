@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class IndexController < ApplicationController
-  before_filter :photos_from_flickr, :only => [:index, :portfolio]
+  before_filter :fetch_albums, only: [:index, :portfolio]
   caches_page :index, :portfolio
 
   def login
@@ -17,33 +17,28 @@ class IndexController < ApplicationController
   def expire
     expire_page '/'
     expire_page '/portfolio'
-    render :text => 'ok'
+    Rails.cache.clear
+
+    render text: 'ok'
   end
 
   private
-    def api_key; '18635c5ffedaf5681361e557ad8ed565' end
+    def graph_url path; "https://graph.facebook.com/#{path}" end
 
-    def photos_from_flickr
-      url = "http://api.flickr.com/services/rest/?method=flickr.collections.getTree&api_key=#{api_key}&collection_id=20446502-72157624005829771&user_id=20451842%40N05&format=json&nojsoncallback=1"
-
-      @sets =
-        Rails.cache.fetch 'flickr' do
-        open url do |f|
-          collection = JSON.parse(f.read)['collections']['collection'].first
-          collection['set'].map do |set|
-            url = "http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=#{api_key}&photoset_id=#{set['id']}&format=json&nojsoncallback=1&extras=original_format"
-            photos = open(url) { |f| JSON.parse(f.read)['photoset']['photo'] }
-            photos.reverse!.each do |p|
-              p['href'] = "http://www.flickr.com/photos/20451842%40N05/#{p['id']}"
-              p['src'] = "http://farm#{p['farm']}.staticflickr.com/#{p['server']}/#{p['id']}_#{p['secret']}_s.jpg"
-              p['original'] = "http://farm#{p['farm']}.staticflickr.com/#{p['server']}/#{p['id']}_#{p['originalsecret']}_o.jpg"
+    def fetch_albums
+      @sets = Rails.cache.fetch 'albums' do
+        open graph_url('theglamourist/albums') do |f|
+          JSON.parse(f.read)['data'].select do |set|
+            set['type'] == 'normal'
+          end.each do |set|
+            open graph_url(set['cover_photo']) do |f|
+              set['cover_photo'] = JSON.parse f.read
             end
-
-            { 'id' => set['id'],
-              'title' => set['title'],
-              'photos' => photos }
+            open graph_url("#{set['id']}/photos") do |f|
+              set['photos'] = JSON.parse(f.read)['data']
+            end
           end
         end
-        end
+      end
     end
 end

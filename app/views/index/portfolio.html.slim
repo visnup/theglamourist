@@ -3,19 +3,14 @@
 ul.sets
   h3
     a.back( href='#' ) &laquo; Back
-    span.title Choose a set below
-  - @sets.each do |s|
+    span.title Choose a set
+  - @sets.each do |set|
     li.set.closed
-      h4
-        a( href="#p#{s['id']}-#{s['photos'].first['id']}" )= s['title']
+      h4: a( href="#p#{set['id']}-#{set['cover_photo']['id']}" )= set['name']
       ul
-        - s['photos'].each_with_index do |p, i|
+        - set['photos'].each_with_index do |photo, i|
           li( style="z-index: -#{i};" )
-            a.thumb( href=p['href'] id="#{s['id']}-#{p['id']}" data-original=p['original'] )
-              = image_tag p['src']
-        - if s['photos'].size.odd?
-          li.spacer( style="z-index: -#{s['photos'].size};" )
-  - if @sets.size.odd?
-    li.set.closed
+            a.thumb( id="#{set['id']}-#{photo['id']}" href=photo['link'] )
+              img( src=photo['picture'] title=photo['name'] )
 
 #portrait

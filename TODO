@@ -1,27 +1,32 @@
 analytics
   blog
 
-blog
-  migrate to tumblr
+seo
+  meta description
+  "wedding makeup san francisco"
+  other queries?
 
 gallery
   handle multiple sizes
-    crop top and bottom (not just top)
+    vertical-align middle
     resize handling
     portrait mode (ipad)
-  autohide picker
-    move title to left
   back button
+    if image exists, scroll to it
   scroll left
     update hash tag
+  keyboard nav
+  autohide picker
+    move title to left
   initial view
     fill up the page
 
 index
   table of contents
-  integrate with tumblr
-    migrate posterous
-  pinterest "ads"
+  integrations
+    tumblr
+    pinterest "ads"
+    facebook
 
 contact form
   textarea
