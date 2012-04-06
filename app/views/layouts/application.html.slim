@@ -26,9 +26,7 @@ html( lang="en" )
     = yield(:head)
   body( class="#{params[:controller]} #{params[:controller]}-#{params[:action]}" )
     header
-      h1
-        .tagline Hair <b>|</b> Makeup Design
-        = link_to '<span class="the">THE</span> <b>GLAMOUR</b>IST'.html_safe, root_path
+      h1= link_to '<span class="the">THE</span> <b>GLAMOUR</b>IST'.html_safe, root_path
       nav
         ul
           li= link_to_unless_current 'home', root_path, class: 'home'

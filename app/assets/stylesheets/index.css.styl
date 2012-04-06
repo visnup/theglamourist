@@ -1,35 +1,78 @@
 @import "_common"
 
 body.index-index
-  #header
+  header
     h1
-      font-size 72px
-      .tagline
-        margin-left 455px
-    #nav
-      font-size 18px
-  .portfolio
-    text-align center
-    a
-      display inline-block
-      background-color white
-      padding 5px
-      margin 0px auto
-      box-shadow 0 0 5px hsla(0, 0%, 0%, 0.4)
-      border-radius 2px
-      transform rotate(1deg)
-      &:first-child
-        transform rotate(-1deg)
-      &:hover
-        text-decoration none
-    h3
-      font-family 'Rock Salt'
-      margin 0px
+      margin-bottom 0
+    nav
+      display none
+  #page
+    padding-top 0
+    margin-top -15px
+  h2, h3
+    font-family Helvetica Neue, Helvetica, Arial, sans-serif
+    font-weight 400
+  .cover
+    position relative
+    z-index -1
     img
-      border solid 1px hsla(0, 0%, 0%, 0.2)
-      border-radius 2px
-  #footer
-    text-align left
+      background-color lightgray
+    .caption
+      position absolute
+      left 0
+      bottom 10px
+      padding 0 10px
+      background-color hsla(0, 0%, 100%, 0.5)
+    &.landscape
+      max-height 450px
+      overflow hidden
+      img
+        width 100%
+        height auto
+        margin-top -5%
+    &.portrait
+      float left
+      margin-right 1em
+      & + article
+        padding-top 2em
+  article
+    display -webkit-box
+  section
+    box-flex 1
+    width 33%
+    padding 10px
+    ul
+      list-style-type none
+      padding-left 0
+      line-height 150%
+    h4
+      font-family Times, Georgia, serif
+      font-style italic
+      font-size medium
+      margin-bottom 0
+      text-transform none
+    p
+      margin 0
+  ul.instagram
+    margin-left -10px
+    li
+      display inline
+      position relative
+      .caption
+        display none
+        position absolute
+        bottom 10px
+        left 5px
+        padding 0 5px
+        font-size small
+        background-color hsla(0, 0%, 100%, 0.5)
+        font-family Helvetica Neue, Helvetica, Arial, sans-serif
+        width 80%
+      &:hover .caption
+        display block
+    img
+      width 45%
+      margin 0 5px 5px 0
 
 body.index-portfolio
   background url('/assets/bg.jpg')
@@ -51,8 +94,10 @@ body.index-portfolio
       .the
         position static
         font-size small
-      .tagline
-        display none
+      a
+        background-image url('logo-small.png')
+        min-height 15px
+        min-width 130px
     nav
       font-size small
       text-align right
@@ -90,8 +135,10 @@ body.index-portfolio
         right 20px
         bottom 120px
         text-align right
-        width 15em
+        max-width 15em
         white-space normal
+        background-color hsla(0, 0%, 0%, 0.5)
+        padding 10px
   ul
     list-style-type none
     margin 0px
