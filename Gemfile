@@ -1,6 +1,7 @@
 source :rubygems
 
 gem 'active-model-email-validator'
+gem 'ffaker'
 gem 'formtastic'
 gem 'slim'
 gem 'rails'

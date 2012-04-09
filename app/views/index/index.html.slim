@@ -1,40 +1,36 @@
-- set = @sets.sample
+- set = @sets[2]
 - cover = set['cover_photo']
 .cover( class="#{ cover['width'] > cover['height'] ? 'landscape' : 'portrait' }" )
   = link_to portfolio_path(anchor: "p#{set['id']}-#{cover['id']}") do
     = image_tag cover['source'], size: "#{cover['width']}x#{cover['height']}", alt: nil
-    h2.caption= set['name']
+    .caption
+      p New York, London and Paris fashion week has come and gone and now fashion media outlets are inundating us with edgy trends, electrifying hues and eclectic textures.
 
 article
-  section.portfolio
-    h2 Gallery
+  section
+    h2= link_to 'Blog', '//blog.theglamourist.com'
+    ul.posts
+      - @posts[0, 7].each do |p|
+        li
+          h4= link_to p['title'], p['post_url']
+          p= p['body'].gsub(/([.!]).*/m, '\1')
+
+  section
+    h2= link_to 'Gallery', portfolio_path
     ul.sets
       - @sets.each do |set|
         li
           h4= link_to set['name'], portfolio_path(anchor: "p#{set['id']}-#{set['cover_photo']['id']}")
-          p= set['description']
+          p= set['description'] || Faker::Lorem.sentence
 
-    h2 Instagram
-    ul.instagram
-      - @instagram[0, 6].each do |p|
-        li= link_to p['link'] do
-          = image_tag p['images']['thumbnail']['url']
-          - if p['caption']
-            .caption= p['caption']['text']
+    h2= link_to 'Contact', new_contact_path
+    ul.contact
+      li.contact= link_to 'New inquiry?', new_contact_path
+      li.email= mail_to 'jane@theglamourist.com', nil
+      li.phone (415) 860-5872
 
-  section.blog
-    h2 Blog
-    ul
-      li
-        h4 Featured Publishing | Mag Rouge - Issue 2
-        p When Meg & Yelena asked me to be a part of their botanical garden shoot for Mag Rouge I was elated!  For one, I knew not to expect anything less than perfection with Meg Perotti behind the lens. Two, I knew the styling would be to-die for simply because Yelena of Stylish Soiree does nothing less than exceptional.
-      li
-        h4 Back to basics...
-        p New York, London and Paris fashion week has come and gone and now fashion media outlets are inundating us with edgy trends, electrifying hues and eclectic textures.  As we all know feather lashes, bright bold liners  and sequin adorned eyes might look uber chic on the runways but the reality is that everyday woman with more than everyday schedules will not leave the house looking as daring. Let’s be real.    
+    h2= link_to 'Services', services_path
+    p= Faker::Lorem.paragraph
 
-      li
-        h4 Model for a day
-        p It’s rare that I’m actually the one in front of the camera but when I am I love that wonderful images to show for it.  These are some of my favorites from sort of a last minute photoshoot with the always inspiring Gladys Jem.
-
-  section.misc
-    h2 Pinterest
+    h2= link_to 'About', about_path
+    p= Faker::Lorem.paragraph

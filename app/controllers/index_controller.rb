@@ -1,7 +1,8 @@
 require 'open-uri'
 
 class IndexController < ApplicationController
-  before_filter :fetch_albums, :fetch_instagram, only: [:index, :portfolio]
+  before_filter :fetch_albums, :fetch_instagram, :fetch_posts,
+    only: [:index, :portfolio]
   caches_page :index, :portfolio
 
   def login
@@ -26,7 +27,7 @@ class IndexController < ApplicationController
     def graph_url path; "https://graph.facebook.com/#{path}" end
 
     def fetch_albums
-      @sets = Rails.cache.fetch 'albums' do
+      @sets = Rails.cache.fetch 'facebook' do
         open graph_url('theglamourist/albums') do |f|
           JSON.parse(f.read)['data'].select do |set|
             set['type'] == 'normal'
@@ -47,6 +48,19 @@ class IndexController < ApplicationController
         Rails.cache.fetch 'instagram' do
           url = 'https://api.instagram.com/v1/users/538328/media/recent/?access_token=538328.643541b.be39dd953e644df58d2ce0f2460b049c'
           open url do |f| JSON.parse(f.read)['data'] end
+        end
+    end
+
+    def fetch_posts
+      @posts =
+        Rails.cache.fetch 'tumblr' do
+          url = 'http://api.tumblr.com/v2/blog/theglamourist.tumblr.com/posts/text?api_key=dIFA35FeL5NzEN7r9xzkEw0neZgIZxNvxxKQ7AneQBh6qVGTjc&type=text&filter=text'
+          total = open url do |f|
+            JSON.parse(f.read)['response']['total_posts']
+          end
+          open "#{url}&offset=#{total-10}" do |f|
+            JSON.parse(f.read)['response']['posts']
+          end.reverse
         end
     end
 end
