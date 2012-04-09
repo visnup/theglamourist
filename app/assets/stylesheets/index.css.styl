@@ -19,13 +19,13 @@ body.index-index
     border-bottom solid 1px #979797
   .cover
     position relative
-    z-index -1
     img
       background-color lightgray
+      width 100%
     .caption
       position absolute
       left 0
-      bottom 3px
+      bottom 0
       padding 0 20px
       color white
       width 60%
@@ -37,22 +37,23 @@ body.index-index
         letter-spacing -1px
         line-height 125%
     &.landscape
-      max-height 450px
+      height 450px
       overflow hidden
       img
-        width 100%
         height auto
         margin-top -5%
+      & ~ section
+        width 30%
     &.portrait
+      width 50%
       float left
-      & + article
-        padding-top 2em
-  article
-    display -webkit-box
+      & ~ section
+        width 20%
   section
-    box-flex 1
-    width 33%
     padding-left 20px
+    float left
+    h2
+      margin-top 1.5em
     ul
       list-style-type none
       padding-left 0
@@ -64,26 +65,6 @@ body.index-index
       text-transform none
     p
       margin 0
-  ul.instagram
-    margin-left -10px
-    li
-      display inline
-      position relative
-      .caption
-        display none
-        position absolute
-        bottom 10px
-        left 5px
-        padding 0 5px
-        font-size small
-        background-color hsla(0, 0%, 100%, 0.5)
-        font-family Helvetica Neue, Helvetica, Arial, sans-serif
-        width 80%
-      &:hover .caption
-        display block
-    img
-      width 45%
-      margin 0 5px 5px 0
 
 body.index-portfolio
   background url('/assets/bg.jpg')
