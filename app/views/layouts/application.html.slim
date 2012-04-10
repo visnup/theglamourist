@@ -52,5 +52,7 @@ html( lang="en" )
         li= link_to_unless_current 'services', services_path, class: 'services'
         li= link_to_unless_current 'blog', 'http://blog.theglamourist.com', class: 'blog'
         li= link_to_unless_current 'contact', new_contact_path, class: 'contact'
-      .copyright &copy; #{Time.now.year} the <b>GLAMOUR</b>IST
+      .copyright
+        ' &copy; #{Time.now.year}
+        span.logo <span class="the">the</span> <b>GLAMOUR</b>IST
     = javascript_include_tag 'application'
