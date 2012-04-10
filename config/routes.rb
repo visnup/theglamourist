@@ -1,5 +1,5 @@
 TheGlamourist::Application.routes.draw do
-  %w/ about portfolio services login logout expire error /.each do |r|
+  %w/ about portfolio services login logout expire error proxy /.each do |r|
     match r => "index##{r}", :as => r
   end
 

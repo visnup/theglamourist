@@ -1,8 +1,8 @@
-- set = @sets[0]
+- set = @sets[4]
 - cover = set['cover_photo']
 .cover( class="#{ cover['width'] > cover['height'] ? 'landscape' : 'portrait' }" )
   = link_to portfolio_path(anchor: "#{set['id']}-#{cover['id']}") do
-    = image_tag cover['source'], alt: nil
+    = image_tag proxy_path(url: cover['source']), alt: nil
     - if cover['name']
       .caption= simple_format cover['name']
 

@@ -5,6 +5,10 @@ class IndexController < ApplicationController
     only: [:index, :portfolio]
   caches_page :index, :portfolio
 
+  def proxy
+    open params[:url] { |f| send_data f.read, type: 'image/jpeg' }
+  end
+
   def login
     session[:admin] = true  if params[:password] == '<3ugf'
     redirect_to root_url
