@@ -1,11 +1,11 @@
 source :rubygems
 
 gem 'active-model-email-validator'
-gem 'ffaker'
+gem 'ffaker'  # TODO remove
 gem 'formtastic'
-gem 'slim'
 gem 'rails'
 gem 'rdiscount'
+gem 'slim'
 gem 'sqlite3'
 
 group :assets do
@@ -22,7 +22,7 @@ end
 
 group :development do
   gem 'capistrano'
-  #gem 'ruby-debug19'
+  #gem 'debugger', require: false
 end
 
 group :test do
