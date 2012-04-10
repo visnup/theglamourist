@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class IndexController < ApplicationController
-  before_filter :fetch_albums, :fetch_instagram, :fetch_posts,
+  before_filter :fetch_albums, :fetch_posts,
     only: [:index, :portfolio]
   caches_page :index, :portfolio
 

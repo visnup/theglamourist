@@ -6,7 +6,7 @@ html( lang="en" )
     = csrf_meta_tag
     title
       = yield(:title) + ' - '  if content_for?(:title)
-      | the glamourist - jane kim - makeup artist (san francisco)
+      | The Glamourist - Jane Kim - Makeup Artist (San Francisco)
     - if Rails.env.production?
       javascript:
         var _gaq = _gaq || [];
@@ -46,6 +46,11 @@ html( lang="en" )
               img.yelp( src=asset_data_uri('yelp.png') )
     #page= yield
     footer
-      .where San Francisco Makeup Artist, SF Bay Area Makeup Artist, Los Angeles, Boudoir, Commerical, Fashion
+      ul
+        li= link_to_unless_current 'about', about_path, class: 'about'
+        li= link_to_unless_current 'gallery', portfolio_path, class: 'portfolio'
+        li= link_to_unless_current 'services', services_path, class: 'services'
+        li= link_to_unless_current 'blog', 'http://blog.theglamourist.com', class: 'blog'
+        li= link_to_unless_current 'contact', new_contact_path, class: 'contact'
       .copyright &copy; #{Time.now.year} the <b>GLAMOUR</b>IST
     = javascript_include_tag 'application'

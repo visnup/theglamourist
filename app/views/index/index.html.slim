@@ -1,10 +1,10 @@
-- set = @sets[2, 2].sample
+- set = @sets[0]
 - cover = set['cover_photo']
 .cover( class="#{ cover['width'] > cover['height'] ? 'landscape' : 'portrait' }" )
-  = link_to portfolio_path(anchor: "p#{set['id']}-#{cover['id']}") do
+  = link_to portfolio_path(anchor: "#{set['id']}-#{cover['id']}") do
     = image_tag cover['source'], alt: nil
-    .caption
-      p New York, London and Paris fashion week has come and gone and now fashion media outlets are inundating us with edgy trends, electrifying hues and eclectic textures.
+    - if cover['name']
+      .caption= simple_format cover['name']
 
 section.posts
   h2= link_to 'Blog', '//blog.theglamourist.com'
@@ -19,20 +19,32 @@ section.sets
   ul
     - @sets.each do |set|
       li
-        h4= link_to set['name'], portfolio_path(anchor: "p#{set['id']}-#{set['cover_photo']['id']}")
-        p= set['description'] || Faker::Lorem.sentence
+        h4= link_to set['name'], portfolio_path(anchor: "#{set['id']}-#{set['cover_photo']['id']}")
+        p= set['description']
 
 section.contact
   h2= link_to 'Contact', new_contact_path
-  ul
-    li.contact= link_to 'New inquiry?', new_contact_path
-    li.email= mail_to 'jane@theglamourist.com', nil
-    li.phone (415) 860-5872
+  p= link_to 'Tell us what you&rsquo;re looking for &rarr;'.html_safe, new_contact_path
+  p Appointments held at <a href="http://maps.google.com/maps?q=Blu+Bungalow&hl=en&ll=37.801307,-122.43546&spn=0.020481,0.033259&view=map&cid=15634673860134688280&t=m&z=15&iwloc=A">Blu Bungalow</a>
+  p
+    = mail_to 'jane@theglamourist.com', nil
+    br
+    | (415) 860-5872
 
 section.services
   h2= link_to 'Services', services_path
-  p= Faker::Lorem.paragraph
+  ul
+    li= link_to 'Bridal, Engagement, Trial Sessions', services_path
+    li= link_to 'Commercial, Fashion', services_path
+    li= link_to 'Boudoir', services_path
+    li= link_to 'Makeup Lessons', services_path
+    li Available for travel
 
 section.about
   h2= link_to 'About', about_path
-  p= Faker::Lorem.paragraph
+  p
+    | The best part of my job is when I unveil a look to my clients. As they
+      stare in disbelief by their own reflection and thank me for a miraculous
+      job well done. Only, I am not a magician. I am not a surgeon. I am not
+      miracle worker. I see the beauty in people and enhance what beautiful
+      features they have already been blessed with.
