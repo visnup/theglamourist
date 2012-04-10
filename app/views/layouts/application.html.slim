@@ -19,8 +19,7 @@ html( lang="en" )
           ga.src = 'http://www.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Rock+Salt'
-    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'application', media: 'all'
     = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
     = javascript_include_tag 'modernizr.min.js'
     = yield(:head)
