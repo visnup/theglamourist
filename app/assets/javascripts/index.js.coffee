@@ -60,6 +60,7 @@ $('body.index-index').each ->
         hi = hsl if hsl[1] > hi[1] && 50 < hsl[2] < 80
 
       $('h2 a').css color: "hsl(#{hi[0]}, #{hi[1]}%, #{hi[2]}%)"
+    .each -> $(@).load() if @complete
 
 $('body.index-portfolio').each ->
   $(window)

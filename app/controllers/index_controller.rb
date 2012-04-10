@@ -6,7 +6,11 @@ class IndexController < ApplicationController
   caches_page :index, :portfolio
 
   def proxy
-    open params[:url] { |f| send_data f.read, type: 'image/jpeg' }
+    open params[:url] do |f|
+      response.headers['Last-Modified'] = f.last_modified.to_s :rfc822
+      response.headers['Cache-Control'] = 'max-age=1209600'
+      send_data f.read, type: f.content_type, disposition: 'inline'
+    end
   end
 
   def login
