@@ -28,11 +28,11 @@ html( lang="en" )
       h1= link_to '<span class="the">THE</span> <b>GLAMOUR</b>IST'.html_safe, root_path
       nav
         ul
-          li= link_to_unless_current 'home', root_path, class: 'home'
-          li= link_to_unless_current 'about', about_path, class: 'about'
+          li= link_to_unless_current 'index', root_path, class: 'home'
           li= link_to_unless_current 'gallery', portfolio_path, class: 'portfolio'
           li= link_to_unless_current 'services', services_path, class: 'services'
           li= link_to_unless_current 'blog', 'http://blog.theglamourist.com', class: 'blog'
+          li= link_to_unless_current 'about', about_path, class: 'about'
           li= link_to_unless_current 'contact', new_contact_path, class: 'contact'
           li.social
             a( href="http://www.facebook.com/theglamourist" )
