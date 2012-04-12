@@ -1,8 +1,11 @@
-- set = @sets[4]
+- set = @sets.sample
 - cover = set['cover_photo']
+css:
+  h2 a { color: #{cover['saturated']}; }
+
 .cover( class="#{ cover['width'] > cover['height'] ? 'landscape' : 'portrait' }" )
   = link_to portfolio_path(anchor: "#{set['id']}-#{cover['id']}") do
-    = image_tag proxy_path(url: cover['source']), alt: nil
+    = image_tag cover['source'], alt: nil
     - if cover['name']
       .caption= simple_format cover['name']
 

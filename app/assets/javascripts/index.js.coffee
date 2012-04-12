@@ -4,64 +4,6 @@
 
 return if $('body.index').length is 0
 
-$('body.index-index').each ->
-
-  rgb2hsl = (r, g, b) ->
-    r /= 255
-    g /= 255
-    b /= 255
-
-    min = Math.min r, g, b
-    max = Math.max r, g, b
-    delta = max - min
-
-    l = (max + min) / 2
-
-    if delta == 0
-      h = 0
-      s = 0
-    else
-      s =
-        if l < 0.5 then delta / (max + min)
-        else            delta / (2 - max - min)
-
-      delta_r = ( ( ( max - r ) / 6 ) + ( delta / 2 ) ) / delta
-      delta_g = ( ( ( max - g ) / 6 ) + ( delta / 2 ) ) / delta
-      delta_b = ( ( ( max - b ) / 6 ) + ( delta / 2 ) ) / delta
-
-      h =
-        if      r == max then delta_b - delta_g
-        else if g == max then ( 1 / 3 ) + delta_r - delta_b
-        else if b == max then ( 2 / 3 ) + delta_g - delta_r
-
-      if h < 0
-        h += 1
-      else if (h > 1)
-        h -= 1
-
-    [ Math.round(h*360), Math.round(s*100), Math.round(l*100) ]
-
-  $ ->
-    $('.cover img').load ->
-      d = 10
-      canvas = $("<canvas width=#{d} height=#{d}>").css
-          position: 'absolute'
-          left: -d - 5
-          top: -d - 5
-        .appendTo('body')
-      ctx = canvas[0].getContext '2d'
-      ctx.drawImage this, 0, 0, d, d
-
-      rgb = ctx.getImageData(0, 0, d, d).data
-
-      hi = [ 0, 0, 0 ]
-      for i in [0 ... rgb.length] by 4
-        hsl = rgb2hsl rgb[i], rgb[i+1], rgb[i+2]
-        hi = hsl if hsl[1] > hi[1] && 50 < hsl[2] < 80
-
-      $('h2 a').css color: "hsl(#{hi[0]}, #{hi[1]}%, #{hi[2]}%)"
-    .each -> $(@).load() if @complete
-
 $('body.index-portfolio').each ->
   $(window)
     .on 'hashchange', ->
