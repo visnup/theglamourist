@@ -39,7 +39,7 @@ class IndexController < ApplicationController
                 set['cover_photo']['saturated'] = "hsla(#{hsla['h']}, #{hsla['s']}%, #{hsla['l']}%, #{hsla['a']})"
               end
             end
-            open graph_url("#{set['id']}/photos") do |f|
+            open graph_url("#{set['id']}/photos?limit=200") do |f|
               set['photos'] = JSON.parse(f.read)['data']
             end
           end
