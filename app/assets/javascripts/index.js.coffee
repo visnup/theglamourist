@@ -14,6 +14,11 @@ $('body.index-portfolio').each ->
       else
         closeSet $('.set.open')
         loadPortrait 'a.thumb:first'
+    .on 'resize', _.debounce ->
+      wh = $(window).height()
+      $('#portrait img').each ->
+        $(this).css 'marginBottom', (wh - $(this).height())/2
+    , 50
   $ -> $(window).resize().hashchange()
 
   if Modernizr.touch
