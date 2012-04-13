@@ -8,7 +8,7 @@ $('body.index-portfolio').each ->
   $(window)
     .on 'hashchange', ->
       if location.hash.length > 1
-        thumb = $("a.thumb##{window.location.hash.substring(1)}")
+        thumb = $("a.thumb##{window.location.hash.substring(2)}")
         openSet thumb.closest('.set')
         loadPortrait thumb
       else
@@ -34,7 +34,7 @@ $('body.index-portfolio').each ->
 
   $(document).on 'click', 'a.thumb', (e) ->
     e.preventDefault()
-    location.hash = $(this).attr('id')
+    location.hash = "p#{$(this).attr('id')}"
 
 loadPortrait = (link) ->
   return if $(link).length is 0

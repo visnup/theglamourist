@@ -4,7 +4,7 @@ css:
   h2 a { color: #{cover['saturated']}; }
 
 .cover( class="#{ cover['width'] > cover['height'] ? 'landscape' : 'portrait' }" )
-  = link_to portfolio_path(anchor: "#{set['id']}-#{cover['id']}") do
+  = link_to portfolio_path(anchor: "p#{set['id']}-#{cover['id']}") do
     = image_tag cover['source'], alt: nil
     - if cover['name']
       .caption= simple_format cover['name']
