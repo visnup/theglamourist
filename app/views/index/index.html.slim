@@ -1,4 +1,4 @@
-- set = @sets.sample
+- set = @albums.reject { |s| [ 'Press', 'Before & Afters' ].include? s['name'] }.sample
 - cover = set['cover_photo']
 css:
   h2 a { color: #{cover['saturated']}; }
@@ -17,12 +17,14 @@ section.posts
         h4= link_to p['title'], p['post_url']
         p= p['body'].gsub(/([.!]).*/m, '\1')
 
-section.sets
+section.portfolio
   h2= link_to 'Gallery', portfolio_path
   ul
-    - @sets.each do |set|
+    - @albums.each do |set|
       li
-        h4= link_to set['name'], portfolio_path(anchor: "#{set['id']}-#{set['cover_photo']['id']}")
+        h4= link_to set['name'], portfolio_path(anchor: "p#{set['id']}-#{set['cover_photo']['id']}")
+        - if set['name'] == 'Before & Afters'
+          p: img( src=set['cover_photo']['images'][-4]['source'] )
         p= set['description']
 
 section.contact

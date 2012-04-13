@@ -27,7 +27,7 @@ class IndexController < ApplicationController
     def graph_url path; "https://graph.facebook.com/#{path}" end
 
     def fetch_albums
-      @sets = Rails.cache.fetch 'facebook' do
+      @albums = Rails.cache.fetch 'facebook' do
         open graph_url('theglamourist/albums') do |f|
           JSON.parse(f.read)['data'].select do |set|
             set['type'] == 'normal'
