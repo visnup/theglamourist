@@ -71,14 +71,16 @@ loadPortrait = (link) ->
           $this.css
             height: 'auto'
             width: ww/2
+          $this.css marginBottom: (wh - $this.height())/2
       else if 1 <= ir < 1.6
         if iw < ww
           $this.css
             height: 'auto'
             width: ww
+          $this.css marginBottom: (wh - $this.height())/2
 
       pw = _.reduce $('img', portrait), ((s, img) -> s + $(img).width()), 0
-      portrait.css 'left', ww - pw
+      portrait.css 'left', ww - pw - 1
     .attr('src', src)
 
 openSet = (set) ->
