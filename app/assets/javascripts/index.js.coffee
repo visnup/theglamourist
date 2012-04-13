@@ -15,9 +15,18 @@ $('body.index-portfolio').each ->
         closeSet $('.set.open')
         loadPortrait 'a.thumb:first'
     .on 'resize', _.debounce ->
+      ww = $(window).width()
       wh = $(window).height()
-      $('#portrait img').each ->
+
+      portrait = $('#portrait')
+      imgs = $('#portrait img')
+
+      imgs[-3..-1].each ->
         $(this).css 'marginBottom', (wh - $(this).height())/2
+
+      pw = _.reduce imgs, ((s, img) -> s + $(img).width()), 0
+      console.log pw
+      portrait.css 'left', ww - pw
     , 50
   $ -> $(window).resize().hashchange()
 
