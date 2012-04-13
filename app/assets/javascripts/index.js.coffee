@@ -58,7 +58,7 @@ loadPortrait = (link) ->
       $this
         .appendTo(portrait)
         .wrap($('<a>', href: $(link).attr('href')))
-        .after($('<div class="caption">').html(thumb.attr('title').replace(/\n/g, '<br/>')))
+        .after($('<div class="caption">').html(thumb.attr('title')?.replace(/\n/g, '<br/>')))
         .css(height: wh)
         .addClass('fade-in')
 
