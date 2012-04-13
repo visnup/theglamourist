@@ -24,7 +24,8 @@ section.portfolio
       li
         h4= link_to set['name'], portfolio_path(anchor: "p#{set['id']}-#{set['cover_photo']['id']}")
         - if set['name'] == 'Before & Afters'
-          p: img( src=set['cover_photo']['images'][-4]['source'] )
+          p= link_to portfolio_path(anchor: "p#{set['id']}-#{set['cover_photo']['id']}") do
+            img( src=set['cover_photo']['images'][-4]['source'] )
         p= set['description']
 
 section.contact

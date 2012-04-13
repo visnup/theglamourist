@@ -19,13 +19,13 @@ $('body.index-portfolio').each ->
   if Modernizr.touch
     y0 = y1 = start = 0
     $(document)
-      .on 'touchstart', 'ul.sets ul', (e) ->
+      .on 'touchstart', 'ul.albums ul', (e) ->
         y0 = y1 = e.originalEvent.touches[0].pageY
         start = $(this).scrollTop() + y0
-      .on 'touchmove', 'ul.sets ul', (e) ->
+      .on 'touchmove', 'ul.albums ul', (e) ->
         y1 = e.originalEvent.touches[0].pageY
         $(this).scrollTop start - y1
-      .on 'click', 'ul.sets ul a.thumb', (e) ->
+      .on 'click', 'ul.albums ul a.thumb', (e) ->
         if Math.abs(y1 - y0) > 10
           e.preventDefault()
           e.stopImmediatePropagation()
@@ -66,7 +66,7 @@ loadPortrait = (link) ->
       ih = $this.height()
       ir = iw / ih
 
-      if 0.7 < ir < 1
+      if 0.6 < ir < 1
         if iw < ww/2
           $this.css
             height: 'auto'
@@ -91,7 +91,7 @@ openSet = (set) ->
     .find('img').slice(1, 4)
       .css transform: 'none'
 
-  $('ul.sets')
+  $('ul.albums')
     .find('a.back').show().end()
     .find('.title')
       .text($('h4', set).text())
@@ -99,7 +99,7 @@ openSet = (set) ->
   $('.set.closed').hide()
 
 closeSet = (set) ->
-  $('ul.sets')
+  $('ul.albums')
     .find('a.back').hide().end()
     .find('.title')
       .text('Choose a set below')
