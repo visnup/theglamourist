@@ -9,8 +9,9 @@ ul.albums
       h4: a( href="#p#{set['id']}-#{set['cover_photo']['id']}" )= set['name']
       ul
         - set['photos'].each_with_index do |photo, i|
+          - image = photo['images'][-1]
           li( style="z-index: -#{i};" )
             a.thumb( id="#{set['id']}-#{photo['id']}" href=photo['link'] )
-              img( src=photo['picture'] title=photo['name'] )
+              img( src=photo['picture'] title=photo['name'] width=75.0/image['height']*image['width'] )
 
 #portrait
