@@ -128,14 +128,3 @@ closeSet = (set) ->
   $(set).toggleClass 'open closed'
 
   $('.set.closed').show()
-
-getColor = (img) ->
-  canvas = $('#color-test')
-  if canvas.length is 0
-    canvas = $('<canvas width=10 height=10 id="color-test">')
-      .css(position: 'absolute', left: 10, top: 10)
-      .appendTo(document.body)
-
-  ctx = canvas[0].getContext('2d')
-  ctx.drawImage img, 0, 0, 10, 10
-  ctx.getImageData 10, 10, 1, 1
