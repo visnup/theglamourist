@@ -44,31 +44,34 @@ $('body.index-portfolio').each ->
     location.hash = "#{$(this).attr('id').substring(1)}"
 
 loadPortrait = (link) ->
-  return if $(link).length is 0
+  $link = $(link)
+  return if $link.length is 0
 
   $('a.thumb.selected').removeClass 'selected'
 
   $portrait = $('#portrait')
 
-  thumb = $(link)
-    .addClass('selected')
-    .find('img')
+  thumb = $link.addClass('selected').find('img')
   src = thumb.attr('src').replace(/_s.jpg$/, '_n.jpg')
-    #.data('original')
 
-  img = $('<img class="portrait">')
-    .load ->
-      $this = $(this)
+  id = "p#{$link.attr('id').substring(1)}"
+  if (img = $("##{id}", $portrait)).length is 0
+    $('<img>', id: id, class: 'portrait')
+      .load ->
+        $this = $(this)
 
-      $this
-        .appendTo($portrait)
-        .wrap($('<a>', href: $(link).attr('href')))
-        .after($('<div class="caption">').html(thumb.attr('title')?.replace(/\n/g, '<br/>')))
-        .addClass('fade-in')
+        $this
+          .appendTo($portrait)
+          .wrap($('<a>', href: $link.attr('href')))
+          .after($('<div class="caption">').html(thumb.attr('title')?.replace(/\n/g, '<br/>')))
+          .addClass('fade-in')
 
-      sizeImage $this
-      alignPortrait $portrait
-    .attr('src', src)
+        sizeImage $this
+        alignPortrait $portrait, $this
+      .attr('src', src)
+  else
+    sizeImage img
+    alignPortrait $portrait, img
 
 sizeImage = ($img) ->
   ww = $(window).width() + 2
@@ -94,8 +97,7 @@ sizeImage = ($img) ->
       $img.css marginBottom: (wh - $img.height())/2
 
 alignPortrait = ($portrait, $img) ->
-  el = $($img?.parent() || 'a:last', $portrait)
-  if el.length > 0
+  if (el = $($img?.closest('a') || 'a:last', $portrait)).length > 0
     $portrait
       .stop()
       .animate scrollLeft: $portrait.scrollLeft() + el.position().left, 500
