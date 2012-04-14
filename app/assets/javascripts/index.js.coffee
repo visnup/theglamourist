@@ -15,18 +15,11 @@ $('body.index-portfolio').each ->
         closeSet $('.set.open')
         loadPortrait 'a.thumb:first'
     .on 'resize', _.debounce ->
-      ww = $(window).width()
-      wh = $(window).height()
-
       portrait = $('#portrait')
       imgs = $('#portrait img')
 
-      imgs[-3..-1].each ->
-        $(this).css 'marginBottom', (wh - $(this).height())/2
-
-      pw = _.reduce imgs, ((s, img) -> s + $(img).width()), 0
-      console.log pw
-      portrait.css 'left', ww - pw
+      imgs[-3..-1].each -> sizeImage $(this)
+      alignPortrait $('#portrait')
     , 50
   $ -> $(window).resize().hashchange()
 
@@ -55,7 +48,8 @@ loadPortrait = (link) ->
 
   $('a.thumb.selected').removeClass 'selected'
 
-  portrait = $('#portrait')
+  $portrait = $('#portrait')
+
   thumb = $(link)
     .addClass('selected')
     .find('img')
@@ -66,36 +60,42 @@ loadPortrait = (link) ->
     .load ->
       $this = $(this)
 
-      ww = $(window).width() + 2
-      wh = $(window).height() + 2
-
       $this
-        .appendTo(portrait)
+        .appendTo($portrait)
         .wrap($('<a>', href: $(link).attr('href')))
         .after($('<div class="caption">').html(thumb.attr('title')?.replace(/\n/g, '<br/>')))
-        .css(height: wh)
         .addClass('fade-in')
 
-      iw = $this.width()
-      ih = $this.height()
-      ir = iw / ih
-
-      if 0.6 < ir < 1
-        if iw < ww/2
-          $this.css
-            height: 'auto'
-            width: ww/2
-          $this.css marginBottom: (wh - $this.height())/2
-      else if 1 <= ir < 1.6
-        if iw < ww
-          $this.css
-            height: 'auto'
-            width: ww
-          $this.css marginBottom: (wh - $this.height())/2
-
-      pw = _.reduce $('img', portrait), ((s, img) -> s + $(img).width()), 0
-      portrait.css 'left', ww - pw - 1
+      sizeImage $this
+      alignPortrait $portrait
     .attr('src', src)
+
+sizeImage = ($img) ->
+  ww = $(window).width() + 2
+  wh = $(window).height() + 2
+
+  $img.css(height: wh, width: 'auto', marginBottom: 0)
+
+  iw = $img.width()
+  ih = $img.height()
+  ir = iw / ih
+
+  if 0.6 < ir < 1
+    if iw < ww/2
+      $img.css
+        height: 'auto'
+        width: ww/2
+      $img.css marginBottom: (wh - $img.height())/2
+  else if 1 <= ir < 1.6
+    if iw < ww
+      $img.css
+        height: 'auto'
+        width: ww
+      $img.css marginBottom: (wh - $img.height())/2
+
+alignPortrait = ($portrait) ->
+  pw = _.reduce $('img', $portrait), ((s, img) -> s + $(img).width()), 0
+  $portrait.css 'left', $(window).width() - pw
 
 openSet = (set) ->
   $set = $(set)
