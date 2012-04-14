@@ -39,9 +39,16 @@ $('body.index-portfolio').each ->
         else
           true
 
-  $(document).on 'click', 'a.thumb', (e) ->
-    e.preventDefault()
-    location.hash = "#{$(this).attr('id').substring(1)}"
+  $(document)
+    .on 'click', 'a.thumb', (e) ->
+      e.preventDefault()
+      location.hash = "#{$(this).attr('id').substring(1)}"
+    .on 'keyup', (e) ->
+      switch e.keyCode
+        when 37  # left
+          $('a.thumb.selected').closest('li').prev('li').find('a').click()
+        when 39  # right
+          $('a.thumb.selected').closest('li').next('li').find('a').click()
 
 loadPortrait = (link) ->
   $link = $(link)
