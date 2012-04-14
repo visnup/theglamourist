@@ -93,9 +93,9 @@ sizeImage = ($img) ->
         width: ww
       $img.css marginBottom: (wh - $img.height())/2
 
-alignPortrait = ($portrait) ->
-  pw = _.reduce $('img', $portrait), ((s, img) -> s + $(img).width()), 0
-  $portrait.css 'left', $(window).width() - pw
+alignPortrait = ($portrait, $img) ->
+  el = $($img?.parent() || 'a:last', $portrait)
+  $portrait.css 'left', $(window).width() - el.position().left - el.width()
 
 openSet = (set) ->
   $set = $(set)
