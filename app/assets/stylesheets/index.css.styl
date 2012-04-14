@@ -115,12 +115,15 @@ body.index-portfolio
       text-shadow 0 0 2px hsla(0, 0%, 0%, 0.8)
   #portrait
     position fixed
+    left 0
     bottom -4px
     z-index -1
     white-space nowrap
-    transition left ease 500ms
     font-family Helvetica Neue, Helvetica, Arial, sans-serif
     font-weight 300
+    width 100%
+    overflow-x scroll
+    overflow-y hidden
     img
       opacity 0
       &.fade-in
@@ -128,6 +131,7 @@ body.index-portfolio
         transition opacity ease 100ms
     a
       position relative
+      display inline-block
       .caption
         position absolute
         right 20px

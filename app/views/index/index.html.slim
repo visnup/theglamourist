@@ -4,7 +4,7 @@ css:
   h2 a { color: #{cover['saturated']}; }
 
 .cover( class="#{ cover['width'] > cover['height'] ? 'landscape' : 'portrait' }" )
-  = link_to portfolio_path(anchor: "p#{set['id']}-#{cover['id']}") do
+  = link_to portfolio_path(anchor: "#{set['id']}-#{cover['id']}") do
     = image_tag cover['source'], alt: nil
     - if cover['name']
       .caption= simple_format cover['name']
@@ -22,9 +22,9 @@ section.portfolio
   ul
     - @albums.each do |set|
       li
-        h4= link_to set['name'], portfolio_path(anchor: "p#{set['id']}-#{set['cover_photo']['id']}")
+        h4= link_to set['name'], portfolio_path(anchor: "#{set['id']}-#{set['cover_photo']['id']}")
         - if set['name'] == 'Before & Afters'
-          p= link_to portfolio_path(anchor: "p#{set['id']}-#{set['cover_photo']['id']}") do
+          p= link_to portfolio_path(anchor: "#{set['id']}-#{set['cover_photo']['id']}") do
             img( src=set['cover_photo']['images'][-4]['source'] )
         p= set['description']
 
