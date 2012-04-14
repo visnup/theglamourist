@@ -104,10 +104,10 @@ sizeImage = ($img) ->
       $img.css marginBottom: (wh - $img.height())/2
 
 alignPortrait = ($portrait, $img) ->
-  if (el = $($img?.closest('a') || 'a:last', $portrait)).length > 0
-    $portrait
-      .stop()
-      .animate scrollLeft: $portrait.scrollLeft() + el.position().left, 500
+  if ($img = $($img?.closest('a') || 'a:last', $portrait)).length > 0
+    d = $img.position().left - $(window).width() + $img.width()
+    if Math.abs(d) > 10
+      $portrait.stop().animate scrollLeft: $portrait.scrollLeft() + d, 500
 
 openSet = (set) ->
   $set = $(set)
