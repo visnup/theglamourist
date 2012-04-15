@@ -1,8 +1,15 @@
 #= require jquery.ba-hashchange
+#= require jquery.masonry
 #= require jquery.transform2d
 #= require underscore
 
 return if $('body.index').length is 0
+
+$('body.index-index').each ->
+  $('#page').imagesLoaded ->
+    $('#page').masonry
+      itemSelector: '.cover, section'
+      columnWidth: $('section').outerWidth()
 
 $('body.index-portfolio').each ->
   $(window)

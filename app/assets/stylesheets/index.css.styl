@@ -19,6 +19,7 @@ body.index-index
     border-bottom solid 1px gray
   .cover
     position relative
+    float left
     img
       background-color lightgray
       width 100%
@@ -37,15 +38,14 @@ body.index-index
         letter-spacing -1px
         line-height 125%
     &.landscape
+      width 100%
       height 420px
       overflow hidden
       img
         height auto
         margin-top -5%
       & ~ section
-        width 286px
-      & + section
-        padding-left 0
+        width 280px
     &.portrait
       width 50%
       float left
