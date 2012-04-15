@@ -28,12 +28,12 @@ html( lang="en" )
       h1= link_to '<span class="the">THE</span> <b>GLAMOUR</b>IST'.html_safe, root_path
       nav
         ul
-          li= link_to_unless_current 'index', root_path, class: 'home'
-          li= link_to_unless_current 'gallery', portfolio_path, class: 'portfolio'
-          li= link_to_unless_current 'services', services_path, class: 'services'
-          li= link_to_unless_current 'blog', 'http://blog.theglamourist.com', class: 'blog'
-          li= link_to_unless_current 'about', about_path, class: 'about'
-          li= link_to_unless_current 'contact', new_contact_path, class: 'contact'
+          li= link_to_unless_current 'index', root_path
+          li= link_to_unless_current 'gallery', portfolio_path
+          li= link_to_unless_current 'services', services_path
+          li= link_to_unless_current 'blog', 'http://blog.theglamourist.com'
+          li= link_to_unless_current 'about', about_path
+          li= link_to_unless_current 'contact', new_contact_path
           li.social
             a( href="http://www.facebook.com/theglamourist" )
               img.facebook( src=asset_data_uri('facebook.png') )
@@ -46,11 +46,12 @@ html( lang="en" )
     #page= yield
     footer
       ul
-        li= link_to_unless_current 'about', about_path, class: 'about'
-        li= link_to_unless_current 'gallery', portfolio_path, class: 'portfolio'
-        li= link_to_unless_current 'services', services_path, class: 'services'
-        li= link_to_unless_current 'blog', 'http://blog.theglamourist.com', class: 'blog'
-        li= link_to_unless_current 'contact', new_contact_path, class: 'contact'
+        li= link_to_unless_current 'index', root_path
+        li= link_to_unless_current 'gallery', portfolio_path
+        li= link_to_unless_current 'services', services_path
+        li= link_to_unless_current 'blog', 'http://blog.theglamourist.com'
+        li= link_to_unless_current 'about', about_path
+        li= link_to_unless_current 'contact', new_contact_path
       .copyright
         ' &copy; #{Time.now.year}
         span.logo <span class="the">the</span> <b>GLAMOUR</b>IST
