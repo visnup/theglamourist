@@ -1,13 +1,11 @@
-- set = @albums.reject { |s| [ 'Press', 'Before & Afters' ].include? s['name'] }.sample
-- cover = set['cover_photo']
 css:
-  h2 a { color: #{cover['saturated']}; }
+  h2 a { color: #{@cover['saturated']}; }
 
-.cover( class="#{ cover['width'] > cover['height'] ? 'landscape' : 'portrait' }" )
-  = link_to portfolio_path(anchor: "#{set['id']}-#{cover['id']}") do
-    = image_tag cover['source'], alt: nil
-    - if cover['name']
-      .caption= simple_format cover['name']
+.cover( class="#{ @cover['width'] > @cover['height'] ? 'landscape' : 'portrait' }" )
+  = link_to portfolio_path(anchor: "#{@set['id']}-#{@cover['id']}") do
+    = image_tag @cover['source'], alt: nil
+    - if @cover['name']
+      .caption= simple_format @cover['name']
 
 section.posts
   h2= link_to 'Blog', '//blog.theglamourist.com'

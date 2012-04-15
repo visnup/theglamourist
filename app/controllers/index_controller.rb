@@ -5,6 +5,13 @@ class IndexController < ApplicationController
     only: [:index, :portfolio]
   caches_page :index, :portfolio
 
+  def index
+    @set = @albums.reject do |s|
+      [ 'Press', 'Before & Afters' ].include? s['name']
+    end.sample
+    @cover = @set['cover_photo']
+  end
+
   def login
     session[:admin] = true  if params[:password] == '<3ugf'
     redirect_to root_url
