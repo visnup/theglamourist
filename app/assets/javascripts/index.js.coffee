@@ -31,14 +31,13 @@ $('body.index-portfolio').each ->
   $ -> $(window).resize().hashchange()
 
   if Modernizr.touch
+    # prevent clicks after scroll
     x0 = x1 = start = 0
     $(document)
       .on 'touchstart', 'ul.albums ul, #portrait', (e) ->
         x0 = x1 = e.originalEvent.touches[0].pageX
-        start = $(this).scrollLeft() + x0
       .on 'touchmove', 'ul.albums ul, #portrait', (e) ->
         x1 = e.originalEvent.touches[0].pageX
-        $(this).scrollLeft start - x1
       .on 'click', 'ul.albums ul a.thumb, #portrait a', (e) ->
         if Math.abs(x1 - x0) > 10
           e.preventDefault()
