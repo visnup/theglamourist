@@ -6,9 +6,7 @@ class IndexController < ApplicationController
   caches_page :index, :portfolio
 
   def index
-    @album = @albums.reject do |s|
-      [ 'Press', 'Before & Afters' ].include? s['name']
-    end.sample
+    @album = @albums[1]
     @cover = @album['cover_photo']
   end
 
