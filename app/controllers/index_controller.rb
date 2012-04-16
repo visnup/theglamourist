@@ -6,10 +6,10 @@ class IndexController < ApplicationController
   caches_page :index, :portfolio
 
   def index
-    @set = @albums.reject do |s|
+    @album = @albums.reject do |s|
       [ 'Press', 'Before & Afters' ].include? s['name']
     end.sample
-    @cover = @set['cover_photo']
+    @cover = @album['cover_photo']
   end
 
   def login
@@ -36,18 +36,20 @@ class IndexController < ApplicationController
     def fetch_albums
       @albums = Rails.cache.fetch 'facebook' do
         open graph_url('theglamourist/albums') do |f|
-          JSON.parse(f.read)['data'].select do |set|
-            set['type'] == 'normal'
-          end.each do |set|
-            open graph_url(set['cover_photo']) do |f|
-              set['cover_photo'] = JSON.parse f.read
-              open "http://saturated.theglamourist.com/?url=#{CGI.escape set['cover_photo']['picture']}" do |saturated|
-                hsla = JSON.parse saturated.read
-                set['cover_photo']['saturated'] = "hsla(#{hsla['h']}, #{hsla['s']}%, #{hsla['l']}%, #{hsla['a']})"
+          JSON.parse(f.read)['data'].select do |album|
+            album['type'] == 'normal'
+          end.each do |album|
+            cover = album['cover_photo'] =
+              open graph_url("#{album['id']}/photos?limit=200") do |f|
+                (album['photos'] = JSON.parse(f.read)['data']).find do |photo|
+                  photo['id'] == album['cover_photo']
+                end
               end
-            end
-            open graph_url("#{set['id']}/photos?limit=200") do |f|
-              set['photos'] = JSON.parse(f.read)['data']
+
+            cover['class'] = 'cover ' + (cover['width'] > cover['height'] ? 'landscape' : 'portrait')
+            open "http://saturated.theglamourist.com/?url=#{CGI.escape cover['picture']}" do |saturated|
+              hsla = JSON.parse saturated.read
+              cover['saturated'] = "hsla(#{hsla['h']}, #{hsla['s']}%, #{hsla['l']}%, #{hsla['a']})"
             end
           end
         end

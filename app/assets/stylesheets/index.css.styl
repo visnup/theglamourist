@@ -155,6 +155,8 @@ body.index-portfolio
   .albums
     position fixed
     bottom 0
+    height 125px
+    // ^ lame - shouldn't be needed, but jumps otherwise
     a.back
       display none
       font-size small
@@ -166,41 +168,38 @@ body.index-portfolio
     :-webkit-scrollbar
       width 8px
       height 8px
-    :-webkit-scrollbar-thumb:vertical
+    :-webkit-scrollbar-thumb:horizontal
       background-color hsla(0, 0%, 0%, 0.2)
       border-radius 8px
   a.thumb
     img
       height 65px
       border solid 1px white
-      border-radius 1px
     &.selected img
       border-color link
       transition border-color 200ms linear
-  .set.closed
-    position relative
+  .album
     display inline-block
-    height 130px
-    margin 5px
-    vertical-align top
-    text-align center
     li
-      position absolute
-      top 0px
-    li + li
-      display none
-    h4
-      text-transform capitalize
-      margin-top 85px
-      width 79px
-  .set.open
-    height 90px
-    width 900px
-    white-space nowrap
-    li
-      position static
       display inline-block
       margin 5px
+  .album.closed
+    ul, h4
+      display inline-block
+    h4
+      vertical-align top
+      text-transform none
+      max-width 85px
+      padding-right 1em
+    img
+      vertical-align top
+    li
+      display none
+    li.cover
+      display inline-block
+  .album.open
+    width 900px
+    white-space nowrap
     h4
       display none
 

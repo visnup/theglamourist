@@ -16,11 +16,11 @@ $('body.index-portfolio').each ->
     .on 'hashchange', ->
       if location.hash.length > 1
         thumb = $("a.thumb#t#{window.location.hash.substring(1)}")
-        openSet thumb.closest('.set')
+        openAlbum thumb.closest('.album')
         loadPortrait thumb
       else
-        closeSet $('.set.open')
-        loadPortrait 'a.thumb:first'
+        closeAlbum $('.album.open')
+        loadPortrait 'li.cover:first a.thumb'
     .on 'resize', _.debounce ->
       portrait = $('#portrait')
       imgs = $('#portrait img')
@@ -115,12 +115,12 @@ alignPortrait = ($portrait, $img) ->
     if Math.abs(d) > 10
       $portrait.stop().animate scrollLeft: $portrait.scrollLeft() + d, 500
 
-openSet = (set) ->
-  $set = $(set)
+openAlbum = (album) ->
+  $album = $(album)
 
-  return if $set.is '.open'
+  return if $album.is '.open'
 
-  $set
+  $album
     .toggleClass('open closed')
     .find('img').slice(1, 4)
       .css transform: 'none'
@@ -128,16 +128,16 @@ openSet = (set) ->
   $('ul.albums')
     .find('a.back').show().end()
     .find('.title')
-      .text($('h4', set).text())
+      .text($('h4', album).text())
 
-  $('.set.closed').hide()
+  $('.album.closed').hide()
 
-closeSet = (set) ->
+closeAlbum = (album) ->
   $('ul.albums')
     .find('a.back').hide().end()
     .find('.title')
-      .text('Choose a set below')
+      .text('Choose an album below')
 
-  $(set).toggleClass 'open closed'
+  $(album).toggleClass 'open closed'
 
-  $('.set.closed').show()
+  $('.album.closed').show()
