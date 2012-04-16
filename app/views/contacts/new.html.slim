@@ -52,5 +52,5 @@ h3 for inquiries
   p.demand
     ' We try to respond promptly, but due to the high volume of inquiries,
     ' please allow up to 72 hours for a reply.
-  = f.buttons do
-    = f.commit_button 'Send'
+  = f.actions do
+    = f.action :submit, label: 'Send'

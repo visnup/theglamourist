@@ -42,15 +42,20 @@ input[type=text], input[type=email], input[type=tel], textarea, select
     border-bottom-color link
 select
   padding-right 12px
-  background url('<%= asset_data_uri 'down-arrow.png' %>') no-repeat 100% 0
+  background url('<%= asset_data_uri 'down-arrow.png' %>') no-repeat 100% -5px
   &:focus
-    background-position 100% -18px
+    background-position 100% -25px
+@media (-webkit-min-device-pixel-ratio: 2)
+  select
+    background-image url('<%= asset_data_uri 'down-arrow@2x.png' %>')
+    background-size 6px 40px
 
 input[type=submit], button
   box-shadow 0 1px 3px hsla(0, 0%, 0%, 0.4), inset 0 1px 0 hsla(0, 0%, 100%, 0.4)
   border solid 1px hsla(0, 0%, 0%, 0.4)
   border-top-color hsla(0, 0%, 0%, 0.2)
   border-left-color hsla(0, 0%, 0%, 0.2)
+  border-radius 0
   padding 0.25em 0.5em
   background-color link
   background-image linear-gradient(top, hsla(0, 100%, 100%, 0.5), hsla(0, 100%, 100%, 0.3))
