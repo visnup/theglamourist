@@ -1,7 +1,6 @@
 source :rubygems
 
 gem 'active-model-email-validator'
-gem 'ffaker'  # TODO remove
 gem 'formtastic'
 gem 'rails'
 gem 'rdiscount'
