@@ -20,7 +20,7 @@ group :development, :test do
 end
 
 group :development do
-  #gem 'debugger', require: false
+  gem 'debugger', require: false
   gem 'heroku', require: false
 end
 
@@ -31,4 +31,8 @@ group :test do
   gem 'ffaker'
   gem 'shoulda-matchers'
   gem 'vcr'
+end
+
+group :production do
+  gem 'dalli'
 end
