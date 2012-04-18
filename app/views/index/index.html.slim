@@ -10,7 +10,7 @@ css:
 section.posts
   h2= link_to 'Blog', '//blog.theglamourist.com'
   ul
-    - @posts[0, 7].each do |p|
+    - @posts[0, 8].each do |p|
       li
         h4= link_to p['title'], p['post_url']
         p= p['body'].gsub(/([.!]).*/m, '\1')
