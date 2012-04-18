@@ -2,10 +2,10 @@ source :rubygems
 
 gem 'active-model-email-validator'
 gem 'formtastic'
+gem 'pg'
 gem 'rails'
 gem 'rdiscount'
 gem 'slim'
-gem 'sqlite3'
 
 group :assets do
   gem 'backbone-rails'
@@ -22,6 +22,7 @@ end
 group :development do
   gem 'capistrano'
   #gem 'debugger', require: false
+  gem 'heroku', require: false
 end
 
 group :test do
