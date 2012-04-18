@@ -3,6 +3,5 @@
 bin
 log/*.log
 log/*.log.*
-node_modules
 tmp/*
 vendor/ruby
