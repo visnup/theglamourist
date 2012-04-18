@@ -1,8 +1,8 @@
 require 'open-uri'
 
 class IndexController < ApplicationController
-  before_filter :fetch_albums, :fetch_posts,
-    only: [:index, :portfolio]
+  before_filter :fetch_albums, :fetch_posts, only: [:index, :portfolio]
+  before_filter :fetch_profile, only: [:about]
   caches_page :index, :portfolio
 
   def index
@@ -72,6 +72,15 @@ class IndexController < ApplicationController
           open "#{url}&offset=#{total-10}" do |f|
             JSON.parse(f.read)['response']['posts']
           end.reverse
+        end
+    end
+
+    def fetch_profile
+      @photo =
+        Rails.cache.fetch 'profile_photo' do
+          open graph_url('395172810510954') do |f|
+            JSON.parse(f.read)
+          end
         end
     end
 end

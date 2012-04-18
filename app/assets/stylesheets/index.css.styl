@@ -200,13 +200,22 @@ body.index-portfolio
       display none
 
 body.index-about
-  #page img
-    float left
-    border solid 5px white
-  p
-    margin-left 330px
-    text-align justify
-    margin-right 35px
+  #page
+    min-height 600px
+    img
+      position absolute
+      z-index -1
+      width 900px
+  article
+    font-size large
+    strong
+      font-weight normal
+      color #ff4b6d
+    p
+      text-align justify
+      margin 1em 2em
+    p:first-child
+      margin-top 2em
 
 body.index-services
   #page
