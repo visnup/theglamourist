@@ -3,7 +3,8 @@ css:
 
 .cover( class=@cover['class'] )
   = link_to portfolio_path(anchor: "#{@album['id']}-#{@cover['id']}") do
-    = image_tag @cover['source'], alt: nil
+    - width = @cover['class'].include?('portrait') ? 450 : 900
+    = image_tag @cover['source'], size: "#{width}x#{width*@cover['height']/@cover['width']}", alt: nil
     - if @cover['name']
       .caption= simple_format @cover['name']
 
@@ -23,7 +24,8 @@ section.portfolio
         h4= link_to album['name'], portfolio_path(anchor: "#{album['id']}-#{album['cover_photo']['id']}")
         - if album['name'] == 'Before & Afters'
           p= link_to portfolio_path(anchor: "#{album['id']}-#{album['cover_photo']['id']}") do
-            img( src=album['cover_photo']['images'][-4]['source'] )
+            - side_cover = album['cover_photo']['images'][-4]
+            img( src=side_cover['source'] width=205 height=205*side_cover['height']/side_cover['width'] )
         p= album['description']
 
 section.contact
