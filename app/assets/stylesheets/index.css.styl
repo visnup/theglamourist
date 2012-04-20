@@ -184,6 +184,8 @@ body.index-portfolio
   .album.closed
     ul, h4
       display inline-block
+    .arrow
+      display none
     h4
       vertical-align top
       text-transform none
@@ -198,6 +200,16 @@ body.index-portfolio
   .album.open
     width 900px
     white-space nowrap
+    position relative
+    .arrow
+      display inline-block
+      position absolute
+      top 25px
+      font-size large
+      &.left
+        left -18px
+      &.right
+        right -28px
     h4
       display none
 

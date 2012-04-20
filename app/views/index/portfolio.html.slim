@@ -7,12 +7,14 @@ ul.albums
   - @albums.each do |album|
     - cover = album['cover_photo']
     li.album.closed
+      a.left.arrow( href="#" ) &larr;
       ul
         - album['photos'].each_with_index do |photo, i|
           - image = photo['images'][-1]
           li( class=photo['class'] )
             a.thumb( id="t#{album['id']}-#{photo['id']}" href=photo['link'] )
               img( src=photo['picture'] title=photo['name'] width=65.0/image['height']*image['width'] )
+      a.right.arrow( href="#" ) &rarr;
       h4: a( href="##{album['id']}-#{cover['id']}" )= album['name']
 
 #portrait

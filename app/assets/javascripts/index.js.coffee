@@ -49,6 +49,11 @@ $('body.index-portfolio').each ->
     .on 'click', 'a.thumb', (e) ->
       e.preventDefault()
       location.hash = "#{$(this).attr('id').substring(1)}"
+    .on 'click', 'a.arrow', (e) ->
+      e.preventDefault()
+      dir = if $(this).hasClass('left') then '-' else '+'
+      ul = $(this).siblings('ul')
+      ul.stop().animate scrollLeft: "#{dir}=#{ul.width()}", 200
     .on 'keyup', (e) ->
       switch e.keyCode
         when 37  # left
