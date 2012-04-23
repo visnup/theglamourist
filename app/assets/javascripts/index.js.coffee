@@ -28,22 +28,6 @@ $('body.index-portfolio').each ->
       imgs[-3..-1].each -> sizeImage $(this)
       alignPortrait $('#portrait')
     , 50
-  $ -> $(window).resize().hashchange()
-
-  if Modernizr.touch
-    # prevent clicks after scroll
-    x0 = x1 = start = 0
-    $(document)
-      .on 'touchstart', 'ul.albums ul, #portrait', (e) ->
-        x0 = x1 = e.originalEvent.touches[0].pageX
-      .on 'touchmove', 'ul.albums ul, #portrait', (e) ->
-        x1 = e.originalEvent.touches[0].pageX
-      .on 'click', 'ul.albums ul a.thumb, #portrait a', (e) ->
-        if Math.abs(x1 - x0) > 10
-          e.preventDefault()
-          e.stopImmediatePropagation()
-        else
-          true
 
   $(document)
     .on 'click', 'a.thumb', (e) ->
@@ -60,6 +44,31 @@ $('body.index-portfolio').each ->
           $('a.thumb.selected').closest('li').prev('li').find('a').click()
         when 39  # right
           $('a.thumb.selected').closest('li').next('li').find('a').click()
+
+  if Modernizr.touch
+    # prevent clicks after scroll
+    x0 = x1 = start = 0
+    $(document)
+      .on 'touchstart', 'ul.albums ul, #portrait', (e) ->
+        x0 = x1 = e.originalEvent.touches[0].pageX
+      .on 'touchmove', 'ul.albums ul, #portrait', (e) ->
+        x1 = e.originalEvent.touches[0].pageX
+      .on 'click', 'ul.albums ul a.thumb, #portrait a', (e) ->
+        if Math.abs(x1 - x0) > 10
+          e.preventDefault()
+          e.stopImmediatePropagation()
+        else
+          true
+
+  $ ->
+    $('.album ul').on 'scroll', _.debounce ->
+      ul = $(this)
+      last = $('li:last', this)
+      ul.prev('.arrow').toggle ul.scrollLeft() > 0
+      ul.next('.arrow').toggle last.position().left + last.width() > ul.width()
+    , 50
+
+    $(window).resize().hashchange()
 
 loadPortrait = (link) ->
   $link = $(link)
@@ -127,8 +136,7 @@ openAlbum = (album) ->
 
   $album
     .toggleClass('open closed')
-    .find('img').slice(1, 4)
-      .css transform: 'none'
+    .find('ul').scroll()
 
   $('ul.albums')
     .find('a.back').show().end()
