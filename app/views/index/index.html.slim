@@ -8,13 +8,11 @@ css:
     - if @cover['name']
       .caption= simple_format @cover['name']
 
-section.posts
-  h2= link_to 'Blog', '//blog.theglamourist.com'
-  ul
-    - @posts[0, 8].each do |p|
-      li
-        h4= link_to p['title'], p['post_url']
-        p= p['body'].gsub(/([.!]).*/m, '\1')
+section.about
+  h2= link_to 'About', about_path
+  p
+    | Jane Kim, owner and founder of The Glamourist, is an award winning
+      <b>makeup artist</b> and <b>hair stylist</b> based in San Francisco.
 
 section.portfolio
   h2= link_to 'Gallery', portfolio_path
@@ -27,6 +25,14 @@ section.portfolio
             - side_cover = album['cover_photo']['images'][-4]
             img( src=side_cover['source'] width=205 height=205*side_cover['height']/side_cover['width'] )
         p= album['description']
+
+section.posts
+  h2= link_to 'Blog', '//blog.theglamourist.com'
+  ul
+    - @posts[0, 6].each do |p|
+      li
+        h4= link_to p['title'], p['post_url']
+        p= p['body'].gsub(/([.!]).*/m, '\1')
 
 section.contact
   h2= link_to 'Contact', new_contact_path
@@ -48,18 +54,8 @@ section.contact
 
 section.services
   h2= link_to 'Services', services_path
-  ul
-    li= link_to '<b>Bridal</b>, Engagement, Trial Sessions'.html_safe, services_path
-    li= link_to 'Commercial, <b>Fashion</b>'.html_safe, services_path
-    li= link_to '<b>Boudoir</b>'.html_safe, services_path
-    li= link_to 'Makeup Lessons', services_path
+  p= link_to '<b>Bridal</b>, Engagement, Trial Sessions'.html_safe, services_path
+  p= link_to 'Commercial, <b>Fashion</b>'.html_safe, services_path
+  p= link_to '<b>Boudoir</b>'.html_safe, services_path
+  p= link_to 'Makeup Lessons', services_path
   p Available for travel around the SF Bay Area, to Los Angeles, and worldwide.
-
-section.about
-  h2= link_to 'About', about_path
-  p
-    | The best part of my job is when I unveil a look to my clients. As they
-      stare in disbelief by their own reflection and thank me for a miraculous
-      job well done. Only, I am not a magician. I am not a surgeon. I am not
-      miracle worker. I see the beauty in people and enhance what beautiful
-      features they have already been blessed with.
