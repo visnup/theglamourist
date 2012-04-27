@@ -32,7 +32,7 @@ $('body.index-portfolio').each ->
   $(document)
     .on 'click', 'a.thumb', (e) ->
       e.preventDefault()
-      location.hash = "#{$(this).attr('id').substring(1)}"
+      location.hash = $(this).attr('id').substring(1)
     .on 'click', 'a.arrow', (e) ->
       e.preventDefault()
       dir = if $(this).hasClass('left') then '-' else '+'
