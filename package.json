@@ -3,6 +3,7 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-     "nib": "*"
+      "nib": "*",
+      "stylus": "git://github.com/visnup/stylus.git#0.7"
   }
 }

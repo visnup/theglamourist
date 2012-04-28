@@ -4,6 +4,21 @@
   "dependencies": {
     "nib": {
       "version": "0.4.1"
+    },
+    "stylus": {
+      "version": "0.26.0",
+      "from": "git://github.com/visnup/stylus.git#0.7",
+      "dependencies": {
+        "cssom": {
+          "version": "0.2.3"
+        },
+        "mkdirp": {
+          "version": "0.3.1"
+        },
+        "debug": {
+          "version": "0.6.0"
+        }
+      }
     }
   }
 }
