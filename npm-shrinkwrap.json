@@ -7,7 +7,7 @@
     },
     "stylus": {
       "version": "0.26.0",
-      "from": "git://github.com/visnup/stylus.git#0.7",
+      "from": "git://github.com/LearnBoost/stylus.git",
       "dependencies": {
         "cssom": {
           "version": "0.2.3"
