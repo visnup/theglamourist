@@ -1,5 +1,5 @@
 css:
-  h2 a { color: #{@cover['saturated']}; }
+  h2, h2 a { color: #{@cover['saturated']}; }
 
 .cover( class=@cover['class'] )
   = link_to portfolio_path(anchor: "#{@album['id']}-#{@cover['id']}") do
@@ -42,6 +42,17 @@ section.contact
     = mail_to 'jane@theglamourist.com', nil
     br
     | (415) 860-5872
+
+section.services
+  h2= link_to 'Services', services_path
+  p= link_to '<b>Bridal</b>, Engagement, Trial Sessions'.html_safe, services_path
+  p= link_to 'Commercial, <b>Fashion</b>'.html_safe, services_path
+  p= link_to '<b>Boudoir</b>'.html_safe, services_path
+  p= link_to 'Makeup Lessons', services_path
+  p Available for travel around the SF Bay Area, to Los Angeles, and worldwide.
+
+section.social
+  h2 Connect
   p.social
     a( href="http://www.pinterest.com/theglamourist/" )
       img.pinterest( src=asset_data_uri('pinterest.png') width=20 height=20 )
@@ -51,11 +62,3 @@ section.contact
       img.twitter( src=asset_data_uri('twitter.png') width=20 height=20 )
     a( href="http://www.yelp.com/biz/the-glamourist-san-francisco" )
       img.yelp( src=asset_data_uri('yelp.png') width=16 height=20 )
-
-section.services
-  h2= link_to 'Services', services_path
-  p= link_to '<b>Bridal</b>, Engagement, Trial Sessions'.html_safe, services_path
-  p= link_to 'Commercial, <b>Fashion</b>'.html_safe, services_path
-  p= link_to '<b>Boudoir</b>'.html_safe, services_path
-  p= link_to 'Makeup Lessons', services_path
-  p Available for travel around the SF Bay Area, to Los Angeles, and worldwide.
