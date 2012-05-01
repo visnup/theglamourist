@@ -65,13 +65,10 @@ class IndexController < ApplicationController
     def fetch_posts
       @posts =
         Rails.cache.fetch 'tumblr' do
-          url = 'http://api.tumblr.com/v2/blog/theglamourist.tumblr.com/posts/text?api_key=dIFA35FeL5NzEN7r9xzkEw0neZgIZxNvxxKQ7AneQBh6qVGTjc&type=text&filter=text'
-          total = open url do |f|
-            JSON.parse(f.read)['response']['total_posts']
-          end
-          open "#{url}&offset=#{total-10}" do |f|
+          url = 'http://api.tumblr.com/v2/blog/theglamourist.tumblr.com/posts/text?api_key=dIFA35FeL5NzEN7r9xzkEw0neZgIZxNvxxKQ7AneQBh6qVGTjc&filter=text'
+          open url do |f|
             JSON.parse(f.read)['response']['posts']
-          end.reverse
+          end
         end
     end
 
