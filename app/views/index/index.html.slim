@@ -32,7 +32,10 @@ section.posts
     - @posts[0, 8].each do |p|
       li
         h4= link_to p['title'], p['post_url']
-        p= p['body'].gsub(/([.!]).*/m, '\1')
+        p
+          =' p['body'].gsub(/([.!]).*/m, '\1')
+          - if p['body'].present?
+            = link_to '&rarr;'.html_safe, p['post_url'], class: 'more'
 
 section.contact
   h2= link_to 'Contact', new_contact_path
