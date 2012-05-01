@@ -154,3 +154,4 @@ closeAlbum = (album) ->
   $(album).toggleClass 'open closed'
 
   $('.album.closed').show()
+    .find('.arrow').hide()
