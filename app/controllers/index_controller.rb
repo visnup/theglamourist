@@ -6,7 +6,7 @@ class IndexController < ApplicationController
   caches_page :index, :portfolio
 
   def index
-    @album = @albums[1]
+    @album = @albums[3]
     @cover = @album['cover_photo']
   end
 
@@ -49,6 +49,9 @@ class IndexController < ApplicationController
               hsla = JSON.parse saturated.read
               cover['saturated'] = "hsla(#{hsla['h']}, #{hsla['s']}%, #{hsla['l']}%, #{hsla['a']})"
             end
+          end.sort_by do |album|
+            [ 'Weddings', 'Before & Afters', 'Fashion', 'Engagement Sessions',
+              'Boudoir', 'Press' ].index(album['name']) || 1000
           end
         end
       end
