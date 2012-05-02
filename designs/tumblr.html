@@ -6,7 +6,7 @@
     <title>{Title} {block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
-    <link rel="stylesheet" type="text/css" media="all" href="//localhost:3004/assets/application.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="//theglamourist.herokuapp.com/assets/application.css"/>
     {block:Description}<meta name="description" content="{MetaDescription}"/>{/block:Description}
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -34,7 +34,13 @@
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACuUlEQVQ4jeVUPWhTYRQ93%2FvL%2B0ma5r2kzdCfoIgiT0IoEqGUthTMEgSHBhyELrYgSKdOdnCwxUxSIrWFQoug0MHBgq3gVBeLggUHndJQHELTtDF5SZr3mvc%2Bp2qbRMG5d7v3nO%2Fcc%2B%2BFDzh3wf7vg0QiccPv998dGRn5ub29nWvEmdPJ2NhY%2B7%2FEhoeH7%2B%2Ft7X3w%2BXz3VFXVW3HI6SQUCj3p6OjQo9Ho84mJife6rlsn2Ojo6LVsNvuxu7tbcblctmmaBVmWU0tLS48JIU5LwXg8fuXg4GBD07SQLMufg8Fganx8fFXXdWtgYOCVpml3NE0DwzJwbAeVSgWqqj6Yn59%2F1nJkn893WK%2FXDwVBgCRJ1%2Ff391%2FMzs6%2BnZmZiXk8nrjH4wHDMCAgYFkWiqKgUChMZTIZEQAWFxf5M0cZHBys7%2B7uhl0u12VFUQRRFEEIuZDL5RKyLMuCSwDD%2FPFAGAIA3s3NzatdXV06x3HfzzhMpVJmOBxOlsvlvVqtBgoKXuAhSZIgiuIZsZNgWRaGYcQ5jvN5vV7KNRIymUy1VCp9VRTFy%2FO8X5IkEEKahAAAFDBN0wkEAtMANmOxWP4vTKC%2Fv%2F9NIBC4paoqOK6pLwDg%2BPgY1Wr10%2BrqavSkxgwNDYmtyD09PUuU0h%2BO44CCNuG2baNcLjuhUOjR6Tq3s7Mj9fb23o5EIunJyclvPM%2BT9fX1S%2Bl0%2BqYgCFrj3iilqNfrKBkluBX3dDKZ3DiNEwDo6%2Bu7WCwWn7a1tfW1t7cTSZI63G43K0nS73EpKOy6DdM0UalUDlVVfbiysrLQ6JwFgGw2W1hYWHi9tbV1ZFmWDqCTYRjYtg3LsnBUO4JRMmAYRtZxnJeRSGR8bm7uXatVNR1leXlZXFtbixSLxWg%2Bn5%2BklPo7OztTwWDwQzgc%2FjI1NdX0IZzz%2BAVhVvjzCs2%2FcgAAAABJRU5ErkJggg%3D%3D" width="20"></a><a href="http://www.yelp.com/biz/the-glamourist-san-francisco"><img class="yelp" height="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAADN0lEQVQ4jcWTT0gjVxzHv%2BNkJjGa7LRJMSkVlQUtsQVRL7aBJsSgsNUcGkqQtSI0IL2tptRKq0XQSw%2FSi2BSkyJe6qFEqPgPuhCwQTANagIGE9DdXLSQyZrJZMjwfD1sU9oueumhn9OPx%2B%2F34fG%2B7wf837D%2FPlhYWLAKgvDIYrF84nK5Kslk8vl9AqZWbGxs8MFg8AkhxG%2B1Wh82Nzfj9PT0BcuykcnJyS%2BdTqdy71WGhoY8Pp%2BPplIpSimlxWKRjo6OUo%2FHQ8fGxobvmqurFQaDQSWE3La1tQEAOI6DIAh4IDyAXq9%2Fj1KquVfg9%2Ft%2FEUXx55WVFQAAz%2FMwGAzQaXUghPh9Pt%2FixMTE%2B3cKnE6n0t%2FfP7O1tfX78fExNBoN9Ho9CCFQFOV1m832%2Bfn5%2Bf7g4GAoEokIrwg2NzcNZrNZ6OjouA4GgyC3BCaTCbIso6enB7OzsxgfH6%2Fnef7TaDT6LaW0DvgzxuXl5dfC4fCP%2BXz%2BG1mWLbIsM%2FSW4vr6GtVqFTMzM9BoNGhpaUHitwRKN6V3o9HocTqdzrAAYDQa3Waz%2BetwOMxqtVqGEIKjoyMUCgV0d3ejsbER%2B%2Fv72N7eRlEsQlVVtlgsZnO53FMWAKxW6%2BOmpqYPPB4PbDYb7HY7zs7OIEkSLi4usLu7i2w2i0qlAo7joKrqud1uf7K3t%2FdCAwAmkykpSRKSySTS6TQODg7AMAwYhkF7ezsGBgaws7ODq6srlMtl6HS651NTU%2FlAIPDyDRYXF5%2FFYrG2WCz2Tj6fZ8pyGYFAANVqFScnJxgZGYHb7UZfXx%2Fi8ThEUXxzfX29kslkfq0DgOHhYXl%2Bft7f2tr6g6qq8H7kRWdnJ5g6BoqiYG1tDQCQy%2BUgV2SwLKstFAqP%2FhFjb2%2BvLEnSntFohNfrffkbNRz0ej0SiQRCoRBC34egVlWUy%2BVCV1fXF3%2FFWMPhcCipVMp9eXn5hqIoyGazuLm5AaUUmUxGlSSJLZVKSn19%2FVeRSOQn4G%2FbWGNubu6tw8PDzwghHzc0NDzkOA4Mwzx1OBxz8XjcwvP81erqaqzW%2F4qgxtLSkjUej38oiuLbLpfru%2Bnp6Wd39f4n%2FgCQ%2FWoeMSffHgAAAABJRU5ErkJggg%3D%3D" width="16"></a></li></ul>
       </nav>
     </header>
+
     <div id="page">
+
+      <aside>
+        <h1>About</h1>
+        {Description}
+      </aside>
 
       {block:SearchPage} <!-- Search results page -->
         <div class="centre">
