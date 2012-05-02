@@ -1,6 +1,6 @@
 TheGlamourist::Application.routes.draw do
   %w/ about portfolio services login logout expire error /.each do |r|
-    match r => "index##{r}", :as => r
+    match "#{r}(/:id)" => "index##{r}", :as => r
   end
 
   resources :contacts, only: [ :new, :create, :show ]

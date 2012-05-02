@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'contacts routing' do
+describe ContactsController do
   it 'does not expose index, edit, update, destroy' do
     { get: '/contacts' }.should_not be_routable
     { get: '/contacts/1/edit' }.should_not be_routable

@@ -23,9 +23,12 @@ class IndexController < ApplicationController
   def expire
     expire_page '/'
     expire_page '/portfolio'
-    Rails.cache.clear
 
-    render text: 'ok'
+    if params[:id]
+      Rails.cache.delete params[:id]
+    else
+      Rails.cache.clear
+    end
   end
 
   private
