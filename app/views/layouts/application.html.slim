@@ -29,10 +29,10 @@ html( lang="en" )
       nav
         ul
           li= link_to_unless_current 'index', root_path
+          li= link_to_unless_current 'about', about_path
+          li= link_to_unless_current 'blog', '//blog.theglamourist.com'
           li= link_to_unless_current 'gallery', portfolio_path
           li= link_to_unless_current 'services', services_path
-          li= link_to_unless_current 'blog', 'http://blog.theglamourist.com'
-          li= link_to_unless_current 'about', about_path
           li= link_to_unless_current 'contact', new_contact_path
           li.social
             a( href="http://www.pinterest.com/theglamourist/" )
@@ -47,10 +47,10 @@ html( lang="en" )
     footer
       ul
         li= link_to_unless_current 'index', root_path
+        li= link_to_unless_current 'about', about_path
+        li= link_to_unless_current 'blog', '//blog.theglamourist.com'
         li= link_to_unless_current 'gallery', portfolio_path
         li= link_to_unless_current 'services', services_path
-        li= link_to_unless_current 'blog', 'http://blog.theglamourist.com'
-        li= link_to_unless_current 'about', about_path
         li= link_to_unless_current 'contact', new_contact_path
       .copyright
         ' &copy; #{Time.now.year}
