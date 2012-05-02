@@ -60,15 +60,14 @@
             {block:Title}
               <h1><a href="{Permalink}">{Title}</a></h1>
             {/block:Title}
+            <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
+
             <div class="body">{Body}</div>
 
-            <div class="timestamp">
-              <a href="{Permalink}">{TimeAgo}</a>
-              {block:IndexPage}{block:NoteCount}
-                - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
-              {/block:NoteCount}{/block:IndexPage}
-              {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
-            </div>
+            {block:IndexPage}{block:NoteCount}
+              <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
+            {/block:NoteCount}{/block:IndexPage}
+            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
           </article>
         {/block:Text}
 
@@ -77,15 +76,14 @@
             {block:Caption}
               <h1><a href="{Permalink}">{Caption}</a></h1>
             {/block:Caption}
+            <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
+
             {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
 
-            <div class="timestamp">
-              <a href="{Permalink}">{TimeAgo}</a>
-              {block:IndexPage}{block:NoteCount}
-                - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
-              {/block:NoteCount}{/block:IndexPage}
-              {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
-            </div>
+            {block:IndexPage}{block:NoteCount}
+              <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
+            {/block:NoteCount}{/block:IndexPage}
+            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
           </article>
         {/block:Photo}
 
@@ -94,136 +92,96 @@
             {block:Caption}
               <h1><a href="{Permalink}">{Caption}</a></h1>
             {/block:Caption}
+            <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
+
             {Photoset-500}
 
-            <div class="timestamp">
-              <a href="{Permalink}">{TimeAgo}</a>
-              {block:IndexPage}{block:NoteCount}
-                - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
-              {/block:NoteCount}{/block:IndexPage}
-              {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
-            </div>
+            {block:IndexPage}{block:NoteCount}
+              <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
+            {/block:NoteCount}{/block:IndexPage}
+            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
           </article>
         {/block:Photoset}
 
         {block:Video}
-         <div class="post">
-             {block:IndexPage}
-               <div class="video">
-                {Video-500}
-                {block:Caption}
-                  {Caption}
-                {/block:Caption}
-                <div class="timestamp" style="margin-top:10px;"><a href="{Permalink}">{TimeAgo}</a>{block:NoteCount} - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>{/block:NoteCount}</div>
-               </div>
-             {/block:IndexPage}
+          <article class="videio">
+            {block:Caption}
+              <h1><a href="{Permalink}">{Caption}</a></h1>
+            {/block:Caption}
+            <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
 
-             {block:PermalinkPage}
-                <div class="centre">
-                  <p>{Video-500}</p>
-                  {block:Caption}
-                     {Caption}
-                {/block:Caption}
-                <p class="timestamp" style="margin-top:10px;"><a href="{Permalink}">{TimeAgo}</a></p>
-              </div>
-             {/block:PermalinkPage}
-        </div>
+            {Video-500}
+
+            {block:IndexPage}{block:NoteCount}
+              <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
+            {/block:NoteCount}{/block:IndexPage}
+            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+          </article>
         {/block:Video}
 
         {block:Audio}
-          <div class="post">
-            {block:IndexPage}
-               <div class="audio">
-                  <div class="player">{AudioPlayerWhite}</div>
-                  {block:Caption}{Caption}{/block:Caption}
-                 <div class="timestamp">{TimeAgo}{block:NoteCount} - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>{/block:NoteCount}</div>
-               </div>
-             {/block:IndexPage}
+          <article class="audio">
+            {block:Caption}
+              <h1>{Caption}</h1>
+            {/block:Caption}
+            <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
 
-             {block:PermalinkPage}
-               <div class="centre">
-                  <div class="player">{AudioPlayerWhite}</div>
-                  {block:Caption}{Caption}{/block:Caption}
-                 <span class="timestamp"><a href="{Permalink}">{TimeAgo}</a></span>
-               </div>
-             {/block:PermalinkPage}
-          </div>
+            <div class="player">{AudioPlayerWhite}</div>
+
+            {block:IndexPage}{block:NoteCount}
+              <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
+            {/block:NoteCount}{/block:IndexPage}
+            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+          </article>
         {/block:Audio}
 
         {block:Quote}
           <article class="quote {length}">
-            {block:IndexPage}
-              <h1><a href="{Permalink}">{Quote}</a></h1>
-              {block:Source}
-                <p style="text-align:right;">{Source}</p>
-              {/block:Source}
-              <div class="timestamp">
-                <a href="{Permalink}">{TimeAgo}</a>{block:NoteCount} - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>{/block:NoteCount}</a>
-              </div>
-            {block:IndexPage}
+            <h1><a href="{Permalink}">{Quote}</a></h1>
+            {block:Source}
+              <p style="text-align:right;">{Source}</p>
+            {/block:Source}
 
-            {block:PermalinkPage}
-              <h1>{Quote}</h1>
-              {block:Source}<p class="centre">{Source}</p>{/block:Source}
-              <div class="timestamp"><a href="{Permalink}">Posted {TimeAgo}</a></div>
-              {PostNotes}
-            {/block:PermalinkPage}
+            <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
+
+            {block:IndexPage}{block:NoteCount}
+              <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
+            {/block:NoteCount}{/block:IndexPage}
+            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
           </article>
         {/block:Quote}
 
         {block:Chat}
-          <div class="post">
-              <div class="chat">
-                {block:IndexPage}
-                <table cellspacing="0">
-                  {block:Lines}
-                  <tr class="user{UserNumber}">
-                    <th>{block:Label}{Label}{/block:Label}</th>
-                    <td>{Line}</td>
-                  </tr>
-                  {/block:Lines}
-                </table>
-                <div class="timestamp"><a href="{Permalink}">{TimeAgo}</a>{block:NoteCount} - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>{/block:NoteCount}</div>
-              {/block:IndexPage}
+          <article class="chat">
+            <table cellspacing="0">
+              {block:Lines}
+              <tr class="user{UserNumber}">
+                <th>{block:Label}{Label}{/block:Label}</th>
+                <td>{Line}</td>
+              </tr>
+              {/block:Lines}
+            </table>
 
-               {block:PermalinkPage}
-                <table cellspacing="0" width="610px">
-                  {block:Lines}
-                  <tr class="user{UserNumber}">
-                    <th>{block:Label}{Label}{/block:Label}</th>
-                    <td>{Line}</td>
-                  </tr>
-                  {/block:Lines}
-                </table>
-                <div class="centre">
-                  <span class="timestamp"><a href="{Permalink}">{TimeAgo}</a></span>
-                </div>
-              {/block:PermalinkPage}
-            </div>
-          </div>
+            <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
+
+            {block:IndexPage}{block:NoteCount}
+              <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
+            {/block:NoteCount}{/block:IndexPage}
+            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+          </article>
         {/block:Chat}
 
         {block:Link}
-        <div class="post">
-           {block:IndexPage}
+          <article class="link">
             <h1><a href="{URL}" {Target}>{Name}</a></h1>
-            {block:Description}
-               {Description}
-            {/block:Description}
-            <div class="timestamp">{TimeAgo}{block:NoteCount} - <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>{/block:NoteCount}</div>
-          {/block:IndexPage}
 
-          {block:PermalinkPage}
-            <h31class="centre"><a href="{URL}" {Target}>{Name}</a></h1>
-            {block:Description}
-               {Description}
-            {/block:Description}
-            <div class="centre">
-              <span class="timestamp"><a href="{Permalink}">{TimeAgo}</a></span>
-            </div>
-               {block:PostNotes} {PostNotes}{/block:PostNotes}
-          {/block:PermalinkPage}
-        </div>
+            <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
+
+            {block:IndexPage}{block:NoteCount}
+              <a href="{Permalink}"><img src="http://static.tumblr.com/fkm6sn6/vYolbws6r/heart_fill_8x7.png"> {NoteCount}</a>
+            {/block:NoteCount}{/block:IndexPage}
+            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+          </article>
         {/block:Link}
 
       {/block:Posts}
