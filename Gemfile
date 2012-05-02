@@ -20,8 +20,8 @@ group :development, :test do
 end
 
 group :development do
+  gem 'capistrano', require: false
   gem 'debugger', require: false
-  gem 'heroku', require: false
 end
 
 group :test do
