@@ -33,7 +33,8 @@ section.posts
       li
         h4= link_to p['title'], p['post_url']
         p
-          =' p['body'].gsub(/([.!]).*/m, '\1')
+          = p['body'].gsub(/([.!]).*/m, '\1')
+          | &nbsp;
           - if p['body'].present?
             = link_to '&rarr;'.html_safe, p['post_url'], class: 'more'
 
