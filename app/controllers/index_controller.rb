@@ -6,7 +6,7 @@ class IndexController < ApplicationController
   caches_page :index, :portfolio
 
   def index
-    @album = @albums[3]
+    @album = @albums[2]
     @cover = @album['cover_photo']
   end
 
