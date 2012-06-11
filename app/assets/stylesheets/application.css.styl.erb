@@ -134,6 +134,24 @@ nav ul
   li
     display inline
     padding 0px 1em 0px
+    position relative
+    word-spacing -0.25ex
+    // sub-menu
+    &:hover ul
+      display block
+    ul
+      z-index 1
+      display none
+      position absolute
+      top 100%
+      margin 0
+      padding 3px 0
+      background-color hsla(0, 0%, 100%, 0.8)
+      li
+        display list-item
+        text-align left
+        white-space nowrap
+
 .social
   a
     padding 0px

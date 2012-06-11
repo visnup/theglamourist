@@ -30,8 +30,17 @@ html( lang="en" )
         ul
           li= link_to_unless_current 'index', root_path
           li= link_to_unless_current 'about', about_path
-          li= link_to_unless_current 'blog', '//blog.theglamourist.com'
-          li= link_to_unless_current 'gallery', portfolio_path
+          li
+            = link_to_unless_current 'blog ▿', '//blog.theglamourist.com'
+            ul
+              - for tag in ['products', 'instagram', 'people', 'the journey'] do
+                li= link_to_unless_current tag, "//blog.theglamourist.com/tagged/#{tag}"
+          li
+            = link_to_unless_current 'gallery ▿', portfolio_path
+            - if @albums
+              ul
+                - @albums.each do |album|
+                  li= link_to album['name'], portfolio_path(anchor: "#{album['id']}-#{album['cover_photo']['id']}")
           li= link_to_unless_current 'services', services_path
           li= link_to_unless_current 'contact', new_contact_path
           li.social
