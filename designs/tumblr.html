@@ -63,10 +63,12 @@
 
             <div class="body">{Body}</div>
 
-            {block:IndexPage}{block:NoteCount}
-              <a href="{Permalink}">&#x2665; {NoteCount}</a>
-            {/block:NoteCount}{/block:IndexPage}
-            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+            {block:IndexPage}
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="600" data-show-faces="true" data-font="lucida grande"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-comments" data-href="{Permalink}" data-num-posts="5" data-width="600"></div>
+            {/block:PermalinkPage}
           </article>
         {/block:Text}
 
@@ -79,10 +81,12 @@
 
             {LinkOpenTag}<img class="photo" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
 
-            {block:IndexPage}{block:NoteCount}
-              <a href="{Permalink}">&#x2665; {NoteCount}</a>
-            {/block:NoteCount}{/block:IndexPage}
-            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+            {block:IndexPage}
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="600" data-show-faces="true" data-font="lucida grande"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-comments" data-href="{Permalink}" data-num-posts="5" data-width="600"></div>
+            {/block:PermalinkPage}
           </article>
         {/block:Photo}
 
@@ -95,15 +99,17 @@
 
             {Photoset-500}
 
-            {block:IndexPage}{block:NoteCount}
-              <a href="{Permalink}">&#x2665; {NoteCount}</a>
-            {/block:NoteCount}{/block:IndexPage}
-            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+            {block:IndexPage}
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="600" data-show-faces="true" data-font="lucida grande"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-comments" data-href="{Permalink}" data-num-posts="5" data-width="600"></div>
+            {/block:PermalinkPage}
           </article>
         {/block:Photoset}
 
         {block:Video}
-          <article class="videio">
+          <article class="video">
             {block:Caption}
               <h1><a href="{Permalink}">{Caption}</a></h1>
             {/block:Caption}
@@ -111,10 +117,12 @@
 
             {Video-500}
 
-            {block:IndexPage}{block:NoteCount}
-              <a href="{Permalink}">&#x2665; {NoteCount}</a>
-            {/block:NoteCount}{/block:IndexPage}
-            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+            {block:IndexPage}
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="600" data-show-faces="true" data-font="lucida grande"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-comments" data-href="{Permalink}" data-num-posts="5" data-width="600"></div>
+            {/block:PermalinkPage}
           </article>
         {/block:Video}
 
@@ -127,10 +135,12 @@
 
             <div class="player">{AudioPlayerWhite}</div>
 
-            {block:IndexPage}{block:NoteCount}
-              <a href="{Permalink}">&#x2665; {NoteCount}</a>
-            {/block:NoteCount}{/block:IndexPage}
-            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+            {block:IndexPage}
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="600" data-show-faces="true" data-font="lucida grande"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-comments" data-href="{Permalink}" data-num-posts="5" data-width="600"></div>
+            {/block:PermalinkPage}
           </article>
         {/block:Audio}
 
@@ -143,10 +153,12 @@
 
             <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
 
-            {block:IndexPage}{block:NoteCount}
-              <a href="{Permalink}">&#x2665; {NoteCount}</a>
-            {/block:NoteCount}{/block:IndexPage}
-            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+            {block:IndexPage}
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="600" data-show-faces="true" data-font="lucida grande"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-comments" data-href="{Permalink}" data-num-posts="5" data-width="600"></div>
+            {/block:PermalinkPage}
           </article>
         {/block:Quote}
 
@@ -163,10 +175,12 @@
 
             <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
 
-            {block:IndexPage}{block:NoteCount}
-              <a href="{Permalink}">&#x2665; {NoteCount}</a>
-            {/block:NoteCount}{/block:IndexPage}
-            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+            {block:IndexPage}
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="600" data-show-faces="true" data-font="lucida grande"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-comments" data-href="{Permalink}" data-num-posts="5" data-width="600"></div>
+            {/block:PermalinkPage}
           </article>
         {/block:Chat}
 
@@ -176,10 +190,12 @@
 
             <time><a href="{Permalink}">{block:Date}{Month} {DayOfMonth}, {Year}{/block:Date}</a></time>
 
-            {block:IndexPage}{block:NoteCount}
-              <a href="{Permalink}">&#x2665; {NoteCount}</a>
-            {/block:NoteCount}{/block:IndexPage}
-            {block:PermalinkPage}{PostNotes}{/block:PermalinkPage}
+            {block:IndexPage}
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="600" data-show-faces="true" data-font="lucida grande"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-comments" data-href="{Permalink}" data-num-posts="5" data-width="600"></div>
+            {/block:PermalinkPage}
           </article>
         {/block:Link}
 
@@ -206,5 +222,13 @@
       </div>
     </footer>
 
-    </body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=336406949773140";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </body>
 </html>
