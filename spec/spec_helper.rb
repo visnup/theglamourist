@@ -39,10 +39,7 @@ RSpec.configure do |config|
   end
 
   config.before :each do
-    metadata = example.metadata
-    location = Pathname.new(metadata[:location]).relative_path_from Rails.root
-
-    Rails.logger.info "\n\nExample: #{metadata[:full_description]} # #{location}\n"
+    Rails.logger.info "\n\nExample: #{example.full_description} # #{example.location}\n"
   end
 end
 
