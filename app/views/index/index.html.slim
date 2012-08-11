@@ -29,7 +29,7 @@ section.portfolio
 section.posts
   h2= link_to 'Blog', '//blog.theglamourist.com'
   ul
-    - @posts[0, 4].each do |p|
+    - @posts[0, 8].each do |p|
       li
         h4= link_to p['title'], p['post_url']
         p
@@ -37,6 +37,15 @@ section.posts
           | &nbsp;
           - if p['body'].present?
             = link_to '&rarr;'.html_safe, p['post_url'], class: 'more'
+
+section.services
+  h2= link_to 'Services', services_path
+  p
+    =' link_to '<b>Bridal</b>, Engagement, Trial Sessions;'.html_safe, services_path
+    =' link_to 'Commercial, <b>Fashion</b>;'.html_safe, services_path
+    =' link_to '<b>Boudoir</b>;'.html_safe, services_path
+    =' link_to 'Makeup Lessons', services_path
+  p Available for travel around the SF Bay Area, to Los Angeles, and worldwide.
 
 section.contact
   h2= link_to 'Contact', new_contact_path
@@ -57,12 +66,3 @@ section.contact
       img.twitter( src=asset_data_uri('twitter.png') width=20 height=20 )
     a( href="http://www.yelp.com/biz/the-glamourist-san-francisco" )
       img.yelp( src=asset_data_uri('yelp.png') width=16 height=20 )
-
-section.services
-  h2= link_to 'Services', services_path
-  p
-    =' link_to '<b>Bridal</b>, Engagement, Trial Sessions;'.html_safe, services_path
-    =' link_to 'Commercial, <b>Fashion</b>;'.html_safe, services_path
-    =' link_to '<b>Boudoir</b>;'.html_safe, services_path
-    =' link_to 'Makeup Lessons', services_path
-  p Available for travel around the SF Bay Area, to Los Angeles, and worldwide.
