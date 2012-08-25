@@ -7,6 +7,7 @@ describe Notifier do
     subject { ActionMailer::Base.deliveries.last }
 
     its(:to)      { should include('jane@theglamourist.com') }
+    its(:cc)      { should include('vi@theglamourist.com') }
     its(:from)    { should include(contact.email) }
     its(:subject) { should match('[theglamourist]') }
   end

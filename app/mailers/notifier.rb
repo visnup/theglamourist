@@ -1,5 +1,6 @@
 class Notifier < ActionMailer::Base
   default to:      'jane@theglamourist.com',
+          cc:      'vi@theglamourist.com',
           subject: '[theglamourist] New Inquiry'
 
   def new_contact(contact)
