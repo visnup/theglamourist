@@ -47,11 +47,14 @@ class IndexController < ApplicationController
                 end
               end
 
+            next unless cover
             cover['class'] = 'cover ' + (cover['width'] > cover['height'] ? 'landscape' : 'portrait')
             open "http://saturated.theglamourist.com/?url=#{CGI.escape cover['picture']}" do |saturated|
               hsla = JSON.parse saturated.read
               cover['saturated'] = "hsla(#{hsla['h']}, #{hsla['s']}%, #{hsla['l']}%, #{hsla['a']})"
             end
+          end.select do |album|
+            album['cover_photo']
           end.sort_by do |album|
             [ 'Weddings', 'Before & Afters', 'Fashion', 'Engagement Sessions',
               'Boudoir', 'Press' ].index(album['name']) || 1000
