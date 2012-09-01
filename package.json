@@ -4,6 +4,6 @@
   , "private": true
   , "dependencies": {
       "nib": "*",
-      "stylus": "git://github.com/LearnBoost/stylus.git"
+      "stylus": "*"
   }
 }
