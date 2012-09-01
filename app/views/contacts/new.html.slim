@@ -41,7 +41,10 @@
 h2 for inquiries
 
 = semantic_form_for @contact do |f|
-  = f.inputs :name, :email, :phone_number
+  = f.inputs do
+    = f.input :name, input_html: { autofocus: true }
+    = f.input :email
+    = f.input :phone_number
   = f.inputs do
     = f.input :service_type, as: :select, collection: %w/ Wedding Commercial Fashion Lessons Boudoir Other /
     = f.input :event_at, labels: { year: I18n.t('activerecord.attributes.contact.event_at') }, start_year: Date.today.year, include_blank: false, required: true
