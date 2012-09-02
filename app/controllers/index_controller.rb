@@ -38,7 +38,7 @@ class IndexController < ApplicationController
       @albums = Rails.cache.fetch 'facebook' do
         open graph_url('theglamourist/albums') do |f|
           JSON.parse(f.read)['data'].select do |album|
-            album['type'] == 'normal'
+            album['type'] == 'normal' && album['name'] != 'Cover Photos'
           end.each do |album|
             cover = album['cover_photo'] =
               open graph_url("#{album['id']}/photos?limit=200") do |f|
