@@ -3,7 +3,7 @@ require 'open-uri'
 class IndexController < ApplicationController
   before_filter :fetch_albums, :fetch_posts, except: [:login, :logout, :expire, :error]
   before_filter :fetch_profile, only: [:about]
-  caches_page :index, :portfolio
+  caches_page :index, :about, :portfolio
 
   def index
     @album = @albums[2]
@@ -22,6 +22,7 @@ class IndexController < ApplicationController
 
   def expire
     expire_page '/'
+    expire_page '/about'
     expire_page '/portfolio'
 
     if params[:id]
