@@ -10,6 +10,7 @@ gem 'sqlite3'
 group :assets do
   gem 'backbone-rails'
   gem 'coffee-rails'
+  gem 'eco'
   gem 'jquery-rails'
   gem 'stylus'
   gem 'uglifier'
