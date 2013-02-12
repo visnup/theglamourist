@@ -11,7 +11,7 @@ group :assets do
   gem 'backbone-rails'
   gem 'coffee-rails'
   gem 'eco'
-  gem 'jquery-rails'
+  gem 'jquery-rails', '~>2.1.0'
   gem 'stylus'
   gem 'uglifier'
 end
