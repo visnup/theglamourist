@@ -7,14 +7,12 @@ describe IndexController do
     before { get :index }
 
     it { should respond_with(:success) }
-    it { should assign_to(:albums) }
   end
 
   describe 'GET portfolio' do
     before { get :portfolio }
 
     it { should respond_with(:success) }
-    it { should assign_to(:albums) }
   end
 
   describe 'GET services' do

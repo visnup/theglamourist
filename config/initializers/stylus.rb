@@ -1,6 +1,7 @@
 if defined? Stylus
   Stylus.use :nib
 
+=begin
   if defined? Slim
     module Slim
       class EmbeddedEngine
@@ -10,4 +11,5 @@ if defined? Stylus
       end
     end
   end
+=end
 end

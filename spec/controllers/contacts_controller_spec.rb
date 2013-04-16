@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe ContactsController do
   let(:contact) { create :contact }
+  subject { controller }
 
   describe 'GET new' do
     before { get :new }
 
     it { should respond_with(:success) }
-    it { should assign_to(:contact) }
   end
 
   describe 'POST create' do
@@ -20,7 +20,6 @@ describe ContactsController do
     before { get :show, id: contact.to_param }
 
     it { should respond_with(:success) }
-    it { should assign_to(:contact).with(contact) }
     it { should render_template(:show) }
 
     describe 'json' do

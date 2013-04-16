@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'active-model-email-validator'
 gem 'formtastic'
@@ -11,7 +11,7 @@ group :assets do
   gem 'backbone-rails'
   gem 'coffee-rails'
   gem 'eco'
-  gem 'jquery-rails', '~>2.1.0'
+  gem 'jquery-rails'
   gem 'stylus'
   gem 'uglifier'
 end
@@ -22,7 +22,7 @@ end
 
 group :development do
   gem 'capistrano', require: false
-  gem 'debugger', require: false
+  #gem 'debugger', require: false
 end
 
 group :test do
