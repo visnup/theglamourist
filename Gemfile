@@ -23,6 +23,7 @@ end
 group :development do
   gem 'capistrano', require: false
   #gem 'debugger', require: false
+  gem 'thin'
 end
 
 group :test do
