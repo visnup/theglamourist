@@ -40,7 +40,7 @@ html( lang="en" )
             - if @albums
               ul
                 - @albums.each do |album|
-                  li= link_to album['name'], portfolio_path(anchor: "#{album['id']}-#{album['cover_photo']['id']}")
+                  li= link_to album['name'], album['link']
           li= link_to_unless_current 'services', services_path
           li= link_to_unless_current 'contact', new_contact_path
           li.social

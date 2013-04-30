@@ -1,13 +1,17 @@
 require 'open-uri'
 
 class IndexController < ApplicationController
-  before_filter :fetch_albums, :fetch_posts, only: [:index, :portfolio]
+  before_filter :fetch_albums, :fetch_posts, except: [:login, :logout, :expire, :error]
   before_filter :fetch_profile, only: [:about]
   caches_page :index, :about, :portfolio, :services
 
   def index
     @album = @albums[2]
     @cover = @album['cover_photo']
+  end
+
+  def portfolio
+    redirect_to 'http://www.facebook.com/theglamourist/photos_albums'
   end
 
   def login

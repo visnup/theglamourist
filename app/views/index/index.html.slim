@@ -2,7 +2,7 @@ css:
   h2, h2 a { color: #{@cover['saturated']}; }
 
 .cover( class=@cover['class'] )
-  = link_to portfolio_path(anchor: "#{@album['id']}-#{@cover['id']}") do
+  = link_to @cover['link'] do
     - width = @cover['class'].include?('portrait') ? 450 : 900
     = image_tag @cover['source'], size: "#{width}x#{width*@cover['height']/@cover['width']}", alt: nil
     - if @cover['name']
@@ -19,9 +19,9 @@ section.portfolio
   ul
     - @albums.each do |album|
       li
-        h4= link_to album['name'], portfolio_path(anchor: "#{album['id']}-#{album['cover_photo']['id']}")
+        h4= link_to album['name'], album['link']
         - if album['name'] == 'Before & Afters'
-          p= link_to portfolio_path(anchor: "#{album['id']}-#{album['cover_photo']['id']}") do
+          p= link_to album['link'] do
             - side_cover = album['cover_photo']['images'][-4]
             img( src=side_cover['source'] width=205 height=205*side_cover['height']/side_cover['width'] )
         p= album['description']
