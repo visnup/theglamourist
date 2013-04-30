@@ -12,7 +12,7 @@ describe IndexController do
   describe 'GET portfolio' do
     before { get :portfolio }
 
-    it { should respond_with(:success) }
+    it { should respond_with(:redirect) }
   end
 
   describe 'GET services' do
