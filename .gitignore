@@ -1,6 +1,5 @@
 .DS_Store
 .bundle
-bin
 log/*.log
 log/*.log.*
 node_modules/*
