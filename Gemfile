@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'active-model-email-validator'
 gem 'formtastic'
-gem 'rails'
+gem 'rails', '4.0.0.rc1'
 gem 'rdiscount'
 gem 'slim'
 gem 'sqlite3'
@@ -10,7 +10,6 @@ gem 'sqlite3'
 group :assets do
   gem 'backbone-rails'
   gem 'coffee-rails'
-  gem 'eco'
   gem 'jquery-rails'
   gem 'stylus'
   gem 'uglifier'
@@ -37,4 +36,5 @@ end
 
 group :production do
   gem 'dalli'
+  gem 'rack-cache'
 end
