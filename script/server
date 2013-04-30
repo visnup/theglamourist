@@ -1,2 +1,2 @@
 #!/bin/sh
-passenger start -p 3004
+bin/puma -p 3004
