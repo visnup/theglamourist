@@ -10,11 +10,6 @@ class IndexController < ApplicationController
     @cover = @album['cover_photo']
   end
 
-  def portfolio
-    # TODO move to routes
-    redirect_to 'http://www.facebook.com/theglamourist/photos_albums'
-  end
-
   def login
     session[:admin] = true  if params[:password] == '<3ugf'
     redirect_to root_url
