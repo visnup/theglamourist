@@ -1,0 +1,75 @@
+{
+  "name": "theglamourist",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "glyphs": [
+    {
+      "search": [
+        "yelp"
+      ],
+      "code": 121,
+      "uid": "5d8165146a6d5f2784982aa955f963ce",
+      "css": "yelp",
+      "orig_css": "yelp",
+      "orig_code": 121,
+      "src": "zocial",
+      "from": 121
+    },
+    {
+      "search": [
+        "twitter",
+        "social",
+        "logo"
+      ],
+      "code": 62217,
+      "uid": "d090355c31f497b61d676416c1fd39fb",
+      "css": "twitter",
+      "orig_css": "twitter",
+      "orig_code": 62217,
+      "src": "entypo",
+      "from": 62217
+    },
+    {
+      "search": [
+        "facebook",
+        "social",
+        "logo"
+      ],
+      "code": 62220,
+      "uid": "bc50457410acf467b8b5721240768742",
+      "css": "facebook",
+      "orig_css": "facebook",
+      "orig_code": 62220,
+      "src": "entypo",
+      "from": 62220
+    },
+    {
+      "search": [
+        "pinterest",
+        "social",
+        "logo"
+      ],
+      "code": 62226,
+      "uid": "689febe699d74bc8862965555503e445",
+      "css": "pinterest",
+      "orig_css": "pinterest",
+      "orig_code": 62226,
+      "src": "entypo",
+      "from": 62226
+    },
+    {
+      "search": [
+        "instagram",
+        "social",
+        "logo"
+      ],
+      "code": 62253,
+      "uid": "0fbfb1cd7a847c88ea4c141d0e1bbdb5",
+      "css": "instagram",
+      "orig_css": "instagram",
+      "orig_code": 62253,
+      "src": "entypo",
+      "from": 62253
+    }
+  ]
+}

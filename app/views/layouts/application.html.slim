@@ -44,14 +44,16 @@ html( lang="en" )
           li= link_to_unless_current 'services', services_path
           li= link_to_unless_current 'contact', new_contact_path
           li.social
-            a( href="http://www.pinterest.com/theglamourist/" )
-              img.pinterest( src=asset_data_uri('pinterest.png') width=20 height=20 )
             a( href="http://www.facebook.com/theglamourist" )
-              img.facebook( src=asset_data_uri('facebook.png') width=20 height=20 )
-            a.twitter( href="http://www.twitter.com/theglamourist" )
-              img.twitter( src=asset_data_uri('twitter.png') width=20 height=20 )
+              i.icon-facebook
+            a( href="http://www.twitter.com/theglamourist" )
+              i.icon-twitter
+            a( href="http://instagram.com/theglamourist" )
+              i.icon-instagram
             a( href="http://www.yelp.com/biz/the-glamourist-san-francisco" )
-              img.yelp( src=asset_data_uri('yelp.png') width=16 height=20 )
+              i.icon-yelp
+            a( href="http://www.pinterest.com/theglamourist/" )
+              i.icon-pinterest
     #page= yield
     footer
       ul
