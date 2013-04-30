@@ -14,8 +14,3 @@ trackViewport = _.debounce (action) ->
 
 trackViewport 'Load'
 $(window).resize -> trackViewport 'Resize'
-
-# gallery clicks
-$(document).on 'click', 'a.thumb', ->
-  album = $(this).closest('.album').find('h4').text()
-  _gaq.push [ '_trackEvent', 'Gallery', album, $(this).attr('href') ]

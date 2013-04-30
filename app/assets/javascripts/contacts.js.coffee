@@ -1,3 +1,3 @@
-return if $('body.contacts').length is 0
-
-$ -> $('textarea').focus -> $(this).addClass 'open'
+$(document).on 'ready page:load', ->
+  $('body.contacts').each ->
+    $('textarea').focus -> $(this).addClass 'open'
