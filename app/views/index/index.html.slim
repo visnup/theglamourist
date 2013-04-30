@@ -14,17 +14,26 @@ section.about
     | Jane Kim, owner and founder of The Glamourist, is an award winning
       <b>makeup artist</b> and <b>hair stylist</b> based in San Francisco.
 
-section.portfolio
-  h2= link_to 'Gallery', portfolio_path
-  ul
-    - @albums.each do |album|
-      li
-        h4= link_to album['name'], album['link']
-        - if album['name'] == 'Before & Afters'
-          p= link_to album['link'] do
-            - side_cover = album['cover_photo']['images'][-4]
-            img( src=side_cover['source'] width=205 height=205*side_cover['height']/side_cover['width'] )
-        p= album['description']
+section.contact
+  h2= link_to 'Contact', new_contact_path
+  p= link_to '<b>Tell us what you&rsquo;re looking for &rarr;</b>'.html_safe, new_contact_path
+  /p Appointments held at <a href="http://maps.google.com/maps?q=Blu+Bungalow&hl=en&ll=37.801307,-122.43546&spn=0.020481,0.033259&view=map&cid=15634673860134688280&t=m&z=15&iwloc=A">Blu Bungalow</a>
+  p
+    = mail_to 'jane@theglamourist.com', nil
+    br
+    | (415) 860-5872
+
+  p.social
+    a( href="http://www.facebook.com/theglamourist" )
+      i.icon-facebook
+    a( href="http://www.twitter.com/theglamourist" )
+      i.icon-twitter
+    a( href="http://instagram.com/theglamourist" )
+      i.icon-instagram
+    a( href="http://www.yelp.com/biz/the-glamourist-san-francisco" )
+      i.icon-yelp
+    a( href="http://www.pinterest.com/theglamourist/" )
+      i.icon-pinterest
 
 section.posts
   h2= link_to 'Blog', '//blog.theglamourist.com'
@@ -38,6 +47,18 @@ section.posts
           - if p['body'].present?
             = link_to '&rarr;'.html_safe, p['post_url'], class: 'more'
 
+section.portfolio
+  h2= link_to 'Gallery', portfolio_path
+  ul
+    - @albums.each do |album|
+      li
+        h4= link_to album['name'], album['link']
+        - if album['name'] == 'Before & Afters'
+          p= link_to album['link'] do
+            - side_cover = album['cover_photo']['images'][-4]
+            img( src=side_cover['source'] width=205 height=205*side_cover['height']/side_cover['width'] )
+        p= album['description']
+
 section.services
   h2= link_to 'Services', services_path
   p
@@ -46,25 +67,3 @@ section.services
     =' link_to '<b>Boudoir</b>;'.html_safe, services_path
     =' link_to 'Makeup Lessons', services_path
   p Available for travel around the SF Bay Area, to Los Angeles, and worldwide.
-
-section.contact
-  h2= link_to 'Contact', new_contact_path
-  p= link_to '<b>Tell us what you&rsquo;re looking for &rarr;</b>'.html_safe, new_contact_path
-  /p Appointments held at <a href="http://maps.google.com/maps?q=Blu+Bungalow&hl=en&ll=37.801307,-122.43546&spn=0.020481,0.033259&view=map&cid=15634673860134688280&t=m&z=15&iwloc=A">Blu Bungalow</a>
-  p
-    = mail_to 'jane@theglamourist.com', nil
-    br
-    | (415) 860-5872
-
-  h2 Connect
-  p.social
-    a( href="http://www.facebook.com/theglamourist" )
-      i.icon-facebook
-    a( href="http://www.twitter.com/theglamourist" )
-      i.icon-twitter
-    a( href="http://instagram.com/theglamourist" )
-      i.icon-instagram
-    a( href="http://www.yelp.com/biz/the-glamourist-san-francisco" )
-      i.icon-yelp
-    a( href="http://www.pinterest.com/theglamourist/" )
-      i.icon-pinterest
