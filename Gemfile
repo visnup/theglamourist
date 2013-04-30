@@ -1,19 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'active-model-email-validator'
+gem 'actionpack-page_caching'
+gem 'backbone-rails'
+gem 'coffee-rails'
 gem 'formtastic'
+gem 'jquery-rails'
 gem 'rails', '4.0.0.rc1'
 gem 'rdiscount'
 gem 'slim'
 gem 'sqlite3'
-
-group :assets do
-  gem 'backbone-rails'
-  gem 'coffee-rails'
-  gem 'jquery-rails'
-  gem 'stylus'
-  gem 'uglifier'
-end
+gem 'stylus', branch: 'rails_4', github: 'lucasmazza/ruby-stylus'
+gem 'uglifier'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -26,7 +24,6 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'fakeweb'
   gem 'ffaker'

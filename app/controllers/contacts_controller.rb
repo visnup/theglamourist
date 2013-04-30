@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
 
   # POST /contacts
   def create
-    @contact = Contact.create(params[:contact])
+    @contact = Contact.create(params.require(:contact).permit!)
     respond_with @contact
   end
 

@@ -34,10 +34,6 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   # Hooks
-  config.before :suite do
-    DatabaseCleaner.clean_with :truncation
-  end
-
   config.before :each do
     Rails.logger.info "\n\nExample: #{example.full_description} # #{example.location}\n"
   end

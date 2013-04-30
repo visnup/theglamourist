@@ -1,2 +1,2 @@
 #!/bin/sh
-bin/puma -p 3004
+bin/rails s -p 3004

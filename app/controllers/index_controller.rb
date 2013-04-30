@@ -3,7 +3,7 @@ require 'open-uri'
 class IndexController < ApplicationController
   before_filter :fetch_albums, :fetch_posts, except: [:login, :logout, :expire, :error]
   before_filter :fetch_profile, only: [:about]
-  caches_page :index, :about, :portfolio, :services
+  caches_page :index, :about, :services
 
   def index
     @album = @albums[2]
@@ -11,6 +11,7 @@ class IndexController < ApplicationController
   end
 
   def portfolio
+    # TODO move to routes
     redirect_to 'http://www.facebook.com/theglamourist/photos_albums'
   end
 
@@ -27,7 +28,7 @@ class IndexController < ApplicationController
   def expire
     expire_page '/'
     expire_page '/about'
-    expire_page '/portfolio'
+    expire_page '/services'
 
     if params[:id]
       Rails.cache.delete params[:id]

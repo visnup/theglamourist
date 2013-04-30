@@ -11,9 +11,14 @@ describe ContactsController do
   end
 
   describe 'POST create' do
-    before { post :create, contact: attributes_for(:contact) }
+    let(:contact_attributes) { attributes_for(:contact) }
+    before { post :create, contact: contact_attributes }
 
     it { should redirect_to(assigns[:contact]) }
+
+    it 'should create the contact' do
+      expect(Contact.last.name).to eq(contact_attributes[:name])
+    end
   end
 
   describe 'GET show' do
