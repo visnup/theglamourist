@@ -21,7 +21,7 @@ end
 group :development do
   gem 'capistrano', require: false
   #gem 'debugger', require: false
-  gem 'puma'
+  gem 'passenger'
 end
 
 group :test do
