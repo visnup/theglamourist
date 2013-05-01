@@ -11,7 +11,7 @@ gem 'rdiscount'
 gem 'slim'
 gem 'sqlite3'
 gem 'stylus', branch: 'rails_4', github: 'lucasmazza/ruby-stylus'
-gem 'turbolinks'
+gem 'turbolinks', github: 'rails/turbolinks'
 gem 'uglifier'
 
 group :development, :test do

@@ -66,4 +66,4 @@ html( lang="en" )
       .copyright
         ' &copy; #{Time.now.year}
         span.logo <span class="the">the</span> <b>GLAMOUR</b>IST
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'application', 'data-turbolinks-eval' => false
