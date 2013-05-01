@@ -23,6 +23,7 @@ end
 group :development do
   gem 'capistrano', require: false
   gem 'passenger'
+  gem 'quiet_assets'
 end
 
 group :test do
