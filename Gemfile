@@ -15,12 +15,13 @@ gem 'turbolinks'
 gem 'uglifier'
 
 group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-plus'
   gem 'rspec-rails'
 end
 
 group :development do
   gem 'capistrano', require: false
-  #gem 'debugger', require: false
   gem 'passenger'
 end
 
