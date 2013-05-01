@@ -48,9 +48,9 @@ h2 for inquiries
     = f.input :phone_number
   = f.inputs do
     = f.input :service_type, as: :select, collection: %w/ Wedding Commercial Fashion Lessons Boudoir Other /
-    = f.input :event_at, labels: { year: I18n.t('activerecord.attributes.contact.event_at') }, start_year: Date.today.year, include_blank: false, required: true
+    = f.input :event_at, start_year: Date.today.year, include_blank: false, required: true
     = f.input :event_venue
-    = f.input :ready_time, labels: { hour: I18n.t('activerecord.attributes.contact.ready_time') }, meridian: true, minute_step: 15
+    = f.input :ready_time, meridian: true, minute_step: 15
     = f.input :party_size
   = f.inputs :message
   p.demand
