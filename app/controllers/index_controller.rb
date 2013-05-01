@@ -42,10 +42,8 @@ class IndexController < ApplicationController
             album['type'] == 'normal' && album['name'] != 'Cover Photos'
           end.each do |album|
             cover = album['cover_photo'] =
-              open graph_url("#{album['id']}/photos?limit=200") do |f|
-                (album['photos'] = JSON.parse(f.read)['data']).find do |photo|
-                  photo['id'] == album['cover_photo']
-                end
+              open graph_url("#{album['cover_photo']}") do |f|
+                JSON.parse f.read
               end
 
             next unless cover

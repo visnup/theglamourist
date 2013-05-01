@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/395172810510954
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - application/json; charset=UTF-8
+      etag:
+      - ! '"e6552844c3236a14c89465236df26d9c7db2ddef"'
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '801567'
+      x-fb-debug:
+      - fdU9PK55RQdAFJM5tzRkohJMfrGX/YZh31CDcTcp+a4=
+      date:
+      - Wed, 01 May 2013 06:11:13 GMT
+      connection:
+      - keep-alive
+      content-length:
+      - '2115'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"395172810510954","from":{"id":"125086767519561","category":"Local
+        business","name":"The Glamourist"},"name":"I love to laugh.","picture":"http:\/\/photos-f.ak.fbcdn.net\/hphotos-ak-prn1\/422787_395172810510954_812616719_s.jpg","source":"http:\/\/sphotos-f.ak.fbcdn.net\/hphotos-ak-prn1\/s720x720\/422787_395172810510954_812616719_n.jpg","height":479,"width":720,"images":[{"height":1365,"width":2048,"source":"http:\/\/sphotos-f.ak.fbcdn.net\/hphotos-ak-ash4\/468544_395172810510954_812616719_o.jpg"},{"height":639,"width":960,"source":"http:\/\/sphotos-f.ak.fbcdn.net\/hphotos-ak-prn1\/422787_395172810510954_812616719_n.jpg"},{"height":479,"width":720,"source":"http:\/\/sphotos-f.ak.fbcdn.net\/hphotos-ak-prn1\/s720x720\/422787_395172810510954_812616719_n.jpg"},{"height":399,"width":600,"source":"http:\/\/sphotos-f.ak.fbcdn.net\/hphotos-ak-prn1\/s600x600\/422787_395172810510954_812616719_n.jpg"},{"height":319,"width":480,"source":"http:\/\/sphotos-f.ak.fbcdn.net\/hphotos-ak-prn1\/s480x480\/422787_395172810510954_812616719_n.jpg"},{"height":212,"width":320,"source":"http:\/\/sphotos-f.ak.fbcdn.net\/hphotos-ak-prn1\/s320x320\/422787_395172810510954_812616719_n.jpg"},{"height":119,"width":180,"source":"http:\/\/photos-f.ak.fbcdn.net\/hphotos-ak-prn1\/422787_395172810510954_812616719_a.jpg"},{"height":86,"width":130,"source":"http:\/\/photos-f.ak.fbcdn.net\/hphotos-ak-prn1\/422787_395172810510954_812616719_s.jpg"},{"height":86,"width":130,"source":"http:\/\/photos-f.ak.fbcdn.net\/hphotos-ak-prn1\/s75x225\/422787_395172810510954_812616719_s.jpg"}],"link":"http:\/\/www.facebook.com\/photo.php?fbid=395172810510954&set=a.151650408196530.29703.125086767519561&type=1","icon":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/v2\/yz\/r\/StEh3RhPvjk.gif","created_time":"2012-03-13T20:10:31+0000","updated_time":"2012-04-09T20:18:56+0000","likes":{"data":[{"id":"1064125153","name":"Marria
+        Tang"},{"id":"751188880","name":"Monica Chang"},{"id":"100003289621032","name":"Justin
+        Parker"}],"paging":{"next":"https:\/\/graph.facebook.com\/395172810510954\/likes?limit=25&offset=25&__after_id=100003289621032"}}}'
+    http_version: '1.1'
+  recorded_at: Wed, 01 May 2013 06:11:13 GMT
+recorded_with: VCR 2.4.0

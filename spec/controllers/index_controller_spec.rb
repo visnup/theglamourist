@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe IndexController do
-  around { |example| VCR.use_cassette('flickr', &example) }
+  around { |example| VCR.use_cassette('index', &example) }
 
   describe 'GET index' do
     before { get :index }
