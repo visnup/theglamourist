@@ -20,6 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  date:
+    order:
+      - :year
+      - :month
+      - :day
   activerecord:
     attributes:
       contact:
