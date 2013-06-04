@@ -42,5 +42,5 @@ end
 
 VCR.configure do |config|
   config.cassette_library_dir = "#{::Rails.root}/spec/fixtures/cassettes"
-  config.hook_into :fakeweb
+  config.hook_into :webmock
 end

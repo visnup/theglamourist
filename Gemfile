@@ -11,7 +11,7 @@ gem 'rdiscount'
 gem 'slim'
 gem 'sqlite3'
 gem 'stylus', branch: 'rails_4', github: 'lucasmazza/ruby-stylus'
-gem 'turbolinks', github: 'rails/turbolinks'
+gem 'turbolinks'
 gem 'uglifier'
 
 group :development, :test do
@@ -30,10 +30,10 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'fakeweb'
   gem 'ffaker'
   gem 'shoulda-matchers'
   gem 'vcr'
+  gem 'webmock'
 end
 
 group :production do
