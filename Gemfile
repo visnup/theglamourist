@@ -15,6 +15,7 @@ gem 'turbolinks', github: 'rails/turbolinks'
 gem 'uglifier'
 
 group :development, :test do
+  gem 'guard-rspec'
   gem 'pry-rails'
   gem 'pry-plus'
   gem 'rspec-rails'
@@ -27,6 +28,7 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
   gem 'factory_girl_rails'
   gem 'fakeweb'
   gem 'ffaker'
