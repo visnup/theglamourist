@@ -12,7 +12,6 @@ body
   text-align center
   background-color #fff
   color #666
-  box-shadow inset 0 0 50px hsla(0, 0%, 0%, 0.2)
   min-height 100%
 
 body, input, textarea, select, option
@@ -97,9 +96,8 @@ header, nav
   text-align center
 
 header
-  padding-top 3em
   h1
-    margin 0
+    margin 1em 0 0
     font-size xx-large
     &, a
       color #888
@@ -120,39 +118,61 @@ header
       font-weight normal
       text-transform lowercase
 
-nav ul
-  font-family headline-sans-serif
-  font-weight 300
-  list-style-type none
-  padding 0px
-  text-transform uppercase
-  color link
-  a
-    color black
-    transition color 200ms ease-out
-    &:hover
-      color link
-  li
-    display inline
-    padding 0px 1em 0px
-    position relative
-    word-spacing -0.25ex
-    // sub-menu
-    &:hover ul
-      display block
-    ul
-      z-index 1
-      display none
-      position absolute
-      left -1px
-      top 100%
-      margin 0
-      padding 3px 0 6px
-      background-color hsla(0, 0%, 100%, 0.8)
-      li
-        display list-item
-        text-align left
-        white-space nowrap
+nav
+  position fixed
+  width 100%
+  left 0
+  top 0
+  z-index 1
+  background-color hsla(0, 0%, 0%, 0.9)
+  padding 10px 0
+  > ul
+    text-align left
+    width 900px
+    font-family headline-sans-serif
+    font-size small
+    list-style-type none
+    padding 0
+    margin 0 auto
+    text-transform uppercase
+    color red
+    i
+      text-transform lowercase
+      font-family headline
+    a
+      color white
+    > li
+      display inline
+      padding 0 2em
+      position relative
+      word-spacing -0.25ex
+      &:first-child
+        padding-left 0
+      // sub-menu
+      &:hover ul
+        opacity 1
+        top 100%
+        visibility visible
+      ul
+        z-index 1
+        opacity 0
+        visibility hidden
+        position absolute
+        left -1px
+        top 0%
+        margin 0
+        padding 1em 0
+        background-color hsla(0, 0%, 0%, 0.9)
+        width auto
+        transition top .2s, opacity .2s
+        li
+          padding 0 2em
+          display list-item
+          text-align left
+          white-space nowrap
+    li.social
+      float right
+      padding-right 0
 
 #page
   padding 2em 0

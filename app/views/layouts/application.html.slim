@@ -25,16 +25,11 @@ html( lang="en" )
     = yield(:head)
   body( class="#{params[:controller]} #{params[:controller]}-#{params[:action]}" )
     header
-      h1= link_to '<span class="the">THE</span> <b>GLAMOUR</b>IST'.html_safe, root_path
       nav
         ul
           li= link_to_unless_current 'index', root_path
-          li= link_to_unless_current 'about', about_path
-          li
-            = link_to_unless_current 'blog ▿', '//blog.theglamourist.com'
-            ul
-              - for tag in ['products', 'instagram', 'people', 'the journey'] do
-                li= link_to_unless_current tag, "//blog.theglamourist.com/tagged/#{tag}"
+          li= link_to_unless_current '<i>about</i> jane'.html_safe, about_path
+          li= link_to_unless_current 'blog', '//blog.theglamourist.com'
           li
             = link_to_unless_current 'gallery ▿', portfolio_path
             - if @albums
@@ -54,6 +49,7 @@ html( lang="en" )
               i.icon-yelp
             a( href="http://www.pinterest.com/theglamourist/" )
               i.icon-pinterest
+      h1= link_to '<span class="the">THE</span> <b>GLAMOUR</b>IST'.html_safe, root_path
     #page= yield
     footer
       ul
