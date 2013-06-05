@@ -15,7 +15,7 @@ body
   min-height 100%
 
 body, input, textarea, select, option
-  font-family Georgia, serif
+  font-family body-font
   font-size medium
 
 a
@@ -34,10 +34,10 @@ h1, h2, h3, h4, h5, h6
 h2
   font-family headline-sans-serif
   font-weight 300
-  letter-spacing -1px
 
 h3, h4, h5, h6
-  font-family headline-simple
+  font-family headline-sans-serif-alt
+  font-weight normal
 
 p, ul
   line-height 140%
@@ -129,7 +129,7 @@ nav
   > ul
     text-align left
     width 900px
-    font-family headline-sans-serif
+    font-family body-font
     font-size small
     list-style-type none
     padding 0
@@ -173,6 +173,8 @@ nav
     li.social
       float right
       padding-right 0
+      a
+        margin 0 0.5ex
 
 #page
   padding 2em 0
@@ -187,6 +189,7 @@ footer
   padding 1em 10px
   .logo
     word-spacing -0.1em
+    font-family headline
   .the
     font-style italic
   b
