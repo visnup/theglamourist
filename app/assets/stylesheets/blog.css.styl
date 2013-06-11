@@ -1,27 +1,18 @@
 @import '_common'
 
 body.blog
-  #page
-    max-width 960px
-  aside
-    float right
-    width 230px
-    text-align left
   article
-    font-family Courier New, monospace
+    font-family body-font
     margin-bottom 3em
-    margin-right 300px
-    text-align center
-    > *
-      text-align left
     &.photo img.photo
       width 100%
       display block
+    h1
+      text-transform none
+      font-family headline-sans-serif
+      font-weight normal
+      font-size large
   time
     display block
     margin 0.5em 0
-  h1
-    text-transform none
-    font-family headline
-    font-weight normal
-    font-size large
+    text-align center
