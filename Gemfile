@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'active-model-email-validator'
 gem 'actionpack-page_caching'
-gem 'backbone-rails'
 gem 'coffee-rails'
 gem 'formtastic'
 gem 'jquery-rails'
