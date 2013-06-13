@@ -10,6 +10,10 @@ class IndexController < ApplicationController
     @cover = @album['cover_photo']
   end
 
+  def blog
+    render layout: false
+  end
+
   def login
     session[:admin] = true  if params[:password] == '<3ugf'
     redirect_to root_url

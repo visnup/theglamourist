@@ -1,5 +1,5 @@
 TheGlamourist::Application.routes.draw do
-  %w/ about services login logout expire error /.each do |r|
+  %w/ about blog services login logout expire error /.each do |r|
     get "#{r}(/:id)" => "index##{r}", as: r
   end
 
