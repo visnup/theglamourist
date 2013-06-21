@@ -30,4 +30,4 @@ aside
     h2 Instagram
     - @instagram.sample(1).each do |random|
       = image_tag random['images']['standard_resolution']['url']
-      p= random['caption']['text']
+      p.caption= random['caption']['text']
