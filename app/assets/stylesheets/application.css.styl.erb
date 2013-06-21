@@ -34,6 +34,9 @@ h1, h2, h3, h4, h5, h6
 h2
   font-family headline-sans-serif
   font-weight 300
+  border-bottom solid 1px gray
+  &, a
+    color accent
 
 h3, h4, h5, h6
   font-family headline-sans-serif-alt
@@ -51,7 +54,7 @@ input[type=text], input[type=email], input[type=tel], textarea, select
   padding 2px
   border-radius 0
   border none
-  border-bottom solid 1px hsla(0, 0%, 0%, 0.3)
+  border-bottom solid 1px hsla(0, 0%, 0%, 0.2)
   appearance none
   &:focus
     outline none
@@ -83,8 +86,8 @@ input[type=submit], button
     background-color gray
     transition background-color 200ms ease
   &:active
-    box-shadow inset 0 2px 8px hsla(0, 0%, 0%, 0.4)
-    color hsla(0, 0%, 100%, 0.8)
+    box-shadow inset 0 2px 8px hsla(0, 0%, 0%, .4)
+    color hsla(0, 0%, 100%, .8)
 
 header, #page, footer
   width 900px
@@ -97,7 +100,7 @@ header, header nav
 
 header
   nav + h1
-    margin 1em 0 0
+    margin 1.5em 0 0
     font-size xx-large
     &, a
       color #888
@@ -124,8 +127,8 @@ header nav
   left 0
   top 0
   z-index 1
-  background-color hsla(0, 0%, 0%, 0.9)
-  padding 10px 0
+  background-color hsla(0, 0%, 0%, .9)
+  padding 15px 0
   > ul
     text-align left
     width 900px
@@ -145,7 +148,7 @@ header nav
       display inline
       padding 0 2em
       position relative
-      word-spacing -0.25ex
+      word-spacing -.25ex
       &:first-child
         padding-left 0
       // sub-menu
@@ -162,7 +165,7 @@ header nav
         top 0%
         margin 0
         padding 1em 0
-        background-color hsla(0, 0%, 0%, 0.9)
+        background-color hsla(0, 0%, 0%, .9)
         width auto
         transition top .2s, opacity .2s
         li
@@ -174,7 +177,7 @@ header nav
       float right
       padding-right 0
       a
-        margin 0 0.5ex
+        margin 0 .5ex
 
 #page
   padding 2em 0
@@ -188,7 +191,7 @@ footer
   font-size small
   padding 1em 10px
   .logo
-    word-spacing -0.1em
+    word-spacing -.2em
     font-family headline
   .the
     font-style italic
