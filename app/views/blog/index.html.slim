@@ -1,9 +1,0 @@
-- @posts.each do |post|
-  article
-    header
-      - if post['category']
-        p.category= Array.wrap(post['category']).first
-      h1= link_to post['title'], translate_link(post['link'])
-    == post['content:encoded']
-
-= link_to 'More', blog_index_path(page: (params[:page] || 1).to_i + 1)

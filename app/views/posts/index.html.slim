@@ -1,0 +1,12 @@
+= render 'aside'
+
+- @posts.each do |post|
+  article
+    header
+      - if post.categories.present?
+        p.category= post.categories.first
+      h1= link_to post.title, post
+      time datetime=post.created_at.iso8601
+        = l post.created_at.to_date, format: :long
+
+    == post.html

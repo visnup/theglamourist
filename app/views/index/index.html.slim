@@ -36,15 +36,15 @@ section.contact
       i.icon-pinterest
 
 section.posts
-  h2= link_to 'Blog', blog_index_path
+  h2= link_to 'Blog', posts_path
   ul
-    - @posts[0, 8].each do |p|
+    - @posts.each do |post|
       li
-        h4= link_to p['title'], translate_link(p['link'])
+        h4= link_to post.title, post
         p
-          = p['description'].sub(/<(a|img) .*/, '').sub(/ … $/, '')
+          = post.description
           | &nbsp;
-          = link_to '&rarr;'.html_safe, translate_link(p['link']), class: 'more'
+          = link_to '&rarr;'.html_safe, post, class: 'more'
 
 section.portfolio
   h2= link_to 'Gallery', portfolio_path

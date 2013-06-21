@@ -30,7 +30,7 @@ html( lang="en" )
         ul
           li= link_to_unless_current 'index', root_path
           li= link_to_unless_current '<i>about</i> jane'.html_safe, about_path
-          li= link_to_unless params[:controller] == 'blog', 'blog', blog_index_path
+          li= link_to_unless params[:controller] == 'posts', 'blog', posts_path
           li
             = link_to_unless_current 'gallery ▿', portfolio_path
             - if @albums

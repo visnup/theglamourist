@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20101024024448) do
+ActiveRecord::Schema.define(version: 20130621040643) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -29,9 +29,17 @@ ActiveRecord::Schema.define(version: 20101024024448) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
-    t.text     "body"
+    t.string   "link"
+    t.text     "categories"
+    t.string   "guid"
+    t.text     "description"
+    t.text     "html"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "posts", ["created_at"], name: "index_posts_on_created_at"
+  add_index "posts", ["guid"], name: "index_posts_on_guid"
+  add_index "posts", ["link"], name: "index_posts_on_link"
 
 end

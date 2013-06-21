@@ -1,13 +1,14 @@
 require 'open-uri'
 
 class IndexController < ApplicationController
-  before_filter :fetch_albums, :fetch_posts, except: [:login, :logout, :expire, :error]
+  before_filter :fetch_albums, except: [:login, :logout, :expire, :error]
   before_filter :fetch_profile, only: [:about]
   caches_page :index, :about, :services
 
   def index
     @album = @albums[2]
     @cover = @album['cover_photo']
+    @posts = Post.order(created_at: :desc).page(1).per(8)
   end
 
   def login

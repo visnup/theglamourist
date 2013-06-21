@@ -1,7 +1,14 @@
-article
-  header: h1= @post['title']
+= render 'aside'
 
-  == @post['html']
+article
+  header
+    - if @post.categories.present?
+      p.category= @post.categories.first
+    h1= @post.title
+    time datetime=@post.created_at.iso8601
+      = l @post.created_at.to_date, format: :long
+
+  == @post.html
 
   footer
     #disqus_thread
