@@ -63,14 +63,6 @@ class IndexController < ApplicationController
       end
     end
 
-    def fetch_instagram
-      @instagram =
-        Rails.cache.fetch 'instagram' do
-          url = 'https://api.instagram.com/v1/users/538328/media/recent/?access_token=538328.643541b.be39dd953e644df58d2ce0f2460b049c'
-          open url do |f| JSON.parse(f.read)['data'] end
-        end
-    end
-
     def fetch_profile
       @photo =
         Rails.cache.fetch 'profile_photo' do

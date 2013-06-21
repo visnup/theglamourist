@@ -26,5 +26,8 @@ aside
       a( href="http://www.pinterest.com/theglamourist/" )
         i.icon-pinterest
 
-  - if @posts
-    = paginate @posts
+  section.instagram
+    h2 Instagram
+    - @instagram.sample(1).each do |random|
+      = image_tag random['images']['standard_resolution']['url']
+      p= random['caption']['text']
