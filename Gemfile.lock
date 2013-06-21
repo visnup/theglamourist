@@ -258,6 +258,7 @@ DEPENDENCIES
   capistrano
   capybara
   coffee-rails
+  crack
   dalli
   factory_girl_rails
   ffaker
@@ -269,7 +270,7 @@ DEPENDENCIES
   pry-rails
   quiet_assets
   rack-cache
-  rails (= 4.0.0.rc1)
+  rails (~> 4.0.0.rc1)
   rdiscount
   rspec-rails
   shoulda-matchers

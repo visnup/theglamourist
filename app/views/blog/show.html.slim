@@ -1,0 +1,13 @@
+article
+  header: h1= @post['title']
+
+  == @post['html']
+
+  footer
+    #disqus_thread
+    javascript:
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//theglamourist.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();

@@ -10,10 +10,6 @@ class IndexController < ApplicationController
     @cover = @album['cover_photo']
   end
 
-  def blog
-    render layout: false
-  end
-
   def login
     session[:admin] = true  if params[:password] == '<3ugf'
     redirect_to root_url
@@ -71,22 +67,6 @@ class IndexController < ApplicationController
         Rails.cache.fetch 'instagram' do
           url = 'https://api.instagram.com/v1/users/538328/media/recent/?access_token=538328.643541b.be39dd953e644df58d2ce0f2460b049c'
           open url do |f| JSON.parse(f.read)['data'] end
-        end
-    end
-
-    def fetch_posts
-      @posts =
-        Rails.cache.fetch 'tumblr' do
-          url = 'http://api.tumblr.com/v2/blog/theglamourist.tumblr.com/posts/text?api_key=dIFA35FeL5NzEN7r9xzkEw0neZgIZxNvxxKQ7AneQBh6qVGTjc&filter=text'
-          total = 0
-          posts = open(url) do |f|
-            JSON.parse(f.read)['response'].tap do |res|
-              total = res['total_posts']
-            end['posts']
-          end + open("#{url}&offset=#{total-10}") do |f|
-            JSON.parse(f.read)['response']['posts']
-          end
-          posts.sort_by { |post| post['date'] }.reverse
         end
     end
 

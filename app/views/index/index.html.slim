@@ -36,16 +36,15 @@ section.contact
       i.icon-pinterest
 
 section.posts
-  h2= link_to 'Blog', '//blog.theglamourist.com'
+  h2= link_to 'Blog', blog_index_path
   ul
     - @posts[0, 8].each do |p|
       li
-        h4= link_to p['title'], p['post_url']
+        h4= link_to p['title'], translate_link(p['link'])
         p
-          = p['body'].gsub(/([.!]).*/m, '\1')
+          = p['description'].sub(/<(a|img) .*/, '').sub(/ … $/, '')
           | &nbsp;
-          - if p['body'].present?
-            = link_to '&rarr;'.html_safe, p['post_url'], class: 'more'
+          = link_to '&rarr;'.html_safe, translate_link(p['link']), class: 'more'
 
 section.portfolio
   h2= link_to 'Gallery', portfolio_path
