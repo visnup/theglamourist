@@ -28,7 +28,19 @@ aside
 
   section.instagram
     h2: a( href="http://instagram.com/theglamourist" ) Instagram
-    - @instagram.sample(1).each do |random|
+    - @instagram.sample(2).each do |random|
       = image_tag random['images']['standard_resolution']['url']
       - if random['caption']
         p.caption= random['caption']['text']
+
+  section.portfolio
+    h2= link_to 'Gallery', portfolio_path
+    ul
+      - @albums.each do |album|
+        li
+          h4= link_to album['name'], album['link']
+          p= album['description']
+          - if album['name'] == 'Before & Afters'
+            p= link_to album['link'] do
+              - side_cover = album['cover_photo']['images'][-4]
+              img src=side_cover['source']
