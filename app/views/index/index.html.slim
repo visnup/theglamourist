@@ -39,7 +39,9 @@ section.posts
   ul
     - @posts.each do |post|
       li
-        h4= link_to post.title, post
+        h4= link_to post do
+          span.category= post.categories.first
+          = post.title
         p
           = post.description
           | &nbsp;
