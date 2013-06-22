@@ -3,6 +3,26 @@
 = content_for :head do
   link( rel="profile" href="http://microformats.org/profile/hcard" )
 
+= semantic_form_for @contact do |f|
+  h2 for inquiries
+
+  = f.inputs do
+    = f.input :name, input_html: { autofocus: true }
+    = f.input :email
+    = f.input :phone_number
+  = f.inputs do
+    = f.input :service_type, as: :select, collection: %w/ Wedding Commercial Fashion Lessons Boudoir Other /
+    = f.input :event_at, start_year: Date.today.year, include_blank: false, required: true
+    = f.input :event_venue
+    = f.input :ready_time, meridian: true, minute_step: 15
+    = f.input :party_size
+  = f.inputs :message
+  p.demand
+    ' We try to respond promptly, but due to the high volume of inquiries,
+    ' please allow up to 72 hours for a reply.
+  = f.actions do
+    = f.action :submit, label: 'Send'
+
 aside.vcard
   h2 contact
   p
@@ -41,22 +61,3 @@ aside.vcard
   p Available for travel worldwide.
   p.attribution Map tile and data &copy; <a href="http://maps.googleapis.com/maps/api/staticmap?center=2068+Union+St+94123&zoom=15&size=220x180&maptype=roadmap&sensor=false&scale=2&style=feature:landscape|visibility:off&style=feature:road|element:geometry|color:0x000000|weight:1&style=feature:road|element:labels.text.stroke|color:0xffffff&style=feature:poi|visibility:off&style=feature:landscape.man_made|element:geometry|visibility:off">Google</a>.
 
-= semantic_form_for @contact do |f|
-  h2 for inquiries
-
-  = f.inputs do
-    = f.input :name, input_html: { autofocus: true }
-    = f.input :email
-    = f.input :phone_number
-  = f.inputs do
-    = f.input :service_type, as: :select, collection: %w/ Wedding Commercial Fashion Lessons Boudoir Other /
-    = f.input :event_at, start_year: Date.today.year, include_blank: false, required: true
-    = f.input :event_venue
-    = f.input :ready_time, meridian: true, minute_step: 15
-    = f.input :party_size
-  = f.inputs :message
-  p.demand
-    ' We try to respond promptly, but due to the high volume of inquiries,
-    ' please allow up to 72 hours for a reply.
-  = f.actions do
-    = f.action :submit, label: 'Send'
