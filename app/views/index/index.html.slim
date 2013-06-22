@@ -53,11 +53,11 @@ section.portfolio
     - @albums.each do |album|
       li
         h4= link_to album['name'], album['link']
+        p= album['description']
         - if album['name'] == 'Before & Afters'
           p= link_to album['link'] do
             - side_cover = album['cover_photo']['images'][-4]
             img( src=side_cover['source'] width=205 height=205*side_cover['height']/side_cover['width'] )
-        p= album['description']
 
 section.services
   h2= link_to 'Services', services_path
