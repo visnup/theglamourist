@@ -41,9 +41,9 @@ aside.vcard
   p Available for travel worldwide.
   p.attribution Map tile and data &copy; <a href="http://maps.googleapis.com/maps/api/staticmap?center=2068+Union+St+94123&zoom=15&size=220x180&maptype=roadmap&sensor=false&scale=2&style=feature:landscape|visibility:off&style=feature:road|element:geometry|color:0x000000|weight:1&style=feature:road|element:labels.text.stroke|color:0xffffff&style=feature:poi|visibility:off&style=feature:landscape.man_made|element:geometry|visibility:off">Google</a>.
 
-h2 for inquiries
-
 = semantic_form_for @contact do |f|
+  h2 for inquiries
+
   = f.inputs do
     = f.input :name, input_html: { autofocus: true }
     = f.input :email
