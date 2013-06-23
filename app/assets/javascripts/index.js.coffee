@@ -1,7 +1,7 @@
-#= require jquery.masonry
+#= require masonry
 
 $(document).on 'ready page:load', ->
   $('body.index-index').each ->
-    $('#page').masonry
+    new Masonry '#page',
       itemSelector: '.cover, section'
-      columnWidth: $('section').outerWidth()
+      columnWidth: 'section'

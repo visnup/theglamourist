@@ -68,19 +68,25 @@ body.index-index
       margin-right 1ex
 @media (max-width: 940px)
   body.index-index
-    .cover.portrait ~ section, .cover.portrait ~ section.services
-      width 45%
+    .cover.portrait
+      width 46.5%
+      img
+        height auto
+      & ~ section, & ~ section.services
+        width 45%
+        padding-left 2%
 @media (max-width: 600px)
   body.index-index
-    .cover.portrait
-      width 106%
+    .cover.portrait, .cover.landscape
+      width 100%
       margin-left -3%
       img
         min-height 200px
         height auto !important
-      & ~ section, & ~ section.services
-        width 100%
-        padding-left 0
+    section
+      width 94% !important
+      height auto !important
+      padding-left 0 !important
 
 body.index-about
   #page

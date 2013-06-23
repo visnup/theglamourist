@@ -8,7 +8,7 @@ class IndexController < ApplicationController
   def index
     @album = @albums[2]
     @cover = @album['cover_photo']
-    @posts = Post.order(created_at: :desc).page(1).per(8)
+    @posts = Post.order(created_at: :desc).page(1).per(5)
   end
 
   def login
