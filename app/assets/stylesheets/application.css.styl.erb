@@ -98,86 +98,77 @@ header, header nav
   font-family headline
   text-align center
 
-header
-  nav + h1
-    margin 1.5em 0 0
+body > header
+  nav
+    position fixed
+    width 100%
+    left 0
+    top 0
+    z-index 1
+    background-color hsla(0, 0%, 0%, .9)
+    padding 15px 0
+    > ul
+      text-align left
+      width 900px
+      font-family body-font
+      font-size small
+      list-style-type none
+      padding 0
+      margin 0 auto
+      text-transform uppercase
+      color accent
+      i
+        text-transform lowercase
+        font-family headline
+      a
+        color white
+      > li
+        display inline
+        padding 0 2em
+        position relative
+        word-spacing -.25ex
+        white-space nowrap
+        &:first-child
+          padding-left 0
+        // sub-menu
+        &:hover ul
+          opacity 1
+          top 100%
+          visibility visible
+        ul
+          z-index 1
+          opacity 0
+          visibility hidden
+          position absolute
+          left -1px
+          top 0%
+          margin 0
+          padding 1em 0
+          background-color hsla(0, 0%, 0%, .9)
+          width auto
+          transition top .2s, opacity .2s
+          li
+            padding 0 2em
+            display list-item
+            text-align left
+            white-space nowrap
+      li.social
+        float right
+        padding-right 0
+        a
+          margin 0 .5ex
+  h1
+    margin 100px 0 0
     font-size xx-large
-    &, a
-      color #888
     a
-      position relative
+      white-space nowrap
       color transparent !important
       background url('<%= asset_data_uri 'logo@2x.png' %>') no-repeat
-      background-size 600px 85px
+      background-size 100% 100%
+      background-position center bottom
       display inline-block
       min-height 85px
       min-width 600px
-    .the
-      position absolute
-      left 82px
-      top 5px
-      font-size large
-      font-style italic
-      font-weight normal
-      text-transform lowercase
-
-body > header nav
-  position fixed
-  width 100%
-  left 0
-  top 0
-  z-index 1
-  background-color hsla(0, 0%, 0%, .9)
-  padding 15px 0
-  > ul
-    text-align left
-    width 900px
-    font-family body-font
-    font-size small
-    list-style-type none
-    padding 0
-    margin 0 auto
-    text-transform uppercase
-    color accent
-    i
-      text-transform lowercase
-      font-family headline
-    a
-      color white
-    > li
-      display inline
-      padding 0 2em
-      position relative
-      word-spacing -.25ex
-      &:first-child
-        padding-left 0
-      // sub-menu
-      &:hover ul
-        opacity 1
-        top 100%
-        visibility visible
-      ul
-        z-index 1
-        opacity 0
-        visibility hidden
-        position absolute
-        left -1px
-        top 0%
-        margin 0
-        padding 1em 0
-        background-color hsla(0, 0%, 0%, .9)
-        width auto
-        transition top .2s, opacity .2s
-        li
-          padding 0 2em
-          display list-item
-          text-align left
-          white-space nowrap
-    li.social
-      float right
-      padding-right 0
-      a
-        margin 0 .5ex
 
 #page
   padding 2em 0
@@ -219,6 +210,53 @@ body > footer
   ul
     float right
     margin 0
+    padding 0
     li
       display inline-block
       margin-left 1em
+      &:first-child
+        margin-left 0
+
+@media (max-width: 940px)
+  body > header, body > header nav ul, body > #page, body > footer
+    width 94%
+    padding-left 3%
+    padding-right 3%
+  body > header
+    nav
+      > ul > li
+        padding 0 1em
+        &.home
+          padding-left 0
+    h1
+      font-size xx-large * .8
+      a
+        min-height 0
+        min-width 0
+
+@media (max-width: 600px)
+  body > header
+    nav
+      > ul
+        &::before
+          font-family theglamourist
+          content '='
+          display inline
+        > li
+          display none
+          padding 0
+          &.social
+            display inline
+        &:hover > li
+          display block
+          text-align center
+          ul
+            opacity 0
+            visibility hidden
+    h1
+      margin-top 70px
+      font-size xx-large * .4
+  body > footer
+    text-align center
+    ul
+      float none

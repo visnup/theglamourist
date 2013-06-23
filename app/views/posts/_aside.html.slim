@@ -7,8 +7,6 @@ aside
 
   section.contact
     h2= link_to 'Contact', new_contact_path
-    p= link_to '<b>Tell us what you&rsquo;re looking for &rarr;</b>'.html_safe, new_contact_path
-    /p Appointments held at <a href="http://maps.google.com/maps?q=Blu+Bungalow&hl=en&ll=37.801307,-122.43546&spn=0.020481,0.033259&view=map&cid=15634673860134688280&t=m&z=15&iwloc=A">Blu Bungalow</a>
     p
       = mail_to 'jane@theglamourist.com', nil
       br

@@ -3,6 +3,7 @@ html( lang="en" )
   head
     meta( charset="utf-8" )
     meta( http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" )
+    meta( name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" )
     = csrf_meta_tag
     title
       = yield(:title) + ' - '  if content_for?(:title)
@@ -28,17 +29,6 @@ html( lang="en" )
     header
       nav
         ul
-          li= link_to_unless_current 'index', root_path
-          li= link_to_unless_current '<i>about</i> jane'.html_safe, about_path
-          li= link_to_unless params[:controller] == 'posts', 'blog', posts_path
-          li
-            = link_to_unless_current 'gallery ▿', portfolio_path
-            - if @albums
-              ul
-                - @albums.each do |album|
-                  li= link_to album['name'], album['link']
-          li= link_to_unless_current 'services', services_path
-          li= link_to_unless_current 'contact', new_contact_path
           li.social
             a( href="http://www.facebook.com/theglamourist" )
               i.icon-facebook
@@ -50,7 +40,18 @@ html( lang="en" )
               i.icon-yelp
             a( href="http://www.pinterest.com/theglamourist/" )
               i.icon-pinterest
-      h1= link_to '<span class="the">THE</span> <b>GLAMOUR</b>IST'.html_safe, root_path
+          li.home= link_to_unless_current 'home', root_path
+          li= link_to_unless_current '<i>about</i> jane'.html_safe, about_path
+          li= link_to_unless params[:controller] == 'posts', 'blog', posts_path
+          li
+            = link_to_unless_current 'gallery ▿', portfolio_path
+            - if @albums
+              ul
+                - @albums.each do |album|
+                  li= link_to album['name'], album['link']
+          li= link_to_unless_current 'services', services_path
+          li= link_to_unless_current 'contact', new_contact_path
+      h1= link_to 'the GLAMOURIST', root_path
     #page= yield
     footer
       ul

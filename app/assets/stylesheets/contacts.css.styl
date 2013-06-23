@@ -58,7 +58,7 @@ body.contacts-new, body.contacts-create
       ol li
         display inline
         label
-          display none
+          display none !important
     fieldset.actions ol
       margin-left 23ex
     li.error
@@ -70,6 +70,36 @@ body.contacts-new, body.contacts-create
         color accent
         font-style italic
         margin 0.25em 0px 0px 26ex
+@media (max-width: 940px)
+  body.contacts-new, body.contacts-create
+    #page
+      max-width none
+      width 94%
+      padding 0 3%
+@media (max-width: 730px)
+  body.contacts-new, body.contacts-create
+    #page form.formtastic, #page aside
+      width 100%
+    #page form.formtastic
+      label
+        display block
+      input, textarea, p.demand
+        width 98%
+        padding 1%
+      legend
+        float none
+      select
+        width 100%
+        padding 1%
+      .fragment select
+        width 32.5%
+      p.demand, fieldset.actions ol
+        margin-left 0
+        input
+          width 100%
+    .address img
+      width 100%
+      height auto
 
 body.contacts-show
   height 100%

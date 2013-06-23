@@ -6,15 +6,16 @@ body.posts
     img
       width 100%
   article
-    width 600px
+    max-width 600px
     font-family body-font
     font-size medium+2
     margin-bottom 3em
-    header, footer, img
-      width 600px
+    position relative
+    header, footer, img, .wp-caption
+      width 100% !important
       height auto
     img.wp-smiley
-      width auto
+      width auto !important
     .wp-caption
       position relative
       .wp-caption-text
@@ -52,3 +53,9 @@ body.posts
       display none
     footer
       padding 1em 0
+@media (max-width: 940px)
+  body.posts
+    #page aside
+      display none
+    article
+      margin 0 auto
