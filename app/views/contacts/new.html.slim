@@ -17,11 +17,11 @@
     = f.input :ready_time, meridian: true, minute_step: 15
     = f.input :party_size
   = f.inputs :message
+  = f.actions do
+    = f.action :submit, label: 'Send'
   p.demand
     ' We try to respond promptly, but due to the high volume of inquiries,
     ' please allow up to 72 hours for a reply.
-  = f.actions do
-    = f.action :submit, label: 'Send'
 
 aside.vcard
   h2 contact
