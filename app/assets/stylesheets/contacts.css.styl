@@ -70,22 +70,23 @@ body.contacts-new, body.contacts-create
         color accent
         font-style italic
         margin 0.25em 0px 0px 26ex
-@media (max-width: 940px)
+@media (max-width: 730px)
   body.contacts-new, body.contacts-create
     #page
       max-width none
       width 94%
       padding 0 3%
-@media (max-width: 730px)
-  body.contacts-new, body.contacts-create
     #page form.formtastic, #page aside
       width 100%
     #page form.formtastic
       label
         display block
-      input, textarea, p.demand
+        width auto
+      input, textarea
         width 98%
         padding 1%
+      p.demand
+        width 100%
       legend
         float none
       select
