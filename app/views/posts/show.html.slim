@@ -6,7 +6,7 @@ article
       p.category= @post.categories.first
     h1= @post.title
     time datetime=@post.created_at.iso8601
-      = l @post.created_at.to_date, format: :long
+      = l @post.created_on, format: :long
 
   == @post.html
 

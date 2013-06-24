@@ -20,6 +20,7 @@ class Post < ActiveRecord::Base
   end
 
   def to_param; link end
+  def created_on; created_at.to_date end
 
   def link= link
     self[:link] = link && link.sub('http://glamourist.wordpress.com/', '').sub(%r(/$), '')
