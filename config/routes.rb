@@ -5,9 +5,10 @@ TheGlamourist::Application.routes.draw do
 
   get 'portfolio' => redirect('https://www.facebook.com/theglamourist/photos_albums')
 
+  resources :contacts, only: [ :new, :create, :show ]
   get 'blog' => 'posts#index', as: 'posts'
   get 'blog/*link' => 'posts#show', as: 'post'
-  resources :contacts, only: [ :new, :create, :show ]
+  post 'blog' => 'posts#create'
 
   root 'index#index'
 end

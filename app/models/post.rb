@@ -3,15 +3,14 @@ require 'open-uri'
 class Post < ActiveRecord::Base
   serialize :categories, Array
 
-  def self.sync!
-    (1 .. 3).each do |page|
+  def self.sync! pages = 1
+    (1 .. pages).each do |page|
       xml = Crack::XML.parse open("http://glamourist.wordpress.com/feed/?paged=#{page}")
       xml['rss']['channel']['item'].each do |item|
         post = Post.where(guid: item['guid']).first_or_initialize
         post.update_attributes title: item['title'],
                                link: item['link'],
                                categories: item['category'],
-                               guid: item['guid'],
                                description: item['description'],
                                html: item['content:encoded'],
                                created_at: Time.parse(item['pubDate'])

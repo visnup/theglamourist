@@ -12,4 +12,9 @@ class PostsController < ApplicationController
     @post = Post.where(link: params[:link]).first
     respond_with @post
   end
+
+  def create
+    Post.sync!
+    respond_with @post = Post.last
+  end
 end
