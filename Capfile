@@ -32,7 +32,7 @@ namespace :deploy do
   namespace :npm do
     desc 'Runs npm install'
     task :install do
-      run "cd #{release_path} && npm install --production"
+      run "cd #{release_path} && npm --quiet install --production"
     end
   end
 end
