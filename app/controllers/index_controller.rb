@@ -1,14 +1,20 @@
 require 'open-uri'
 
 class IndexController < ApplicationController
-  before_filter :fetch_albums, except: [:login, :logout, :expire, :error]
-  before_filter :fetch_profile, only: [:about]
   caches_page :index, :about, :services
 
   def index
-    @album = @albums[2]
+    @album = albums[2]
     @cover = @album['cover_photo']
-    @posts = Post.order(created_at: :desc).page(1).per(5)
+    @posts = Post.includes(:categories).order(created_at: :desc).page(1).per(5)
+  end
+
+  def about
+    @photo = Rails.cache.fetch 'profile_photo' do
+      open graph_url('395172810510954') do |f|
+        JSON.parse(f.read)
+      end
+    end
   end
 
   def login
@@ -32,15 +38,4 @@ class IndexController < ApplicationController
       Rails.cache.clear
     end
   end
-
-  private
-
-    def fetch_profile
-      @photo =
-        Rails.cache.fetch 'profile_photo' do
-          open graph_url('395172810510954') do |f|
-            JSON.parse(f.read)
-          end
-        end
-    end
 end

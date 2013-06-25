@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class Post < ActiveRecord::Base
-  serialize :categories, Array
+  has_and_belongs_to_many :categories
 
   def self.sync! pages = 1
     (1 .. pages).each do |page|
@@ -21,14 +21,22 @@ class Post < ActiveRecord::Base
   def to_param; link end
   def created_on; created_at.to_date end
 
+  def category
+    categories.first.try :name
+  end
+
   def link= link
     self[:link] = link && link.sub('http://glamourist.wordpress.com/', '').sub(%r(/$), '')
   end
 
   def categories= categories
-    self[:categories] = Array.wrap(categories).map(&:to_s).reject do |category|
-      category.blank? || category == 'Uncategorized'
+    categories = Array.wrap(categories).map(&:to_s).reject do |name|
+      name.blank? || name == 'Uncategorized'
+    end.map do |name|
+      Category.where(name: name.downcase).first_or_initialize
     end
+
+    super categories
   end
 
   def description= description

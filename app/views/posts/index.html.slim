@@ -3,8 +3,8 @@
 - @posts.each do |post|
   article
     header
-      - if post.categories.present?
-        p.category= post.categories.first
+      - if post.category
+        p.category= post.category
       h1= link_to post.title, post
       time datetime=post.created_at.iso8601
         = l post.created_on, format: :long

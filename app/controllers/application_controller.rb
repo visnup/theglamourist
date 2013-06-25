@@ -10,8 +10,8 @@ class ApplicationController < ActionController::Base
 
     def graph_url path; "https://graph.facebook.com/#{path}" end
 
-    def fetch_albums
-      @albums = Rails.cache.fetch 'facebook' do
+    def albums
+      @albums ||= Rails.cache.fetch 'facebook' do
         open graph_url('theglamourist/albums') do |f|
           JSON.parse(f.read)['data'].select do |album|
             album['type'] == 'normal' && album['name'] != 'Cover Photos'
@@ -36,12 +36,18 @@ class ApplicationController < ActionController::Base
         end
       end
     end
+    helper_method :albums
 
-    def fetch_instagram
-      @instagram =
-        Rails.cache.fetch 'instagram' do
-          url = 'https://api.instagram.com/v1/users/538328/media/recent/?access_token=538328.643541b.be39dd953e644df58d2ce0f2460b049c'
-          open url do |f| JSON.parse(f.read)['data'] end
-        end
+    def instagram
+      @instagram ||= Rails.cache.fetch 'instagram' do
+        url = 'https://api.instagram.com/v1/users/538328/media/recent/?access_token=538328.643541b.be39dd953e644df58d2ce0f2460b049c'
+        open url do |f| JSON.parse(f.read)['data'] end
+      end
     end
+    helper_method :instagram
+
+    def categories
+      @categories ||= Category.order(:name)
+    end
+    helper_method :categories
 end

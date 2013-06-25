@@ -45,10 +45,9 @@ html( lang="en" )
           li= link_to_unless params[:controller] == 'posts', 'blog', posts_path
           li
             = link_to_unless_current 'gallery ▿', portfolio_path
-            - if @albums
-              ul
-                - @albums.each do |album|
-                  li= link_to album['name'], album['link']
+            ul
+              - albums.each do |album|
+                li= link_to album['name'], album['link']
           li= link_to_unless_current 'services', services_path
           li= link_to_unless_current 'contact', new_contact_path
       h1= link_to 'the GLAMOURIST', root_path
