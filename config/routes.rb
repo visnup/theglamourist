@@ -3,7 +3,13 @@ TheGlamourist::Application.routes.draw do
     get "#{r}(/:id)" => "index##{r}", as: r
   end
 
-  get 'portfolio' => redirect('https://www.facebook.com/theglamourist/photos_albums')
+  get 'portfolio' => redirect { |_, req|
+    if req.env['X_MOBILE_DEVICE'] == 'iPhone'
+      'https://m.facebook.com/theglamourist?v=photos'
+    else
+      'https://www.facebook.com/theglamourist/photos_albums'
+    end
+  }
 
   resources :contacts, only: [ :new, :create, :show ]
   get 'blog' => 'posts#index', as: 'posts'

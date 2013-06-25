@@ -172,6 +172,8 @@ GEM
     rack (1.5.2)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-mobile-detect (0.4.0)
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.0.rc1)
@@ -270,6 +272,7 @@ DEPENDENCIES
   pry-rails
   quiet_assets
   rack-cache
+  rack-mobile-detect
   rails (~> 4.0.0.rc1)
   rdiscount
   rspec-rails
