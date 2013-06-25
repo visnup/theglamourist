@@ -1,9 +1,9 @@
 TheGlamourist::Application.routes.draw do
   %w/ about services login logout expire error /.each do |r|
-    get "#{r}(/:id)" => "index##{r}", as: r
+    get "#{r}(/:id)", to: "index##{r}", as: r
   end
 
-  get 'portfolio' => redirect { |_, req|
+  get 'portfolio', to: redirect { |_, req|
     if req.env['X_MOBILE_DEVICE'] == 'iPhone'
       'https://m.facebook.com/theglamourist?v=photos'
     else
@@ -13,10 +13,16 @@ TheGlamourist::Application.routes.draw do
 
   resources :contacts, only: [ :new, :create, :show ]
 
-  get 'blog' => 'posts#index', as: 'posts'
-  get 'blog/categories/:category' => 'posts#index', as: 'category'
-  get 'blog/*link' => 'posts#show', as: 'post'
-  post 'blog' => 'posts#create'
+  constraints subdomain: 'blog' do
+    get '/', to: redirect(path: '/blog', subdomain: nil)
+    get '/rss', to: redirect('http://feeds.feedburner.com/theglamourist/sTqj')
+    get '/*link', to: redirect(path: '/blog/%{link}', subdomain: nil)
+  end
+
+  get 'blog', to: 'posts#index', as: 'posts'
+  get 'blog/categories/:category', to: 'posts#index', as: 'category'
+  get 'blog/*link', to: 'posts#show', as: 'post'
+  post 'blog', to: 'posts#create'
 
   root 'index#index'
 end
