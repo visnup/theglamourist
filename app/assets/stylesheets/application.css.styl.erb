@@ -106,7 +106,7 @@ body > header
     top 0
     z-index 1
     background-color hsla(0, 0%, 0%, .9)
-    padding 15px 0
+    padding 0
     > ul
       text-align left
       width 900px
@@ -125,8 +125,8 @@ body > header
       a.current
         color accent
       > li
-        display inline
-        padding 0 2em
+        display inline-block
+        padding 15px 2em
         position relative
         word-spacing -.25ex
         white-space nowrap
@@ -145,7 +145,7 @@ body > header
           left -1px
           top 0%
           margin 0
-          padding 1em 0
+          padding .5em 0 1em
           background-color hsla(0, 0%, 0%, .9)
           width auto
           transition top .2s, opacity .2s
@@ -228,7 +228,7 @@ body > footer
   body > header
     nav
       > ul > li
-        padding 0 1em
+        padding 15px 1em
         &.home
           padding-left 0
     h1
@@ -241,15 +241,18 @@ body > footer
   body > header
     nav
       > ul
+        font-size large
         &::before
           font-family theglamourist
           content '='
-          display inline
+          display inline-block
+          padding 15px 0
         > li
           display none
-          padding 0
+          padding 0 0 1em
           &.social
             display inline
+            padding 15px 0
         &:hover > li
           display block
           text-align center
