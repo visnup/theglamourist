@@ -12,7 +12,9 @@ TheGlamourist::Application.routes.draw do
   }
 
   resources :contacts, only: [ :new, :create, :show ]
+
   get 'blog' => 'posts#index', as: 'posts'
+  get 'blog/categories/:category' => 'posts#index', as: 'category'
   get 'blog/*link' => 'posts#show', as: 'post'
   post 'blog' => 'posts#create'
 

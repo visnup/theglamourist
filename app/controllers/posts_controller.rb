@@ -2,7 +2,12 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
-    @posts = Post.includes(:categories).order(created_at: :desc).page params[:page]
+    @posts =
+      if params[:category]
+        Category.where(name: params[:category].downcase).first.posts
+      else
+        Post.all
+      end.includes(:categories).order(created_at: :desc).page params[:page]
     respond_with @posts
   end
 

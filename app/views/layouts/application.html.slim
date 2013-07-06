@@ -42,7 +42,11 @@ html( lang="en" )
               i.icon-pinterest
           li.home= link_to_unless_current 'home', root_path
           li= link_to_unless_current '<i>about</i> jane'.html_safe, about_path
-          li= link_to_unless params[:controller] == 'posts', 'blog', posts_path
+          li
+            = link_to 'blog ▿', posts_path, class: ('current' if params[:controller] == 'posts')
+            ul
+              - categories.each do |category|
+                li= link_to category.name, category_path(category)
           li
             = link_to_unless_current 'gallery ▿', portfolio_path
             ul
