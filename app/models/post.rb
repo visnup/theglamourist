@@ -40,7 +40,7 @@ class Post < ActiveRecord::Base
   end
 
   def description= description
-    self[:description] = description && description.sub(/<(a|img) .*/, '').sub(/ \u2026 $/, '').sub(/Filed under: .*/, '').sub(/ +$/, '')
+    self[:description] = description && description.sub(/Filed under: .*/, '').sub(/<(a|img) .*/, '').sub(/ \[\u2026\]/, '').sub(/ +$/, '')
   end
 
   def html= html
