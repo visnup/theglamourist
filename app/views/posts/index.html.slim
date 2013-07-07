@@ -1,3 +1,8 @@
+- if @category
+  - content_for :title, "Blog: #{@category.name.titleize}"
+- else
+  - content_for :title, 'Blog'
+
 = render 'aside'
 
 - @posts.each do |post|
