@@ -15,3 +15,7 @@
         = l post.created_on, format: :long
 
     == post.html
+
+nav.pagination
+  = link_to_next_page @posts, '&lt; Older Posts'.html_safe
+  = link_to_previous_page @posts, 'Newer Posts &gt;'.html_safe
