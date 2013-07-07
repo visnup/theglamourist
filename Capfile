@@ -26,6 +26,9 @@ namespace :deploy do
 
   task :request, :roles => :db do
     run 'curl -s http://theglamourist.com >/dev/null'
+    run 'curl -s http://theglamourist.com/blog >/dev/null'
+    run 'curl -s http://theglamourist.com/services >/dev/null'
+    run 'curl -s http://theglamourist.com/contacts/new >/dev/null'
   end
 
   task :finalize_update_more, :except => { :no_release => true } do
