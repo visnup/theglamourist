@@ -3,6 +3,7 @@ load 'deploy/assets'
 Dir['vendor/plugins/*/recipes/*.rb'].each { |plugin| load(plugin) }
 
 require 'bundler/capistrano'
+require 'whenever/capistrano'
 
 set :application, 'theglamourist'
 set :scm, 'git'
@@ -14,6 +15,8 @@ set :rails_env, 'production'
 set :use_sudo, false
 set :default_shell, 'bash -l'
 set :normalize_asset_timestamps, false
+
+set :whenever_command, 'bundle exec whenever'
 
 role :web, 'theglamourist.com'
 role :db, 'theglamourist.com', :primary => true
