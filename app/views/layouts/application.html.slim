@@ -20,10 +20,10 @@ html( lang="en" )
           ga.src = 'http://www.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-    = stylesheet_link_tag 'application', media: 'all'
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Muli:400|Nunito:300|Oswald:300', media: 'all'
-    = auto_discovery_link_tag :atom, 'http://blog.theglamourist.com/rss.xml'
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'modernizr.min.js'
+    = auto_discovery_link_tag :rss, posts_url(format: 'xml')
     = yield(:head)
   body( class="#{params[:controller]} #{params[:controller]}-#{params[:action]}" )
     header

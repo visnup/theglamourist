@@ -44,6 +44,6 @@ class Post < ActiveRecord::Base
   end
 
   def html= html
-    self[:html] = html && html.sub(/Filed under: .*/, '')
+    self[:html] = html && html.sub(/(\s<br \/>)?Filed under: .*/, '')
   end
 end

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  respond_to :html
+  respond_to :html, :xml
 
   def index
     @posts =
