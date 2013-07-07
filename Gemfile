@@ -14,6 +14,7 @@ gem 'sqlite3'
 gem 'stylus', branch: 'rails_4', github: 'lucasmazza/ruby-stylus'
 gem 'turbolinks'
 gem 'uglifier'
+gem 'whenever'
 
 group :development, :test do
   gem 'guard-rspec'
