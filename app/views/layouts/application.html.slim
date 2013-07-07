@@ -23,7 +23,7 @@ html( lang="en" )
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Muli:400|Nunito:300|Oswald:300', media: 'all'
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'modernizr.min.js'
-    = auto_discovery_link_tag :rss, posts_url(format: 'xml')
+    = auto_discovery_link_tag :rss, 'http://feeds.feedburner.com/theglamourist/sTqj'
     = yield(:head)
   body( class="#{params[:controller]} #{params[:controller]}-#{params[:action]}" )
     header
