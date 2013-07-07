@@ -5,7 +5,9 @@ class Post < ActiveRecord::Base
 
   def self.sync! pages = 1
     (1 .. pages).each do |page|
-      xml = Crack::XML.parse open("http://glamourist.wordpress.com/feed/?paged=#{page}")
+      url = "http://glamourist.wordpress.com/feed/?paged=#{page}"
+      print "Fetching #{url}... "
+      xml = Crack::XML.parse open(url)
       xml['rss']['channel']['item'].each do |item|
         post = Post.where(guid: item['guid']).first_or_initialize
         post.update_attributes title: item['title'],
@@ -15,7 +17,10 @@ class Post < ActiveRecord::Base
                                html: item['content:encoded'],
                                created_at: Time.parse(item['pubDate'])
       end
+      puts 'done'
     end
+  rescue OpenURI::HTTPError
+    puts 'missing'
   end
 
   def to_param; link end
