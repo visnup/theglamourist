@@ -33,7 +33,8 @@ aside
   section.instagram
     h2: a( href="http://instagram.com/theglamourist" ) Instagram
     - instagram.sample(1).each do |random|
-      = image_tag random['images']['standard_resolution']['url']
+      a href=random['link']
+        img src=random['images']['standard_resolution']['url']
       - if random['caption']
         p.caption= random['caption']['text']
 
