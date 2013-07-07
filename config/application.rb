@@ -27,5 +27,8 @@ module TheGlamourist
     # Precompile additional assets.
     # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
     config.assets.precompile += %w( modernizr.min.js theglamourist.svg theglamourist.eot )
+
+    # Remove frame protection
+    config.action_dispatch.default_headers.delete 'X-Frame-Options'
   end
 end
