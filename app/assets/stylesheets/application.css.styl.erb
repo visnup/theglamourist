@@ -77,7 +77,7 @@ input[type=submit], button
   border-radius 0
   padding 0.25em 0.5em
   background-color link
-  background-image linear-gradient(top, hsla(0, 100%, 100%, 0.5), hsla(0, 100%, 100%, 0.3))
+  background-image linear-gradient(top, hsla(0, 0%, 100%, 0.5), hsla(0, 0%, 100%, 0.3))
   color white
   text-shadow 0px -1px 0px hsla(0, 0%, 0%, 0.2)
   font-size large
@@ -143,18 +143,20 @@ body > header
           visibility hidden
           position absolute
           left -1px
-          top 0%
+          top 75%
           margin 0
-          padding .5em 0 1em
+          padding 0 0 .25em
           background-color hsla(0, 0%, 0%, .9)
           width auto
-          transition top .2s, opacity .2s
+          transition all .2s
           line-height 200%
           li
-            padding 0 2em
+            padding .5em 2em
             display list-item
             text-align left
             white-space nowrap
+          li + li
+            border-top solid 1px hsla(0, 0%, 100%, .2)
       li.social
         float right
         padding-right 2em
