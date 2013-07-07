@@ -24,6 +24,10 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 
+  task :request, :roles => :db do
+    run 'curl -s http://theglamourist.com >/dev/null'
+  end
+
   task :finalize_update_more, :except => { :no_release => true } do
     run "ln -s #{shared_path}/production.sqlite3 #{release_path}/db/production.sqlite3"
     run "ln -s #{shared_path}/node_modules #{release_path}/node_modules"
@@ -41,5 +45,6 @@ end
 
 after  'deploy:finalize_update',   'deploy:finalize_update_more'
 before 'deploy:assets:precompile', 'deploy:npm:install'
+after  'deploy:restart',           'deploy:request'
 
 # vim:syntax=ruby
