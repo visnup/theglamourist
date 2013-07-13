@@ -1,9 +1,14 @@
 {
-    "name": "theglamourist"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "nib": "*",
-      "stylus": "*"
-  }
+  "name": "theglamourist",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "nib": "*",
+    "stylus": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/visnup/theglamourist.git"
+  },
+  "readme": "A website for Jane"
 }
