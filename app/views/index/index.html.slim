@@ -40,7 +40,7 @@ section.posts
     - @posts.each do |post|
       li
         h4= link_to post do
-          span.category= post.category
+          span.category= post.category_name
           = post.title
         p
           = post.description
