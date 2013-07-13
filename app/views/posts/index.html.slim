@@ -9,7 +9,7 @@
   article
     header
       - if post.category
-        p.category= link_to post.category, category_path(post.category)
+        p.category= link_to post.category_name, category_path(post.category)
       h1= link_to post.title, post
       time datetime=post.created_at.iso8601
         = l post.created_on, format: :long

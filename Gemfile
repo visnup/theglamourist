@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'active-model-email-validator'
 gem 'actionpack-page_caching'
+gem 'babosa'
 gem 'coffee-rails'
 gem 'crack'
 gem 'formtastic'

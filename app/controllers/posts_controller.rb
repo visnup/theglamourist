@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def index
     @posts =
       if params[:category]
-        @category = Category.where(name: params[:category].downcase).first
+        @category = Category.from_param params[:category]
         @category.posts
       else
         Post.all

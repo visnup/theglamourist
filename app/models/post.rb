@@ -26,9 +26,8 @@ class Post < ActiveRecord::Base
   def to_param; link end
   def created_on; created_at.to_date end
 
-  def category
-    categories.first.try :name
-  end
+  def category; categories.first end
+  def category_name; category.try :name end
 
   def link= link
     self[:link] = link && link.sub('http://glamourist.wordpress.com/', '').sub(%r(/$), '')
@@ -38,7 +37,7 @@ class Post < ActiveRecord::Base
     categories = Array.wrap(categories).map(&:to_s).reject do |name|
       name.blank? || name == 'Uncategorized'
     end.map do |name|
-      Category.where(name: name.downcase).first_or_initialize
+      Category.where(name: name).first_or_initialize
     end
 
     super categories
