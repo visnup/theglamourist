@@ -10,7 +10,7 @@ describe 'contacting' do
       fill_in 'Email', with: 'visnupx@gmail.com'
       fill_in 'Phone number', with: '415-305-7168'
       select 'Wedding', from: 'Service type'
-      select '2013', from: 'contact[event_at(1i)]'
+      select Date.today.year.to_s, from: 'contact[event_at(1i)]'
       select 'March', from: 'contact[event_at(2i)]'
       select '3', from: 'contact[event_at(3i)]'
       fill_in 'Event location', with: 'Phuket, Thailand'
@@ -33,7 +33,7 @@ describe 'contacting' do
       its(:body) do
         should include('415-305-7168')
         should include('Phuket, Thailand')
-        should include('March  3, 2013')
+        should include("March  3, #{Date.today.year}")
         should include('4:15 PM')
         should include('2')
         should include('Huggies!')
