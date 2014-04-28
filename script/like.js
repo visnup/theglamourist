@@ -51,7 +51,7 @@ var queue = async.queue(function(url, next) {
 
       var rate = (r0 - remaining) / (now - t0) * 1000
         , delay = (r0 - remaining) * 1000 - (now - t0)
-      console.log(sprintf('%d req remaining at %0.2f req/s = %0.1f minutes remaining: pausing for %0.1f s', remaining, rate, remaining/rate/60, delay/1000))
+      console.log(sprintf('%d req remaining at %0.2f req/s = %0.1f minutes remaining: pausing for %d s', remaining, rate, remaining/rate/60, delay/1000))
       setTimeout(next, delay)
     })
   })
