@@ -25,7 +25,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'capistrano', require: false
+  gem 'capistrano', '~>2', require: false
   gem 'passenger'
   gem 'quiet_assets'
 end
