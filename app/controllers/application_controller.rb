@@ -27,6 +27,8 @@ class ApplicationController < ActionController::Base
               hsla = JSON.parse saturated.read
               cover['saturated'] = "hsla(#{hsla['h']}, #{hsla['s']}%, #{hsla['l']}%, #{hsla['a']})"
             end
+
+            album['custom_link'] = "https://www.facebook.com/media/set/?set=a.#{album['id']}"
           end.select do |album|
             album['cover_photo']
           end.sort_by do |album|
