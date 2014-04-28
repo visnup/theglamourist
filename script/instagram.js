@@ -22,7 +22,7 @@ var instagram = module.exports = {
   handler: function(next) {
     return function(err, res, body) {
       if (err) return next(err)
-      if (!body.meta) return next(Error(body))
+      if (!body.meta) return next(res)
       if (body.meta.code !== 200) return next(Error(body.meta.error_message))
 
       next(null, body, res)

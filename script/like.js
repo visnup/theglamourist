@@ -13,17 +13,11 @@ var queue = async.queue(function(url, next) {
   instagram.get(url, function(err, body, res) {
     if (err) return next(err)
 
-    var remaining = +res.headers['x-ratelimit-remaining']
-      , rate = 0
-    if (!r0) {
-      r0 = remaining
-    } else {
-      rate = (r0 - remaining) / (Date.now() - t0) * 1000
-      console.log(sprintf('%d remaining: %0.2f req/s - %0.1f minutes remaining', remaining, rate, remaining/rate/60))
-    }
-
     if (body.pagination.next_url)
       queue.push(body.pagination.next_url)
+
+    var remaining = +res.headers['x-ratelimit-remaining']
+      , now = Date.now()
 
     var photos = body.data
     async.each(photos, function(photo, next) {
@@ -49,8 +43,16 @@ var queue = async.queue(function(url, next) {
       })
     }, function(err) {
       if (err) throw err
-      console.log('waiting %d ms', (rate - 1) * 1000)
-      setTimeout(next, (rate - 1) * 1000)  // slow down
+
+      if (!r0) {
+        r0 = remaining
+        return next()
+      }
+
+      var rate = (r0 - remaining) / (now - t0) * 1000
+        , delay = (r0 - remaining) * 1000 - (now - t0)
+      console.log(sprintf('%d req remaining at %0.2f req/s = %0.1f minutes remaining: pausing for %0.1f s', remaining, rate, remaining/rate/60, delay/1000))
+      setTimeout(next, delay)
     })
   })
 }, 1)
