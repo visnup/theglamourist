@@ -1,0 +1,76 @@
+#!/usr/bin/env node
+
+var async = require('async')
+  , request = require('request')
+
+var api = 'https://api.instagram.com/v1/'
+  , accessToken = '538328.643541b.be39dd953e644df58d2ce0f2460b049c'
+
+var instagram = {
+  get: function(path, next) {
+    var url = path.indexOf('//') === -1 ? api + path : path
+    request({
+      url: url,
+      qs: { access_token: accessToken },
+      json: true
+    }, instagram.handler(next))
+  },
+  post: function(path, next) {
+    request.post({
+      url: api + path,
+      form: { access_token: accessToken },
+      json: true
+    }, instagram.handler(next))
+  },
+  handler: function(next) {
+    return function(err, res, body) {
+      if (err) return next(err)
+      if (body.meta.code !== 200) return next(Error(body.meta.error_message))
+
+      next(null, body, res)
+    }
+  }
+}
+
+var tags = [ 'vsco', 'makeupartist', 'mua', 'onthetable' ]
+  , users = {}
+
+var queue = async.queue(function(url, next) {
+  instagram.get(url, function(err, body, res) {
+    if (err) return next(err)
+
+    console.log(+res.headers['x-ratelimit-remaining'])
+
+    if (body.pagination.next_url)
+      queue.push(body.pagination.next_url)
+
+    var photos = body.data
+    async.each(photos, function(photo, next) {
+      // skip photos with 0 likes or over 15 likes
+      if (photo.likes.count < 1 || 15 < photo.likes.count) return next()
+
+      // skip users we've seen before
+      if (users[photo.user.id]) return next()
+
+      instagram.get('users/' + photo.user.id, function(err, body) {
+        if (err) return next(err)
+
+        var user = body.data
+        // skip users with more than 500 followers or ones we've seen
+        if (user.counts.followed_by < 500) {
+          users[user.id] = true
+          var tag = url.match('tags/([^/]+)')[1]
+          console.log('%s %s %s  %d ❤️   %d 😀', tag, user.username, photo.link, photo.likes.count, user.counts.followed_by)
+          instagram.post('media/' + photo.id + '/likes', next)
+        } else {
+          next()
+        }
+      })
+    }, next)
+  })
+}, 1)
+
+for (var i = 0; i < tags.length; i++)
+  queue.push('tags/' + tags[i] + '/media/recent')
+
+// vim:syntax=javascript
