@@ -2,44 +2,25 @@
 
 var async = require('async')
   , request = require('request')
-
-var api = 'https://api.instagram.com/v1/'
-  , accessToken = '538328.643541b.be39dd953e644df58d2ce0f2460b049c'
-
-var instagram = {
-  get: function(path, next) {
-    var url = path.indexOf('//') === -1 ? api + path : path
-    request({
-      url: url,
-      qs: { access_token: accessToken },
-      json: true
-    }, instagram.handler(next))
-  },
-  post: function(path, next) {
-    request.post({
-      url: api + path,
-      form: { access_token: accessToken },
-      json: true
-    }, instagram.handler(next))
-  },
-  handler: function(next) {
-    return function(err, res, body) {
-      if (err) return next(err)
-      if (body.meta.code !== 200) return next(Error(body.meta.error_message))
-
-      next(null, body, res)
-    }
-  }
-}
+  , sprintf = require('sprintf').sprintf
+  , instagram = require('./instagram')
 
 var tags = [ 'vsco', 'makeupartist', 'mua', 'onthetable' ]
   , users = {}
+  , t0 = Date.now(), r0 = null
 
 var queue = async.queue(function(url, next) {
   instagram.get(url, function(err, body, res) {
     if (err) return next(err)
 
-    console.log(+res.headers['x-ratelimit-remaining'])
+    var remaining = +res.headers['x-ratelimit-remaining']
+      , rate = 0
+    if (!r0) {
+      r0 = remaining
+    } else {
+      rate = (r0 - remaining) / (Date.now() - t0) * 1000
+      console.log(sprintf('%d remaining: %0.2f req/s - %0.1f minutes remaining', remaining, rate, remaining/rate/60))
+    }
 
     if (body.pagination.next_url)
       queue.push(body.pagination.next_url)
@@ -60,13 +41,17 @@ var queue = async.queue(function(url, next) {
         if (user.counts.followed_by < 500) {
           users[user.id] = true
           var tag = url.match('tags/([^/]+)')[1]
-          console.log('%s %s %s  %d ❤️   %d 😀', tag, user.username, photo.link, photo.likes.count, user.counts.followed_by)
+          console.log(sprintf('%s %s %2d ❤️  %3d 😀  %s', tag, photo.link, photo.likes.count, user.counts.followed_by, user.username))
           instagram.post('media/' + photo.id + '/likes', next)
         } else {
           next()
         }
       })
-    }, next)
+    }, function(err) {
+      if (err) throw err
+      console.log('waiting %d ms', (rate - 1) * 1000)
+      setTimeout(next, (rate - 1) * 1000)  // slow down
+    })
   })
 }, 1)
 

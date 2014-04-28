@@ -3,12 +3,18 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "async": "*",
     "nib": "*",
+    "request": "*",
+    "sprintf": "*",
     "stylus": "*"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/visnup/theglamourist.git"
   },
-  "readme": "A website for Jane"
+  "readme": "A website for Jane",
+  "devDependencies": {
+    "debug": "^0.8.1"
+  }
 }
