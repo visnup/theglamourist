@@ -21,7 +21,7 @@ var queue = async.queue(function(url, next) {
       , photos = body.data
 
     // add next page if photos are less than an hour old
-    var age = daysOld(latest(photos))
+    var age = daysOld(latest(photos), now)
     console.log(sprintf('%s %0.2f days ago', tag, age))
     if (age < 1 && body.pagination.next_url)
       queue.push(body.pagination.next_url)
@@ -31,7 +31,7 @@ var queue = async.queue(function(url, next) {
       if (photo.likes.count < 1 || 15 < photo.likes.count) return next()
 
       // skip photos older than a day
-      if (daysOld(photo) > 1) return next()
+      if (daysOld(photo, now) > 1) return next()
 
       // skip users we've seen before
       if (users[photo.user.id]) return next()
