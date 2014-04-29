@@ -17,7 +17,7 @@ var queue = async.queue(function(url, next) {
     var remaining = +res.headers['x-ratelimit-remaining']
       , now = Date.now()
 
-    var tag = url.match('tags/([^/]+)')[1]
+    var tag = decodeURIComponent(url.match('tags/([^/]+)')[1])
       , photos = body.data
 
     // add next page if photos are less than an hour old
