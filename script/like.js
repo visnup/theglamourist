@@ -21,14 +21,17 @@ var queue = async.queue(function(url, next) {
       , photos = body.data
 
     // add next page if photos are less than an hour old
-    var age = now - (+photos[0].created_time*1000)
-    console.log(sprintf('%s %d minutes ago', tag, age/1000/60))
-    if (age/1000/60/60 < 1 && body.pagination.next_url)
+    var age = daysOld(latest(photos))
+    console.log(sprintf('%s %0.2f days ago', tag, age))
+    if (age < 1 && body.pagination.next_url)
       queue.push(body.pagination.next_url)
 
     async.each(photos, function(photo, next) {
       // skip photos with 0 likes or over 15 likes
       if (photo.likes.count < 1 || 15 < photo.likes.count) return next()
+
+      // skip photos older than a day
+      if (daysOld(photo) > 1) return next()
 
       // skip users we've seen before
       if (users[photo.user.id]) return next()
@@ -49,7 +52,8 @@ var queue = async.queue(function(url, next) {
         instagram.post('media/' + photo.id + '/likes', next)
       })
     }, function(err) {
-      if (err) throw err
+      if (err)
+        console.log(err)
 
       if (!r0) {
         r0 = remaining
@@ -66,5 +70,20 @@ var queue = async.queue(function(url, next) {
 
 for (var i = 0; i < tags.length; i++)
   queue.push('tags/' + tags[i] + '/media/recent')
+
+function daysOld(photo, now) {
+  now = now || Date.now()
+  return (now - (+photo.created_time * 1000)) / 1000 / 60 / 60 / 24;
+}
+
+function latest(photos) {
+  var photo = photos[0]
+
+  for (var i = 1; i < photos.length; i++)
+    if (photos[i].created_time > photo.created_time)
+      photo = photos[i]
+
+  return photo
+}
 
 // vim:syntax=javascript
