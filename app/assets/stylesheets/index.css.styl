@@ -18,7 +18,7 @@ body.index-index
       right 0
       padding 20px 20px 10px
       color white
-      background linear-gradient(top, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, .2))
+      background linear-gradient(top, transparent, rgba(0, 0, 0, 0.5))
       text-shadow 0 1px 0 hsla(0, 0%, 0%, .2)
       p:first-child:first-line
         font-family headline
@@ -168,6 +168,18 @@ body.index-services
       width 94%
       .price
         right 3.5%
+
+body.index-shop
+  #page
+    max-width: 684px
+@media (max-width: 727px)
+  body.index-shop
+    #page
+      max-width: 456px
+@media (max-width: 485px)
+  body.index-shop
+    #page
+      max-width: 224px
 
 body.index-error
   #page
