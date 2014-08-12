@@ -20,7 +20,6 @@ gem 'whenever'
 group :development, :test do
   gem 'guard-rspec'
   gem 'pry-rails'
-  gem 'pry-plus'
   gem 'rspec-rails'
 end
 
@@ -34,6 +33,7 @@ group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'ffaker'
+  gem 'rspec-its'
   gem 'shoulda-matchers'
   gem 'vcr'
   gem 'webmock'

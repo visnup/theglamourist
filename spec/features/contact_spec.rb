@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'contacting' do
+describe 'contacting', type: :feature do
   context 'filling out the form' do
     before do
       visit '/'

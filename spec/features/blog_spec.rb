@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'reading the blog' do
+describe 'reading the blog', type: :feature do
   let!(:post) { FactoryGirl.create :post }
 
   it 'should show me blog entries' do

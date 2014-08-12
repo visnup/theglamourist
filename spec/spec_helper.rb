@@ -2,7 +2,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
 require 'capybara/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -29,7 +28,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   # Hooks
-  config.before :each do
+  config.before :each do |example|
     Rails.logger.info "\n\nExample: #{example.full_description} # #{example.location}\n"
   end
 end

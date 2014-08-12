@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'browsing the site' do
+describe 'browsing the site', type: :feature do
   it 'should show me pages' do
     visit '/'
     expect(page).to have_content('Services')

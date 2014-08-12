@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'index routing' do
+describe 'index routing', type: :routing do
   specify { expect( get: '/'          ).to route_to('index#index') }
   specify { expect( get: '/about'     ).to route_to('index#about') }
   specify { expect( get: '/services'  ).to route_to('index#services') }
