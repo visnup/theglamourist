@@ -4,4 +4,4 @@ log/*.log
 log/*.log.*
 node_modules/*
 tmp/*
-vendor/bundler
+vendor/bundle

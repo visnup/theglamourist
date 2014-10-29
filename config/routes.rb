@@ -24,5 +24,7 @@ TheGlamourist::Application.routes.draw do
   get 'blog/*link', to: 'posts#show', as: 'post'
   post 'blog', to: 'posts#create'
 
+  get 'theworkshop', to: 'posts#show', defaults: { link: '2014/10/29/the-workshop' }, as: 'workshop'
+
   root 'index#index'
 end
