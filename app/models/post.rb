@@ -30,7 +30,7 @@ class Post < ActiveRecord::Base
   def category_name; category.try :name end
 
   def link= link
-    self[:link] = link && link.sub('http://glamourist.wordpress.com/', '').sub(%r(/$), '')
+    self[:link] = link && link.sub(%r'https?://glamourist.wordpress.com/', '').sub(%r(/$), '')
   end
 
   def categories= categories
