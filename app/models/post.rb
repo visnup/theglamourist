@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
 
   def self.sync! pages = 1
     (1 .. pages).each do |page|
-      url = "http://glamourist.wordpress.com/feed/?paged=#{page}"
+      url = "https://glamourist.wordpress.com/feed/?paged=#{page}"
       print "Fetching #{url}... "
       xml = Crack::XML.parse open(url)
       xml['rss']['channel']['item'].each do |item|
