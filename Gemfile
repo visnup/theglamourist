@@ -21,6 +21,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'rspec_junit_formatter', git: 'git@github.com:circleci/rspec_junit_formatter.git'
 end
 
 group :development do
