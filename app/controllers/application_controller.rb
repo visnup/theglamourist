@@ -9,15 +9,16 @@ class ApplicationController < ActionController::Base
   private
 
     def graph_url path; "https://graph.facebook.com/#{path}" end
+    def graph_headers; { 'Authorization' => 'Bearer CAAEx9di9v1QBALjeZAIuUsGV4OfqE4xBqKoCZBY2HrYmNLhP0MijTQ3FEWnJkWm8pVW5K1IyY4u4iMZBU4WDLzMWMUCVWSrBwwU2KIZBHrT4bVX4SNxV2aesuxzhYqgAcl926eHGg40qviRSLCDG5qNTLL8bnuPpeKzQYNvmh6J5ZA6FBbKYUoNvo5HAM92HCJmO2QuXTNyuKTnFXhFEp5TqXfWECSZCIgoFkxUmZBD2wZDZD' } end
 
     def albums
       @albums ||= Rails.cache.fetch 'facebook' do
-        open graph_url('theglamourist/albums') do |f|
+        open graph_url('theglamourist/albums'), graph_headers do |f|
           JSON.parse(f.read)['data'].select do |album|
             album['type'] == 'normal' && album['name'] != 'Cover Photos'
           end.each do |album|
             cover = album['cover_photo'] =
-              open graph_url("#{album['cover_photo']}") do |f|
+              open graph_url("#{album['cover_photo']}"), graph_headers do |f|
                 JSON.parse f.read
               end
 
