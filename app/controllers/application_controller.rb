@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   private
 
     def graph_url path; "https://graph.facebook.com/#{path}" end
-    def graph_headers; { 'Authorization' => 'Bearer CAAEx9di9v1QBALjeZAIuUsGV4OfqE4xBqKoCZBY2HrYmNLhP0MijTQ3FEWnJkWm8pVW5K1IyY4u4iMZBU4WDLzMWMUCVWSrBwwU2KIZBHrT4bVX4SNxV2aesuxzhYqgAcl926eHGg40qviRSLCDG5qNTLL8bnuPpeKzQYNvmh6J5ZA6FBbKYUoNvo5HAM92HCJmO2QuXTNyuKTnFXhFEp5TqXfWECSZCIgoFkxUmZBD2wZDZD' } end
+    def graph_headers; { 'Authorization' => 'Bearer 336406949773140|UPGhVy6QmxngW6F1dp9pr-yw4e4' } end
 
     def albums
       @albums ||= Rails.cache.fetch 'facebook' do
@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
 
     def instagram
       @instagram ||= Rails.cache.fetch 'instagram' do
-        url = 'https://api.instagram.com/v1/users/538328/media/recent/?access_token=538328.643541b.be39dd953e644df58d2ce0f2460b049c'
+        url = 'https://api.instagram.com/v1/users/538328/media/recent/?access_token=673267.1fb234f.735fee82c08b415ab76339cd337c4053'
         open url do |f| JSON.parse(f.read)['data'] end
       end
     end
