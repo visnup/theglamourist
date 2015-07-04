@@ -52,7 +52,6 @@ html( lang="en" )
               - categories.each do |category|
                 li= link_to category.name, category_path(category)
           li= link_to_unless_current 'shop', shop_path
-          li= link_to_unless_current 'workshop', workshop_path
           li= link_to_unless_current 'contact', new_contact_path
       h1= link_to 'the GLAMOURIST', root_path
     #page= yield
