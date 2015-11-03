@@ -1,0 +1,13 @@
+doctype html
+html( ng-app='main' ng-strict-di )
+  head
+    title The Glamourist - Jane Kim - Makeup Artist (San Francisco)
+    meta( name='viewport' content='width=device-width,initial-scale=1' )
+    link( href='http://fonts.googleapis.com/css?family=Muli:400|Nunito:300|Oswald:300' rel='stylesheet' type='text/css' )
+    base( href='/' )
+  body
+    h1 hello
+    div( ui-view )
+    each chunk in htmlWebpackPlugin.files.chunks
+      if chunk.entry.match(/^bundle-(main|vendor)\b/)
+        script( src="/#{chunk.entry}" )

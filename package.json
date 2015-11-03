@@ -14,11 +14,14 @@
   "devDependencies": {
     "angular": "^1.4.7",
     "angular-ui-router": "^0.2.15",
-    "debug": "^0.8.1",
+    "babel-core": "^6.0.20",
+    "babel-loader": "^6.0.1",
+    "debug": "^2.2.0",
     "html-webpack-plugin": "^1.6.2",
     "jade": "^1.11.0",
-    "npm-shrinkwrap": "*",
-    "webpack": "*",
-    "webpack-dev-server": "*"
+    "ng-annotate-loader": "0.0.10",
+    "npm-shrinkwrap": "^5.4.1",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
   }
 }
