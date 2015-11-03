@@ -1,21 +1,24 @@
 {
   "name": "theglamourist",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
-  "dependencies": {
-    "async": "*",
-    "nib": "*",
-    "request": "*",
-    "sprintf": "*",
-    "stylus": "*"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/visnup/theglamourist.git"
   },
   "readme": "A website for Jane",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {},
   "devDependencies": {
+    "angular": "^1.4.7",
+    "angular-ui-router": "^0.2.15",
     "debug": "^0.8.1",
-    "npm-shrinkwrap": "*"
+    "html-webpack-plugin": "^1.6.2",
+    "jade": "^1.11.0",
+    "npm-shrinkwrap": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
   }
 }
