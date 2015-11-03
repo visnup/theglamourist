@@ -18,8 +18,8 @@ set :normalize_asset_timestamps, false
 
 set :whenever_command, 'bundle exec whenever'
 
-role :web, 'theglamourist.com'
-role :db, 'theglamourist.com', :primary => true
+role :web, '74.207.251.209'
+role :db, '74.207.251.209', :primary => true
 
 namespace :deploy do
   desc 'Restart Application'
