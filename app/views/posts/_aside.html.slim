@@ -32,7 +32,7 @@ aside
       - categories.each do |category|
         li: h4= link_to category.name.titleize, category_path(category)
 
-  section.instagram
+  //section.instagram
     h2: a( href="http://instagram.com/theglamourist" ) Instagram
     - instagram.sample(1).each do |random|
       a href=random['link']
