@@ -44,7 +44,7 @@ class ApplicationController < ActionController::Base
     def instagram
       @instagram ||= Rails.cache.fetch 'instagram' do
         url = 'https://api.instagram.com/v1/users/538328/media/recent/?access_token=673267.1fb234f.735fee82c08b415ab76339cd337c4053'
-        open url do |f| JSON.parse(f.read)['data'] end rescue nil
+        open url do |f| JSON.parse(f.read)['data'] end
       end
     end
     helper_method :instagram
