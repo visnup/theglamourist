@@ -10,11 +10,11 @@ class IndexController < ApplicationController
   end
 
   def about
-    # @photo = Rails.cache.fetch 'profile_photo' do
-    #   open graph_url('395172810510954') do |f|
-    #     JSON.parse(f.read)
-    #   end
-    # end
+    @photo = Rails.cache.fetch 'profile_photo' do
+      open graph_url('395172810510954'), graph_headers do |f|
+        JSON.parse(f.read)
+      end
+    end
   end
 
   def login
