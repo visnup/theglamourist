@@ -1,7 +1,0 @@
-#!/bin/sh
-
-for c in 401 404 422 500; do
-  curl http://theglamourist.com/error?code=$c \
-  | perl -pe 's/(assets\/[^-]*)[^.]*/\1/g' \
-  > public/$c.html
-done
