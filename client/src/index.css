@@ -1,0 +1,42 @@
+@import url('https://cloud.typography.com/6739094/7523572/css/fonts.css');
+@import '~normalize.css';
+@import '~flexboxgrid';
+
+body {
+  font: 400 13px "Gotham SSm A", "Gotham SSm B", sans-serif;
+  color: #666;
+  letter-spacing: -.05ex;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: black;
+}
+
+h2 {
+  border-bottom: solid 1px gray;
+  color: hsl(102.63157894736841, 35.84905660377357%, 58.4313725490196%);
+}
+h2 a {
+  color: hsl(102.63157894736841, 35.84905660377357%, 58.4313725490196%);
+}
+
+p, ul {
+  line-height: 140%;
+  margin: .5em 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+b, strong {
+  font-weight: 400;
+  color: black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

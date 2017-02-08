@@ -1,0 +1,42 @@
+:local(.className) header nav {
+  background-color: hsla(0, 0%, 0%, .9);
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+:local(.className) header i {
+  text-transform: lowercase;
+  font-style: italic;
+  font-family: Didot, serif;
+}
+
+:local(.className) header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+:local(.className) header ul {
+  padding: 0;
+  margin: 0;
+}
+
+:local(.className) header li {
+  display: inline-block;
+}
+
+:local(.className) header li + li {
+  margin-left: 2em;
+}
+
+:local(.className) header h1 {
+  font-size: 72px;
+  min-width: 600px;
+  min-height: 85px;
+  background: url('../public/logo.svg') no-repeat center center;
+  background-size: contain;
+}
+:local(.className) header h1 a {
+  color: transparent;
+}

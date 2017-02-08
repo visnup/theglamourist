@@ -1,0 +1,7 @@
+:local(.className) h2 {
+  text-align: center;
+}
+
+:local(.className) h3 {
+  margin: 1.5em 5% 0 0;
+}
