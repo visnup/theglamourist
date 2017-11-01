@@ -12,13 +12,13 @@ class ApplicationController < ActionController::Base
     def graph_headers; { 'Authorization' => 'Bearer 336406949773140|UPGhVy6QmxngW6F1dp9pr-yw4e4' } end
 
     def albums
-      @albums ||= Rails.cache.fetch 'facebook' do
-        open graph_url('theglamourist/albums'), graph_headers do |f|
+      @albums ||= Rails.cache.fetch 'facebook5' do
+        open graph_url('theglamourist/albums?fields=id,name,type,cover_photo'), graph_headers do |f|
           JSON.parse(f.read)['data'].select do |album|
             album['type'] == 'normal' && album['name'] != 'Cover Photos'
           end.each do |album|
             cover = album['cover_photo'] =
-              open graph_url("#{album['cover_photo']}"), graph_headers do |f|
+              open graph_url("#{album['cover_photo']['id']}?fields=width,height,picture,images,source,link,name"), graph_headers do |f|
                 JSON.parse f.read
               end
 
