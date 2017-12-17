@@ -25,6 +25,11 @@ html
     #content
       table
         tr
+          th= label :contact, :name
+          td= @contact.name
+          th= label :contact, :email
+          td= @contact.email
+        tr
           th= label :contact, :phone_number
           td= @contact.phone_number
           th= label :contact, :service_type
