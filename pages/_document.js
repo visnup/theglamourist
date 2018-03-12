@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>The Glamourist - Jane Kim - Makeup Artist (San Francisco)</title>
+          <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400i|Montserrat" rel="stylesheet" />
           {this.props.styleTags}
         </Head>
         <body>

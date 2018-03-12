@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 
-const Section = styled.section`
-  margin: 2em 0;
-`
+export default styled.section`
+  margin: 4em 0;
+  padding: 2em;
 
-export default Section
+  h1 {
+    margin-top: -1.5em;
+    text-align: center;
+  }
+`
