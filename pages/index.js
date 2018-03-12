@@ -1,7 +1,7 @@
 import Container from '../components/container'
 import About from '../sections/about'
-import Services from '../sections/services'
 import Contact from '../sections/contact'
+import Services from '../sections/services'
 
 const Index = () => (
   <Container>
@@ -9,8 +9,8 @@ const Index = () => (
       <h1>The Glamourist</h1>
     </header>
     <About />
-    <Services />
     <Contact />
+    <Services />
   </Container>
 )
 
