@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>My page</title>
+          <title>The Glamourist - Jane Kim - Makeup Artist (San Francisco)</title>
           {this.props.styleTags}
         </Head>
         <body>

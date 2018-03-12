@@ -5,9 +5,9 @@ import Contact from '../sections/contact'
 
 const Index = () => (
   <Container>
-  <header>
-    <h1>The Glamourist</h1>
-  </header>
+    <header>
+      <h1>The Glamourist</h1>
+    </header>
     <About />
     <Services />
     <Contact />
