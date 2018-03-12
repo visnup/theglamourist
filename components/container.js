@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+// http://typecast.com/blog/a-more-modern-scale-for-web-typography
 const Container = styled.main`
   max-width: 76rem;
   margin: 0 auto;
@@ -21,6 +22,16 @@ const Container = styled.main`
   h2 {
     font-size: 2.25em;
     line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-size: 1em;
+    line-height: 1.22222222;
   }
 `
 
