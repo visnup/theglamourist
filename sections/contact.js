@@ -1,5 +1,6 @@
 import Section from '../components/section'
 import Input from '../components/input'
+import DateInput from '../components/date-input'
 import Select from '../components/select'
 import Textarea from '../components/textarea'
 
@@ -45,11 +46,8 @@ const Contact = () => (
       <p>
         <label>
           Event date<br/>
-          <Input type="date" />
-          <input type="hidden" name="entry.887843388_year" value="2018" />
-          <input type="hidden" name="entry.887843388_month" value="3" />
-          <input type="hidden" name="entry.887843388_day" value="15" />
         </label>
+        <DateInput name="entry.887843388" />
       </p>
 
       <p>
