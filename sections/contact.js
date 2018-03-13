@@ -5,9 +5,9 @@ import Textarea from '../components/textarea'
 import DateInput from '../components/date-input'
 import TimeInput from '../components/time-input'
 
-const Contact = () => (
-  <Section>
-    <h1>Contact</h1>
+const Contact = (props) => (
+  <Section {...props}>
+    <a name="contact"><h1>Contact</h1></a>
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSdMkgKEPDGBxO7FQFL2d2-Cac508piNbh4opXifr_FW_7Vp9A/formResponse">
       <p>
         <label>
