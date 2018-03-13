@@ -31,5 +31,9 @@ export default styled(About)`
   background-image: url('/static/468544_395172810510954_812616719_o.jpg');
   background-size: cover;
   background-position: bottom center;
-  padding-bottom: 30% !important;
+  padding-bottom: 150% !important;
+
+  @media (min-width: 48rem) {
+    padding-bottom: 40% !important;
+  }
 `
