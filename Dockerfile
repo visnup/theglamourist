@@ -6,4 +6,6 @@ WORKDIR /app
 COPY package.json package-lock.json* /app/
 RUN npm install
 
+COPY . /app/
+
 CMD node_modules/.bin/next
