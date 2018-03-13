@@ -20,8 +20,8 @@ To know me is to love me so get to know me here.
 Oh yea, puppies are my weakness.
 `
 
-const About = ({ className }) => (
-  <Section className={className}>
+const About = (props) => (
+  <Section {...props}>
     <h1>About</h1>
     <Markdown source={source} />
   </Section>

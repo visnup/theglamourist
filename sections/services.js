@@ -135,8 +135,8 @@ Packages are designed with our bride's best interest in mind.
 [1]: https://maps.google.com/maps?q=Blu+Bungalow&hl=en&ll=37.800188,-122.433314&spn=0.022109,0.033517&cid=15634673860134688280&gl=US&t=m&z=15&iwloc=A
 `
 
-const Services = ({ className }) => (
-  <Section className={className}>
+const Services = (props) => (
+  <Section {...props}>
     <h1>Services</h1>
     <Markdown source={source} options={{html: true}} />
   </Section>
