@@ -27,7 +27,7 @@ export default ({ name }) => (
     </Select>
     {' '}
     <Select name={`${name}_day`}>
-      {range(1, 31).map(d => (
+      {range(1, 32).map(d => (
         <option key={d}>{d}</option>
       ))}
     </Select>

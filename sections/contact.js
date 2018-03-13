@@ -1,8 +1,9 @@
 import Section from '../components/section'
 import Input from '../components/input'
-import DateInput from '../components/date-input'
 import Select from '../components/select'
 import Textarea from '../components/textarea'
+import DateInput from '../components/date-input'
+import TimeInput from '../components/time-input'
 
 const Contact = () => (
   <Section>
@@ -60,8 +61,8 @@ const Contact = () => (
       <p>
         <label>
           What time will you need to be ready by?<br/>
-          <Input type="time" step="900" />
         </label>
+        <TimeInput name="entry.1056723364" />
       </p>
 
       <p>
