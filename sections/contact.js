@@ -8,6 +8,7 @@ import Select from '../components/select'
 import Textarea from '../components/textarea'
 import DateInput from '../components/date-input'
 import TimeInput from '../components/time-input'
+import Button from '../components/button'
 
 class Form extends Component {
   state = {
@@ -128,7 +129,7 @@ class Form extends Component {
         <Row>
           <Column xs={12} sm={4}></Column>
           <Column>
-            <button>Send</button>
+            <Button>Send</Button>
           </Column>
         </Row>
       </form>
