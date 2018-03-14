@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 // http://typecast.com/blog/a-more-modern-scale-for-web-typography
 const Container = styled.main`
-  max-width: 75rem;
+  max-width: 64rem;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
   font-size: 1em;
