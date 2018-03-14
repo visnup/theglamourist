@@ -1,8 +1,9 @@
 import { range } from 'lodash'
+import styled from 'styled-components'
 import Select from './select'
 
-export default ({ name }) => (
-  <span>
+const TimeInput = ({ className, name }) => (
+  <span className={className}>
     <Select name={`${name}_hour`}>
       {range(0,24).map(h => (
         <option value={h} key={h}>
@@ -19,3 +20,7 @@ export default ({ name }) => (
     </Select>
   </span>
 )
+
+export default styled(TimeInput)`
+  select { width: auto }
+`

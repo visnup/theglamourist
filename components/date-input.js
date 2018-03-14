@@ -1,10 +1,11 @@
 import { range } from 'lodash'
+import styled from 'styled-components'
 import Select from './select'
 
 const now = new Date()
 
-export default ({ name }) => (
-  <span>
+const DateInput = ({ className, name }) => (
+  <span className={className}>
     <Select name={`${name}_year`}>
       {[0, 1, 2, 3, 4, 5].map(i => (
         <option key={i}>{now.getFullYear() + i}</option>
@@ -33,3 +34,7 @@ export default ({ name }) => (
     </Select>
   </span>
 )
+
+export default styled(DateInput)`
+  select { width: auto }
+`
