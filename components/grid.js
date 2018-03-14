@@ -9,14 +9,17 @@ const breakpoints = [
 
 export const Row = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
   align-items: baseline;
 `
 
 export const Column = styled.div`
-  padding: 10px;
   box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-shrink: 0;
 
   ${props => breakpoints.map(bp => `
     @media (min-width: ${bp.min}rem) {
