@@ -7,7 +7,7 @@ import TimeInput from '../components/time-input'
 
 const Contact = (props) => (
   <Section {...props}>
-    <a name="contact"><h1>Contact</h1></a>
+    <h1>Contact</h1>
     <form action="https://docs.google.com/forms/d/e/1FAIpQLSdMkgKEPDGBxO7FQFL2d2-Cac508piNbh4opXifr_FW_7Vp9A/formResponse">
       <p>
         <label>

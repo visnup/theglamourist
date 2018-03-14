@@ -8,21 +8,28 @@ const Index = (props) => (
   <Container {...props}>
     <header>
       <h1>the Glamourist</h1>
+      <nav>
+        <a href="#about">About</a>
+        {' '}
+        <a href="#contact">Contact</a>
+        {' '}
+        <a href="#services">Services</a>
+      </nav>
     </header>
-    <About />
-    <Contact />
-    <Services />
+    <About id="about" />
+    <Contact id="contact" />
+    <Services id="services" />
   </Container>
 )
 
 export default styled(Index)`
   > header {
-    background: url('/static/logo@2x.png') no-repeat center center;
-    background-size: contain;
     text-align: center;
   }
 
   > header > h1 {
     color: transparent;
+    background: url('/static/logo@2x.png') no-repeat center center;
+    background-size: contain;
   }
 `

@@ -22,7 +22,7 @@ Oh yea, puppies are my weakness.
 
 const About = (props) => (
   <Section {...props}>
-    <a name="about"><h1>About</h1></a>
+    <h1>About</h1>
     <Markdown source={source} />
   </Section>
 )
