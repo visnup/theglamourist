@@ -8,4 +8,4 @@ services:
       - /app/node_modules
     ports:
       - '3000:3000'
-    command: node_modules/.bin/next
+    command: npm run dev
