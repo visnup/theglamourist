@@ -19,7 +19,7 @@ export default styled(Photos)`
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   scroll-snap-destination: 50% 50%;
 
