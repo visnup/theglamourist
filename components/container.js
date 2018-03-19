@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Container = styled.main`
   max-width: 64rem;
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1em;
   line-height: 1.375em;
 
@@ -32,6 +32,10 @@ const Container = styled.main`
   h4 {
     font-size: 1em;
     line-height: 1.22222222;
+  }
+
+  a {
+    color: black;
   }
 `
 
