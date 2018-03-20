@@ -32,7 +32,7 @@ export default styled(Index)`
 
   > header > h1 {
     color: transparent;
-    background: url('/static/logo@2x.png') no-repeat center center;
+    background: url('/static/logo.svg') no-repeat center center;
     background-size: contain;
     margin: 0;
   }
