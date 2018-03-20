@@ -20,10 +20,10 @@ const Contact = (props) => (
   <Section {...props}>
     <h1>Contact</h1>
     <Row>
-      <Column xs={12} sm={8}>
+      <Column xs={12} sm={8} style={{margin: '1em 0'}}>
         <Form />
       </Column>
-      <Column xs={12} sm={4}>
+      <Column xs={12} sm={4} style={{margin: '1em 0'}}>
         Jane Kim<br/>
         <a href="mailto:jane@theglamourist.com">jane@theglamourist.com</a><br/>
         <a href="tel:14158605872">(415) 860-5872</a>
