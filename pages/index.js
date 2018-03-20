@@ -1,21 +1,51 @@
+import React, { Component } from 'react'
 import styled from 'styled-components'
+import { throttle } from 'lodash'
 import Container from '../components/container'
 import About from '../sections/about'
 import Contact from '../sections/contact'
 import Photos from '../sections/photos'
 import Services from '../sections/services'
 
-const Index = (props) => (
-  <Container {...props}>
-    <header>
-      <h1>the Glamourist</h1>
-    </header>
-    <Photos id="gallery" />
-    <About id="about" />
-    <Contact id="contact" />
-    <Services id="services" />
-  </Container>
-)
+class Index extends Component {
+  state = {
+    scrolled: false
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = throttle((e) => {
+    if (document.body.scrollTop > 100) {
+      if (!this.state.scrolled) {
+        this.setState({ scrolled: true })
+      }
+    } else {
+      if (this.state.scrolled) {
+        this.setState({ scrolled: false })
+      }
+    }
+  }, 100)
+
+  render() {
+    return (
+      <Container {...this.props}>
+        <header className={this.state.scrolled ? 'scrolled' : undefined}>
+          <h1>the Glamourist</h1>
+        </header>
+        <Photos id="gallery" />
+        <About id="about" />
+        <Contact id="contact" />
+        <Services id="services" />
+      </Container>
+    )
+  }
+}
 
 export default styled(Index)`
   > header {
@@ -35,5 +65,11 @@ export default styled(Index)`
     background: url('/static/logo.svg') no-repeat center center;
     background-size: contain;
     margin: 0;
+    height: 1.5em;
+    transition: height .1s ease-in;
+  }
+
+  > header.scrolled > h1 {
+    height: .75em;
   }
 `
