@@ -9,15 +9,6 @@ const Index = (props) => (
   <Container {...props}>
     <header>
       <h1>the Glamourist</h1>
-      <nav>
-        <a href="#gallery">Gallery</a>
-        {' '}
-        <a href="#about">About</a>
-        {' '}
-        <a href="#contact">Contact</a>
-        {' '}
-        <a href="#services">Services</a>
-      </nav>
     </header>
     <Photos id="gallery" />
     <About id="about" />
@@ -35,8 +26,8 @@ export default styled(Index)`
     top: 0;
     width: 100%;
     background-color: hsla(0, 0%, 100%, .8);
-    box-shadow: 0 0 3px hsla(0, 0%, 50%, .8);
-    padding: 10px;
+    box-shadow: 0 0 3px hsla(0, 0%, 80%, .8);
+    padding: 10px 0;
   }
 
   > header > h1 {
