@@ -29,11 +29,20 @@ const Index = (props) => (
 export default styled(Index)`
   > header {
     text-align: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, .8);
+    box-shadow: 0 0 3px hsla(0, 0%, 50%, .8);
+    padding: 10px;
   }
 
   > header > h1 {
     color: transparent;
     background: url('/static/logo@2x.png') no-repeat center center;
     background-size: contain;
+    margin: 0;
   }
 `

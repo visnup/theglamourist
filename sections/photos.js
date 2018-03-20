@@ -15,7 +15,9 @@ const Photos = (props) => (
 export default styled(Photos)`
   height: 80vh;
   padding: 0;
-  margin: 0;
+  margin: 7em 0 0;
+  max-width: 100%;
+  width: 100%;
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
