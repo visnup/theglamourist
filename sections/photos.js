@@ -3,12 +3,12 @@ import Section from '../components/section'
 
 const Photos = (props) => (
   <Section {...props}>
-    <img src="/static/photos/donkeys.jpg" />
-    <img src="/static/photos/elephants.jpg" />
-    <img src="/static/photos/kittens.jpg" />
-    <img src="/static/photos/koi.jpg" />
-    <img src="/static/photos/lemurs.jpg" />
-    <img src="/static/photos/tigers.jpg" />
+    <img src="/static/photos/27878230_413955342373291_4665685564203204608_n.jpg" />
+    <img src="/static/photos/27893084_171014887020535_2728928469332262912_n.jpg" />
+    <img src="/static/photos/28151997_417089678744153_7321564065828962304_n.jpg" />
+    <img src="/static/photos/25007066_923003567876044_1388286846299013120_n.jpg" />
+    <img src="/static/photos/23668123_1603435529719419_490774200538103808_n.jpg" />
+    <img src="/static/photos/27877883_756039844586619_299669991479836672_n.jpg" />
   </Section>
 )
 
