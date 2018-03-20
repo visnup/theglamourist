@@ -7,21 +7,23 @@ const Container = styled.main`
   font-family: 'Nunito', sans-serif;
   font-size: 1em;
   line-height: 1.375em;
+  color: hsl(0, 0%, 30%);
 
   h1, h2 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
-    font-style: italic;
   }
 
   h1 {
     font-size: 3em;
     line-height: 1.25;
+    letter-spacing: -2px;
   }
 
   h2 {
     font-size: 2.25em;
     line-height: 1.25;
+    font-style: italic;
   }
 
   h3 {
@@ -36,6 +38,11 @@ const Container = styled.main`
 
   a {
     color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 `
 
