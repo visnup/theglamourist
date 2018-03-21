@@ -22,10 +22,11 @@ export const Column = styled.div`
   padding-left: ${gutter}px;
   padding-right: ${gutter}px;
   flex-shrink: 0;
+  width: 100%;
 
-  ${props => breakpoints.map(bp => `
+  ${props => breakpoints.filter(bp => props[bp.name]).map(bp => `
     @media (min-width: ${bp.min}rem) {
-      width: ${props[bp.name] ? props[bp.name]/12*100 : 'auto'}%;
+      width: ${props[bp.name]/12*100}%;
     }
   `)}
 `
