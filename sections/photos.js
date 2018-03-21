@@ -17,7 +17,7 @@ export default styled(Photos)`
   padding: 0;
   padding-left: 15%;
   margin: 0;
-  margin-top: 7em;
+  margin-top: 5em;
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;

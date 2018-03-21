@@ -65,8 +65,12 @@ export default styled(Index)`
     background: url('/static/logo.svg') no-repeat center center;
     background-size: contain;
     margin: 0;
-    height: 1.5em;
+    height: 1em;
     transition: height .1s ease-in;
+
+    @media (min-width: 48rem) {
+      height: 1.5em;
+    }
   }
 
   > header.scrolled > h1 {
