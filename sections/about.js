@@ -1,11 +1,9 @@
 import Markdown from 'react-remarkable'
 import styled from 'styled-components'
+import { Row, Column } from '../components/grid'
 import Section from '../components/section'
 
 const source = `
-I love empowering women through beauty.
----------------------------------------
-
 A clumsy makeup artist, a new wife, daughter, sister and a mother to 2
 furry babies... I laugh a lot, find amusement in the random things, and
 Instagram lot.
@@ -22,18 +20,20 @@ Oh yea, puppies are my weakness.
 
 const About = (props) => (
   <Section {...props}>
-    <h1>About</h1>
-    <Markdown source={source} />
+    <Row style={{alignItems: 'center'}}>
+      <Column xs={12} sm={6}>
+        <h2>About</h2>
+        <Markdown source={source} />
+      </Column>
+      <Column xs={12} sm={6}>
+        <img src="/static/LRG__DSC2679.jpg" />
+      </Column>
+    </Row>
   </Section>
 )
 
 export default styled(About)`
-  background-image: url('/static/468544_395172810510954_812616719_o.jpg');
-  background-size: cover;
-  background-position: bottom center;
-  padding-bottom: 180% !important;
-
-  @media (min-width: 48rem) {
-    padding-bottom: 40% !important;
+  img {
+    width: 100%;
   }
 `

@@ -10,8 +10,8 @@ const Container = styled.main`
   color: hsl(0, 0%, 30%);
 
   h1, h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
+    font-family: 'Gotham SSm A', 'Gotham SSm B', serif;
+    font-weight: 700;
   }
 
   h1 {
@@ -23,7 +23,8 @@ const Container = styled.main`
   h2 {
     font-size: 2.25em;
     line-height: 1.25;
-    font-style: italic;
+    text-transform: uppercase;
+    color: black;
   }
 
   h3 {
