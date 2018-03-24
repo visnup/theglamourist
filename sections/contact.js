@@ -18,23 +18,16 @@ const map = [
 
 const Contact = (props) => (
   <Section {...props}>
-    <h1>Contact</h1>
     <Row>
-      <Column xs={12} sm={8} style={{margin: '1em 0'}}>
+      <Column xs={12} sm={6} style={{margin: '1em 0'}}>
         <Form />
       </Column>
-      <Column xs={12} sm={4} style={{margin: '1em 0'}}>
+      <Column xs={12} sm={6} style={{margin: '1em 0'}}>
+        <h2>Contact</h2>
+
         Jane Kim<br/>
         <a href="mailto:jane@theglamourist.com">jane@theglamourist.com</a><br/>
         <a href="tel:14158605872">(415) 860-5872</a>
-
-        <h3>Studio & Appointments</h3>
-        <a href="https://maps.google.com/maps?q=Blu+Bungalow&hl=en&ll=37.800188,-122.433314&spn=0.022109,0.033517&cid=15634673860134688280&gl=US&t=m&z=15&iwloc=A">
-          Blu Bungalow<br/>
-          2068 Union St.<br/>
-          San Francisco, CA 94043<br/>
-          <img className="map" src={`https://maps.googleapis.com/maps/api/staticmap?${map}`} />
-        </a>
 
         <h3>Mail & Correspondence</h3>
         <a href="https://maps.google.com/maps?q=The+Glamourist&hl=en&ll=37.753717,-122.390656&spn=0.022123,0.033517&cid=14521749320186323615&gl=US&t=m&z=15&iwloc=A">

@@ -32,7 +32,7 @@ class Photos extends Component {
 
 export default styled(Photos)`
   .container {
-    height: 85vh;
+    height: 75vh;
     padding: 0;
     margin: 0;
     white-space: nowrap;

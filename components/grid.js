@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+const gutter = 20
+
 const breakpoints = [
   { name: 'xs', min: 0 },
   { name: 'sm', min: 48 },
@@ -10,15 +12,15 @@ const breakpoints = [
 export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin-left: -${gutter}px;
+  margin-right: -${gutter}px;
   align-items: baseline;
 `
 
 export const Column = styled.div`
   box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: ${gutter}px;
+  padding-right: ${gutter}px;
   flex-shrink: 0;
 
   ${props => breakpoints.map(bp => `

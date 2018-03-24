@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Section from '../components/section'
 
 const source = `
-## Rates & Policies
+## Rates
 
 ### Bridal Packages <span class="price header">Rates 2017</span>
 
@@ -137,7 +137,7 @@ Packages are designed with our bride's best interest in mind.
 
 const Services = (props) => (
   <Section {...props}>
-    <h1>Services</h1>
+    <h2>Services</h2>
     <Markdown source={source} options={{html: true}} />
   </Section>
 )

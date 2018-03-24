@@ -9,9 +9,14 @@ const Container = styled.main`
   line-height: 1.375em;
   color: hsl(0, 0%, 30%);
 
-  h1, h2 {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5em;
+  }
+
+  h1, h2, h3 {
     font-family: 'Gotham SSm A', 'Gotham SSm B', serif;
     font-weight: 700;
+    color: black;
   }
 
   h1 {
@@ -24,7 +29,6 @@ const Container = styled.main`
     font-size: 2.25em;
     line-height: 1.25;
     text-transform: uppercase;
-    color: black;
   }
 
   h3 {

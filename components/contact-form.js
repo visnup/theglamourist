@@ -85,6 +85,7 @@ class Form extends Component {
             <label>Event date</label>
           </Column>
           <Column xs={12} sm={8}>
+            <label></label>
             <DateInput name="entry.887843388" />
           </Column>
         </Row>
@@ -98,39 +99,14 @@ class Form extends Component {
           </Row>
         </label>
 
-        <Row>
-          <Column xs={12} sm={4}>
-            <label>What time will you need to be ready by?</label>
-          </Column>
-          <Column xs={12} sm={8}>
-            <TimeInput name="entry.1056723364" />
-          </Column>
-        </Row>
-
         <label>
           <Row>
-            <Column xs={12} sm={4}>Size of bridal party</Column>
-            <Column xs={12} sm={8}>
-              <Input type="text" name="entry.1752902834" />
+            <Column xs={12} sm={4}></Column>
+            <Column>
+              <Button>Send</Button>
             </Column>
           </Row>
         </label>
-
-        <label>
-          <Row>
-            <Column xs={12} sm={4}>Please describe what you're looking for</Column>
-            <Column xs={12} sm={8}>
-              <Textarea name="entry.1525442277"></Textarea>
-            </Column>
-          </Row>
-        </label>
-
-        <Row>
-          <Column xs={12} sm={4}></Column>
-          <Column>
-            <Button>Send</Button>
-          </Column>
-        </Row>
       </form>
     )
   }
