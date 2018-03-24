@@ -14,7 +14,7 @@ const Container = styled.main`
   }
 
   h1, h2, h3 {
-    font-family: 'Gotham SSm A', 'Gotham SSm B', serif;
+    font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
     font-weight: 700;
     color: black;
   }
