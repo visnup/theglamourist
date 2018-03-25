@@ -5,7 +5,7 @@ import Section from '../components/section'
 const source = `
 ## Services
 
-#### Bridal Packages <span class="price header">Rates 2017</span>
+### Bridal Packages <span class="price header">2017 Rates</span>
 
 Packages are designed with our bride's best interest in mind.
 
@@ -65,7 +65,7 @@ Packages are designed with our bride's best interest in mind.
   - In studio & weekdays only
   - On-location add 150+
 
-#### Destination Packages <span class="price">Upon Request</span>
+### Destination Packages <span class="price">Upon Request</span>
 
 #### Bridal Party
 
@@ -143,6 +143,22 @@ const Services = (props) => (
 
 export default styled(Services)`
   position: relative;
+
+  h3, h4 {
+    margin: 3em 0 0;
+  }
+
+  p {
+    margin: .5em 0;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    list-style-type: square;
+  }
 
   .price {
     position: absolute;

@@ -9,14 +9,14 @@ const Container = styled.main`
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  color: hsl(0, 0%, 10%);
+  color: hsl(0, 0%, 40%);
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
     font-weight: 500;
     line-height: 1.2;
     margin: 1.414em 0 .5em;
-    color: black;
+    color: hsl(0, 0%, 10%);
   }
 
   h1 {
