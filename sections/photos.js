@@ -37,8 +37,9 @@ class Photos extends Component {
 }
 
 export default styled(Photos)`
-  // padding: 0;
-  // margin: 0;
+  padding: 0;
+  margin: 6em 0;
+  max-width: 100%;
 
   .container {
     height: 70vh;

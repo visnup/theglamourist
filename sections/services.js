@@ -157,7 +157,7 @@ export default styled(Services)`
   }
 
   li {
-    list-style-type: square;
+    list-style-type: square; 
   }
 
   .price {
