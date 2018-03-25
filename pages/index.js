@@ -55,9 +55,8 @@ export default styled(Index)`
     left: 0;
     top: 0;
     width: 100%;
-    background-color: hsla(0, 0%, 100%, .8);
-    box-shadow: 0 0 3px hsla(0, 0%, 80%, .8);
     padding: 20px 0;
+    transition: all .1s ease-in;
   }
 
   > header > h1 {
@@ -71,6 +70,11 @@ export default styled(Index)`
     @media (min-width: 48rem) {
       height: 1.2em;
     }
+  }
+
+  > header.scrolled {
+    background-color: hsla(0, 0%, 100%, .8);
+    box-shadow: 0 0 3px hsla(0, 0%, 80%, .8);
   }
 
   > header.scrolled > h1 {

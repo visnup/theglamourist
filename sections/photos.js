@@ -18,12 +18,18 @@ class Photos extends Component {
     return (
       <Section {...this.props}>
         <div className="container" style={{ paddingLeft: this.state.paddingLeft }} ref={container => this.container = container}>
-          <img ref={img => this.img = img} src="/static/photos/27878230_413955342373291_4665685564203204608_n.jpg" />}
-          <img src="/static/photos/27893084_171014887020535_2728928469332262912_n.jpg" />
-          <img src="/static/photos/28151997_417089678744153_7321564065828962304_n.jpg" />
-          <img src="/static/photos/25007066_923003567876044_1388286846299013120_n.jpg" />
-          <img src="/static/photos/23668123_1603435529719419_490774200538103808_n.jpg" />
-          <img src="/static/photos/27877883_756039844586619_299669991479836672_n.jpg" />
+          <img ref={img => this.img = img} src="/static/photos/001_elizabethmessinaFAVORITES.jpg" />
+          <img src="/static/photos/012_elizabethmessinaFAVORITES.jpg" />
+          <img src="/static/photos/014_elizabethmessinaFAVORITES.jpg" />
+          <img src="/static/photos/116_elizabethmessinaFAVORITES.jpg" />
+          <img src="/static/photos/119_elizabethmessinaFAVORITES.jpg" />
+          <img src="/static/photos/000076780033.jpg" />
+          <img src="/static/photos/000077100016.jpg" />
+          <img src="/static/photos/000077220011.jpg" />
+          <img src="/static/photos/000077450007.jpg" />
+          <img src="/static/photos/000077610013.jpg" />
+          <img src="/static/photos/000077650003.jpg" />
+          <img src="/static/photos/000077780012.jpg" />
         </div>
       </Section>
     )
@@ -31,8 +37,11 @@ class Photos extends Component {
 }
 
 export default styled(Photos)`
+  // padding: 0;
+  // margin: 0;
+
   .container {
-    height: 75vh;
+    height: 70vh;
     padding: 0;
     margin: 0;
     white-space: nowrap;
@@ -45,7 +54,7 @@ export default styled(Photos)`
 
   img {
     height: 100%;
-    margin: 0;
+    margin: 0 10px;
     scroll-snap-align: center;
   }
 `
