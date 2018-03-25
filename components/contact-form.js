@@ -31,7 +31,7 @@ class Form extends Component {
             <div>
               <h2>Thanks!</h2>
               <p>
-                We'll get back to you soon.
+                We’ll get back to you soon.
               </p>
             </div>
           </div>
