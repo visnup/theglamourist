@@ -1,44 +1,40 @@
 import styled from 'styled-components'
 
-// http://typecast.com/blog/a-more-modern-scale-for-web-typography
+// http://type-scale.com/?size=16&scale=1.200&text=A%20Visual%20Type%20Scale&webfont=EB%2BGaramond%7CMontserrat%3A400%2C500%2C600%2C700&font-family=%22EB%20Garamond%22%2C%20serif&font-weight=400&font-family-headers=Montserrat%2C%20sans-serif&font-weight-headers=600&background-color=white&font-color=#333
+const scale = 1.125
 const Container = styled.main`
   max-width: 64rem;
   margin: 0 auto;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1em;
-  line-height: 1.375em;
-  color: hsl(0, 0%, 30%);
+  font-family: 'Garamond', serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: hsl(0, 0%, 10%);
 
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: .5em;
-  }
-
-  h1, h2, h3 {
     font-family: 'Gotham SSm A', 'Gotham SSm B', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 1.414em 0 .5em;
     color: black;
   }
 
   h1 {
-    font-size: 3em;
-    line-height: 1.25;
+    font-size: ${Math.pow(scale,4)}em;
     letter-spacing: -2px;
   }
 
   h2 {
-    font-size: 2.25em;
-    line-height: 1.25;
-    text-transform: uppercase;
+    font-size: ${Math.pow(scale,3)}em;
   }
 
   h3 {
-    font-size: 1.25em;
-    line-height: 1.25;
+    font-size: ${Math.pow(scale,2)}em;
   }
 
   h4 {
-    font-size: 1em;
-    line-height: 1.22222222;
+    font-size: ${scale}em;
+    font-weight: 400;
   }
 
   a {

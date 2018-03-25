@@ -50,7 +50,7 @@ class Form extends Component {
           <Row>
             <Column xs={12} sm={4}>Email address</Column>
             <Column xs={12} sm={8}>
-              <Input type="email" autocomplete="email" aria-label="Your email" name="emailAddress" required />
+              <Input type="email" autocomplete="email" aria-label="Email address" name="emailAddress" required />
             </Column>
           </Row>
         </label>
@@ -59,7 +59,7 @@ class Form extends Component {
           <Row>
             <Column xs={12} sm={4}>Phone number</Column>
             <Column xs={12} sm={8}>
-              <Input type="text" aria-label="Phone number" name="entry.576562644" required />
+              <Input type="tel" aria-label="Phone number" name="entry.576562644" required />
             </Column>
           </Row>
         </label>
@@ -102,7 +102,7 @@ class Form extends Component {
         <label>
           <Row>
             <Column xs={12} sm={4}></Column>
-            <Column>
+            <Column xs={12} sm={8}>
               <Button>Send</Button>
             </Column>
           </Row>

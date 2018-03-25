@@ -5,11 +5,11 @@ import Section from '../components/section'
 const source = `
 ## Services
 
-### Bridal Packages <span class="price header">Rates 2017</span>
+#### Bridal Packages <span class="price header">Rates 2017</span>
 
 Packages are designed with our bride's best interest in mind.
 
-### The Essential Package (Hair & Makeup) <span class="price">1000</span>
+#### The Essential Package (Hair & Makeup) <span class="price">1000</span>
 
   *Provides brides with the essential needs of hair and makeup for her big
   day.*
@@ -18,7 +18,7 @@ Packages are designed with our bride's best interest in mind.
   - Airbrushed foundation (optional)
   - Touch up kit (lip gloss, oil blotting papers, hair spray, etc.)
 
-### The Radiant Package <span class="price">1800</span>
+#### The Radiant Package <span class="price">1800</span>
 
   *Ensures each bride peace of mind of her flawless beauty as she walks down
   the aisle.*
@@ -32,7 +32,7 @@ Packages are designed with our bride's best interest in mind.
     apply.
   - Hair and makeup changes not allowed
 
-### The Glamour Package <span class="price">2150</span>
+#### The Glamour Package <span class="price">2150</span>
 
   *The ultimate bridal pampering package and also the favorite of our brides.
   Ensures brides peace of mind.*
@@ -50,7 +50,7 @@ Packages are designed with our bride's best interest in mind.
   - *Recommended for cryers, difficult weather conditions, and oilier skin
     types*
 
-### Trial Sessions <span class="price">450</span>
+#### Trial Sessions <span class="price">450</span>
 
   - Hair & makeup consultation and application (includes faux lashes)
   - All sessions last 3 hours
@@ -58,27 +58,27 @@ Packages are designed with our bride's best interest in mind.
   - On-location add 150+
   - *More details below*
 
-### Engagement, Boudoir & Special Event Sessions <span class="price">300</span>
+#### Engagement, Boudoir & Special Event Sessions <span class="price">300</span>
 
   - Hair & makeup application (includes faux lashes)
   - All sessions last 2 hours
   - In studio & weekdays only
   - On-location add 150+
 
-### Destination Packages <span class="price">Upon Request</span>
+#### Destination Packages <span class="price">Upon Request</span>
 
-### Bridal Party
+#### Bridal Party
 
   (*Maids, mothers, & other ladies*)
 
   - Hair <span class="price">125 / service</span>
   - Makeup <span class="price">125 / service</span>
 
-### Jr. Bridesmaids / Flower Girls (3-12 years)
+#### Jr. Bridesmaids / Flower Girls (3-12 years)
   - Hair <span class="price">75 / service</span>
   - Makeup <span class="price">75 / service</span>
 
-### Add-On Services
+#### Add-On Services
 
   - Makeup Lessons <span class="price">300+ (*2 hrs*)</span>
   - Touchups <span class="price">150 / hr</span>
@@ -90,13 +90,13 @@ Packages are designed with our bride's best interest in mind.
   - Workshops <span class="price">upon request</span>
   - Commercial / Production <span class="price">upon request</span>
 
-### Travel Fees
+#### Travel Fees
 
   - Vary on location
   - Minimum rate may apply depending on travel radius, please inquire about
     your location
 
-## Policies
+### Policies
 
   - **A signed contract and a non-refundable retainer of 50% is required to
     reserve a date**
@@ -109,7 +109,7 @@ Packages are designed with our bride's best interest in mind.
   - For Destination Weddings, only The Glamour Package is available &
     airfare, accommodations, transportation & travel rate will apply.
 
-## Trial Sessions
+### Trial Sessions
 
   - All trial sessions are held in-studio
   - Trial session location address: [Blu Bungalow, 2068 Union Street, San

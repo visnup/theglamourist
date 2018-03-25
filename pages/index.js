@@ -57,7 +57,7 @@ export default styled(Index)`
     width: 100%;
     background-color: hsla(0, 0%, 100%, .8);
     box-shadow: 0 0 3px hsla(0, 0%, 80%, .8);
-    padding: 10px 0;
+    padding: 20px 0;
   }
 
   > header > h1 {
@@ -69,7 +69,7 @@ export default styled(Index)`
     transition: height .1s ease-in;
 
     @media (min-width: 48rem) {
-      height: 1.5em;
+      height: 1.2em;
     }
   }
 

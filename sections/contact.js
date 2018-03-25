@@ -18,24 +18,16 @@ const map = [
 
 const Contact = (props) => (
   <Section {...props}>
-    <Row>
+    <Row style={{alignItems: 'center'}}>
       <Column xs={12} sm={6} style={{margin: '1em 0'}}>
         <Form />
       </Column>
-      <Column xs={12} sm={6} style={{margin: '1em 0'}}>
+      <Column xs={12} sm={6} style={{margin: '1em 0', textAlign: 'center'}}>
         <h2>Contact</h2>
 
         Jane Kim<br/>
         <a href="mailto:jane@theglamourist.com">jane@theglamourist.com</a><br/>
         <a href="tel:14158605872">(415) 860-5872</a>
-
-        <h3>Mail & Correspondence</h3>
-        <a href="https://maps.google.com/maps?q=The+Glamourist&hl=en&ll=37.753717,-122.390656&spn=0.022123,0.033517&cid=14521749320186323615&gl=US&t=m&z=15&iwloc=A">
-          1301 Indiana St. Ste. 203<br/>
-          San Francisco, CA 94107<br/>
-        </a>
-
-        Available for travel worldwide.
       </Column>
     </Row>
   </Section>

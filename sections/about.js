@@ -21,10 +21,11 @@ Oh yea, puppies are my weakness.
 const About = (props) => (
   <Section {...props}>
     <Row style={{alignItems: 'center'}}>
-      <Column xs={12} sm={6}>
+      <Column xs={12} sm={5}>
         <h2>About</h2>
         <Markdown source={source} />
       </Column>
+      <Column xs={12} sm={1}></Column>
       <Column xs={12} sm={6}>
         <img src="/static/LRG__DSC2679.jpg" />
       </Column>

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const gutter = 20
+const gutter = 10
 
 const breakpoints = [
   { name: 'xs', min: 0 },
