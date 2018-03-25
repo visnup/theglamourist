@@ -137,7 +137,7 @@ Packages are designed with our bride's best interest in mind.
 
 const Services = (props) => (
   <Section {...props}>
-    <Markdown source={source} options={{html: true}} />
+    <Markdown source={source} options={{html: true, typographer: true}} />
   </Section>
 )
 

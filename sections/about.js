@@ -23,11 +23,11 @@ const About = (props) => (
     <Row style={{alignItems: 'center'}}>
       <Column xs={12} sm={5}>
         <h2>About</h2>
-        <Markdown source={source} />
+        <Markdown source={source} options={{typographer: true}}/>
       </Column>
       <Column xs={12} sm={1}></Column>
       <Column xs={12} sm={6}>
-        <img src="/static/LRG__DSC2679.jpg" />
+        <img src="/static/25038993_1611609495572717_8995398385418633216_n.jpg" />
       </Column>
     </Row>
   </Section>
