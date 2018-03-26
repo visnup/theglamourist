@@ -142,7 +142,9 @@ const Services = (props) => (
 )
 
 export default styled(Services)`
-  position: relative;
+  > div {
+    position: relative;
+  }
 
   h3, h4 {
     margin: 3em 0 0;
@@ -162,6 +164,6 @@ export default styled(Services)`
 
   .price {
     position: absolute;
-    right: 2em;
+    right: 0;
   }
 `

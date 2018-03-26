@@ -29,7 +29,7 @@ const Arrow = styled.div`
   bottom: 0;
   left: ${({direction}) => direction === 'left' ? '0px' : 'auto'};
   right: ${({direction}) => direction === 'right' ? '0px' : 'auto'};
-  width: 100px;
+  width: 60px;
   background: url('data:image/svg+xml,${arrow}') no-repeat center center;
   transform: scaleX(${({direction}) => direction === 'left' ? -1 : 1});
   cursor: pointer;
@@ -63,7 +63,7 @@ class Photos extends Component {
 
 export default styled(Photos)`
   padding: 0;
-  margin: 6em 0;
+  margin: 4em 0 0;
   max-width: 100%;
   position: relative;
 `

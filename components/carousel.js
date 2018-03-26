@@ -42,6 +42,9 @@ class Carousel extends Component {
   }
 
   scrollTo(index) {
+    if (index < 0 || index >= this.imgRefs.length)
+      return
+
     const img = this.imgRefs[index],
           rect = img.getBoundingClientRect(),
           width = this.ref.getBoundingClientRect().width - rect.width
@@ -81,7 +84,7 @@ class Carousel extends Component {
 }
 
 export default styled(Carousel)`
-  height: 70vh;
+  height: 75vh;
   padding: 0;
   margin: 0;
   white-space: nowrap;
