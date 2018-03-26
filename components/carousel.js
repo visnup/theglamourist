@@ -70,7 +70,7 @@ class Carousel extends Component {
       >
         {photos.map(photo => (
           <img
-            srcset={`https://theglamourist.imgix.net/photos/${photo}?h=${height} 1x,
+            srcSet={`https://theglamourist.imgix.net/photos/${photo}?h=${height} 1x,
                      https://theglamourist.imgix.net/photos/${photo}?h=${height}&dpr=2 2x,
                      https://theglamourist.imgix.net/photos/${photo}?h=${height}&dpr=3 3x`}
             src={`https://theglamourist.imgix.net/photos/${photo}?h=${height}`}
