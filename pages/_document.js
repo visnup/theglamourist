@@ -1,16 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-const GTag = () => {
-  if (typeof(window) !== 'undefined') {
-    window.dataLayer = window.dataLayer || []
-    function gtag(){ dataLayer.push(arguments) }
-    gtag('js', new Date())
-    gtag('config', 'UA-30354035-1')
-  }
-  return null
-}
-
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -31,7 +21,12 @@ export default class MyDocument extends Document {
           {this.props.styleTags}
           <meta name="description" content="Jane Kim, owner and founder of The Glamourist, is an award winning makeup artist and hair stylist based in San Francisco." />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30354035-1"></script>
-          <GTag />
+          <script dangerouslySetInnerHTML={{__html: `
+            window.dataLayer = window.dataLayer || []
+            function gtag(){ dataLayer.push(arguments) }
+            gtag('js', new Date())
+            gtag('config', 'UA-30354035-1')
+          `}} />
         </Head>
         <body>
           <Main />
