@@ -4,11 +4,11 @@ import Section from '../components/section'
 import Carousel from '../components/carousel'
 
 const photos = [
-  "001_elizabethmessinafavorites.jpg",
-  "012_elizabethmessinaFAVORITES.jpg",
-  "014_elizabethmessinaFAVORITES.jpg",
-  "116_elizabethmessinaFAVORITES.jpg",
-  "119_elizabethmessinaFAVORITES.jpg",
+  "001_elizabethmessina.jpg",
+  "012_elizabethmessina.jpg",
+  "014_elizabethmessina.jpg",
+  "116_elizabethmessina.jpg",
+  "119_elizabethmessina.jpg",
   "000076780033.jpg",
   "000077100016.jpg",
   "000077220011.jpg",
