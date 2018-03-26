@@ -27,7 +27,12 @@ const About = (props) => (
       </Column>
       <Column xs={12} sm={1}></Column>
       <Column xs={12} sm={6}>
-        <img src="/static/25038993_1611609495572717_8995398385418633216_n.jpg" />
+        <img
+          srcset="https://theglamourist.imgix.net/25038993_1611609495572717_8995398385418633216_n.jpg?h=640 1x,
+                  https://theglamourist.imgix.net/25038993_1611609495572717_8995398385418633216_n.jpg?h=640&dpr=2 2x,
+                  https://theglamourist.imgix.net/25038993_1611609495572717_8995398385418633216_n.jpg?h=640&dpr=3 3x"
+          src="https://theglamourist.imgix.net/25038993_1611609495572717_8995398385418633216_n.jpg?h=640"
+        />
       </Column>
     </Row>
   </Section>
