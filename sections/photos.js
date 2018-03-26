@@ -1,36 +1,60 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Section from '../components/section'
+import Carousel from '../components/carousel'
+
+const photos = [
+  "001_elizabethmessinafavorites.jpg",
+  "012_elizabethmessinaFAVORITES.jpg",
+  "014_elizabethmessinaFAVORITES.jpg",
+  "116_elizabethmessinaFAVORITES.jpg",
+  "119_elizabethmessinaFAVORITES.jpg",
+  "000076780033.jpg",
+  "000077100016.jpg",
+  "000077220011.jpg",
+  "000077450007.jpg",
+  "000077610013.jpg",
+  "000077650003.jpg",
+  "000077780012.jpg",
+]
+
+const arrow = `
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-3 -3 16 16">
+<path d="M5,0L10,5L5,10" fill="none" stroke="hsla(0, 0%, 0%, .6)" stroke-width="2px" stroke-linecap="round" />
+</svg>
+`
+const Arrow = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: ${({direction}) => direction === 'left' ? '0px' : 'auto'};
+  right: ${({direction}) => direction === 'right' ? '0px' : 'auto'};
+  width: 100px;
+  background: url('data:image/svg+xml,${arrow}') no-repeat center center;
+  transform: scaleX(${({direction}) => direction === 'left' ? -1 : 1});
+  cursor: pointer;
+`
+  // background: linear-gradient(90deg, hsla(0, 0%, 100%, ${({direction}) => direction === 'left' ? 0.8 : 0}), hsla(0, 0%, 100%, ${({direction}) => direction === 'left' ? 0 : 0.8}));
 
 class Photos extends Component {
-  state = { paddingLeft: 0 }
+  state = { index: 0 }
 
-  componentDidMount() {
-    let width = this.container.getBoundingClientRect().width -
-                this.img.getBoundingClientRect().width
-    if (width > 0)
-      this.setState({ paddingLeft: width / 2 })
-    else
-      this.container.scrollLeft = -width / 2
+  incrementIndex(increment) {
+    this.setState({
+      index: (this.state.index + increment + photos.length) % photos.length
+    })
   }
 
   render() {
     return (
       <Section {...this.props}>
-        <div className="container" style={{ paddingLeft: this.state.paddingLeft }} ref={container => this.container = container}>
-          <img ref={img => this.img = img} src="/static/photos/001_elizabethmessinaFAVORITES.jpg" />
-          <img src="/static/photos/012_elizabethmessinaFAVORITES.jpg" />
-          <img src="/static/photos/014_elizabethmessinaFAVORITES.jpg" />
-          <img src="/static/photos/116_elizabethmessinaFAVORITES.jpg" />
-          <img src="/static/photos/119_elizabethmessinaFAVORITES.jpg" />
-          <img src="/static/photos/000076780033.jpg" />
-          <img src="/static/photos/000077100016.jpg" />
-          <img src="/static/photos/000077220011.jpg" />
-          <img src="/static/photos/000077450007.jpg" />
-          <img src="/static/photos/000077610013.jpg" />
-          <img src="/static/photos/000077650003.jpg" />
-          <img src="/static/photos/000077780012.jpg" />
-        </div>
+        <Arrow direction="left" onClick={() => this.incrementIndex(-1)} />
+        <Carousel
+          photos={photos}
+          index={this.state.index}
+          onScroll={index => this.setState({ index })}
+        />
+        <Arrow direction="right" onClick={() => this.incrementIndex(+1)} />
       </Section>
     )
   }
@@ -40,22 +64,5 @@ export default styled(Photos)`
   padding: 0;
   margin: 6em 0;
   max-width: 100%;
-
-  .container {
-    height: 70vh;
-    padding: 0;
-    margin: 0;
-    white-space: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    scroll-snap-destination: 50% 50%;
-  }
-
-  img {
-    height: 100%;
-    margin: 0 10px;
-    scroll-snap-align: center;
-  }
+  position: relative;
 `
