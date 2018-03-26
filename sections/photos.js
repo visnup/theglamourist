@@ -33,6 +33,7 @@ const Arrow = styled.div`
   background: url('data:image/svg+xml,${arrow}') no-repeat center center;
   transform: scaleX(${({direction}) => direction === 'left' ? -1 : 1});
   cursor: pointer;
+  z-index: 1;
 `
   // background: linear-gradient(90deg, hsla(0, 0%, 100%, ${({direction}) => direction === 'left' ? 0.8 : 0}), hsla(0, 0%, 100%, ${({direction}) => direction === 'left' ? 0 : 0.8}));
 
