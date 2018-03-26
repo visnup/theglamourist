@@ -74,6 +74,7 @@ class Carousel extends Component {
                      https://theglamourist.imgix.net/photos/${photo}?h=${height}&dpr=2 2x,
                      https://theglamourist.imgix.net/photos/${photo}?h=${height}&dpr=3 3x`}
             src={`https://theglamourist.imgix.net/photos/${photo}?h=${height}`}
+            alt=""
             ref={this.addImgRef}
             key={photo}
           />

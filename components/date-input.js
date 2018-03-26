@@ -6,13 +6,13 @@ const now = new Date()
 
 const DateInput = ({ className, name }) => (
   <span className={className}>
-    <Select name={`${name}_year`}>
+    <Select name={`${name}_year`} aria-label="Year">
       {[0, 1, 2, 3, 4, 5].map(i => (
         <option key={i}>{now.getFullYear() + i}</option>
       ))}
     </Select>
     {' '}
-    <Select name={`${name}_month`}>
+    <Select name={`${name}_month`} aria-label="Month">
       <option value="1">January</option>
       <option value="2">February</option>
       <option value="3">March</option>
@@ -27,7 +27,7 @@ const DateInput = ({ className, name }) => (
       <option value="12">December</option>
     </Select>
     {' '}
-    <Select name={`${name}_day`}>
+    <Select name={`${name}_day`} aria-label="Day">
       {range(1, 32).map(d => (
         <option key={d}>{d}</option>
       ))}

@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
           <title>The Glamourist - Jane Kim - Makeup Artist (San Francisco)</title>
           <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
@@ -19,6 +19,7 @@ export default class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet" />
           <link href="https://unpkg.com/normalize.css@8.0.0/normalize.css" rel="stylesheet" />
           {this.props.styleTags}
+          <meta name="description" content="Jane Kim, owner and founder of The Glamourist, is an award winning makeup artist and hair stylist based in San Francisco." />
         </Head>
         <body>
           <Main />

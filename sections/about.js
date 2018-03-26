@@ -32,6 +32,7 @@ const About = (props) => (
                   https://theglamourist.imgix.net/25038993_1611609495572717_8995398385418633216_n.jpg?h=640&dpr=2 2x,
                   https://theglamourist.imgix.net/25038993_1611609495572717_8995398385418633216_n.jpg?h=640&dpr=3 3x"
           src="https://theglamourist.imgix.net/25038993_1611609495572717_8995398385418633216_n.jpg?h=640"
+          alt="Discovering sweet dessert cafes in #chiangmai"
         />
       </Column>
     </Row>
