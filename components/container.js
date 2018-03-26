@@ -3,7 +3,7 @@ import styled from 'styled-components'
 // http://type-scale.com/?size=16&scale=1.200&text=A%20Visual%20Type%20Scale&webfont=EB%2BGaramond%7CMontserrat%3A400%2C500%2C600%2C700&font-family=%22EB%20Garamond%22%2C%20serif&font-weight=400&font-family-headers=Montserrat%2C%20sans-serif&font-weight-headers=600&background-color=white&font-color=#333
 const scale = 1.125
 const Container = styled.main`
-  font-family: 'Garamond', serif;
+  font-family: 'Garamond', 'EB Garamond', serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
