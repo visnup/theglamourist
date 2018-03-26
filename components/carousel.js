@@ -19,7 +19,7 @@ class Carousel extends Component {
 
   ref = null
   imgRefs = []
-  state = { style: {} }
+  state = { style: {}, height: 100 }
 
   addImgRef = ref => {
     if (this.imgRefs.indexOf(ref) === -1)
@@ -28,10 +28,10 @@ class Carousel extends Component {
 
   componentDidMount() {
     // pad based on first and last images
-    const width = this.ref.getBoundingClientRect().width,
+    const { width, height } = this.ref.getBoundingClientRect(),
           paddingLeft = Math.max(width - this.imgRefs[0].getBoundingClientRect().width, 0) / 2,
           paddingRight = Math.max(width - this.imgRefs[this.imgRefs.length-1].getBoundingClientRect().width, 0) / 2
-    this.setState({ style: { paddingLeft, paddingRight } })
+    this.setState({ style: { paddingLeft, paddingRight }, height: Math.floor(height) })
 
     this.scrollTo(this.props.index)
   }
@@ -57,7 +57,7 @@ class Carousel extends Component {
 
   render() {
     const { photos } = this.props
-    const { style } = this.state
+    const { style, height } = this.state
     return (
       <div
         {...this.props}
@@ -67,7 +67,10 @@ class Carousel extends Component {
       >
         {photos.map(photo => (
           <img
-            src={`/static/photos/${photo}`}
+            srcset={`https://theglamourist.imgix.net/photos/${photo}?h=${height} 1x,
+                     https://theglamourist.imgix.net/photos/${photo}?h=${height}&dpr=2 2x,
+                     https://theglamourist.imgix.net/photos/${photo}?h=${height}&dpr=3 3x`}
+            src={`https://theglamourist.imgix.net/photos/${photo}?h=${height}`}
             ref={this.addImgRef}
             key={photo}
           />
