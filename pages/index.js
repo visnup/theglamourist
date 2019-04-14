@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Head from 'next/head'
 import styled from 'styled-components'
 import { throttle } from 'lodash'
 import Container from '../components/container'
@@ -35,6 +36,9 @@ class Index extends Component {
   render() {
     return (
       <Container {...this.props}>
+        <Head>
+          <title>The Glamourist - Jane Kim - Makeup Artist (San Francisco)</title>
+        </Head>
         <header className={this.state.scrolled ? 'scrolled' : undefined}>
           <h1>the Glamourist</h1>
         </header>
