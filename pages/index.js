@@ -22,7 +22,7 @@ class Index extends Component {
   }
 
   handleScroll = throttle((e) => {
-    if (document.body.scrollTop > 100) {
+    if (window.scrollY > 100) {
       if (!this.state.scrolled) {
         this.setState({ scrolled: true })
       }
