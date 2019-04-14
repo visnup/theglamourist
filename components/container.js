@@ -3,16 +3,12 @@ import styled from 'styled-components'
 
 const Container = ({ className, children }) => (
   <main className={className}>
-    <Head>
-      <link rel="preconnect" href="https://cloud.typography.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-    </Head>
     {children}
-    <style dangerouslySetInnerHTML={{__html: `
+    <style>
       @import "https://cloud.typography.com/6739094/7523572/css/fonts.css";
       @import "https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700";
       @import "https://unpkg.com/normalize.css@8.0.1/normalize.css";
-    `}}></style>
+    </style>
   </main>
 )
 
