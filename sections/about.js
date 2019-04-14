@@ -28,10 +28,10 @@ const About = (props) => (
       <Column xs={12} sm={1}></Column>
       <Column xs={12} sm={6}>
         <img
-          srcSet="https://theglamourist.imgix.net/Jane_Cybex_0035.jpg?h=640 1x,
-                  https://theglamourist.imgix.net/Jane_Cybex_0035.jpg?h=640&dpr=2 2x,
-                  https://theglamourist.imgix.net/Jane_Cybex_0035.jpg?h=640&dpr=3 3x"
-          src="https://theglamourist.imgix.net/Jane_Cybex_0035.jpg?h=640"
+          srcSet="https://theglamourist.imgix.net/Jane_Cybex_0035.jpg?h=640&auto=format 1x,
+                  https://theglamourist.imgix.net/Jane_Cybex_0035.jpg?h=640&dpr=2&auto=format 2x,
+                  https://theglamourist.imgix.net/Jane_Cybex_0035.jpg?h=640&dpr=3&auto=format 3x"
+          src="https://theglamourist.imgix.net/Jane_Cybex_0035.jpg?h=640&auto=format"
           alt=""
         />
       </Column>
