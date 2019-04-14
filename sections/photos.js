@@ -49,7 +49,7 @@ class Photos extends Component {
   render() {
     return (
       <Section {...this.props}>
-        <Arrow direction="left" onClick={() => this.incrementIndex(-1)} />
+        {/* <Arrow direction="left" onClick={() => this.incrementIndex(-1)} /> */}
         <Carousel
           photos={photos}
           index={this.state.index}
