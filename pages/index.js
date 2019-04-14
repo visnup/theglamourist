@@ -38,6 +38,15 @@ class Index extends Component {
       <Container {...this.props}>
         <Head>
           <title>The Glamourist - Jane Kim - Makeup Artist (San Francisco)</title>
+          <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+          <meta name="description" content="Jane Kim, owner and founder of The Glamourist, is an award winning makeup artist and hair stylist based in San Francisco." />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-30354035-1"></script>
+          <script dangerouslySetInnerHTML={{__html: `
+            window.dataLayer = window.dataLayer || []
+            function gtag(){ dataLayer.push(arguments) }
+            gtag('js', new Date())
+            gtag('config', 'UA-30354035-1')
+          `}} />
         </Head>
         <header className={this.state.scrolled ? 'scrolled' : undefined}>
           <h1>the Glamourist</h1>
