@@ -27,7 +27,6 @@ const Arrow = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
-  left: ${({direction}) => direction === 'left' ? '0px' : 'auto'};
   right: ${({direction}) => direction === 'right' ? '0px' : 'auto'};
   width: 60px;
   background: url('data:image/svg+xml,${arrow}') no-repeat center center;
